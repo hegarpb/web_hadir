@@ -1,0 +1,4 @@
+com\dikahadir\utils\DriverUtil.class
+com\dikahadir\page\LoginPage.class
+com\dikahadir\utils\DriverManager.class
+com\dikahadir\page\ManagementPage.class

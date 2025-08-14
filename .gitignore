@@ -1,0 +1,12 @@
+# IDE / Editor files
+.vscode/
+.idea/
+*.iml
+
+# Sistem operasi
+.DS_Store
+Thumbs.db
+
+# Log dan temporary
+*.log
+*.tmp
