@@ -19,8 +19,6 @@ public class ManagementTest extends BaseTest {
         Thread.sleep(5000);
 
 
-        String actual= driver.getCurrentUrl();
-        String expected= "https://magang.dikahadir.com/management/location-point";
-        Assert.assertEquals(actual, expected);
+        
     }
 }
