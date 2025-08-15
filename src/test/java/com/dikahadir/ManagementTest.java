@@ -16,6 +16,7 @@ public class ManagementTest extends BaseTest {
         // Thread.sleep(2000);
         ManagementPage managementPage = new ManagementPage(driver);
         managementPage.clickAbsenPointMenu();
+        Thread.sleep(5000);
 
 
         String actual= driver.getCurrentUrl();

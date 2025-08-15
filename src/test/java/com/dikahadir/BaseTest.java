@@ -11,7 +11,7 @@ public class BaseTest {
     protected LoginPage loginPage;
 
     @BeforeClass
-    public void setUp() {
+    public void setUp() throws InterruptedException {
         // Inisialisasi driver
         driver = DriverUtil.getDriver();
         driver.manage().window().maximize();
@@ -22,6 +22,7 @@ public class BaseTest {
         // Lakukan login
         loginPage = new LoginPage(driver);
         loginPage.performLogin("admin@hadir.com","MagangSQA_JC@123");
+        Thread.sleep(5000);
     }
 
     @AfterClass

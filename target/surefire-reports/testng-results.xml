@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-08-15T05:55:58 WIB" name="Main Test" finished-at="2025-08-15T05:56:12 WIB" duration-ms="14811">
+  <suite started-at="2025-08-15T20:16:47 WIB" name="Main Test" finished-at="2025-08-15T20:17:12 WIB" duration-ms="25119">
     <groups>
     </groups>
-    <test started-at="2025-08-15T05:55:58 WIB" name="Test Math" finished-at="2025-08-15T05:56:12 WIB" duration-ms="14811">
+    <test started-at="2025-08-15T20:16:47 WIB" name="Test Math" finished-at="2025-08-15T20:17:12 WIB" duration-ms="25119">
       <class name="com.dikahadir.ManagementTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.dikahadir.ManagementTest@6cf0e0ba]" started-at="2025-08-15T05:55:58 WIB" name="setUp" finished-at="2025-08-15T05:56:06 WIB" duration-ms="7931" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.dikahadir.ManagementTest@6cf0e0ba]" started-at="2025-08-15T20:16:47 WIB" name="setUp" finished-at="2025-08-15T20:17:05 WIB" duration-ms="18204" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="openManagementMenu()[pri:0, instance:com.dikahadir.ManagementTest@6cf0e0ba]" started-at="2025-08-15T05:56:06 WIB" name="openManagementMenu" finished-at="2025-08-15T05:56:09 WIB" duration-ms="3030" status="PASS">
+        <test-method signature="openManagementMenu()[pri:0, instance:com.dikahadir.ManagementTest@6cf0e0ba]" started-at="2025-08-15T20:17:05 WIB" name="openManagementMenu" finished-at="2025-08-15T20:17:10 WIB" duration-ms="5447" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openManagementMenu -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.dikahadir.ManagementTest@6cf0e0ba]" started-at="2025-08-15T05:56:09 WIB" name="tearDown" finished-at="2025-08-15T05:56:12 WIB" duration-ms="3638" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.dikahadir.ManagementTest@6cf0e0ba]" started-at="2025-08-15T20:17:10 WIB" name="tearDown" finished-at="2025-08-15T20:17:12 WIB" duration-ms="1391" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

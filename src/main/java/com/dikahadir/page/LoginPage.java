@@ -9,7 +9,7 @@ public class LoginPage {
     private By email = By.id("email");
     private By password = By.id("password");
     private By buttonLogin= By.cssSelector("button[type='submit']");
-    private By managementBar = By.xpath("//p[normalize-space()='Management']");
+    private By managementBar = By.xpath("(//p[normalize-space()='Management'])[1]");
     
 
     
