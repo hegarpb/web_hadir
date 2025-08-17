@@ -30,6 +30,7 @@ public class LoginPage {
     }
 
     public void navigateToManagementBar(){
+        
         driver.findElement(managementBar).click();
     }
 

@@ -3,7 +3,8 @@
 <suite name="Main Test">
   <test name="Test Math">
     <classes>
-      <class name="com.dikahadir.ManagementTest"></class>
+      <!-- <class name="com.dikahadir.ManagementTest"></class> -->
+      <class name="com.dikahadir.JabatanTest"></class>
     </classes>
   </test>
 </suite>

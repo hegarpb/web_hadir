@@ -1,8 +1,18 @@
 package com.dikahadir;
 
+import java.time.Duration;
+
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeTest;
+
 import com.dikahadir.page.LoginPage;
 import com.dikahadir.utils.DriverUtil;
 
@@ -10,8 +20,8 @@ public class BaseTest {
     protected WebDriver driver;
     protected LoginPage loginPage;
 
-    @BeforeClass
-    public void setUp() throws InterruptedException {
+    @BeforeMethod
+    public void setUp() {
         // Inisialisasi driver
         driver = DriverUtil.getDriver();
         driver.manage().window().maximize();
@@ -22,10 +32,16 @@ public class BaseTest {
         // Lakukan login
         loginPage = new LoginPage(driver);
         loginPage.performLogin("admin@hadir.com","MagangSQA_JC@123");
-        Thread.sleep(5000);
+
+        // Tunggu sampai menu Management muncul → ganti Thread.sleep dengan WebDriverWait
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(
+            By.xpath("(//p[normalize-space()='Management'])[1]")));
+
+       
     }
 
-    @AfterClass
+    @AfterMethod
     public void tearDown() {
         DriverUtil.quitDriver();
     }

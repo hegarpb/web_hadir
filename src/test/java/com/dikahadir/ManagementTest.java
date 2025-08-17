@@ -12,10 +12,10 @@ public class ManagementTest extends BaseTest {
     @Test
     public void openManagementMenu() throws InterruptedException {
         // Klik menu Management setelah login berhasil
-        loginPage.navigateToManagementBar();
+        
         // Thread.sleep(2000);
         ManagementPage managementPage = new ManagementPage(driver);
-        managementPage.clickAbsenPointMenu();
+        managementPage.clickJabatanMenu();
         Thread.sleep(5000);
 
 
