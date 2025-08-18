@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">4 methods,   4 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -103,12 +103,22 @@
                     <div class="method-list-content passed suite-Main_Test">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Main_Test" title="com.dikahadir.JabatanTest" class="method navigator-link" hash-for-method="negativeTestTambahJabatan">negativeTestTambahJabatan</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Main_Test" title="com.dikahadir.Jabatan.TambahJabatanTest" class="method navigator-link" hash-for-method="TestTambahJabatanInvalidData1">TestTambahJabatanInvalidData1</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Main_Test" title="com.dikahadir.JabatanTest" class="method navigator-link" hash-for-method="testTambahJabatanBaru">testTambahJabatanBaru</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Main_Test" title="com.dikahadir.Jabatan.TambahJabatanTest" class="method navigator-link" hash-for-method="TestTambahJabatanInvalidData2">TestTambahJabatanInvalidData2</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Main_Test" title="com.dikahadir.Jabatan.TambahJabatanTest" class="method navigator-link" hash-for-method="TestTambahJabatanInvalidData3">TestTambahJabatanInvalidData3</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Main_Test" title="com.dikahadir.Jabatan.TambahJabatanTest" class="method navigator-link" hash-for-method="testTambahJabatanBaru">testTambahJabatanBaru</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Main_Test -->
@@ -126,16 +136,34 @@
           <div class="suite-Main_Test-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">com.dikahadir.JabatanTest</span>
+              <span class="class-name">com.dikahadir.Jabatan.TambahJabatanTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="negativeTestTambahJabatan">
-                  </a> <!-- negativeTestTambahJabatan -->
-                  <span class="method-name">negativeTestTambahJabatan</span>
+                  <a name="TestTambahJabatanInvalidData1">
+                  </a> <!-- TestTambahJabatanInvalidData1 -->
+                  <span class="method-name">TestTambahJabatanInvalidData1</span>
                   <em>
 (Verifikasi penambahan jabatan baru dengan nama jabatan yang sudah ada)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TestTambahJabatanInvalidData2">
+                  </a> <!-- TestTambahJabatanInvalidData2 -->
+                  <span class="method-name">TestTambahJabatanInvalidData2</span>
+                  <em>
+(Verifikasi penambahan jabatan baru dengan nama jabatan yang kosong)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TestTambahJabatanInvalidData3">
+                  </a> <!-- TestTambahJabatanInvalidData3 -->
+                  <span class="method-name">TestTambahJabatanInvalidData3</span>
+                  <em>
+(Verifikasi penambahan jabatan baru dengan level yang kosong)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -161,7 +189,7 @@
 &lt;suite name=&quot;Main Test&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Test Math&quot; verbose=&quot;0&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.dikahadir.JabatanTest&quot;/&gt;
+      &lt;class name=&quot;com.dikahadir.Jabatan.TambahJabatanTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test Math --&gt;
 &lt;/suite&gt; &lt;!-- Main Test --&gt;
@@ -201,20 +229,28 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(4);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'negativeTestTambahJabatan')
-data.setCell(0, 2, 'com.dikahadir.JabatanTest')
-data.setCell(0, 3, 1866);
+data.setCell(0, 1, 'testTambahJabatanBaru')
+data.setCell(0, 2, 'com.dikahadir.Jabatan.TambahJabatanTest')
+data.setCell(0, 3, 3130);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'testTambahJabatanBaru')
-data.setCell(1, 2, 'com.dikahadir.JabatanTest')
-data.setCell(1, 3, 1676);
+data.setCell(1, 1, 'TestTambahJabatanInvalidData3')
+data.setCell(1, 2, 'com.dikahadir.Jabatan.TambahJabatanTest')
+data.setCell(1, 3, 1465);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'TestTambahJabatanInvalidData1')
+data.setCell(2, 2, 'com.dikahadir.Jabatan.TambahJabatanTest')
+data.setCell(2, 3, 1332);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'TestTambahJabatanInvalidData2')
+data.setCell(3, 2, 'com.dikahadir.Jabatan.TambahJabatanTest')
+data.setCell(3, 3, 1060);
 window.suiteTableData['Main_Test']= { tableData: data, tableDiv: 'times-div-Main_Test'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 3 seconds</span>
+              <span class="suite-total-time">Total running time: 6 seconds</span>
               <div id="times-div-Main_Test">
               </div> <!-- times-div-Main_Test -->
             </div> <!-- times-div -->
@@ -240,30 +276,54 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.dikahadir.JabatanTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.dikahadir.Jabatan.TambahJabatanTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">testTambahJabatanBaru</span>
-                <span class="method-start">9519 ms</span>
+                <span class="method-start">13524 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">11195 ms</span>
+                <span class="method-start">16673 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">12682 ms</span>
+                <span class="method-start">18230 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">negativeTestTambahJabatan</span>
-                <span class="method-start">20979 ms</span>
+                <span class="method-name">TestTambahJabatanInvalidData1</span>
+                <span class="method-start">27059 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">22849 ms</span>
+                <span class="method-start">28391 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">29749 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">TestTambahJabatanInvalidData2</span>
+                <span class="method-start">37434 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">38494 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">39828 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">TestTambahJabatanInvalidData3</span>
+                <span class="method-start">46484 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">47950 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
