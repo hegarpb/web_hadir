@@ -1,4 +1,4 @@
-package com.dikahadir.Jabatan;
+package com.dikahadir.definitions.Jabatan;
 
 import java.time.Duration;
 
@@ -8,27 +8,35 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import com.dikahadir.BaseTest;
+import com.dikahadir.Hooks;
 import com.dikahadir.page.JabatanPage;
 import com.dikahadir.page.ManagementPage;
 
-public class TambahJabatanTest extends BaseTest{
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+
+public class TambahJabatanTest extends Hooks{
 
     ManagementPage managementPage;
-    
-    @Test(priority = 1, description = "Verifikasi penambahan jabatan baru dengan data valid")
-    public void testTambahJabatanBaru() {
-
-        JabatanPage jabatanPage = new JabatanPage(driver);
+    JabatanPage jabatanPage = new JabatanPage(driver);
+    @Given("user berada di halaman Manajemen Jabatan")
+    public void step01(){
+        
         jabatanPage.navigateToJabatanPage();
 
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[normalize-space()='Tambahkan']")));
 
-        jabatanPage.stepTambahjabatan("SPV2", "2");
-        
-        String expectedMessage = "Berhasil Menambahkan Job Level";
-        Assert.assertEquals(jabatanPage.getMessageText(), expectedMessage, "Isi pesan sukses tidak sesuai.");
+    }
+    @When("user menambahkan jabatan dengan nama {string} dan level {string}")
+    public void step02(String namaJabatan,String leveljabatan){
+          jabatanPage.stepTambahjabatan("SPV2", "2");
+    }
+    @Then(" sistem menampilkan pesan sukses {string}")
+    public void step03(String expectedMessage){
+        String actualMessage =jabatanPage.getMessageText();
+        Assert.assertEquals(actualMessage, expectedMessage);
     }
 
     @Test (priority = 2, description = "Verifikasi penambahan jabatan baru dengan nama jabatan yang sudah ada")

@@ -14,13 +14,16 @@ public class JabatanPage {
     private ManagementPage managementPage;
     private By buttonTambahkanJabatan = By.xpath("//button[normalize-space()='Tambahkan']");
     private By buttonFilterJabatan = By.xpath("//button[normalize-space()='Search']");
-    private By resetFilter = By.xpath("//button[normalize-space()='Reset']");
+    private By resetFilter = By.xpath("(//button[normalize-space()='Reset'])[1]");
+    
     private By inputFilterText = By.xpath("//input[@id='search']");
     private By inputNamaJabatan= By.xpath("//input[@id='name']");
     private By inputLevelJabatan = By.xpath("//input[@id='level']");
     private By buttonTambah = By.xpath("//button[normalize-space()='Tambah']");
     private By message = By.xpath("(//div[@class='MuiSnackbarContent-message css-1w0ym84'])[1]");
     private By tampilSearchLevel= By.xpath("//table/tbody/tr/td[2]");
+    private By tableRows = By.xpath("//table/tbody/tr");
+
 
     public JabatanPage (WebDriver driver){
         this.driver =driver;
@@ -86,7 +89,16 @@ public class JabatanPage {
     public String getValidationLevelJabatan(){
         return driver.findElement(inputLevelJabatan).getAttribute("validationMessage");
     }
-public void navigateToJabatanPage(){
+
+    public int getRowsCount() {
+    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+    wait.until(ExpectedConditions.visibilityOfElementLocated(tableRows)); 
+    return driver.findElements(tableRows).size();
+}
+    public By getInputFilterText() {
+    return inputFilterText;
+}
+    public void navigateToJabatanPage(){
         managementPage = new ManagementPage(driver);
         managementPage.clickJabatanMenu();
 }

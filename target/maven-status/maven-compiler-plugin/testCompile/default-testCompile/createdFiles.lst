@@ -1,3 +1,4 @@
-com\dikahadir\Jabatan\SearchLevelJabatan.class
+com\dikahadir\Jabatan\FilterLevelJabatanTest.class
 com\dikahadir\Jabatan\TambahJabatanTest.class
 com\dikahadir\BaseTest.class
+com\dikahadir\Jabatan\ResetFilterLevelJabatanTest.class

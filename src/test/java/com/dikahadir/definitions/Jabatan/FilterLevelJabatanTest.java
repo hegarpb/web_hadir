@@ -1,4 +1,4 @@
-package com.dikahadir.Jabatan;
+package com.dikahadir.definitions.Jabatan;
 
 import java.util.List;
 
@@ -6,13 +6,11 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import com.dikahadir.BaseTest;
+import com.dikahadir.Hooks;
 import com.dikahadir.page.JabatanPage;
-import com.dikahadir.page.ManagementPage;
 
-public class SearchLevelJabatan extends BaseTest {
-    ManagementPage managementPage;
 
+public class FilterLevelJabatanTest extends Hooks {
     @Test(priority=1, description="Verifikasi fungsionalitas pencarian jabatan berdasarkan level jabatan yang valid.")
 public void searchLevelJabatan() {
     JabatanPage jabatanPage = new JabatanPage(driver);
@@ -27,6 +25,7 @@ public void searchLevelJabatan() {
     for (WebElement cell : levelCells) {
         Assert.assertEquals(cell.getText(), expectedLevel);
     }
+    
 }
 
 
