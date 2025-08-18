@@ -11,6 +11,9 @@ import java.time.Duration;
 public class ManagementPage {
     private WebDriver driver;
     private By absenPointMenu = By.xpath("(//p[@class='MuiTypography-root MuiTypography-body1 css-aqx7sf'][normalize-space()='Absen Point'])[1]");
+    private By jabatanMenu = By.xpath("//p[@class='MuiTypography-root MuiTypography-body1 css-aqx7sf'][normalize-space()='Jabatan']");
+    private By aturanCutiMenu = By.xpath("//p[contains(@class,'MuiTypography-root') and normalize-space()='Aturan Cuti']");
+    private By dayOffMenu = By.xpath("//p[contains(@class,'MuiTypography-root') and normalize-space()='Day Off']");
 
     public ManagementPage(WebDriver driver){
         this.driver = driver;
@@ -23,10 +26,29 @@ public class ManagementPage {
 
         // Scroll ke elemen
         ((JavascriptExecutor) driver)
-                .executeScript("arguments[0].scrollIntoView(true);", driver.findElement(absenPointMenu));
+        .executeScript("arguments[0].scrollIntoView(true);", driver.findElement(absenPointMenu));
 
         // Klik menu Absen Point
         driver.findElement(absenPointMenu).click();
+    }
+
+    public void clickJabatanMenu() {
+
+        ((JavascriptExecutor) driver)
+        .executeScript("arguments[0].scrollIntoView(true);", driver.findElement(jabatanMenu));
+        driver.findElement(jabatanMenu).click(); 
+    }
+
+    public void clickAturanCutiMenu(){
+        ((JavascriptExecutor) driver)
+        .executeScript("arguments[0].scrollIntoView(true);", driver.findElement(aturanCutiMenu));
+        driver.findElement(aturanCutiMenu).click(); 
+    }
+
+    public void clickDayOffMenu(){
+        ((JavascriptExecutor) driver)
+        .executeScript("arguments[0].scrollIntoView(true);", driver.findElement(dayOffMenu));
+        driver.findElement(dayOffMenu).click(); 
     }
 
     public String getCurrentURL(){
