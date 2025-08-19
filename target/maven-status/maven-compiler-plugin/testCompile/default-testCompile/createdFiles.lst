@@ -1,2 +1,5 @@
-com\dikahadir\BaseTest.class
-com\dikahadir\ManagementTest.class
+com\dikahadir\definitions\jabatan\FilterLevelJabatanTest.class
+com\dikahadir\definitions\jabatan\ResetFilterLevelJabatanTest.class
+com\dikahadir\runners\RunnerJabatanTest.class
+com\dikahadir\definitions\jabatan\TambahJabatanTest.class
+com\dikahadir\Hooks.class
