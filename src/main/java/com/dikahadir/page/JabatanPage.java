@@ -1,6 +1,6 @@
 package com.dikahadir.page;
 
-import org.openqa.selenium.By;
+import com.dikahadir.repository.JabatanRepository;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -10,98 +10,93 @@ import java.time.Duration;
 import java.util.List;
 
 public class JabatanPage {
-    private WebDriver driver;
-    private ManagementPage managementPage;
-    private By buttonTambahkanJabatan = By.xpath("//button[normalize-space()='Tambahkan']");
-    private By buttonFilterJabatan = By.xpath("//button[normalize-space()='Search']");
-    private By resetFilter = By.xpath("(//button[normalize-space()='Reset'])[1]");
-    
-    private By inputFilterText = By.xpath("//input[@id='search']");
-    private By inputNamaJabatan= By.xpath("//input[@id='name']");
-    private By inputLevelJabatan = By.xpath("//input[@id='level']");
-    private By buttonTambah = By.xpath("//button[normalize-space()='Tambah']");
-    private By message = By.xpath("(//div[@class='MuiSnackbarContent-message css-1w0ym84'])[1]");
-    private By tampilSearchLevel= By.xpath("//table/tbody/tr/td[2]");
-    private By tableRows = By.xpath("//table/tbody/tr");
 
+    private final WebDriver driver;
+    private final WebDriverWait wait;
+    private final ManagementPage managementPage;
 
-    public JabatanPage (WebDriver driver){
-        this.driver =driver;
+    // Konstruktor
+    public JabatanPage(WebDriver driver) {
+        this.driver = driver;
+        this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        this.managementPage = new ManagementPage(driver);
     }
 
-    public void clickFilterJabatan(){
-        driver.findElement(buttonFilterJabatan).click();
+    // Metode Aksi
+    public void clickFilterJabatan() {
+        wait.until(ExpectedConditions.elementToBeClickable(JabatanRepository.buttonFilterJabatan)).click();
     }
 
-    public void inputFilterText(String value){
-        driver.findElement(inputFilterText).sendKeys(value);
-    }
-    public void clickResetFilter(){
-        driver.findElement(resetFilter).click();
-    }
-    public void clickButtonTambahkanJabatan(){
-        driver.findElement(buttonTambahkanJabatan).click();
+    public void inputFilterText(String value) {
+        WebElement filterInput = wait.until(ExpectedConditions.visibilityOfElementLocated(JabatanRepository.inputFilterText));
+        filterInput.clear();
+        filterInput.sendKeys(value);
     }
 
-    public void setNamaJabatan(String value){
-        driver.findElement(inputNamaJabatan).sendKeys(value);
-    }
-    
-    public void setLevelJabatan(String value){
-        driver.findElement(inputLevelJabatan).sendKeys(value);
+    public void clickResetFilter() {
+        wait.until(ExpectedConditions.elementToBeClickable(JabatanRepository.resetFilter)).click();
     }
 
-    public void clickButtonTambah (){
-        driver.findElement(buttonTambah).click();
+    public void clickButtonTambahkanJabatan() {
+        wait.until(ExpectedConditions.elementToBeClickable(JabatanRepository.buttonTambahkanJabatan)).click();
     }
 
-    
-    public void stepTambahjabatan(String namaJabatan, String levelJabatan){
+    public void setNamaJabatan(String value) {
+        wait.until(ExpectedConditions.visibilityOfElementLocated(JabatanRepository.inputNamaJabatan)).sendKeys(value);
+    }
+
+    public void setLevelJabatan(String value) {
+        wait.until(ExpectedConditions.visibilityOfElementLocated(JabatanRepository.inputLevelJabatan)).sendKeys(value);
+    }
+
+    public void clickButtonTambah() {
+        wait.until(ExpectedConditions.elementToBeClickable(JabatanRepository.buttonTambah)).click();
+    }
+
+    // Metode Komposit (menggabungkan beberapa langkah)
+    public void stepTambahJabatan(String namaJabatan, String levelJabatan) {
         clickButtonTambahkanJabatan();
         setNamaJabatan(namaJabatan);
         setLevelJabatan(levelJabatan);
         clickButtonTambah();
     }
-    
-    
-    public String getMessageText(){
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        wait.until(ExpectedConditions.visibilityOfElementLocated(message));
-        wait.until(ExpectedConditions.not(ExpectedConditions.textToBe(message, "")));
-        return driver.findElement(message).getText();   
+
+    // Metode Verifikasi (assertion di level Page Object)
+    public String getMessageText() {
+        WebElement messageElement = wait.until(ExpectedConditions.visibilityOfElementLocated(JabatanRepository.message));
+        wait.until(ExpectedConditions.not(ExpectedConditions.textToBe(JabatanRepository.message, "")));
+        return messageElement.getText();
     }
 
     public List<WebElement> searchLevelJabatan(String level) {
-    driver.findElement(inputFilterText).clear();
-    driver.findElement(inputFilterText).sendKeys(level);
-    driver.findElement(buttonFilterJabatan).click(); 
-
-    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-    wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(tampilSearchLevel));
-
-    return driver.findElements(tampilSearchLevel);
-}
-
-    public String getValidationNamaJabatan(){
-        return driver.findElement(inputNamaJabatan).getAttribute("validationMessage");
+        inputFilterText(level);
+        clickFilterJabatan();
+        wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(JabatanRepository.tampilSearchLevel));
+        return driver.findElements(JabatanRepository.tampilSearchLevel);
     }
 
-    public String getValidationLevelJabatan(){
-        return driver.findElement(inputLevelJabatan).getAttribute("validationMessage");
+    public String getValidationNamaJabatan() {
+        return driver.findElement(JabatanRepository.inputNamaJabatan).getAttribute("validationMessage");
+    }
+
+    public String getValidationLevelJabatan() {
+        return driver.findElement(JabatanRepository.inputLevelJabatan).getAttribute("validationMessage");
     }
 
     public int getRowsCount() {
-    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-    wait.until(ExpectedConditions.visibilityOfElementLocated(tableRows)); 
-    return driver.findElements(tableRows).size();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(JabatanRepository.tableRows));
+        return driver.findElements(JabatanRepository.tableRows).size();
+    }
+    
+    public List<WebElement> getFilteredJobLevels() {
+   WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+    // Tunggu sampai row tabel muncul
+    wait.until(driver -> driver.findElements(JabatanRepository.tampilSearchLevel).size() > 0);
+    return driver.findElements(JabatanRepository.tampilSearchLevel);
 }
-    public By getInputFilterText() {
-    return inputFilterText;
-}
-    public void navigateToJabatanPage(){
-        managementPage = new ManagementPage(driver);
+
+
+    public void navigateToJabatanPage() {
         managementPage.clickJabatanMenu();
+    }
 }
-
-}
-

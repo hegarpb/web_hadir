@@ -1,11 +1,8 @@
 package com.dikahadir.utils;
 
-import java.io.FileReader;
 import java.time.Duration;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.*;
 public class DriverManager {
     private WebDriver driver;

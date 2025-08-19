@@ -4,7 +4,7 @@
   <test name="Test Math">
     <classes>
       <!-- <class name="com.dikahadir.Jabatan.TambahJabatanTest"></class> -->
-      <class name="com.dikahadir.Jabatan.ResetFilterLevelJabatanTest"></class>
+      <class name="com.dikahadir.runners.RunnerJabatanTest"></class>
       <!-- <class name="com.dikahadir.Jabatan.SearchLevelJabatan"></class> -->
     </classes>
   </test>
