@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test Math</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>4/4/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>9/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Aug 19 13:34:45 WIB 2025</td>
+<td>Started on:</td><td>Tue Aug 19 21:23:17 WIB 2025</td>
 </tr>
-<tr><td>Total time:</td><td>121 seconds (121340 ms)</td>
+<tr><td>Total time:</td><td>178 seconds (178238 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,116 +67,6 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td><b>Attribute(s)</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='com.dikahadir.runners.RunnerJabatanTest.runScenario()'><b>runScenario</b><br>Test class: com.dikahadir.runners.RunnerJabatanTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Memfilter jabatan berdasarkan level", "Filter Level Jabatan"</td>
-<td><div><pre>java.lang.AssertionError: Level jabatan tidak cocok. Seharusnya: &apos;3&apos;, tapi ditemukan: &apos;13&apos;. expected [3] but found [13]
-	at com.dikahadir.definitions.jabatan.FilterLevelJabatanTest.semuaJabatanMemilikiLevel(FilterLevelJabatanTest.java:39)
-	at ✽.semua jabatan yang ditampilkan memiliki level &quot;3&quot;(file:///C:/Hegar/sqabatch23/TA/web_hadir/src/test/resources/features/jabatan/FilterJabatan.feature:6)
-... Removed 5 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2060569250", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace2060569250'><pre>java.lang.AssertionError: Level jabatan tidak cocok. Seharusnya: &apos;3&apos;, tapi ditemukan: &apos;13&apos;. expected [3] but found [13]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:656)
-	at com.dikahadir.definitions.jabatan.FilterLevelJabatanTest.semuaJabatanMemilikiLevel(FilterLevelJabatanTest.java:39)
-	at ✽.semua jabatan yang ditampilkan memiliki level &quot;3&quot;(file:///C:/Hegar/sqabatch23/TA/web_hadir/src/test/resources/features/jabatan/FilterJabatan.feature:6)
-</pre></div></td>
-<td>12</td>
-<td>com.dikahadir.runners.RunnerJabatanTest@4218d6a3</td></tr>
-<tr>
-<td title='com.dikahadir.runners.RunnerJabatanTest.runScenario()'><b>runScenario</b><br>Test class: com.dikahadir.runners.RunnerJabatanTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Tambah jabatan baru dengan data valid", "Tambah Jabatan"</td>
-<td><div><pre>java.lang.AssertionError: Pesan sukses tidak sesuai! expected [Berhasil Menambahkan Job Level] but found [Gagal Menambahkan Job Level]
-	at com.dikahadir.definitions.jabatan.TambahJabatanTest.pesanSukses(TambahJabatanTest.java:40)
-	at ✽.sistem menampilkan pesan sukses &quot;Berhasil Menambahkan Job Level&quot;(file:///C:/Hegar/sqabatch23/TA/web_hadir/src/test/resources/features/jabatan/TambahJabatan.feature:8)
-... Removed 5 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace475526834", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace475526834'><pre>java.lang.AssertionError: Pesan sukses tidak sesuai! expected [Berhasil Menambahkan Job Level] but found [Gagal Menambahkan Job Level]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:656)
-	at com.dikahadir.definitions.jabatan.TambahJabatanTest.pesanSukses(TambahJabatanTest.java:40)
-	at ✽.sistem menampilkan pesan sukses &quot;Berhasil Menambahkan Job Level&quot;(file:///C:/Hegar/sqabatch23/TA/web_hadir/src/test/resources/features/jabatan/TambahJabatan.feature:8)
-</pre></div></td>
-<td>16</td>
-<td>com.dikahadir.runners.RunnerJabatanTest@4218d6a3</td></tr>
-<tr>
-<td title='com.dikahadir.runners.RunnerJabatanTest.runScenario()'><b>runScenario</b><br>Test class: com.dikahadir.runners.RunnerJabatanTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Reset filter setelah melakukan pencarian", "Reset Filter Level Jabatan"</td>
-<td><div><pre>java.lang.AssertionError: Jumlah baris setelah reset tidak kembali ke kondisi awal. expected [3] but found [10]
-	at com.dikahadir.definitions.jabatan.ResetFilterLevelJabatanTest.verifikasiJumlahKembaliNormal(ResetFilterLevelJabatanTest.java:55)
-	at ✽.jumlah jabatan yang ditampilkan kembali ke kondisi semula(file:///C:/Hegar/sqabatch23/TA/web_hadir/src/test/resources/features/jabatan/ResetFilterJabatan.feature:10)
-... Removed 6 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1300497562", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1300497562'><pre>java.lang.AssertionError: Jumlah baris setelah reset tidak kembali ke kondisi awal. expected [3] but found [10]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:1419)
-	at org.testng.Assert.assertEquals(Assert.java:1383)
-	at com.dikahadir.definitions.jabatan.ResetFilterLevelJabatanTest.verifikasiJumlahKembaliNormal(ResetFilterLevelJabatanTest.java:55)
-	at ✽.jumlah jabatan yang ditampilkan kembali ke kondisi semula(file:///C:/Hegar/sqabatch23/TA/web_hadir/src/test/resources/features/jabatan/ResetFilterJabatan.feature:10)
-</pre></div></td>
-<td>13</td>
-<td>com.dikahadir.runners.RunnerJabatanTest@4218d6a3</td></tr>
-<tr>
-<td title='com.dikahadir.runners.RunnerJabatanTest.runScenario()'><b>runScenario</b><br>Test class: com.dikahadir.runners.RunnerJabatanTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Memfilter jabatan berdasarkan level", "Filter Level Jabatan"</td>
-<td><div><pre>org.openqa.selenium.StaleElementReferenceException: The element with the reference bdf2e8da-8f24-44db-ad50-7bda9e372054 is stale; either its node document is not the active document, or it is no longer connected to the DOM
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
-Build info: version: &apos;4.34.0&apos;, revision: &apos;707dcb4246*&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.8&apos;
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Command: [467463e3-4cbb-4fd1-8583-481cfa00e2e8, getElementText {id=bdf2e8da-8f24-44db-ad50-7bda9e372054}]
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 141.0.3, moz:accessibilityChecks: false, moz:buildID: 20250806102122, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 58384, moz:profile: C:\Users\LENOVO\AppData\Loc..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
-Element: [[FirefoxDriver: firefox on windows (467463e3-4cbb-4fd1-8583-481cfa00e2e8)] -&gt; xpath: //table/tbody/tr/td[2]]
-Session ID: 467463e3-4cbb-4fd1-8583-481cfa00e2e8
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-	at org.openqa.selenium.remote.RemoteWebElement.getText(RemoteWebElement.java:191)
-	at com.dikahadir.definitions.jabatan.FilterLevelJabatanTest.semuaJabatanMemilikiLevel(FilterLevelJabatanTest.java:38)
-	at ✽.semua jabatan yang ditampilkan memiliki level &quot;1&quot;(file:///C:/Hegar/sqabatch23/TA/web_hadir/src/test/resources/features/jabatan/FilterJabatan.feature:6)
-... Removed 3 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace80903581", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace80903581'><pre>org.openqa.selenium.StaleElementReferenceException: The element with the reference bdf2e8da-8f24-44db-ad50-7bda9e372054 is stale; either its node document is not the active document, or it is no longer connected to the DOM
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
-Build info: version: &apos;4.34.0&apos;, revision: &apos;707dcb4246*&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.8&apos;
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Command: [467463e3-4cbb-4fd1-8583-481cfa00e2e8, getElementText {id=bdf2e8da-8f24-44db-ad50-7bda9e372054}]
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 141.0.3, moz:accessibilityChecks: false, moz:buildID: 20250806102122, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 58384, moz:profile: C:\Users\LENOVO\AppData\Loc..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
-Element: [[FirefoxDriver: firefox on windows (467463e3-4cbb-4fd1-8583-481cfa00e2e8)] -&gt; xpath: //table/tbody/tr/td[2]]
-Session ID: 467463e3-4cbb-4fd1-8583-481cfa00e2e8
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-	at org.openqa.selenium.remote.RemoteWebElement.getText(RemoteWebElement.java:191)
-	at com.dikahadir.definitions.jabatan.FilterLevelJabatanTest.semuaJabatanMemilikiLevel(FilterLevelJabatanTest.java:38)
-	at ✽.semua jabatan yang ditampilkan memiliki level &quot;1&quot;(file:///C:/Hegar/sqabatch23/TA/web_hadir/src/test/resources/features/jabatan/FilterJabatan.feature:6)
-</pre></div></td>
-<td>20</td>
-<td>com.dikahadir.runners.RunnerJabatanTest@4218d6a3</td></tr>
-</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -188,22 +78,47 @@ Session ID: 467463e3-4cbb-4fd1-8583-481cfa00e2e8
 <tr>
 <td title='com.dikahadir.runners.RunnerJabatanTest.runScenario()'><b>runScenario</b><br>Test class: com.dikahadir.runners.RunnerJabatanTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validasi field kosong saat menambahkan jabatan", "Tambah Jabatan"</td>
 <td></td>
-<td>9</td>
-<td>com.dikahadir.runners.RunnerJabatanTest@4218d6a3</td></tr>
-<tr>
-<td title='com.dikahadir.runners.RunnerJabatanTest.runScenario()'><b>runScenario</b><br>Test class: com.dikahadir.runners.RunnerJabatanTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validasi penambahan jabatan dengan nama yang sudah ada", "Tambah Jabatan"</td>
-<td></td>
 <td>17</td>
 <td>com.dikahadir.runners.RunnerJabatanTest@4218d6a3</td></tr>
 <tr>
-<td title='com.dikahadir.runners.RunnerJabatanTest.runScenario()'><b>runScenario</b><br>Test class: com.dikahadir.runners.RunnerJabatanTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validasi field kosong saat menambahkan jabatan", "Tambah Jabatan"</td>
+<td title='com.dikahadir.runners.RunnerJabatanTest.runScenario()'><b>runScenario</b><br>Test class: com.dikahadir.runners.RunnerJabatanTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Memfilter jabatan dengan level yang tidak ada", "Filter Level Jabatan"</td>
 <td></td>
-<td>13</td>
+<td>18</td>
+<td>com.dikahadir.runners.RunnerJabatanTest@4218d6a3</td></tr>
+<tr>
+<td title='com.dikahadir.runners.RunnerJabatanTest.runScenario()'><b>runScenario</b><br>Test class: com.dikahadir.runners.RunnerJabatanTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validasi penambahan jabatan dengan data invalid", "Tambah Jabatan"</td>
+<td></td>
+<td>24</td>
+<td>com.dikahadir.runners.RunnerJabatanTest@4218d6a3</td></tr>
+<tr>
+<td title='com.dikahadir.runners.RunnerJabatanTest.runScenario()'><b>runScenario</b><br>Test class: com.dikahadir.runners.RunnerJabatanTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Memfilter jabatan dengan input alfabet", "Filter Level Jabatan"</td>
+<td></td>
+<td>16</td>
 <td>com.dikahadir.runners.RunnerJabatanTest@4218d6a3</td></tr>
 <tr>
 <td title='com.dikahadir.runners.RunnerJabatanTest.runScenario()'><b>runScenario</b><br>Test class: com.dikahadir.runners.RunnerJabatanTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Memfilter jabatan berdasarkan level", "Filter Level Jabatan"</td>
 <td></td>
-<td>15</td>
+<td>21</td>
+<td>com.dikahadir.runners.RunnerJabatanTest@4218d6a3</td></tr>
+<tr>
+<td title='com.dikahadir.runners.RunnerJabatanTest.runScenario()'><b>runScenario</b><br>Test class: com.dikahadir.runners.RunnerJabatanTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Tambah jabatan baru dengan data valid", "Tambah Jabatan"</td>
+<td></td>
+<td>22</td>
+<td>com.dikahadir.runners.RunnerJabatanTest@4218d6a3</td></tr>
+<tr>
+<td title='com.dikahadir.runners.RunnerJabatanTest.runScenario()'><b>runScenario</b><br>Test class: com.dikahadir.runners.RunnerJabatanTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validasi penambahan jabatan dengan data invalid", "Tambah Jabatan"</td>
+<td></td>
+<td>19</td>
+<td>com.dikahadir.runners.RunnerJabatanTest@4218d6a3</td></tr>
+<tr>
+<td title='com.dikahadir.runners.RunnerJabatanTest.runScenario()'><b>runScenario</b><br>Test class: com.dikahadir.runners.RunnerJabatanTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validasi field kosong saat menambahkan jabatan", "Tambah Jabatan"</td>
+<td></td>
+<td>16</td>
+<td>com.dikahadir.runners.RunnerJabatanTest@4218d6a3</td></tr>
+<tr>
+<td title='com.dikahadir.runners.RunnerJabatanTest.runScenario()'><b>runScenario</b><br>Test class: com.dikahadir.runners.RunnerJabatanTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Reset filter setelah melakukan pencarian", "Reset Filter Level Jabatan"</td>
+<td></td>
+<td>18</td>
 <td>com.dikahadir.runners.RunnerJabatanTest@4218d6a3</td></tr>
 </table><p>
 </body>

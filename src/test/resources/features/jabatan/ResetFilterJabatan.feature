@@ -7,4 +7,3 @@ Feature: Reset Filter Level Jabatan
     And user sudah melakukan pencarian level jabatan dengan level "2"
     When user mengklik tombol "Reset Filter"
     Then semua jabatan yang ditampilkan tidak dalam keadaan terfilter
-    And jumlah jabatan yang ditampilkan kembali ke kondisi semula

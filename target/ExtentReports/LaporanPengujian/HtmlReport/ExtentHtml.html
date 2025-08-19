@@ -39,7 +39,6 @@
 		<!-- slideout menu -->
 		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
 			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
-			<li class='waves-effect'><a href='#!' view='exception-view' onclick="configureView(2)"><i class='material-icons'>bug_report</i></a></li>
 			<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></a></li>
 		</ul>
 		<!-- report name -->
@@ -49,7 +48,7 @@
 		<!-- nav-right -->
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<a href='#!'>
-			<span class='label blue darken-3 suite-start-time'>Aug 19, 2025 01:34:45 PM</span>
+			<span class='label blue darken-3 suite-start-time'>Aug 19, 2025 09:23:17 PM</span>
 			</a>
 		</ul>
 	</div>
@@ -64,7 +63,7 @@
 				<i class='material-icons'>warning</i> Status
 				</a>
 				<ul id='tests-toggle' class='dropdown-content'>
-										<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
+										<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
 					<li class='divider'></li>
 					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
 				</ul>
@@ -108,12 +107,12 @@
                     <canvas id='parent-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='$0%'>
-                    <span class='strong'>0</span> features passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='$100%'>
+                    <span class='strong'>3</span> features passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='100%'>
-                    3</span> features failed, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
+                    0</span> features failed, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
                     0</span> skipped
                 </div>
@@ -126,12 +125,12 @@
                     <canvas id='child-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='50%'>
-                    <span class='strong'>4</span> scenarios passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='100%'>
+                    <span class='strong'>9</span> scenarios passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='50%'>
-                    4</span> scenarios failed, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
+                    0</span> scenarios failed, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
                     0</span> skipped, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
@@ -146,12 +145,12 @@
                     <canvas id='grandchild-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='87%'>
-                    <span class='strong'>28</span> steps passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='100%'>
+                    <span class='strong'>30</span> steps passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='12%'>
-                    4</span> steps failed, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
+                    0</span> steps failed, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
                     0</span> skipped, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
@@ -174,11 +173,11 @@
 	<div class='subview-left left'>
 		<div class='view-summary'>
 			<ul id='test-collection' class='test-collection'>
-				<li class='test displayed active has-leaf fail' status='fail' bdd='true' test-id='1'>
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='1'>
 					<div class='test-heading'>
 						<span class='test-name'>Filter Level Jabatan</span>
-						<span class='test-time'>Aug 19, 2025 01:34:46 PM</span>
-						<span class='test-status right fail'>Fail</span>
+						<span class='test-time'>Aug 19, 2025 09:23:18 PM</span>
+						<span class='test-status right pass'>Pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class="sr-filters bdd-filters">
@@ -187,20 +186,22 @@
 	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
 	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
 </div>
+	<div class='test-desc'>          Sebagai pengguna saya 
+          ingin memfilter level jabatan agar dapat melihat daftar jabatan dengan level tertentu</div>
 
-<div class='scenario outline node' test-id='2' status='fail'>
+<div class='scenario outline node' test-id='2' status='pass'>
 
-	<span class='duration right label'>00 00 48.560</span>
+	<span class='duration right label'>00 00 21.555</span>
 	<div class="bdd-test">
-		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario Outline: Memfilter jabatan berdasarkan level</div>
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario Outline: Memfilter jabatan berdasarkan level</div>
 	</div>
 	
-		<div class='node-desc'><br><br><table class='markup-table table '><tr><td>level</td></tr><tr><td>1</td></tr><tr><td>2</td></tr><tr><td>3</td></tr></table></div>
+		<div class='node-desc'><br><br><table class='markup-table table '><tr><td>level</td></tr><tr><td>2</td></tr></table></div>
 	
 	
 	<ul class='steps'>
-		<li test-id='3' class='node scenario Fail' status='Fail'>
-			<div class="step-name" title="()"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>Memfilter jabatan berdasarkan level</div>
+		<li test-id='3' class='node scenario Pass' status='Pass'>
+			<div class="step-name" title="()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Memfilter jabatan berdasarkan level</div>
 
 
 			<ul class='gc steps'>
@@ -209,99 +210,76 @@
 
 				</li>
 				<li test-id='6' class='gc when Pass' status='Pass'>
-					<h6 class="step-name" title="com.dikahadir.definitions.jabatan.FilterLevelJabatanTest.userMencariJabatanDenganLevel(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When user mencari jabatan dengan level "1"</h6>
-
-				</li>
-				<li test-id='7' class='gc then Fail' status='Fail'>
-					<h6 class="step-name" title="com.dikahadir.definitions.jabatan.FilterLevelJabatanTest.semuaJabatanMemilikiLevel(java.lang.String)"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>Then semua jabatan yang ditampilkan memiliki level "1"</h6>
-
-							<textarea disabled class="code-block">org.openqa.selenium.StaleElementReferenceException: The element with the reference bdf2e8da-8f24-44db-ad50-7bda9e372054 is stale; either its node document is not the active document, or it is no longer connected to the DOM
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
-Build info: version: '4.34.0', revision: '707dcb4246*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.8'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Command: [467463e3-4cbb-4fd1-8583-481cfa00e2e8, getElementText {id=bdf2e8da-8f24-44db-ad50-7bda9e372054}]
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 141.0.3, moz:accessibilityChecks: false, moz:buildID: 20250806102122, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 58384, moz:profile: C:\Users\LENOVO\AppData\Loc..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
-Element: [[FirefoxDriver: firefox on windows (467463e3-4cbb-4fd1-8583-481cfa00e2e8)] -> xpath: //table/tbody/tr/td[2]]
-Session ID: 467463e3-4cbb-4fd1-8583-481cfa00e2e8
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-	at org.openqa.selenium.remote.RemoteWebElement.getText(RemoteWebElement.java:191)
-	at com.dikahadir.definitions.jabatan.FilterLevelJabatanTest.semuaJabatanMemilikiLevel(FilterLevelJabatanTest.java:38)
-	at ✽.semua jabatan yang ditampilkan memiliki level "1"(file:///C:/Hegar/sqabatch23/TA/web_hadir/src/test/resources/features/jabatan/FilterJabatan.feature:6)
-</textarea>
-				</li>
-				<li test-id='8' class='gc * Pass' status='Pass'>
-					<h6 class="step-name" title="AFTER"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>com.dikahadir.Hooks.tearDown(io.cucumber.java.Scenario)</h6>
-
-							<div class="node-step">Memfilter jabatan berdasarkan level</div>
-							<div class='screenshots'>
-								<img width='80' height='40' onerror='this.style.display="none"' data-featherlight='../Screenshots/embedded1.png' src='../Screenshots/embedded1.png'>
-							</div>
-				</li>
-			</ul>
-		</li>
-		<li test-id='9' class='node scenario Pass' status='Pass'>
-			<div class="step-name" title="()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Memfilter jabatan berdasarkan level</div>
-
-
-			<ul class='gc steps'>
-				<li test-id='11' class='gc given Pass' status='Pass'>
-					<h6 class="step-name" title="com.dikahadir.definitions.jabatan.FilterLevelJabatanTest.navigasiKeHalamanJabatan()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given user berada pada halaman Manajemen Jabatan</h6>
-
-				</li>
-				<li test-id='12' class='gc when Pass' status='Pass'>
 					<h6 class="step-name" title="com.dikahadir.definitions.jabatan.FilterLevelJabatanTest.userMencariJabatanDenganLevel(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When user mencari jabatan dengan level "2"</h6>
 
 				</li>
-				<li test-id='13' class='gc then Pass' status='Pass'>
+				<li test-id='7' class='gc then Pass' status='Pass'>
 					<h6 class="step-name" title="com.dikahadir.definitions.jabatan.FilterLevelJabatanTest.semuaJabatanMemilikiLevel(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then semua jabatan yang ditampilkan memiliki level "2"</h6>
 
 				</li>
 			</ul>
 		</li>
-		<li test-id='15' class='node scenario Fail' status='Fail'>
-			<div class="step-name" title="()"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>Memfilter jabatan berdasarkan level</div>
+	</ul>
+</div>
+<div class='scenario outline node' test-id='9' status='pass'>
+
+	<span class='duration right label'>00 00 18.119</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario Outline: Memfilter jabatan dengan level yang tidak ada</div>
+	</div>
+	
+		<div class='node-desc'><br><br><table class='markup-table table '><tr><td>level</td></tr><tr><td>10000</td></tr></table></div>
+	
+	
+	<ul class='steps'>
+		<li test-id='10' class='node scenario Pass' status='Pass'>
+			<div class="step-name" title="()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Memfilter jabatan dengan level yang tidak ada</div>
 
 
 			<ul class='gc steps'>
-				<li test-id='17' class='gc given Pass' status='Pass'>
+				<li test-id='12' class='gc given Pass' status='Pass'>
 					<h6 class="step-name" title="com.dikahadir.definitions.jabatan.FilterLevelJabatanTest.navigasiKeHalamanJabatan()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given user berada pada halaman Manajemen Jabatan</h6>
 
 				</li>
-				<li test-id='18' class='gc when Pass' status='Pass'>
-					<h6 class="step-name" title="com.dikahadir.definitions.jabatan.FilterLevelJabatanTest.userMencariJabatanDenganLevel(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When user mencari jabatan dengan level "3"</h6>
+				<li test-id='13' class='gc when Pass' status='Pass'>
+					<h6 class="step-name" title="com.dikahadir.definitions.jabatan.FilterLevelJabatanTest.userMencariJabatanDenganLevelTidakAda(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When user mencari jabatan dengan level yang tidak ada "10000"</h6>
 
 				</li>
-				<li test-id='19' class='gc then Fail' status='Fail'>
-					<h6 class="step-name" title="com.dikahadir.definitions.jabatan.FilterLevelJabatanTest.semuaJabatanMemilikiLevel(java.lang.String)"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>Then semua jabatan yang ditampilkan memiliki level "3"</h6>
+				<li test-id='14' class='gc then Pass' status='Pass'>
+					<h6 class="step-name" title="com.dikahadir.definitions.jabatan.FilterLevelJabatanTest.tidakAdaJabatanYangDitampilkan()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then tidak ada jabatan yang ditampilkan</h6>
 
-							<textarea disabled class="code-block">java.lang.AssertionError: Level jabatan tidak cocok. Seharusnya: '3', tapi ditemukan: '13'. expected [3] but found [13]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:656)
-	at com.dikahadir.definitions.jabatan.FilterLevelJabatanTest.semuaJabatanMemilikiLevel(FilterLevelJabatanTest.java:39)
-	at ✽.semua jabatan yang ditampilkan memiliki level "3"(file:///C:/Hegar/sqabatch23/TA/web_hadir/src/test/resources/features/jabatan/FilterJabatan.feature:6)
-</textarea>
 				</li>
-				<li test-id='20' class='gc * Pass' status='Pass'>
-					<h6 class="step-name" title="AFTER"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>com.dikahadir.Hooks.tearDown(io.cucumber.java.Scenario)</h6>
+			</ul>
+		</li>
+	</ul>
+</div>
+<div class='scenario outline node' test-id='16' status='pass'>
 
-							<div class="node-step">Memfilter jabatan berdasarkan level</div>
-							<div class='screenshots'>
-								<img width='80' height='40' onerror='this.style.display="none"' data-featherlight='../Screenshots/embedded2.png' src='../Screenshots/embedded2.png'>
-							</div>
+	<span class='duration right label'>00 00 16.558</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario Outline: Memfilter jabatan dengan input alfabet</div>
+	</div>
+	
+		<div class='node-desc'><br><br><table class='markup-table table '><tr><td>level</td></tr><tr><td>abc</td></tr></table></div>
+	
+	
+	<ul class='steps'>
+		<li test-id='17' class='node scenario Pass' status='Pass'>
+			<div class="step-name" title="()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Memfilter jabatan dengan input alfabet</div>
+
+
+			<ul class='gc steps'>
+				<li test-id='19' class='gc given Pass' status='Pass'>
+					<h6 class="step-name" title="com.dikahadir.definitions.jabatan.FilterLevelJabatanTest.navigasiKeHalamanJabatan()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given user berada pada halaman Manajemen Jabatan</h6>
+
+				</li>
+				<li test-id='20' class='gc when Pass' status='Pass'>
+					<h6 class="step-name" title="com.dikahadir.definitions.jabatan.FilterLevelJabatanTest.userMencariJabatanDenganLevelAlfabet(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When user mencari jabatan dengan level yang mengandung alfabet "abc"</h6>
+
+				</li>
+				<li test-id='21' class='gc then Pass' status='Pass'>
+					<h6 class="step-name" title="com.dikahadir.definitions.jabatan.FilterLevelJabatanTest.tidakAdaJabatanYangDitampilkan()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then tidak ada jabatan yang ditampilkan</h6>
+
 				</li>
 			</ul>
 		</li>
@@ -309,11 +287,11 @@ Session ID: 467463e3-4cbb-4fd1-8583-481cfa00e2e8
 </div>
 					</div>
 				</li>
-				<li class='test displayed active has-leaf fail' status='fail' bdd='true' test-id='21'>
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='23'>
 					<div class='test-heading'>
 						<span class='test-name'>Reset Filter Level Jabatan</span>
-						<span class='test-time'>Aug 19, 2025 01:35:34 PM</span>
-						<span class='test-status right fail'>Fail</span>
+						<span class='test-time'>Aug 19, 2025 09:24:14 PM</span>
+						<span class='test-status right pass'>Pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class="sr-filters bdd-filters">
@@ -325,69 +303,45 @@ Session ID: 467463e3-4cbb-4fd1-8583-481cfa00e2e8
 	<div class='test-desc'>  Sebagai pengguna, saya ingin dapat mereset filter level jabatan
   untuk melihat kembali semua daftar jabatan tanpa filter.</div>
 
-<div class='scenario node' test-id='22' status='fail'>
+<div class='scenario node' test-id='24' status='pass'>
 
-	<span class='duration right label'>00 00 13.359</span>
+	<span class='duration right label'>00 00 18.956</span>
 	<div class="bdd-test">
-		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario: Reset filter setelah melakukan pencarian</div>
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Reset filter setelah melakukan pencarian</div>
 	</div>
 	
 	
 	
 	<ul class='steps'>
-		<li test-id='24' class='node given Pass' status='Pass'>
+		<li test-id='26' class='node given Pass' status='Pass'>
 			<div class="step-name" title="(com.dikahadir.definitions.jabatan.ResetFilterLevelJabatanTest.navigasiKeHalamanJabatan())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given user diarahkan ke halaman Manajemen Jabatan</div>
 
 
 		</li>
-		<li test-id='25' class='node and Pass' status='Pass'>
+		<li test-id='27' class='node and Pass' status='Pass'>
 			<div class="step-name" title="(com.dikahadir.definitions.jabatan.ResetFilterLevelJabatanTest.lakukanPencarian(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And user sudah melakukan pencarian level jabatan dengan level "2"</div>
 
 
 		</li>
-		<li test-id='26' class='node when Pass' status='Pass'>
+		<li test-id='28' class='node when Pass' status='Pass'>
 			<div class="step-name" title="(com.dikahadir.definitions.jabatan.ResetFilterLevelJabatanTest.klikTombol(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When user mengklik tombol "Reset Filter"</div>
 
 
 		</li>
-		<li test-id='27' class='node then Pass' status='Pass'>
+		<li test-id='29' class='node then Pass' status='Pass'>
 			<div class="step-name" title="(com.dikahadir.definitions.jabatan.ResetFilterLevelJabatanTest.verifikasiTidakTerfilter())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then semua jabatan yang ditampilkan tidak dalam keadaan terfilter</div>
 
 
-		</li>
-		<li test-id='28' class='node and Fail' status='Fail'>
-			<div class="step-name" title="(com.dikahadir.definitions.jabatan.ResetFilterLevelJabatanTest.verifikasiJumlahKembaliNormal())"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>And jumlah jabatan yang ditampilkan kembali ke kondisi semula</div>
-
-
-					<textarea disabled class="code-block">java.lang.AssertionError: Jumlah baris setelah reset tidak kembali ke kondisi awal. expected [3] but found [10]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:1419)
-	at org.testng.Assert.assertEquals(Assert.java:1383)
-	at com.dikahadir.definitions.jabatan.ResetFilterLevelJabatanTest.verifikasiJumlahKembaliNormal(ResetFilterLevelJabatanTest.java:55)
-	at ✽.jumlah jabatan yang ditampilkan kembali ke kondisi semula(file:///C:/Hegar/sqabatch23/TA/web_hadir/src/test/resources/features/jabatan/ResetFilterJabatan.feature:10)
-</textarea>
-		</li>
-		<li test-id='29' class='node * Pass' status='Pass'>
-			<div class="step-name" title="(AFTER)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>com.dikahadir.Hooks.tearDown(io.cucumber.java.Scenario)</div>
-
-
-					<div class="node-step">Reset filter setelah melakukan pencarian</div>
-					<div class='screenshots'>
-						<img width='80' height='40' onerror='this.style.display="none"' data-featherlight='../Screenshots/embedded3.png' src='../Screenshots/embedded3.png'>
-					</div>
 		</li>
 	</ul>
 </div>
 					</div>
 				</li>
-				<li class='test displayed active has-leaf fail' status='fail' bdd='true' test-id='30'>
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='31'>
 					<div class='test-heading'>
 						<span class='test-name'>Tambah Jabatan</span>
-						<span class='test-time'>Aug 19, 2025 01:35:48 PM</span>
-						<span class='test-status right fail'>Fail</span>
+						<span class='test-time'>Aug 19, 2025 09:24:33 PM</span>
+						<span class='test-status right pass'>Pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class="sr-filters bdd-filters">
@@ -396,103 +350,74 @@ Session ID: 467463e3-4cbb-4fd1-8583-481cfa00e2e8
 	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
 	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
 </div>
-	<div class='test-desc'>  Sebagai pengguna, saya ingin dapat menambahkan jabatan baru
-  dengan berbagai skenario, termasuk validasi.</div>
+	<div class='test-desc'>  Sebagai pengguna
+  Saya ingin dapat menambahkan jabatan baru
+  Sehingga sistem dapat menyimpan atau memvalidasi input dengan benar</div>
 
-<div class='scenario outline node' test-id='31' status='fail'>
+<div class='scenario outline node' test-id='32' status='pass'>
 
-	<span class='duration right label'>00 00 16.645</span>
+	<span class='duration right label'>00 00 22.383</span>
 	<div class="bdd-test">
-		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario Outline: Tambah jabatan baru dengan data valid</div>
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario Outline: Tambah jabatan baru dengan data valid</div>
 	</div>
 	
-		<div class='node-desc'><br><br><table class='markup-table table '><tr><td>nama</td><td>level</td><td>message</td></tr><tr><td>Supervisor6</td><td>2</td><td>Berhasil Menambahkan Job Level</td></tr></table></div>
+		<div class='node-desc'><br><br><table class='markup-table table '><tr><td>nama</td><td>level</td><td>message</td></tr><tr><td>Karyawan14</td><td>1</td><td>Berhasil Menambahkan Job Level</td></tr></table></div>
 	
 	
 	<ul class='steps'>
-		<li test-id='32' class='node scenario Fail' status='Fail'>
-			<div class="step-name" title="()"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>Tambah jabatan baru dengan data valid</div>
+		<li test-id='33' class='node scenario Pass' status='Pass'>
+			<div class="step-name" title="()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Tambah jabatan baru dengan data valid</div>
 
 
 			<ul class='gc steps'>
-				<li test-id='34' class='gc given Pass' status='Pass'>
+				<li test-id='35' class='gc given Pass' status='Pass'>
 					<h6 class="step-name" title="com.dikahadir.definitions.jabatan.TambahJabatanTest.navigasiKeHalamanJabatan()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given user berada di halaman Manajemen Jabatan</h6>
 
 				</li>
-				<li test-id='35' class='gc when Pass' status='Pass'>
-					<h6 class="step-name" title="com.dikahadir.definitions.jabatan.TambahJabatanTest.tambahJabatan(java.lang.String,java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When user menambahkan jabatan dengan nama "Supervisor6" dan level "2"</h6>
+				<li test-id='36' class='gc when Pass' status='Pass'>
+					<h6 class="step-name" title="com.dikahadir.definitions.jabatan.TambahJabatanTest.tambahJabatan(java.lang.String,java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When user menambahkan jabatan dengan nama "Karyawan14" dan level "1"</h6>
 
 				</li>
-				<li test-id='36' class='gc then Fail' status='Fail'>
-					<h6 class="step-name" title="com.dikahadir.definitions.jabatan.TambahJabatanTest.pesanSukses(java.lang.String)"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>Then sistem menampilkan pesan sukses "Berhasil Menambahkan Job Level"</h6>
+				<li test-id='37' class='gc then Pass' status='Pass'>
+					<h6 class="step-name" title="com.dikahadir.definitions.jabatan.TambahJabatanTest.pesanSukses(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then sistem menampilkan pesan sukses "Berhasil Menambahkan Job Level"</h6>
 
-							<textarea disabled class="code-block">java.lang.AssertionError: Pesan sukses tidak sesuai! expected [Berhasil Menambahkan Job Level] but found [Gagal Menambahkan Job Level]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:656)
-	at com.dikahadir.definitions.jabatan.TambahJabatanTest.pesanSukses(TambahJabatanTest.java:40)
-	at ✽.sistem menampilkan pesan sukses "Berhasil Menambahkan Job Level"(file:///C:/Hegar/sqabatch23/TA/web_hadir/src/test/resources/features/jabatan/TambahJabatan.feature:8)
-</textarea>
-				</li>
-				<li test-id='37' class='gc * Pass' status='Pass'>
-					<h6 class="step-name" title="AFTER"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>com.dikahadir.Hooks.tearDown(io.cucumber.java.Scenario)</h6>
-
-							<div class="node-step">Tambah jabatan baru dengan data valid</div>
-							<div class='screenshots'>
-								<img width='80' height='40' onerror='this.style.display="none"' data-featherlight='../Screenshots/embedded4.png' src='../Screenshots/embedded4.png'>
-							</div>
 				</li>
 			</ul>
 		</li>
 	</ul>
 </div>
-<div class='scenario outline node' test-id='38' status='pass'>
+<div class='scenario outline node' test-id='39' status='pass'>
 
-	<span class='duration right label'>00 00 17.271</span>
+	<span class='duration right label'>00 00 44.301</span>
 	<div class="bdd-test">
-		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario Outline: Validasi penambahan jabatan dengan nama yang sudah ada</div>
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario Outline: Validasi penambahan jabatan dengan data invalid</div>
 	</div>
 	
-		<div class='node-desc'><br><br><table class='markup-table table '><tr><td>nama</td><td>level</td><td>message</td></tr><tr><td>Supervisor6</td><td>2</td><td>Gagal Menambahkan Job Level</td></tr></table></div>
+		<div class='node-desc'><br><br><table class='markup-table table '><tr><td>nama</td><td>level</td><td>message</td></tr><tr><td>Karyawan14</td><td>1</td><td>Gagal Menambahkan Job Level</td></tr><tr><td>SPVVVv</td><td>abc</td><td>Gagal Menambahkan Job Level</td></tr></table></div>
 	
 	
 	<ul class='steps'>
-		<li test-id='39' class='node scenario Pass' status='Pass'>
-			<div class="step-name" title="()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Validasi penambahan jabatan dengan nama yang sudah ada</div>
+		<li test-id='40' class='node scenario Pass' status='Pass'>
+			<div class="step-name" title="()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Validasi penambahan jabatan dengan data invalid</div>
 
 
 			<ul class='gc steps'>
-				<li test-id='41' class='gc given Pass' status='Pass'>
+				<li test-id='42' class='gc given Pass' status='Pass'>
 					<h6 class="step-name" title="com.dikahadir.definitions.jabatan.TambahJabatanTest.navigasiKeHalamanJabatan()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given user berada di halaman Manajemen Jabatan</h6>
 
 				</li>
-				<li test-id='42' class='gc when Pass' status='Pass'>
-					<h6 class="step-name" title="com.dikahadir.definitions.jabatan.TambahJabatanTest.tambahJabatan(java.lang.String,java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When user menambahkan jabatan dengan nama "Supervisor6" dan level "2"</h6>
+				<li test-id='43' class='gc when Pass' status='Pass'>
+					<h6 class="step-name" title="com.dikahadir.definitions.jabatan.TambahJabatanTest.tambahJabatan(java.lang.String,java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When user menambahkan jabatan dengan nama "Karyawan14" dan level "1"</h6>
 
 				</li>
-				<li test-id='43' class='gc then Pass' status='Pass'>
+				<li test-id='44' class='gc then Pass' status='Pass'>
 					<h6 class="step-name" title="com.dikahadir.definitions.jabatan.TambahJabatanTest.pesanError(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then sistem menampilkan pesan error "Gagal Menambahkan Job Level"</h6>
 
 				</li>
 			</ul>
 		</li>
-	</ul>
-</div>
-<div class='scenario outline node' test-id='45' status='pass'>
-
-	<span class='duration right label'>00 00 23.494</span>
-	<div class="bdd-test">
-		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario Outline: Validasi field kosong saat menambahkan jabatan</div>
-	</div>
-	
-		<div class='node-desc'><br><br><table class='markup-table table '><tr><td>nama</td><td>level</td><td>message_nama</td><td>message_level</td></tr><tr><td></td><td>2</td><td>Isi isian ini.</td><td></td></tr><tr><td>Manager</td><td></td><td></td><td>Isi isian ini.</td></tr></table></div>
-	
-	
-	<ul class='steps'>
 		<li test-id='46' class='node scenario Pass' status='Pass'>
-			<div class="step-name" title="()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Validasi field kosong saat menambahkan jabatan</div>
+			<div class="step-name" title="()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Validasi penambahan jabatan dengan data invalid</div>
 
 
 			<ul class='gc steps'>
@@ -501,19 +426,28 @@ Session ID: 467463e3-4cbb-4fd1-8583-481cfa00e2e8
 
 				</li>
 				<li test-id='49' class='gc when Pass' status='Pass'>
-					<h6 class="step-name" title="com.dikahadir.definitions.jabatan.TambahJabatanTest.tambahJabatan(java.lang.String,java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When user menambahkan jabatan dengan nama "" dan level "2"</h6>
+					<h6 class="step-name" title="com.dikahadir.definitions.jabatan.TambahJabatanTest.tambahJabatan(java.lang.String,java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When user menambahkan jabatan dengan nama "SPVVVv" dan level "abc"</h6>
 
 				</li>
 				<li test-id='50' class='gc then Pass' status='Pass'>
-					<h6 class="step-name" title="com.dikahadir.definitions.jabatan.TambahJabatanTest.validasiNamaJabatan(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then sistem menampilkan pesan validasi "Isi isian ini." pada field nama jabatan</h6>
-
-				</li>
-				<li test-id='51' class='gc and Pass' status='Pass'>
-					<h6 class="step-name" title="com.dikahadir.definitions.jabatan.TambahJabatanTest.validasiLevelJabatan(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And sistem menampilkan pesan validasi "" pada field level jabatan</h6>
+					<h6 class="step-name" title="com.dikahadir.definitions.jabatan.TambahJabatanTest.pesanError(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then sistem menampilkan pesan error "Gagal Menambahkan Job Level"</h6>
 
 				</li>
 			</ul>
 		</li>
+	</ul>
+</div>
+<div class='scenario outline node' test-id='52' status='pass'>
+
+	<span class='duration right label'>00 00 34.008</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario Outline: Validasi field kosong saat menambahkan jabatan</div>
+	</div>
+	
+		<div class='node-desc'><br><br><table class='markup-table table '><tr><td>nama</td><td>level</td><td>message_nama</td><td>message_level</td></tr><tr><td></td><td>2</td><td>Isi isian ini.</td><td></td></tr><tr><td>Manager</td><td></td><td></td><td>Isi isian ini.</td></tr></table></div>
+	
+	
+	<ul class='steps'>
 		<li test-id='53' class='node scenario Pass' status='Pass'>
 			<div class="step-name" title="()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Validasi field kosong saat menambahkan jabatan</div>
 
@@ -524,14 +458,37 @@ Session ID: 467463e3-4cbb-4fd1-8583-481cfa00e2e8
 
 				</li>
 				<li test-id='56' class='gc when Pass' status='Pass'>
-					<h6 class="step-name" title="com.dikahadir.definitions.jabatan.TambahJabatanTest.tambahJabatan(java.lang.String,java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When user menambahkan jabatan dengan nama "Manager" dan level ""</h6>
+					<h6 class="step-name" title="com.dikahadir.definitions.jabatan.TambahJabatanTest.tambahJabatan(java.lang.String,java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When user menambahkan jabatan dengan nama "" dan level "2"</h6>
 
 				</li>
 				<li test-id='57' class='gc then Pass' status='Pass'>
-					<h6 class="step-name" title="com.dikahadir.definitions.jabatan.TambahJabatanTest.validasiNamaJabatan(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then sistem menampilkan pesan validasi "" pada field nama jabatan</h6>
+					<h6 class="step-name" title="com.dikahadir.definitions.jabatan.TambahJabatanTest.validasiNamaJabatan(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then sistem menampilkan pesan validasi "Isi isian ini." pada field nama jabatan</h6>
 
 				</li>
 				<li test-id='58' class='gc and Pass' status='Pass'>
+					<h6 class="step-name" title="com.dikahadir.definitions.jabatan.TambahJabatanTest.validasiLevelJabatan(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And sistem menampilkan pesan validasi "" pada field level jabatan</h6>
+
+				</li>
+			</ul>
+		</li>
+		<li test-id='60' class='node scenario Pass' status='Pass'>
+			<div class="step-name" title="()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Validasi field kosong saat menambahkan jabatan</div>
+
+
+			<ul class='gc steps'>
+				<li test-id='62' class='gc given Pass' status='Pass'>
+					<h6 class="step-name" title="com.dikahadir.definitions.jabatan.TambahJabatanTest.navigasiKeHalamanJabatan()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given user berada di halaman Manajemen Jabatan</h6>
+
+				</li>
+				<li test-id='63' class='gc when Pass' status='Pass'>
+					<h6 class="step-name" title="com.dikahadir.definitions.jabatan.TambahJabatanTest.tambahJabatan(java.lang.String,java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When user menambahkan jabatan dengan nama "Manager" dan level ""</h6>
+
+				</li>
+				<li test-id='64' class='gc then Pass' status='Pass'>
+					<h6 class="step-name" title="com.dikahadir.definitions.jabatan.TambahJabatanTest.validasiNamaJabatan(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then sistem menampilkan pesan validasi "" pada field nama jabatan</h6>
+
+				</li>
+				<li test-id='65' class='gc and Pass' status='Pass'>
 					<h6 class="step-name" title="com.dikahadir.definitions.jabatan.TambahJabatanTest.validasiLevelJabatan(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And sistem menampilkan pesan validasi "Isi isian ini." pada field level jabatan</h6>
 
 				</li>
@@ -563,151 +520,7 @@ Session ID: 467463e3-4cbb-4fd1-8583-481cfa00e2e8
 	</div>
 	<!-- subview right -->
 </div>
-<!-- test view --><div id='exception-view' class='view hide'>
-	<section id='controls'>
-		<div class='controls grey lighten-4'>
-			<!-- search -->
-			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
-				<a href="#" class='search-div'>
-				<i class='material-icons'>search</i> Search
-				</a>
-				<div class='input-field left hide'>
-					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
-				</div>
-			</div>
-			<!-- search -->
-		</div>
-	</section>
-	<div class='subview-left left'>
-		<div class='view-summary'>
-			<ul id='exception-collection' class='exception-collection'>
-				<li class='exception displayed active'>
-					<div class='exception-heading'>
-						<span class='exception-name'>java.lang.AssertionError</span>
-						<span class='exception-count right'><span class='label red lighten-1 white-text'>3</span></span>
-					</div>
-					<div class='exception-content hide'>
-						<div class='exception-tests'>
-							<table class='bordered table-results'>
-								<thead>
-									<tr>
-										<th>Timestamp</th>
-										<th>TestName</th>
-										<th>StackTrace</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>Aug 19, 2025 01:35:33 PM</td>
-										<td class='linked' test-id='19'>Then semua jabatan yang ditampilkan memiliki level "3"</td>
-										<td>
-											<textarea disabled class="code-block">java.lang.AssertionError: Level jabatan tidak cocok. Seharusnya: '3', tapi ditemukan: '13'. expected [3] but found [13]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:656)
-	at com.dikahadir.definitions.jabatan.FilterLevelJabatanTest.semuaJabatanMemilikiLevel(FilterLevelJabatanTest.java:39)
-	at ✽.semua jabatan yang ditampilkan memiliki level "3"(file:///C:/Hegar/sqabatch23/TA/web_hadir/src/test/resources/features/jabatan/FilterJabatan.feature:6)
-</textarea>
-										</td>
-									</tr>
-									<tr>
-										<td>Aug 19, 2025 01:35:46 PM</td>
-										<td class='linked' test-id='28'>And jumlah jabatan yang ditampilkan kembali ke kondisi semula</td>
-										<td>
-											<textarea disabled class="code-block">java.lang.AssertionError: Level jabatan tidak cocok. Seharusnya: '3', tapi ditemukan: '13'. expected [3] but found [13]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:656)
-	at com.dikahadir.definitions.jabatan.FilterLevelJabatanTest.semuaJabatanMemilikiLevel(FilterLevelJabatanTest.java:39)
-	at ✽.semua jabatan yang ditampilkan memiliki level "3"(file:///C:/Hegar/sqabatch23/TA/web_hadir/src/test/resources/features/jabatan/FilterJabatan.feature:6)
-</textarea>
-										</td>
-									</tr>
-									<tr>
-										<td>Aug 19, 2025 01:36:03 PM</td>
-										<td class='linked' test-id='36'>Then sistem menampilkan pesan sukses "Berhasil Menambahkan Job Level"</td>
-										<td>
-											<textarea disabled class="code-block">java.lang.AssertionError: Level jabatan tidak cocok. Seharusnya: '3', tapi ditemukan: '13'. expected [3] but found [13]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:656)
-	at com.dikahadir.definitions.jabatan.FilterLevelJabatanTest.semuaJabatanMemilikiLevel(FilterLevelJabatanTest.java:39)
-	at ✽.semua jabatan yang ditampilkan memiliki level "3"(file:///C:/Hegar/sqabatch23/TA/web_hadir/src/test/resources/features/jabatan/FilterJabatan.feature:6)
-</textarea>
-										</td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</li>
-				<li class='exception displayed active'>
-					<div class='exception-heading'>
-						<span class='exception-name'>org.openqa.selenium.StaleElementReferenceException</span>
-						<span class='exception-count right'><span class='label red lighten-1 white-text'>1</span></span>
-					</div>
-					<div class='exception-content hide'>
-						<div class='exception-tests'>
-							<table class='bordered table-results'>
-								<thead>
-									<tr>
-										<th>Timestamp</th>
-										<th>TestName</th>
-										<th>StackTrace</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>Aug 19, 2025 01:35:04 PM</td>
-										<td class='linked' test-id='7'>Then semua jabatan yang ditampilkan memiliki level "1"</td>
-										<td>
-											<textarea disabled class="code-block">org.openqa.selenium.StaleElementReferenceException: The element with the reference bdf2e8da-8f24-44db-ad50-7bda9e372054 is stale; either its node document is not the active document, or it is no longer connected to the DOM
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
-Build info: version: '4.34.0', revision: '707dcb4246*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.8'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Command: [467463e3-4cbb-4fd1-8583-481cfa00e2e8, getElementText {id=bdf2e8da-8f24-44db-ad50-7bda9e372054}]
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 141.0.3, moz:accessibilityChecks: false, moz:buildID: 20250806102122, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 58384, moz:profile: C:\Users\LENOVO\AppData\Loc..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
-Element: [[FirefoxDriver: firefox on windows (467463e3-4cbb-4fd1-8583-481cfa00e2e8)] -> xpath: //table/tbody/tr/td[2]]
-Session ID: 467463e3-4cbb-4fd1-8583-481cfa00e2e8
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-	at org.openqa.selenium.remote.RemoteWebElement.getText(RemoteWebElement.java:191)
-	at com.dikahadir.definitions.jabatan.FilterLevelJabatanTest.semuaJabatanMemilikiLevel(FilterLevelJabatanTest.java:38)
-	at ✽.semua jabatan yang ditampilkan memiliki level "1"(file:///C:/Hegar/sqabatch23/TA/web_hadir/src/test/resources/features/jabatan/FilterJabatan.feature:6)
-</textarea>
-										</td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</li>
-			</ul>
-		</div>
-	</div>
-	<div class='subview-right left'>
-		<div class='view-summary'>
-			<h5 class='exception-name'></h5>
-		</div>
-	</div>
-</div>
-<!-- exception view --><div id='dashboard-view' class='view hide'>
+<!-- test view --><div id='dashboard-view' class='view hide'>
 	<div class='card-panel transparent np-v'>
 		<h5>Dashboard</h5>
 
@@ -721,31 +534,31 @@ Session ID: 467463e3-4cbb-4fd1-8583-481cfa00e2e8
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Scenarios
-					<div class='panel-lead'>8</div>
+					<div class='panel-lead'>9</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Steps
-					<div class='panel-lead'>32</div>
+					<div class='panel-lead'>30</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Aug 19, 2025 01:34:45 PM</div>
+					<div class='panel-lead'>Aug 19, 2025 09:23:17 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Aug 19, 2025 01:36:46 PM</div>
+			 		<div class='panel-lead'>Aug 19, 2025 09:26:15 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>00 02 00.807</div>
+					<div class='panel-lead'>00 02 57.537</div>
 				</div>
 			</div>
 			<div class='col s4'>
@@ -781,23 +594,23 @@ Session ID: 467463e3-4cbb-4fd1-8583-481cfa00e2e8
 		<script>
 			var statusGroup = {
                 parentCount: 3,
-				passParent: 0,
-				failParent: 3,
+				passParent: 3,
+				failParent: 0,
 				fatalParent: 0,
 				errorParent: 0,
 				warningParent: 0,
 				skipParent: 0,
-				childCount: 8,
-				passChild: 4,
-				failChild: 4,
+				childCount: 9,
+				passChild: 9,
+				failChild: 0,
 				fatalChild: 0,
 				errorChild: 0,
 				warningChild: 0,
 				skipChild: 0,
 				infoChild: 0,
-				grandChildCount: 32,
-				passGrandChild: 28,
-				failGrandChild: 4,
+				grandChildCount: 30,
+				passGrandChild: 30,
+				failGrandChild: 0,
 				fatalGrandChild: 0,
 				errorGrandChild: 0,
 				warningGrandChild: 0,
@@ -808,7 +621,7 @@ Session ID: 467463e3-4cbb-4fd1-8583-481cfa00e2e8
 		
 		<script>
 			var timeline = {
-			        "Filter Level Jabatan":48.562,"Reset Filter Level Jabatan":13.359,"Tambah Jabatan":57.42
+			        "Filter Level Jabatan":56.301,"Reset Filter Level Jabatan":18.956,"Tambah Jabatan":100.738
 			};
 		</script>
 		

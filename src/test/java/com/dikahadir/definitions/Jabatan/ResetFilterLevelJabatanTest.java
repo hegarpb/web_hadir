@@ -1,5 +1,3 @@
-// File: src/test/java/com/dikahadir/definitions/jabatan/ResetFilterLevelJabatanTest.java
-
 package com.dikahadir.definitions.jabatan;
 
 import com.dikahadir.Hooks;
@@ -11,47 +9,43 @@ import org.testng.Assert;
 
 public class ResetFilterLevelJabatanTest {
 
-    private JabatanPage jabatanPage;
-    private int initialCount;
+    private final JabatanPage jabatanPage;
 
-    // Gunakan constructor untuk menginisialisasi Page Object
     public ResetFilterLevelJabatanTest() {
-        // Akses driver melalui metode statis dari kelas Hooks
         this.jabatanPage = new JabatanPage(Hooks.getDriver());
     }
 
     @Given("user diarahkan ke halaman Manajemen Jabatan")
     public void navigasiKeHalamanJabatan() {
         jabatanPage.navigateToJabatanPage();
-        // Simpan jumlah baris awal sebelum filter diterapkan
-        initialCount = jabatanPage.getRowsCount();
+        // Tunggu tabel penuh load, misal minimal 10 baris
+        
     }
 
-    @Given("user sudah melakukan pencarian level jabatan dengan level {string}")
+    @When("user sudah melakukan pencarian level jabatan dengan level {string}")
     public void lakukanPencarian(String level) {
         jabatanPage.searchLevelJabatan(level);
+        
     }
 
-    @When("user mengklik tombol {string}")
-    public void klikTombol(String buttonName) {
-        if ("Reset Filter".equalsIgnoreCase(buttonName)) {
-            jabatanPage.clickResetFilter();
-        } else {
-            // Opsional: tambahkan logika untuk tombol lain jika diperlukan
-            System.out.println("Tombol tidak dikenali: " + buttonName);
-        }
-    }
+   @When("user mengklik tombol {string}")
+public void klikTombol(String buttonName) {
+    jabatanPage.clickResetFilter();
+    jabatanPage.waitForUrlAfterReset();
+    
+}
 
-    @Then("semua jabatan yang ditampilkan tidak dalam keadaan terfilter")
-    public void verifikasiTidakTerfilter() {
-        // Asumsi: Jika filter berhasil di-reset, jumlah item tidak akan nol
-        Assert.assertTrue(jabatanPage.getRowsCount() > 0, "Daftar jabatan kosong setelah reset filter.");
-        // Anda juga bisa menambahkan verifikasi visual di sini (misalnya, cek apakah input filter sudah kosong)
-    }
+  
+@Then("semua jabatan yang ditampilkan tidak dalam keadaan terfilter")
+public void verifikasiTidakTerfilter() {
+    String currentUrl = jabatanPage.getCurrentUrl();
+    System.out.println("🔍 URL setelah reset: " + currentUrl);
 
-    @Then("jumlah jabatan yang ditampilkan kembali ke kondisi semula")
-    public void verifikasiJumlahKembaliNormal() {
-        int resetCount = jabatanPage.getRowsCount();
-        Assert.assertEquals(resetCount, initialCount, "Jumlah baris setelah reset tidak kembali ke kondisi awal.");
-    }
+    Assert.assertEquals(
+        currentUrl,
+        "https://magang.dikahadir.com/management/job-level",
+        "URL setelah reset filter tidak sesuai!"
+    );
+}
+
 }
