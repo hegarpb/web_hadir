@@ -28,9 +28,9 @@ public class JabatanPage {
     }
 
     public void inputSearchText(String value) {
-        WebElement filterInput = wait.until(ExpectedConditions.visibilityOfElementLocated(JabatanRepository.inputSearchText));
-        filterInput.clear();
-        filterInput.sendKeys(value);
+        WebElement searchInput = wait.until(ExpectedConditions.visibilityOfElementLocated(JabatanRepository.inputSearchText));
+        searchInput.clear();
+        searchInput.sendKeys(value);
     }
 
     public void clickResetFilter() {
@@ -41,29 +41,38 @@ public class JabatanPage {
         wait.until(ExpectedConditions.elementToBeClickable(JabatanRepository.buttonTambahkanJabatan)).click();
     }
 
-    public void setNamaJabatan(String value) {
-        wait.until(ExpectedConditions.visibilityOfElementLocated(JabatanRepository.inputNamaJabatan)).sendKeys(value);
-    }
-
-    public void setLevelJabatan(String value) {
-        wait.until(ExpectedConditions.visibilityOfElementLocated(JabatanRepository.inputLevelJabatan)).sendKeys(value);
-    }
-
-    public void clickButtonTambah() {
-        wait.until(ExpectedConditions.elementToBeClickable(JabatanRepository.buttonTambah)).click();
-    }
+   public void SetNamaJabatan(String value) {
+    WebElement namaInput = wait.until(ExpectedConditions.visibilityOfElementLocated(JabatanRepository.inputNamaJabatan));
+    namaInput.clear();
+    namaInput.sendKeys(value);
+}
+public void SetLevelJabatan(String value) {
+    WebElement levelInput = wait.until(ExpectedConditions.visibilityOfElementLocated(JabatanRepository.inputLevelJabatan));
+    levelInput.clear();
+    levelInput.sendKeys(value);
+}
 
     
+    public void clickButtonTambahForm() {
+        wait.until(ExpectedConditions.elementToBeClickable(JabatanRepository.buttonTambah)).click();
+    }
+    public void clickButtonConfirmDelete(){
+         wait.until(ExpectedConditions.elementToBeClickable(JabatanRepository.buttonConfirmDelete)).click();
+    }
+    public void clickButtonCancelDelete(){
+        wait.until(ExpectedConditions.elementToBeClickable(JabatanRepository.buttonCancelDelete)).click();
+    }
+    
     public void stepTambahJabatan(String namaJabatan, String levelJabatan) {
-        clickButtonTambahkanJabatan();
-        setNamaJabatan(namaJabatan);
-        setLevelJabatan(levelJabatan);
-        clickButtonTambah();
+        
+        SetNamaJabatan(namaJabatan);
+        SetLevelJabatan(levelJabatan);
+        
     }
 
     
     public String getMessageText() {
-        WebElement messageElement = wait.until(ExpectedConditions.visibilityOfElementLocated(JabatanRepository.message));
+        WebElement messageElement = wait.until(ExpectedConditions.presenceOfElementLocated(JabatanRepository.message));
         wait.until(ExpectedConditions.not(ExpectedConditions.textToBe(JabatanRepository.message, "")));
         return messageElement.getText();
     }
@@ -82,17 +91,16 @@ public class JabatanPage {
         wait.until(ExpectedConditions.visibilityOfElementLocated(JabatanRepository.tableRows));
         return driver.findElements(JabatanRepository.tableRows).size();
     }
-    
-public void searchLevelJabatan(String level) {
-    inputSearchText(level);
-    clickSearchJabatan();
-    
-    wait.until(ExpectedConditions.urlContains("level"));
+
+    public boolean isDeleteFormClosed() {
+    return driver.findElements(JabatanRepository.formHapusJabatan).isEmpty();
 }
+
 
     public void navigateToJabatanPage() {
         managementPage.clickJabatanMenu();
     }
+    
     public String getCurrentUrl() {
     return driver.getCurrentUrl();
 }
@@ -102,12 +110,38 @@ public void waitForUrlToContain(String level) {
 public void waitForUrlAfterReset() {
     wait.until(ExpectedConditions.urlToBe("https://magang.dikahadir.com/management/job-level"));
 }
-public void waitForTableToBeEmpty() {
-    wait.until(ExpectedConditions.numberOfElementsToBe(JabatanRepository.tableRows, 0));
+
+
+
+public void clickActionButton() {
+    wait.until(ExpectedConditions.elementToBeClickable(
+        JabatanRepository.buttonAction
+    )).click();
 }
-
-
-
+ public void clickEditMenu() {
+        wait.until(ExpectedConditions.elementToBeClickable(
+            JabatanRepository.menuEdit
+        )).click();
+    }
+public void clickDeleteMenu() {
+        wait.until(ExpectedConditions.elementToBeClickable(
+            JabatanRepository.menuDelete
+        )).click();
+    }
+    public void editJabatan() {
+        clickActionButton();
+        clickEditMenu();
+    }
+     public void deleteJabatan() {
+        clickActionButton();
+        clickDeleteMenu();
+    }
+    public void clickButtonSimpanEdit() {
+    wait.until(ExpectedConditions.elementToBeClickable(
+        JabatanRepository.buttonSimpanEdit
+    )).click();
+}
+    
 
 
 }

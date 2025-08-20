@@ -2,21 +2,49 @@ Feature: Tambah Jabatan
   Sebagai pengguna
   Saya ingin dapat menambahkan jabatan baru
   Sehingga sistem dapat menyimpan atau memvalidasi input dengan benar
-  # Positive Test
+  # Positive Test Data Valid (Nama baru dan level baru)
 
-  Scenario Outline: Tambah jabatan baru dengan data valid
-    Given user berada di halaman Manajemen Jabatan
-    When user menambahkan jabatan dengan nama "<nama>" dan level "<level>"
+  Scenario Outline: Tambah jabatan baru dengan data nama baru dan level baru
+    Given user sudah login dan berada di halaman Manajemen Jabatan
+    When user menekan tombol tambahkan
+    When user menginput jabatan dengan nama "<nama>" dan level "<level>"
+    When user menekan tombol tambah di form tambah jabatan
     Then sistem menampilkan pesan sukses "<message>"
 
     Examples:
-      | nama       | level | message                        |
-      | Karyawan14 |     1 | Berhasil Menambahkan Job Level |
-  # Negative Test - Data Invalid (nama yang sudah ada,inputan level non numeric)
+      | nama     | level | message                        |
+      | SPVBaru5 |     1 | Berhasil Menambahkan Job Level |
+#Positive Test Data Valid 
 
-  Scenario Outline: Validasi penambahan jabatan dengan data invalid
-    Given user berada di halaman Manajemen Jabatan
-    When user menambahkan jabatan dengan nama "<nama>" dan level "<level>"
+  Scenario Outline: Tambah jabatan baru dengan data nama yang sudah ada tetapi level berbeda
+    Given user sudah login dan berada di halaman Manajemen Jabatan
+    When user menekan tombol tambahkan
+    When user menginput jabatan dengan nama "<nama>" dan level "<level>"
+    When user menekan tombol tambah di form tambah jabatan
+    Then sistem menampilkan pesan sukses "<message>"
+
+    Examples:
+      | nama     | level | message                        |
+      | SPVBaru5 |     8 | Berhasil Menambahkan Job Level |
+         # Positive Test Data Valid 
+
+  Scenario Outline: Tambah jabatan baru dengan data  Nama baru dan level yang sudah ada
+    Given user sudah login dan berada di halaman Manajemen Jabatan
+    When user menekan tombol tambahkan
+    When user menginput jabatan dengan nama "<nama>" dan level "<level>"
+    When user menekan tombol tambah di form tambah jabatan
+    Then sistem menampilkan pesan sukses "<message>"
+
+    Examples:
+      | nama         | level | message                        |
+      | Ass Manager2 |     1 | Berhasil Menambahkan Job Level |
+  # Negative Test - Data Invalid 
+
+  Scenario Outline: Validasi penambahan jabatan dengan data invalid (nama yang sama dan level yang sama,inputan level non numeric)
+    Given user sudah login dan berada di halaman Manajemen Jabatan
+    When user menekan tombol tambahkan
+    When user menginput jabatan dengan nama "<nama>" dan level "<level>"
+    When user menekan tombol tambah di form tambah jabatan
     Then sistem menampilkan pesan error "<message>"
 
     Examples:
@@ -26,8 +54,10 @@ Feature: Tambah Jabatan
   # Negative Test - Field Kosong
 
   Scenario Outline: Validasi field kosong saat menambahkan jabatan
-    Given user berada di halaman Manajemen Jabatan
-    When user menambahkan jabatan dengan nama "<nama>" dan level "<level>"
+    Given user sudah login dan berada di halaman Manajemen Jabatan
+    When user menekan tombol tambahkan
+    When user menginput jabatan dengan nama "<nama>" dan level "<level>"
+    When user menekan tombol tambah di form tambah jabatan
     Then sistem menampilkan pesan validasi "<message_nama>" pada field nama jabatan
     And sistem menampilkan pesan validasi "<message_level>" pada field level jabatan
 

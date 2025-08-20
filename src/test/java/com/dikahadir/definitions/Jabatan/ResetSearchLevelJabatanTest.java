@@ -7,28 +7,31 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.testng.Assert;
 
-public class ResetFilterLevelJabatanTest {
+public class ResetSearchLevelJabatanTest {
 
     private final JabatanPage jabatanPage;
 
-    public ResetFilterLevelJabatanTest() {
+    public ResetSearchLevelJabatanTest() {
         this.jabatanPage = new JabatanPage(Hooks.getDriver());
     }
 
-    @Given("user diarahkan ke halaman Manajemen Jabatan")
-    public void navigasiKeHalamanJabatan() {
+    @Given("user sudah login dan diarahkan ke halaman Manajemen Jabatan")
+    public void navigasiKeHalamanJabatanResetSearch() {
         jabatanPage.navigateToJabatanPage();
-        // Tunggu tabel penuh load, misal minimal 10 baris
         
     }
 
-    @When("user sudah melakukan pencarian level jabatan dengan level {string}")
-    public void lakukanPencarian(String level) {
-        jabatanPage.searchLevelJabatan(level);
-        
+    @When("user sudah menginput level jabatan dengan level {string}")
+    public void inputLevel(String level){
+        jabatanPage.inputSearchText(level);
     }
 
-   @When("user mengklik tombol {string}")
+    @When("user menekan tombol search {string}")
+    public void lakukanPencarian(String buttonName) {
+        jabatanPage.clickSearchJabatan();      
+    }
+
+   @When("user menekan tombol {string}")
 public void klikTombol(String buttonName) {
     jabatanPage.clickResetFilter();
     jabatanPage.waitForUrlAfterReset();

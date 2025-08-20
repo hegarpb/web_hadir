@@ -1,5 +1,7 @@
-com\dikahadir\definitions\jabatan\FilterLevelJabatanTest.class
-com\dikahadir\definitions\jabatan\ResetFilterLevelJabatanTest.class
+com\dikahadir\definitions\jabatan\ResetSearchLevelJabatanTest.class
+com\dikahadir\definitions\jabatan\HapusJabatan.class
+com\dikahadir\definitions\jabatan\EditJabatanTest.class
+com\dikahadir\Hooks.class
+com\dikahadir\definitions\jabatan\SearchLevelJabatanTest.class
 com\dikahadir\runners\RunnerJabatanTest.class
 com\dikahadir\definitions\jabatan\TambahJabatanTest.class
-com\dikahadir\Hooks.class

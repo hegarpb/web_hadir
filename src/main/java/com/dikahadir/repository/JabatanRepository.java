@@ -14,5 +14,13 @@ public class JabatanRepository {
     public static  By message = By.xpath("(//div[@class='MuiSnackbarContent-message css-1w0ym84'])[1]");
     public static  By tampilSearchLevel= By.xpath("//table/tbody/tr/td[2]");
     public static  By tableRows = By.xpath("//table/tbody/tr");
+    public static By menuEdit = By.xpath("//li[normalize-space()='Edit']");
+    public static By menuDelete = By.xpath("//li[normalize-space()='Delete']");
+    public static By buttonSimpanEdit= By.xpath("//button[normalize-space()='Simpan']");
+    public static By buttonConfirmDelete= By.xpath("//button[normalize-space()='Ya']");
+    public static By buttonCancelDelete= By.xpath("//button[normalize-space()='Tidak']");
+    public static By formHapusJabatan=By.xpath("//div[contains(@class,'modal')]//h2[normalize-space()='Hapus Jabatan']");
+  public static By buttonAction = By.xpath("(//table//tr[1]//*[name()='svg' and contains(@class,'feather-more-vertical')])");
+
 
 }

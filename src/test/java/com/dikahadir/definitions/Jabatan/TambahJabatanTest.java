@@ -18,8 +18,8 @@ public class TambahJabatanTest {
 
     private JabatanPage jabatanPage;
 
-    @Given("user berada di halaman Manajemen Jabatan")
-    public void navigasiKeHalamanJabatan(){
+    @Given("user sudah login dan berada di halaman Manajemen Jabatan")
+    public void navigasiKeHalamanJabatanTambah(){
         // Inisialisasi setelah Hooks.getDriver() siap
         this.jabatanPage = new JabatanPage(Hooks.getDriver());
         jabatanPage.navigateToJabatanPage();
@@ -28,10 +28,19 @@ public class TambahJabatanTest {
         WebDriverWait wait = new WebDriverWait(Hooks.getDriver(), Duration.ofSeconds(10));
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[normalize-space()='Tambahkan']")));
     }
+    @When ("user menekan tombol tambahkan")
+    public void clickTombolTambahkan(){
+        jabatanPage.clickButtonTambahkanJabatan();
+    }
 
-    @When("user menambahkan jabatan dengan nama {string} dan level {string}")
+    @When("user menginput jabatan dengan nama {string} dan level {string}")
     public void tambahJabatan(String nama, String level) {
         jabatanPage.stepTambahJabatan(nama, level);
+    }
+
+    @When ("user menekan tombol tambah di form tambah jabatan")
+    public void clickTombolFormTambahJababatan(){
+        jabatanPage.clickButtonTambahForm();
     }
 
     @Then("sistem menampilkan pesan sukses {string}")
