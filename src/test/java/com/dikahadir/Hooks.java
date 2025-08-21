@@ -40,6 +40,8 @@ public class Hooks {
 
         // Navigasi ke Management
         loginPage.navigateToManagementBar();
+
+       
     }
 
     // Metode untuk menghentikan driver dan mengambil screenshot. Gunakan @After di sini.

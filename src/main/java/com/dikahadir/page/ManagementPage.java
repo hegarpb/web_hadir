@@ -13,8 +13,8 @@ import java.time.Duration;
 
 public class ManagementPage {
 
-    private final WebDriver driver;
-    private final WebDriverWait wait;
+    private  WebDriver driver;
+    private  WebDriverWait wait;
 
     
 
@@ -33,6 +33,17 @@ public class ManagementPage {
         WebElement element = wait.until(ExpectedConditions.elementToBeClickable(ManagementRepository.jabatanMenu));
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
         element.click();
+    }
+
+     public void navigateToUserBar(){
+        WebElement userBarElement = wait.until(ExpectedConditions.elementToBeClickable(ManagementRepository.userBar));
+    ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", userBarElement);
+    userBarElement.click();
+
+    // Tunggu sampai field search user muncul → tanda halaman User sudah terbuka
+    wait.until(ExpectedConditions.visibilityOfElementLocated(
+        com.dikahadir.repository.UserRepository.inputSearchUser
+    ));
     }
 
     public String getCurrentURL() {

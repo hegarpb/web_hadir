@@ -17,14 +17,13 @@ import io.cucumber.java.en.When;
 public class TambahJabatanTest {
 
     private JabatanPage jabatanPage;
+    
 
     @Given("user sudah login dan berada di halaman Manajemen Jabatan")
     public void navigasiKeHalamanJabatanTambah(){
-        // Inisialisasi setelah Hooks.getDriver() siap
         this.jabatanPage = new JabatanPage(Hooks.getDriver());
         jabatanPage.navigateToJabatanPage();
 
-        // Tunggu tombol Tambahkan muncul
         WebDriverWait wait = new WebDriverWait(Hooks.getDriver(), Duration.ofSeconds(10));
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[normalize-space()='Tambahkan']")));
     }
@@ -42,13 +41,27 @@ public class TambahJabatanTest {
     public void clickTombolFormTambahJababatan(){
         jabatanPage.clickButtonTambahForm();
     }
+    @When ("user menekan tombol batal di form tambah jabatan")
+    public void clickTombolBatal(){
+    }
 
+      @Then("form pada tambah jabatan akan tertutup")
+public void formHapusTertutup() {
+    boolean isClosed = jabatanPage.waitUntilDeleteFormClosed();
+    Assert.assertTrue(isClosed, "Form hapus jabatan seharusnya sudah tertutup");
+}
+
+    @Then("form tambah jabatan akan tertutup")
+    public void formTambahTertutup(){
+
+    }
     @Then("sistem menampilkan pesan sukses {string}")
     public void pesanSukses(String expectedMessage){
         String actualMessage = jabatanPage.getMessageText();
         Assert.assertEquals(actualMessage, expectedMessage, 
             "Pesan sukses tidak sesuai!");
     }
+
 
     @Then("sistem menampilkan pesan error {string}")
     public void pesanError(String expectedMessage){

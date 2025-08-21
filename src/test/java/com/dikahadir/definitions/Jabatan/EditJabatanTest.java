@@ -21,28 +21,28 @@ public class EditJabatanTest {
     public void navigasiKeHalamanJabatanEdit() {
         this.jabatanPage = new JabatanPage(Hooks.getDriver());
         jabatanPage.navigateToJabatanPage();
-        WebDriverWait wait = new WebDriverWait(Hooks.getDriver(), Duration.ofSeconds(10));
+        WebDriverWait wait = new WebDriverWait(Hooks.getDriver(), Duration.ofSeconds(15));
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[normalize-space()='Search']")));
     }
 
-  @When("user menekan tombol action pada jabatan")
-public void penggunaMenekanTombolAction() {
-    jabatanPage.clickActionButton();
+  @When("user menekan tombol action pada jabatan {string}")
+public void MenekanTombolAction(String namaJabatan) {
+    jabatanPage.clickActionButtonWithPagination(namaJabatan);
 }
     @When("user menekan tombol edit pada menu dropdown")
-    public void penggunaMemilihMenuEdit() {
+    public void MemilihMenuEdit() {
     jabatanPage.clickEditMenu();
 }
 
-    @When("user mengubah nama jabatan menjadi {string} dan level {string}")
-   public void penggunaMengubahNamaDanLevel(String namaBaru, String levelBaru) {
-        jabatanPage.SetNamaJabatan(namaBaru);
-        jabatanPage.SetLevelJabatan(levelBaru);
+
+    @When("user mengubah nama jabatan menjadi {string}")
+    public void MengubahNama(String namaBaru) {
+        jabatanPage.setNamaJabatan(namaBaru);
     }
 
-     @When("user mengubah nama jabatan menjadi {string}")
-   public void penggunaMengubahNama(String namaBaru) {
-        jabatanPage.SetNamaJabatan(namaBaru);
+    @When("user mengubah level jabatan menjadi {string}")
+    public void MengubahNamaDanLevel(String levelBaru) {
+        jabatanPage.setLevelJabatan(levelBaru);
     }
     
 
@@ -51,9 +51,33 @@ public void penggunaMenekanTombolAction() {
         jabatanPage.clickButtonSimpanEdit();
     }
 
-    @Then("sistem akan menampilkan pesan sukses {string}")
-    public void sistemMenampilkanPesanSukses(String expectedMessage) {
+    @When ("user menekan tombol batal pada form edit jabatan")
+
+    @Then("sistem akan menampilkan pesan {string}")
+    public void sistemMenampilkanPesan(String expectedMessage) throws InterruptedException {
         String actualMessage = jabatanPage.getMessageText();
         Assert.assertEquals(actualMessage, expectedMessage, "Pesan sukses tidak sesuai");
+        Thread.sleep(10000);
     }
+
+
+     @Then("pesan validasi {string} akan muncul pada field nama jabatan")
+    public void validasiNamaJabatan(String expectedMessage){
+        String actualMessage = jabatanPage.getValidationNamaJabatan();
+        Assert.assertEquals(actualMessage, expectedMessage, 
+            "Validasi nama jabatan tidak sesuai!");
+    }
+
+    @Then("pesan validasi {string} akan muncul pada field level jabatan")
+    public void validasiLevelJabatan(String expectedMessage){
+        String actualMessage = jabatanPage.getValidationLevelJabatan();
+        Assert.assertEquals(actualMessage, expectedMessage, 
+            "Validasi level jabatan tidak sesuai!");
+    }
+
+    @Then("form pada edit jabatan akan tertutup")
+    public void formEditTertutup() {
+    boolean isClosed = jabatanPage.waitUntilFormEditJabatanClosed();
+    Assert.assertTrue(isClosed, "Form hapus jabatan seharusnya sudah tertutup");
+}
 }

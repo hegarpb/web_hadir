@@ -5,10 +5,10 @@ import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(
     features = {
-        // "src/test/resources/features/jabatan/TambahJabatan.feature",
-        // "src/test/resources/features/jabatan/FilterJabatan.feature",
-        // "src/test/resources/features/jabatan/ResetFilterJabatan.feature",
-        // "src/test/resources/features/jabatan/EditJabatan.feature",
+        "src/test/resources/features/jabatan/TambahJabatan.feature",
+        "src/test/resources/features/jabatan/SearchJabatan.feature",
+        "src/test/resources/features/jabatan/ResetSearchJabatan.feature",
+        "src/test/resources/features/jabatan/EditJabatan.feature",
         "src/test/resources/features/jabatan/HapusJabatan.feature"
 
     },

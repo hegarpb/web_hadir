@@ -24,9 +24,9 @@ public class HapusJabatan {
         WebDriverWait wait = new WebDriverWait(Hooks.getDriver(), Duration.ofSeconds(10));
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[normalize-space()='Search']")));
     }
-    @When("user mengklik tombol action pada jabatan")
-    public void clickTombolAction(){
-        jabatanPage.clickActionButton();
+    @When("user mengklik tombol action pada jabatan {string}")
+    public void clickTombolAction(String namaJabatan){
+        jabatanPage.clickActionButtonWithPagination(namaJabatan);
     }
     @When("user mengklik tombol delete pada menu dropdown")
     public void clickMenuDelete(){
@@ -48,9 +48,9 @@ public class HapusJabatan {
         String actualMessage = jabatanPage.getMessageText();
         Assert.assertEquals(actualMessage,expectedMessage, "Pesan sukses tidak sesuai");
     } 
-    @Then("form hapus jabatan akan tertutup")
+    @Then("form pada hapus jabatan akan tertutup")
 public void formHapusTertutup() {
-    boolean isClosed = jabatanPage.isDeleteFormClosed();
+    boolean isClosed = jabatanPage.waitUntilDeleteFormClosed();
     Assert.assertTrue(isClosed, "Form hapus jabatan seharusnya sudah tertutup");
 }
 }
