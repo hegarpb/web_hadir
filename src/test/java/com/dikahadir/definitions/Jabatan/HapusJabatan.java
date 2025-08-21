@@ -40,7 +40,7 @@ public class HapusJabatan {
 
     @When("user mengklik tombol Batal pada form hapus jabatan")
     public void clickButtonCancelDelete(){
-        jabatanPage.clickButtonCancelDelete();
+        jabatanPage.clickButtonCancel();
     }
     
     @Then("pesan sukses {string} akan diatmpilkan sistem")

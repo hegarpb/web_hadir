@@ -43,6 +43,7 @@ public class TambahJabatanTest {
     }
     @When ("user menekan tombol batal di form tambah jabatan")
     public void clickTombolBatal(){
+        jabatanPage.clickButtonCancel();
     }
 
       @Then("form pada tambah jabatan akan tertutup")

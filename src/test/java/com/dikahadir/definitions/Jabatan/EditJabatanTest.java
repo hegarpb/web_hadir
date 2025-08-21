@@ -52,6 +52,9 @@ public void MenekanTombolAction(String namaJabatan) {
     }
 
     @When ("user menekan tombol batal pada form edit jabatan")
+    public void cancelEdit(){
+        jabatanPage.clickButtonCancel();
+    }
 
     @Then("sistem akan menampilkan pesan {string}")
     public void sistemMenampilkanPesan(String expectedMessage) throws InterruptedException {

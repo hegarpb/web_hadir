@@ -17,7 +17,7 @@ public class JabatanRepository {
     public static By menuDelete = By.xpath("//li[@role='menuitem' and normalize-space()='Delete']");
     public static By buttonSimpanEdit= By.xpath("//button[normalize-space()='Simpan']");
     public static By buttonConfirmDelete= By.xpath("//button[normalize-space()='Ya']");
-    public static By buttonCancelDelete= By.xpath("//button[normalize-space()='Tidak']");
+    public static By buttonCancel= By.xpath("//button[normalize-space()='Tidak']");
     public static By formHapusJabatan=By.xpath("//div[contains(@class,'modal')]//h2[normalize-space()='Hapus Jabatan']");
     public static By formTambahJabatan = By.xpath("//h2[normalize-space()='Tambah Jabatan']");
     public static By buttonNextPage = By.xpath("//*[name()='svg' and @data-testid='KeyboardArrowRightIcon']");

@@ -65,8 +65,8 @@ public class JabatanPage {
         safeClick(wait.until(ExpectedConditions.elementToBeClickable(JabatanRepository.buttonConfirmDelete)));
     }
 
-    public void clickButtonCancelDelete() {
-        safeClick(wait.until(ExpectedConditions.elementToBeClickable(JabatanRepository.buttonCancelDelete)));
+    public void clickButtonCancel() {
+        safeClick(wait.until(ExpectedConditions.elementToBeClickable(JabatanRepository.buttonCancel)));
     }
 
     public void clickButtonSimpanEdit() {
