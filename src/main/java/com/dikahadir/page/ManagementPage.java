@@ -34,6 +34,11 @@ public class ManagementPage {
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
         element.click();
     }
+      public void navigateToAturanCutiMenu(){
+        WebElement userBarElement = wait.until(ExpectedConditions.elementToBeClickable(ManagementRepository.aturanCutiMenu));
+    ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", userBarElement);
+    userBarElement.click();
+      }
 
      public void navigateToUserBar(){
         WebElement userBarElement = wait.until(ExpectedConditions.elementToBeClickable(ManagementRepository.userBar));

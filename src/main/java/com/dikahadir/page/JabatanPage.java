@@ -10,9 +10,9 @@ import java.util.List;
 
 public class JabatanPage {
 
-    private final WebDriver driver;
-    private final WebDriverWait wait;
-    private final ManagementPage managementPage;
+    private  WebDriver driver;
+    private  WebDriverWait wait;
+    private  ManagementPage managementPage;
 
     public JabatanPage(WebDriver driver) {
         this.driver = driver;
@@ -32,7 +32,7 @@ public class JabatanPage {
         searchInput.sendKeys(value);
     }
 
-    public void clickResetFilter() {
+    public void clickResetSearch() {
         safeClick(wait.until(ExpectedConditions.elementToBeClickable(JabatanRepository.resetButton)));
     }
 
@@ -204,6 +204,32 @@ public void clickEditMenu() {
 }
 
 
+public void clickDeleteMenu() {
+    try {
+        // Pastikan semua menu dropdown sudah ada di DOM
+        List<WebElement> menuItems = wait.until(
+            ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("//li[@role='menuitem']"))
+        );
+
+        for (WebElement item : menuItems) {
+            String text = item.getText().trim();
+            if (text.equalsIgnoreCase("Delete")) {
+                // Scroll ke elemen biar benar-benar kelihatan
+                ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", item);
+
+                // Klik pakai JS langsung
+                ((JavascriptExecutor) driver).executeScript("arguments[0].click();", item);
+                return;
+            }
+        }
+
+        throw new RuntimeException("❌ Menu 'Delete' tidak ditemukan di dropdown!");
+
+    } catch (Exception e) {
+        printAllDropdownOptions(); // debug isi dropdown
+        throw new RuntimeException("❌ Gagal klik menu Delete. Detail: " + e.getMessage(), e);
+    }
+}
 
 public void printAllDropdownOptions() {
     List<WebElement> options = driver.findElements(By.xpath("//li[@role='menuitem']"));
@@ -213,14 +239,6 @@ public void printAllDropdownOptions() {
     }
     System.out.println("=== End of Options ===");
 }
-
-
-
-    public void clickDeleteMenu() {
-        By menuDelete = By.xpath("//ul[contains(@class,'MuiMenu-list')]//li[normalize-space()='Delete']");
-        WebElement deleteOption = wait.until(ExpectedConditions.presenceOfElementLocated(menuDelete));
-        safeClick(deleteOption); // 🔹 pakai safeClick
-    }
 
     public void clickNextPageButton() {
     WebElement nextButton = wait.until(ExpectedConditions.elementToBeClickable(JabatanRepository.buttonNextPage));

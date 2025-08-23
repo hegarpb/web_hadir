@@ -33,7 +33,7 @@ public class ResetSearchLevelJabatanTest {
 
    @When("user menekan tombol {string}")
 public void klikTombol(String buttonName) {
-    jabatanPage.clickResetFilter();
+    jabatanPage.clickResetSearch();
     jabatanPage.waitForUrlAfterReset();
     
 }

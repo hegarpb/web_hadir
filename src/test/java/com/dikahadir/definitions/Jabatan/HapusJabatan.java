@@ -21,8 +21,8 @@ public class HapusJabatan {
     public void navigasiKeHalamanJabatanEdit() {
         this.jabatanPage = new JabatanPage(Hooks.getDriver());
         jabatanPage.navigateToJabatanPage();
-        WebDriverWait wait = new WebDriverWait(Hooks.getDriver(), Duration.ofSeconds(10));
-        wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//button[normalize-space()='Next']")));
+        jabatanPage.waitTableUpdated(null);
+        
     }
     @When("user mengklik tombol action pada jabatan {string}")
     public void clickTombolAction(String namaJabatan){
@@ -45,6 +45,12 @@ public class HapusJabatan {
     
     @Then("pesan sukses {string} akan diatmpilkan sistem")
     public void pesanSukses(String expectedMessage){
+        String actualMessage = jabatanPage.getMessageText();
+        Assert.assertEquals(actualMessage,expectedMessage, "Pesan sukses tidak sesuai");
+    } 
+
+      @Then("pesan gagal {string} akan diatmpilkan sistem")
+    public void pesanGagal(String expectedMessage){
         String actualMessage = jabatanPage.getMessageText();
         Assert.assertEquals(actualMessage,expectedMessage, "Pesan sukses tidak sesuai");
     } 

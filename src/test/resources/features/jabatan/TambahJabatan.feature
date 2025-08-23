@@ -13,7 +13,7 @@ Feature: Tambah Jabatan
 
     Examples:
       | nama            | level | message                        |
-      | Kel3 ValidData2 |     9 | Berhasil Menambahkan Job Level |
+      | Kel3 ValidData3 |     9 | Berhasil Menambahkan Job Level |
 #Positive Test Data Valid 
 
   Scenario Outline: Tambah jabatan baru dengan data nama yang sudah ada tetapi level berbeda
@@ -25,7 +25,7 @@ Feature: Tambah Jabatan
 
     Examples:
       | nama     | level | message                        |
-      | SPVBaru5 |     1 | Berhasil Menambahkan Job Level |
+      | SPVBaru5 |     2 | Berhasil Menambahkan Job Level |
          # Positive Test Data Valid 
 
   Scenario Outline: Tambah jabatan baru dengan data  Nama baru dan level yang sudah ada
@@ -36,8 +36,8 @@ Feature: Tambah Jabatan
     Then sistem menampilkan pesan sukses "<message>"
 
     Examples:
-      | nama                 | level | message                        |
-      | Assistant Manager HK |     1 | Berhasil Menambahkan Job Level |
+      | nama                  | level | message                        |
+      | Assistant Manager HKK |     1 | Berhasil Menambahkan Job Level |
   # Negative Test - Data Invalid 
 
   Scenario Outline: Validasi penambahan jabatan dengan data invalid (nama yang sama dan level yang sama,inputan level non numeric,level negtif atau minus)
@@ -51,7 +51,7 @@ Feature: Tambah Jabatan
       | nama       | level | message                     |
       | Karyawan14 |     1 | Gagal Menambahkan Job Level |
       | SPVVVv     | abc   | Gagal Menambahkan Job Level |
-      | Kopral     |   -10 | Gagal Menambahkan Job Level |
+      | Jendral    |   -10 | Gagal Menambahkan Job Level |
   # Negative Test - Field Kosong
 
   Scenario Outline: Validasi field kosong saat menambahkan jabatan

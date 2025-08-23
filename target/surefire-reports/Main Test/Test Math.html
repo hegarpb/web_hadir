@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test Math</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/3/0</td>
 </tr><tr>
-<td>Started on:</td><td>Sat Aug 23 10:35:01 WIB 2025</td>
+<td>Started on:</td><td>Sat Aug 23 11:47:38 WIB 2025</td>
 </tr>
-<tr><td>Total time:</td><td>32 seconds (32716 ms)</td>
+<tr><td>Total time:</td><td>60 seconds (60705 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,8 +67,8 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td><b>Attribute(s)</b></td>
 <td width="30%"><b>Exception</b></td>
@@ -76,9 +76,49 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.dikahadir.runners.RunnerJabatanTest.runScenario()'><b>runScenario</b><br>Test class: com.dikahadir.runners.RunnerJabatanTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Mengubah nama jabatan dengan fitur edit dengan data yang valid.", "Edit Jabatan"</td>
-<td></td>
-<td>31</td>
+<td title='com.dikahadir.runners.RunnerJabatanTest.runScenario()'><b>runScenario</b><br>Test class: com.dikahadir.runners.RunnerJabatanTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Batal menghapus jabatan dengan menekan tombol batal pada form hapus jabatan", "Hapus Jabatan"</td>
+<td><div><pre>java.lang.RuntimeException: Jabatan dengan nama &apos;STOFF&apos; tidak ditemukan di semua halaman.
+	at com.dikahadir.page.JabatanPage.clickActionButtonWithPagination(JabatanPage.java:160)
+	at com.dikahadir.definitions.jabatan.HapusJabatan.clickTombolAction(HapusJabatan.java:29)
+	at ✽.user mengklik tombol action pada jabatan &quot;STOFF&quot;(file:///C:/Hegar/sqabatch23/TA/web_hadir/src/test/resources/features/jabatan/HapusJabatan.feature:21)
+</pre></div><a href='#' onClick='toggleBox("stack-trace251666609", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace251666609'><pre>java.lang.RuntimeException: Jabatan dengan nama &apos;STOFF&apos; tidak ditemukan di semua halaman.
+	at com.dikahadir.page.JabatanPage.clickActionButtonWithPagination(JabatanPage.java:160)
+	at com.dikahadir.definitions.jabatan.HapusJabatan.clickTombolAction(HapusJabatan.java:29)
+	at ✽.user mengklik tombol action pada jabatan &quot;STOFF&quot;(file:///C:/Hegar/sqabatch23/TA/web_hadir/src/test/resources/features/jabatan/HapusJabatan.feature:21)
+</pre></div></td>
+<td>13</td>
+<td>com.dikahadir.runners.RunnerJabatanTest@4218d6a3</td></tr>
+<tr>
+<td title='com.dikahadir.runners.RunnerJabatanTest.runScenario()'><b>runScenario</b><br>Test class: com.dikahadir.runners.RunnerJabatanTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Menghapus data jabatan dengan feature delete pada tabel jabatan dengan data jabatan yang tidak terkait dengn user .", "Hapus Jabatan"</td>
+<td><div><pre>java.lang.AssertionError: Pesan sukses tidak sesuai expected [Berhasil Delete Jabatan] but found [Gagal Delete Jabatan]
+	at com.dikahadir.definitions.jabatan.HapusJabatan.pesanSukses(HapusJabatan.java:49)
+	at ✽.pesan sukses &quot;Berhasil Delete Jabatan&quot; akan diatmpilkan sistem(file:///C:/Hegar/sqabatch23/TA/web_hadir/src/test/resources/features/jabatan/HapusJabatan.feature:10)
+... Removed 5 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace947043383", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace947043383'><pre>java.lang.AssertionError: Pesan sukses tidak sesuai expected [Berhasil Delete Jabatan] but found [Gagal Delete Jabatan]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at com.dikahadir.definitions.jabatan.HapusJabatan.pesanSukses(HapusJabatan.java:49)
+	at ✽.pesan sukses &quot;Berhasil Delete Jabatan&quot; akan diatmpilkan sistem(file:///C:/Hegar/sqabatch23/TA/web_hadir/src/test/resources/features/jabatan/HapusJabatan.feature:10)
+</pre></div></td>
+<td>18</td>
+<td>com.dikahadir.runners.RunnerJabatanTest@4218d6a3</td></tr>
+<tr>
+<td title='com.dikahadir.runners.RunnerJabatanTest.runScenario()'><b>runScenario</b><br>Test class: com.dikahadir.runners.RunnerJabatanTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Menghapus data jabatan dengan feature delete pada tabel jabatan dengan data jabatan yang terkait dengn user .", "Hapus Jabatan"</td>
+<td><div><pre>java.lang.RuntimeException: Jabatan dengan nama &apos;SQA&apos; tidak ditemukan di semua halaman.
+	at com.dikahadir.page.JabatanPage.clickActionButtonWithPagination(JabatanPage.java:160)
+	at com.dikahadir.definitions.jabatan.HapusJabatan.clickTombolAction(HapusJabatan.java:29)
+	at ✽.user mengklik tombol action pada jabatan &quot;SQA&quot;(file:///C:/Hegar/sqabatch23/TA/web_hadir/src/test/resources/features/jabatan/HapusJabatan.feature:14)
+</pre></div><a href='#' onClick='toggleBox("stack-trace703315444", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace703315444'><pre>java.lang.RuntimeException: Jabatan dengan nama &apos;SQA&apos; tidak ditemukan di semua halaman.
+	at com.dikahadir.page.JabatanPage.clickActionButtonWithPagination(JabatanPage.java:160)
+	at com.dikahadir.definitions.jabatan.HapusJabatan.clickTombolAction(HapusJabatan.java:29)
+	at ✽.user mengklik tombol action pada jabatan &quot;SQA&quot;(file:///C:/Hegar/sqabatch23/TA/web_hadir/src/test/resources/features/jabatan/HapusJabatan.feature:14)
+</pre></div></td>
+<td>27</td>
 <td>com.dikahadir.runners.RunnerJabatanTest@4218d6a3</td></tr>
 </table><p>
 </body>
