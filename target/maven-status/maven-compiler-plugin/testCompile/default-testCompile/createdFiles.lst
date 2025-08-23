@@ -1,4 +1,5 @@
 com\dikahadir\definitions\jabatan\ResetSearchLevelJabatanTest.class
+com\dikahadir\definitions\jabatan\PaginationTest.class
 com\dikahadir\definitions\jabatan\HapusJabatan.class
 com\dikahadir\definitions\jabatan\EditJabatanTest.class
 com\dikahadir\Hooks.class

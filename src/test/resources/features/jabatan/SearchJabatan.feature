@@ -1,9 +1,9 @@
-Feature: Filter Level Jabatan
+Feature: Search Level Jabatan
           Sebagai pengguna saya 
-          ingin memfilter level jabatan agar dapat melihat daftar jabatan dengan level tertentu
+          ingin mencri level jabatan agar dapat melihat daftar jabatan dengan level tertentu
   #Positive Test
 
-  Scenario Outline: Memfilter jabatan berdasarkan level
+  Scenario Outline: Search jabatan berdasarkan level
     Given user sudah melakukan login dan berada pada halaman Manajemen Jabatan
     When user menginput "<level>" pada field "inputSearchText"
     When user menekan tombol search setelah menginput "<level>"
@@ -14,7 +14,7 @@ Feature: Filter Level Jabatan
       |     2 |
   #Negative Test
 
-  Scenario Outline: Memfilter jabatan dengan level yang tidak ada
+  Scenario Outline: Search jabatan dengan level yang tidak ada
     Given user sudah melakukan login dan berada pada halaman Manajemen Jabatan
     When user menginput "<level>" pada field "inputSearchText"
     When user menekan tombol search setelah menginput "<level>"
@@ -25,7 +25,7 @@ Feature: Filter Level Jabatan
       | 10000 |
   #Negative Test
 
-  Scenario Outline: Memfilter jabatan dengan input alfabet
+  Scenario Outline: Search jabatan dengan input alfabet
     Given user sudah melakukan login dan berada pada halaman Manajemen Jabatan
     When user menginput "<level>" pada field "inputSearchText"
     When user menekan tombol search setelah menginput "<level>"

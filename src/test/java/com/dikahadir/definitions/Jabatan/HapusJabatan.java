@@ -22,7 +22,7 @@ public class HapusJabatan {
         this.jabatanPage = new JabatanPage(Hooks.getDriver());
         jabatanPage.navigateToJabatanPage();
         WebDriverWait wait = new WebDriverWait(Hooks.getDriver(), Duration.ofSeconds(10));
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[normalize-space()='Search']")));
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//button[normalize-space()='Next']")));
     }
     @When("user mengklik tombol action pada jabatan {string}")
     public void clickTombolAction(String namaJabatan){
