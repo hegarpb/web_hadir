@@ -8,6 +8,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.dikahadir.repository.AturanCutiRepository;
+import com.dikahadir.repository.JabatanRepository;
 
 public class AturanCutiPage {
     
@@ -46,32 +47,32 @@ public class AturanCutiPage {
               inputNamaAturan.sendKeys(value);
         }     
 
-    public void inputEligablePengaturan(int value){
+    public void inputEligablePengaturan(String value){
         WebElement inputEligablePengaturan= wait.until(ExpectedConditions.visibilityOfElementLocated(AturanCutiRepository.inputEligiblePengaturanCuti));
         inputEligablePengaturan.clear();
-        inputEligablePengaturan.sendKeys(String.valueOf(value));
+        inputEligablePengaturan.sendKeys(value);
     }
 
     
-    public void inputTanggalBatasSisaCuti(int value){
+    public void inputTanggalBatasSisaCuti(String value){
         WebElement inputTanggalBatasSisaCuti= wait.until(ExpectedConditions.visibilityOfElementLocated(AturanCutiRepository.inputTanggalBatasSisaCuti));
         inputTanggalBatasSisaCuti.clear();
-        inputTanggalBatasSisaCuti.sendKeys(String.valueOf(value));
+        inputTanggalBatasSisaCuti.sendKeys(value);
     }
 
-    public void inputBulanBatasSisaCuti(int value){
+    public void inputBulanBatasSisaCuti(String value){
         WebElement inputBulanBatasSisaCuti= wait.until(ExpectedConditions.visibilityOfElementLocated(AturanCutiRepository.inputBulanCuti));
         inputBulanBatasSisaCuti.clear();
-        inputBulanBatasSisaCuti.sendKeys(String.valueOf(value));
+        inputBulanBatasSisaCuti.sendKeys(value);
     }
 
-    public void InputMaksimalSisaCuti(int value){
+    public void InputMaksimalSisaCuti(String value){
         WebElement inputMaksimalSIsaCuti= wait.until(ExpectedConditions.visibilityOfElementLocated(AturanCutiRepository.inputMaksimalSisaCuti));
         inputMaksimalSIsaCuti.clear();
-        inputMaksimalSIsaCuti.sendKeys(String.valueOf(value));
+        inputMaksimalSIsaCuti.sendKeys(value);
     }
 
-    public void inputJumlahBulanKerjaSisaCuti(int value){
+    public void inputJumlahBulanKerjaSisaCuti(String value){
         WebElement inputJumlahBulanSisaKerjaCuti= wait.until(ExpectedConditions.visibilityOfElementLocated(AturanCutiRepository.inputJumlahBulanKerjaSisaCuti));
         inputJumlahBulanSisaKerjaCuti.clear();
         inputJumlahBulanSisaKerjaCuti.sendKeys(String.valueOf(value));
@@ -144,6 +145,12 @@ public class AturanCutiPage {
     /** Tunggu tabel terlihat */
     private void waitTableToBeVisible() {
         wait.until(ExpectedConditions.visibilityOfElementLocated(AturanCutiRepository.tabelAturanCuti));
+    }
+
+     public String getMessageText() {
+        WebElement messageElement = wait.until(ExpectedConditions.presenceOfElementLocated(AturanCutiRepository.message));
+        wait.until(ExpectedConditions.not(ExpectedConditions.textToBe(JabatanRepository.message, "")));
+        return messageElement.getText();
     }
 
     /** Safe click dengan JS fallback */

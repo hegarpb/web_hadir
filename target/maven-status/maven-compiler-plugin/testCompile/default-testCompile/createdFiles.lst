@@ -7,5 +7,6 @@ com\dikahadir\Hooks.class
 com\dikahadir\definitions\jabatan\SearchLevelJabatanTest.class
 com\dikahadir\runners\RunnerJabatanTest.class
 com\dikahadir\definitions\jabatan\TambahJabatanTest.class
+com\dikahadir\definitions\aturancuti\TambahAturanCutiTest.class
 com\dikahadir\runners\RunnerAturanCutiTest.class
 com\dikahadir\definitions\aturancuti\SearchAturanCutiTest.class

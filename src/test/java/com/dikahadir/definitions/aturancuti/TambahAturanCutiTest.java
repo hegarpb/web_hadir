@@ -27,28 +27,28 @@ public class TambahAturanCutiTest {
         aturanCutiPage.inputNamaAturan(namaAturan);
     }
 
-    @When("user menginput Eligible pengaturan cuti {int}")
-    public void userMengisiEligiblePengaturanCuti(Integer eligible) {
+    @When("user menginput Eligible pengaturan cuti {string}")
+    public void userMengisiEligiblePengaturanCuti(String eligible) {
         aturanCutiPage.inputEligablePengaturan(eligible);
     }
 
-    @When("user menginput tanggal batas sisa cuti {int}")
-    public void userMengisiTanggalBatasSisaCuti(int hari) {
+    @When("user menginput tanggal batas sisa cuti {string}")
+    public void userMengisiTanggalBatasSisaCuti(String hari) {
         aturanCutiPage.inputTanggalBatasSisaCuti(hari);
     }
 
-    @When("user menginput bulan batas sisa cuti {int}")
-    public void userMengisiBulanBatasSisaCuti(int bulan) {
+    @When("user menginput bulan batas sisa cuti {string}")
+    public void userMengisiBulanBatasSisaCuti(String bulan) {
         aturanCutiPage.inputBulanBatasSisaCuti(bulan);
     }
 
-    @When("user menginput maksimal sisa cuti {int}")
-    public void userMengisiMaksimalSisaCuti(int maksimal) {
+    @When("user menginput maksimal sisa cuti {string}")
+    public void userMengisiMaksimalSisaCuti(String  maksimal) {
         aturanCutiPage.InputMaksimalSisaCuti(maksimal);
     }
 
-    @When("user menginput jumlah bulan sisa kerja cuti {int}")
-    public void userMengisiJumlahBulanKerjaSisaCuti(int jumlah) {
+    @When("user menginput jumlah bulan sisa kerja cuti {string}")
+    public void userMengisiJumlahBulanKerjaSisaCuti(String jumlah) {
         aturanCutiPage.inputJumlahBulanKerjaSisaCuti(jumlah);
     }
 
@@ -59,7 +59,7 @@ public class TambahAturanCutiTest {
 
     @Then("sistem menampilkan pesan {string}")
     public void aturanCutiBerhasilDitambahkan(String expectedMessage) {
-        String actualMessage = aturanCutiPage.getSuccessMessage();
+        String actualMessage = aturanCutiPage.getMessageText();
         Assert.assertEquals(actualMessage, expectedMessage, 
             "Pesan sukses tidak sesuai!");
     }

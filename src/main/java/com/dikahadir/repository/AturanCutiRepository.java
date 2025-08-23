@@ -29,4 +29,6 @@ public class AturanCutiRepository {
     public static final By tabelAturanCuti = By.xpath("//table[contains(@class,'MuiTable-root')]");
     public static final By tableRows = By.xpath("//table[contains(@class,'MuiTable-root')]//tbody/tr");
     public static final By tableFirstColumn = By.xpath("//table[contains(@class,'MuiTable-root')]//tbody/tr/td[1]");
+
+    public static  By message = By.xpath("(//div[@class='MuiSnackbarContent-message css-1w0ym84'])[1]");
 }

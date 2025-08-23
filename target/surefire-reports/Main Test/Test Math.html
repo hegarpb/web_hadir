@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test Math</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>2/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>3/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Sat Aug 23 15:07:32 WIB 2025</td>
+<td>Started on:</td><td>Sun Aug 24 02:08:20 WIB 2025</td>
 </tr>
-<tr><td>Total time:</td><td>28 seconds (28741 ms)</td>
+<tr><td>Total time:</td><td>91 seconds (91904 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,6 +67,32 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.dikahadir.runners.RunnerAturanCutiTest.runScenario()'><b>runScenario</b><br>Test class: com.dikahadir.runners.RunnerAturanCutiTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Tambah aturan cuti dengan data invalid", "Tambah Aturan Cuti"</td>
+<td><div><pre>java.lang.AssertionError: Pesan sukses tidak sesuai! expected [Gagal Membuat Aturan Cuti] but found [Sukses Membuat Aturan Cuti]
+	at com.dikahadir.definitions.aturancuti.TambahAturanCutiTest.aturanCutiBerhasilDitambahkan(TambahAturanCutiTest.java:63)
+	at ✽.sistem menampilkan pesan &quot;Gagal Membuat Aturan Cuti&quot;(file:///C:/Hegar/sqabatch23/TA/web_hadir/src/test/resources/features/aturancuti/TambahAturanCuti.feature:30)
+... Removed 5 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace227080339", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace227080339'><pre>java.lang.AssertionError: Pesan sukses tidak sesuai! expected [Gagal Membuat Aturan Cuti] but found [Sukses Membuat Aturan Cuti]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at com.dikahadir.definitions.aturancuti.TambahAturanCutiTest.aturanCutiBerhasilDitambahkan(TambahAturanCutiTest.java:63)
+	at ✽.sistem menampilkan pesan &quot;Gagal Membuat Aturan Cuti&quot;(file:///C:/Hegar/sqabatch23/TA/web_hadir/src/test/resources/features/aturancuti/TambahAturanCuti.feature:30)
+</pre></div></td>
+<td>22</td>
+<td>com.dikahadir.runners.RunnerAturanCutiTest@4218d6a3</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -78,12 +104,17 @@ function toggleAllBoxes() {
 <tr>
 <td title='com.dikahadir.runners.RunnerAturanCutiTest.runScenario()'><b>runScenario</b><br>Test class: com.dikahadir.runners.RunnerAturanCutiTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Pencarian aturan cuti", "Tombol Reset"</td>
 <td></td>
-<td>15</td>
+<td>28</td>
+<td>com.dikahadir.runners.RunnerAturanCutiTest@4218d6a3</td></tr>
+<tr>
+<td title='com.dikahadir.runners.RunnerAturanCutiTest.runScenario()'><b>runScenario</b><br>Test class: com.dikahadir.runners.RunnerAturanCutiTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Tambah aturan cuti baru dengan data valid", "Tambah Aturan Cuti"</td>
+<td></td>
+<td>18</td>
 <td>com.dikahadir.runners.RunnerAturanCutiTest@4218d6a3</td></tr>
 <tr>
 <td title='com.dikahadir.runners.RunnerAturanCutiTest.runScenario()'><b>runScenario</b><br>Test class: com.dikahadir.runners.RunnerAturanCutiTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Pencarian aturan cuti", "Tombol Search"</td>
 <td></td>
-<td>11</td>
+<td>19</td>
 <td>com.dikahadir.runners.RunnerAturanCutiTest@4218d6a3</td></tr>
 </table><p>
 </body>

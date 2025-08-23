@@ -39,6 +39,7 @@
 		<!-- slideout menu -->
 		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
 			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
+			<li class='waves-effect'><a href='#!' view='exception-view' onclick="configureView(2)"><i class='material-icons'>bug_report</i></a></li>
 			<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></a></li>
 		</ul>
 		<!-- report name -->
@@ -48,7 +49,7 @@
 		<!-- nav-right -->
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<a href='#!'>
-			<span class='label blue darken-3 suite-start-time'>Aug 23, 2025 03:07:32 PM</span>
+			<span class='label blue darken-3 suite-start-time'>Aug 24, 2025 02:08:20 AM</span>
 			</a>
 		</ul>
 	</div>
@@ -64,6 +65,7 @@
 				</a>
 				<ul id='tests-toggle' class='dropdown-content'>
 										<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+					<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
 					<li class='divider'></li>
 					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
 				</ul>
@@ -107,12 +109,12 @@
                     <canvas id='parent-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='$100%'>
+                    <span class='tooltipped' data-position='top' data-tooltip='$66%'>
                     <span class='strong'>2</span> features passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
-                    0</span> features failed, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='33%'>
+                    1</span> features failed, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
                     0</span> skipped
                 </div>
@@ -125,12 +127,12 @@
                     <canvas id='child-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='100%'>
-                    <span class='strong'>2</span> scenarios passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='75%'>
+                    <span class='strong'>3</span> scenarios passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
-                    0</span> scenarios failed, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='25%'>
+                    1</span> scenarios failed, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
                     0</span> skipped, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
@@ -145,12 +147,12 @@
                     <canvas id='grandchild-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='100%'>
-                    <span class='strong'>9</span> steps passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='96%'>
+                    <span class='strong'>29</span> steps passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
-                    0</span> steps failed, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='3%'>
+                    1</span> steps failed, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
                     0</span> skipped, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
@@ -176,7 +178,7 @@
 				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='1'>
 					<div class='test-heading'>
 						<span class='test-name'>Tombol Reset</span>
-						<span class='test-time'>Aug 23, 2025 03:07:33 PM</span>
+						<span class='test-time'>Aug 24, 2025 02:08:22 AM</span>
 						<span class='test-status right pass'>Pass</span>
 					</div>
 					<div class='test-content hide'>
@@ -191,7 +193,7 @@
 
 <div class='scenario outline node' test-id='2' status='pass'>
 
-	<span class='duration right label'>00 00 14.920</span>
+	<span class='duration right label'>00 00 28.203</span>
 	<div class="bdd-test">
 		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario Outline: Pencarian aturan cuti</div>
 	</div>
@@ -234,7 +236,7 @@
 				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='11'>
 					<div class='test-heading'>
 						<span class='test-name'>Tombol Search</span>
-						<span class='test-time'>Aug 23, 2025 03:07:48 PM</span>
+						<span class='test-time'>Aug 24, 2025 02:08:50 AM</span>
 						<span class='test-status right pass'>Pass</span>
 					</div>
 					<div class='test-content hide'>
@@ -249,7 +251,7 @@
 
 <div class='scenario outline node' test-id='12' status='pass'>
 
-	<span class='duration right label'>00 00 11.917</span>
+	<span class='duration right label'>00 00 19.543</span>
 	<div class="bdd-test">
 		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario Outline: Pencarian aturan cuti</div>
 	</div>
@@ -285,6 +287,163 @@
 </div>
 					</div>
 				</li>
+				<li class='test displayed active has-leaf fail' status='fail' bdd='true' test-id='20'>
+					<div class='test-heading'>
+						<span class='test-name'>Tambah Aturan Cuti</span>
+						<span class='test-time'>Aug 24, 2025 02:09:10 AM</span>
+						<span class='test-status right fail'>Fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class="sr-filters bdd-filters">
+	<a class="btn-floating waves-effect waves-light pass green" title="pass"><i class='material-icons'>check_circle</i></a>
+	<a class="btn-floating waves-effect waves-light fail red" title="fail"><i class='material-icons'>cancel</i></a>
+	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
+	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
+</div>
+	<div class='test-desc'>  Sebagai user saya ingin menambahkan aturan cuti dengan feature tambah aturan cuti</div>
+
+<div class='scenario outline node' test-id='21' status='pass'>
+
+	<span class='duration right label'>00 00 18.770</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario Outline: Tambah aturan cuti baru dengan data valid</div>
+	</div>
+	
+		<div class='node-desc'><br><br><table class='markup-table table '><tr><td>namaAturan</td></tr><tr><td>Cuti Tahunan</td></tr></table></div>
+	
+	
+	<ul class='steps'>
+		<li test-id='22' class='node scenario Pass' status='Pass'>
+			<div class="step-name" title="()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Tambah aturan cuti baru dengan data valid</div>
+
+
+			<ul class='gc steps'>
+				<li test-id='24' class='gc given Pass' status='Pass'>
+					<h6 class="step-name" title="com.dikahadir.definitions.aturancuti.TambahAturanCutiTest.userBeradaDiHalamanTambahAturanCuti()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given user melakukan login dan berada di halaman manajemen Aturan Cuti</h6>
+
+				</li>
+				<li test-id='25' class='gc when Pass' status='Pass'>
+					<h6 class="step-name" title="com.dikahadir.definitions.aturancuti.TambahAturanCutiTest.userClickButtonTambahkanAturan()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When user menekan tombol Tambahkan Aturan Cuti</h6>
+
+				</li>
+				<li test-id='26' class='gc and Pass' status='Pass'>
+					<h6 class="step-name" title="com.dikahadir.definitions.aturancuti.TambahAturanCutiTest.userMengisiNamaAturanCuti(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And user menginput nama aturan cuti "Cuti Tahunan"</h6>
+
+				</li>
+				<li test-id='27' class='gc and Pass' status='Pass'>
+					<h6 class="step-name" title="com.dikahadir.definitions.aturancuti.TambahAturanCutiTest.userMengisiEligiblePengaturanCuti(java.lang.Integer)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And user menginput Eligible pengaturan cuti 12</h6>
+
+				</li>
+				<li test-id='28' class='gc and Pass' status='Pass'>
+					<h6 class="step-name" title="com.dikahadir.definitions.aturancuti.TambahAturanCutiTest.userMengisiTanggalBatasSisaCuti(int)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And user menginput tanggal batas sisa cuti 5</h6>
+
+				</li>
+				<li test-id='29' class='gc and Pass' status='Pass'>
+					<h6 class="step-name" title="com.dikahadir.definitions.aturancuti.TambahAturanCutiTest.userMengisiBulanBatasSisaCuti(int)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And user menginput bulan batas sisa cuti 2</h6>
+
+				</li>
+				<li test-id='30' class='gc and Pass' status='Pass'>
+					<h6 class="step-name" title="com.dikahadir.definitions.aturancuti.TambahAturanCutiTest.userMengisiMaksimalSisaCuti(int)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And user menginput maksimal sisa cuti 10</h6>
+
+				</li>
+				<li test-id='31' class='gc and Pass' status='Pass'>
+					<h6 class="step-name" title="com.dikahadir.definitions.aturancuti.TambahAturanCutiTest.userMengisiJumlahBulanKerjaSisaCuti(int)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And user menginput jumlah bulan sisa kerja cuti 6</h6>
+
+				</li>
+				<li test-id='32' class='gc and Pass' status='Pass'>
+					<h6 class="step-name" title="com.dikahadir.definitions.aturancuti.TambahAturanCutiTest.userMenekanTombolTambahkan()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And user menekan tombol Tambahkan pada form tambahkan aturan cuti</h6>
+
+				</li>
+				<li test-id='33' class='gc then Pass' status='Pass'>
+					<h6 class="step-name" title="com.dikahadir.definitions.aturancuti.TambahAturanCutiTest.aturanCutiBerhasilDitambahkan(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then sistem menampilkan pesan "Sukses Membuat Aturan Cuti"</h6>
+
+				</li>
+			</ul>
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='35' status='fail'>
+
+	<span class='duration right label'>00 00 22.355</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario: Tambah aturan cuti dengan data invalid</div>
+	</div>
+	
+	
+	
+	<ul class='steps'>
+		<li test-id='37' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(com.dikahadir.definitions.aturancuti.TambahAturanCutiTest.userBeradaDiHalamanTambahAturanCuti())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given user melakukan login dan berada di halaman manajemen Aturan Cuti</div>
+
+
+		</li>
+		<li test-id='38' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.dikahadir.definitions.aturancuti.TambahAturanCutiTest.userClickButtonTambahkanAturan())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When user menekan tombol Tambahkan Aturan Cuti</div>
+
+
+		</li>
+		<li test-id='39' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.dikahadir.definitions.aturancuti.TambahAturanCutiTest.userMengisiNamaAturanCuti(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And user menginput nama aturan cuti "<namaAturan>"</div>
+
+
+		</li>
+		<li test-id='40' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.dikahadir.definitions.aturancuti.TambahAturanCutiTest.userMengisiEligiblePengaturanCuti(java.lang.Integer))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And user menginput Eligible pengaturan cuti -10</div>
+
+
+		</li>
+		<li test-id='41' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.dikahadir.definitions.aturancuti.TambahAturanCutiTest.userMengisiTanggalBatasSisaCuti(int))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And user menginput tanggal batas sisa cuti 5</div>
+
+
+		</li>
+		<li test-id='42' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.dikahadir.definitions.aturancuti.TambahAturanCutiTest.userMengisiBulanBatasSisaCuti(int))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And user menginput bulan batas sisa cuti 7</div>
+
+
+		</li>
+		<li test-id='43' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.dikahadir.definitions.aturancuti.TambahAturanCutiTest.userMengisiMaksimalSisaCuti(int))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And user menginput maksimal sisa cuti -10</div>
+
+
+		</li>
+		<li test-id='44' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.dikahadir.definitions.aturancuti.TambahAturanCutiTest.userMengisiJumlahBulanKerjaSisaCuti(int))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And user menginput jumlah bulan sisa kerja cuti -12</div>
+
+
+		</li>
+		<li test-id='45' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.dikahadir.definitions.aturancuti.TambahAturanCutiTest.userMenekanTombolTambahkan())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And user menekan tombol Tambahkan pada form tambahkan aturan cuti</div>
+
+
+		</li>
+		<li test-id='46' class='node then Fail' status='Fail'>
+			<div class="step-name" title="(com.dikahadir.definitions.aturancuti.TambahAturanCutiTest.aturanCutiBerhasilDitambahkan(java.lang.String))"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>Then sistem menampilkan pesan "Gagal Membuat Aturan Cuti"</div>
+
+
+					<textarea disabled class="code-block">java.lang.AssertionError: Pesan sukses tidak sesuai! expected [Gagal Membuat Aturan Cuti] but found [Sukses Membuat Aturan Cuti]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at com.dikahadir.definitions.aturancuti.TambahAturanCutiTest.aturanCutiBerhasilDitambahkan(TambahAturanCutiTest.java:63)
+	at ✽.sistem menampilkan pesan "Gagal Membuat Aturan Cuti"(file:///C:/Hegar/sqabatch23/TA/web_hadir/src/test/resources/features/aturancuti/TambahAturanCuti.feature:30)
+</textarea>
+		</li>
+		<li test-id='47' class='node * Pass' status='Pass'>
+			<div class="step-name" title="(AFTER)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>com.dikahadir.Hooks.tearDown(io.cucumber.java.Scenario)</div>
+
+
+					<div class="node-step">Tambah aturan cuti dengan data invalid</div>
+					<div class='screenshots'>
+						<img width='80' height='40' onerror='this.style.display="none"' data-featherlight='../Screenshots/embedded1.png' src='../Screenshots/embedded1.png'>
+					</div>
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
 			</ul>
 		</div>
 	</div>
@@ -307,7 +466,70 @@
 	</div>
 	<!-- subview right -->
 </div>
-<!-- test view --><div id='dashboard-view' class='view hide'>
+<!-- test view --><div id='exception-view' class='view hide'>
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+				<i class='material-icons'>search</i> Search
+				</a>
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+	<div class='subview-left left'>
+		<div class='view-summary'>
+			<ul id='exception-collection' class='exception-collection'>
+				<li class='exception displayed active'>
+					<div class='exception-heading'>
+						<span class='exception-name'>java.lang.AssertionError</span>
+						<span class='exception-count right'><span class='label red lighten-1 white-text'>1</span></span>
+					</div>
+					<div class='exception-content hide'>
+						<div class='exception-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>StackTrace</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Aug 24, 2025 02:09:48 AM</td>
+										<td class='linked' test-id='46'>Then sistem menampilkan pesan "Gagal Membuat Aturan Cuti"</td>
+										<td>
+											<textarea disabled class="code-block">java.lang.AssertionError: Pesan sukses tidak sesuai! expected [Gagal Membuat Aturan Cuti] but found [Sukses Membuat Aturan Cuti]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at com.dikahadir.definitions.aturancuti.TambahAturanCutiTest.aturanCutiBerhasilDitambahkan(TambahAturanCutiTest.java:63)
+	at ✽.sistem menampilkan pesan "Gagal Membuat Aturan Cuti"(file:///C:/Hegar/sqabatch23/TA/web_hadir/src/test/resources/features/aturancuti/TambahAturanCuti.feature:30)
+</textarea>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<h5 class='exception-name'></h5>
+		</div>
+	</div>
+</div>
+<!-- exception view --><div id='dashboard-view' class='view hide'>
 	<div class='card-panel transparent np-v'>
 		<h5>Dashboard</h5>
 
@@ -315,37 +537,37 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Features
-					<div class='panel-lead'>2</div>
+					<div class='panel-lead'>3</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Scenarios
-					<div class='panel-lead'>2</div>
+					<div class='panel-lead'>4</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Steps
-					<div class='panel-lead'>9</div>
+					<div class='panel-lead'>30</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Aug 23, 2025 03:07:32 PM</div>
+					<div class='panel-lead'>Aug 24, 2025 02:08:20 AM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Aug 23, 2025 03:08:01 PM</div>
+			 		<div class='panel-lead'>Aug 24, 2025 02:09:52 AM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>00 00 28.204</div>
+					<div class='panel-lead'>00 01 31.193</div>
 				</div>
 			</div>
 			<div class='col s4'>
@@ -380,24 +602,24 @@
 		<!-- container -->
 		<script>
 			var statusGroup = {
-                parentCount: 2,
+                parentCount: 3,
 				passParent: 2,
-				failParent: 0,
+				failParent: 1,
 				fatalParent: 0,
 				errorParent: 0,
 				warningParent: 0,
 				skipParent: 0,
-				childCount: 2,
-				passChild: 2,
-				failChild: 0,
+				childCount: 4,
+				passChild: 3,
+				failChild: 1,
 				fatalChild: 0,
 				errorChild: 0,
 				warningChild: 0,
 				skipChild: 0,
 				infoChild: 0,
-				grandChildCount: 9,
-				passGrandChild: 9,
-				failGrandChild: 0,
+				grandChildCount: 30,
+				passGrandChild: 29,
+				failGrandChild: 1,
 				fatalGrandChild: 0,
 				errorGrandChild: 0,
 				warningGrandChild: 0,
@@ -408,7 +630,7 @@
 		
 		<script>
 			var timeline = {
-			        "Tombol Reset":14.93,"Tombol Search":11.917
+			        "Tombol Reset":28.212,"Tombol Search":19.543,"Tambah Aturan Cuti":41.169
 			};
 		</script>
 		
