@@ -21,8 +21,10 @@ public void navigasiKeHalamanJabatanEdit() {
 }
 
     @When("user menekan tombol action pada jabatan {string}")
-    public void menekanTombolAction(String namaJabatan) {
-        jabatanPage.clickActionButtonWithPagination(namaJabatan);
+    public void menekanTombolAction(String level) {
+        jabatanPage.inputSearchText(level);
+        jabatanPage.clickSearchJabatan();
+        jabatanPage.clickActionButtonRowPertama();
     }
 
     @When("user menekan tombol edit pada menu dropdown")

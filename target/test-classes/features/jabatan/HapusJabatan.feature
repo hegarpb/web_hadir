@@ -4,7 +4,7 @@ Feature: Hapus Jabatan
 
   Scenario Outline: Menghapus data jabatan dengan feature delete pada tabel jabatan dengan data jabatan yang tidak terkait dengn user .
     Given user sudah login sebagai admin dan berada di halaman Manajemen jabatan
-    When user mengklik tombol action pada jabatan "Test Jabatan"
+    When user mengklik tombol action pada jabatan "OB"
     And user mengklik tombol delete pada menu dropdown
     And user mengklik tombol Ya pada form hapus jabatan
     Then pesan sukses "Berhasil Delete Jabatan" akan diatmpilkan sistem

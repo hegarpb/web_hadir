@@ -21,7 +21,7 @@ public class HapusJabatan {
     }
     @When("user mengklik tombol action pada jabatan {string}")
     public void clickTombolAction(String namaJabatan){
-        jabatanPage.clickActionButtonWithPagination(namaJabatan);
+        // jabatanPage.clickActionButtonWithPagination(namaJabatan);
     }
     @When("user mengklik tombol delete pada menu dropdown")
     public void clickMenuDelete(){

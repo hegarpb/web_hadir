@@ -20,7 +20,7 @@ public class JabatanRepository {
 
     public static By buttonSimpanEdit= By.xpath("//button[normalize-space()='Simpan']");
     public static By buttonConfirmDelete= By.xpath("//button[normalize-space()='Ya']");
-    public static By buttonCancel= By.xpath("//button[normalize-space()='Tidak']");
+    public static By buttonCancel= By.xpath("//button[normalize-space()='Batal']");
     public static By formHapusJabatan=By.xpath("//div[contains(@class,'modal')]//h2[normalize-space()='Hapus Jabatan']");
     public static By formTambahJabatan = By.xpath("//h2[normalize-space()='Tambah Jabatan']");
     public static By buttonNextPage = By.xpath("//button[@aria-label='Go to next page' and not(@disabled)]");
@@ -34,13 +34,17 @@ public class JabatanRepository {
     public static By tableContainer = By.xpath("//div[contains(@class,'MuiTableContainer-root')]");
     public static By loadingSpinner = By.xpath("//div[contains(@class,'MuiCircularProgress-root')]");
     public static By formEditJabatan = By.xpath("//h2[normalize-space()='Edit Jabatan']");
+// lebih stabil target button icon
+// target tombol action di baris pertama
+public static By buttonActionRowPertama = By.xpath("//table/tbody/tr[1]//button[contains(@class,'MuiIconButton')]");
 
-public static By editButtonInRow = By.xpath(".//button[@aria-label='Edit']");
 
-  public static By buttonAction(String namaJabatan) {
-    return By.xpath(
-        "//table//tr[td[normalize-space()='" + namaJabatan + "']]//button[contains(@class,'MuiButtonBase-root')]"
-    );
-}
+
+
+//  (String namaJabatan) {
+//     return By.xpath(
+//         "//table//tr[td[normalize-space()='" + namaJabatan + "']]//button[contains(@class,'MuiButtonBase-root')]"
+//     );
+// }
 
 }
