@@ -1,26 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 3, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 61.49 s <<< FAILURE! -- in TestSuite
-com.dikahadir.runners.RunnerJabatanTest.runScenario["Menghapus data jabatan dengan feature delete pada tabel jabatan dengan data jabatan yang tidak terkait dengn user .", "Hapus Jabatan"](1) -- Time elapsed: 18.63 s <<< FAILURE!
-java.lang.AssertionError: Pesan sukses tidak sesuai expected [Berhasil Delete Jabatan] but found [Gagal Delete Jabatan]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:656)
-	at com.dikahadir.definitions.jabatan.HapusJabatan.pesanSukses(HapusJabatan.java:49)
-	at ✽.pesan sukses "Berhasil Delete Jabatan" akan diatmpilkan sistem(file:///C:/Hegar/sqabatch23/TA/web_hadir/src/test/resources/features/jabatan/HapusJabatan.feature:10)
-
-com.dikahadir.runners.RunnerJabatanTest.runScenario["Menghapus data jabatan dengan feature delete pada tabel jabatan dengan data jabatan yang terkait dengn user .", "Hapus Jabatan"](2) -- Time elapsed: 27.29 s <<< FAILURE!
-java.lang.RuntimeException: Jabatan dengan nama 'SQA' tidak ditemukan di semua halaman.
-	at com.dikahadir.page.JabatanPage.clickActionButtonWithPagination(JabatanPage.java:160)
-	at com.dikahadir.definitions.jabatan.HapusJabatan.clickTombolAction(HapusJabatan.java:29)
-	at ✽.user mengklik tombol action pada jabatan "SQA"(file:///C:/Hegar/sqabatch23/TA/web_hadir/src/test/resources/features/jabatan/HapusJabatan.feature:14)
-
-com.dikahadir.runners.RunnerJabatanTest.runScenario["Batal menghapus jabatan dengan menekan tombol batal pada form hapus jabatan", "Hapus Jabatan"](3) -- Time elapsed: 13.02 s <<< FAILURE!
-java.lang.RuntimeException: Jabatan dengan nama 'STOFF' tidak ditemukan di semua halaman.
-	at com.dikahadir.page.JabatanPage.clickActionButtonWithPagination(JabatanPage.java:160)
-	at com.dikahadir.definitions.jabatan.HapusJabatan.clickTombolAction(HapusJabatan.java:29)
-	at ✽.user mengklik tombol action pada jabatan "STOFF"(file:///C:/Hegar/sqabatch23/TA/web_hadir/src/test/resources/features/jabatan/HapusJabatan.feature:21)
-
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 29.56 s -- in TestSuite

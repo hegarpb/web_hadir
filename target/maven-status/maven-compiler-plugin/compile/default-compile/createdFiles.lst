@@ -1,6 +1,8 @@
 com\dikahadir\page\JabatanPage.class
+com\dikahadir\page\AturanCutiPage.class
 com\dikahadir\repository\JabatanRepository.class
 com\dikahadir\utils\DriverManager.class
+com\dikahadir\repository\AturanCutiRepository.class
 com\dikahadir\repository\ManagementRepository.class
 com\dikahadir\utils\DriverUtil.class
 com\dikahadir\page\UserPage.class

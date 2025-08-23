@@ -39,7 +39,6 @@
 		<!-- slideout menu -->
 		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
 			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
-			<li class='waves-effect'><a href='#!' view='exception-view' onclick="configureView(2)"><i class='material-icons'>bug_report</i></a></li>
 			<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></a></li>
 		</ul>
 		<!-- report name -->
@@ -49,7 +48,7 @@
 		<!-- nav-right -->
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<a href='#!'>
-			<span class='label blue darken-3 suite-start-time'>Aug 23, 2025 11:47:38 AM</span>
+			<span class='label blue darken-3 suite-start-time'>Aug 23, 2025 03:07:32 PM</span>
 			</a>
 		</ul>
 	</div>
@@ -64,7 +63,7 @@
 				<i class='material-icons'>warning</i> Status
 				</a>
 				<ul id='tests-toggle' class='dropdown-content'>
-										<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
+										<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
 					<li class='divider'></li>
 					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
 				</ul>
@@ -108,12 +107,12 @@
                     <canvas id='parent-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='$0%'>
-                    <span class='strong'>0</span> features passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='$100%'>
+                    <span class='strong'>2</span> features passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='100%'>
-                    1</span> features failed, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
+                    0</span> features failed, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
                     0</span> skipped
                 </div>
@@ -126,12 +125,12 @@
                     <canvas id='child-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='0%'>
-                    <span class='strong'>0</span> scenarios passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='100%'>
+                    <span class='strong'>2</span> scenarios passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='100%'>
-                    3</span> scenarios failed, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
+                    0</span> scenarios failed, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
                     0</span> skipped, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
@@ -146,14 +145,14 @@
                     <canvas id='grandchild-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='50%'>
+                    <span class='tooltipped' data-position='top' data-tooltip='100%'>
                     <span class='strong'>9</span> steps passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='16%'>
-                    3</span> steps failed, 
-                    <span class='strong tooltipped' data-position='top' data-tooltip='33%'>
-                    6</span> skipped, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
+                    0</span> steps failed, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
+                    0</span> skipped, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
                     0</span> others
                 </div>
@@ -174,11 +173,11 @@
 	<div class='subview-left left'>
 		<div class='view-summary'>
 			<ul id='test-collection' class='test-collection'>
-				<li class='test displayed active has-leaf fail' status='fail' bdd='true' test-id='1'>
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='1'>
 					<div class='test-heading'>
-						<span class='test-name'>Hapus Jabatan</span>
-						<span class='test-time'>Aug 23, 2025 11:47:39 AM</span>
-						<span class='test-status right fail'>Fail</span>
+						<span class='test-name'>Tombol Reset</span>
+						<span class='test-time'>Aug 23, 2025 03:07:33 PM</span>
+						<span class='test-status right pass'>Pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class="sr-filters bdd-filters">
@@ -187,169 +186,100 @@
 	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
 	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
 </div>
-	<div class='test-desc'>        Sebagai user saya ingin menghapus data jabatan 
-        dengan menggunakan feature delete pada tabel data jabatan</div>
+	<div class='test-desc'>  Seabagai user saya ingin melakukan reset setelah melakukan kaukanpencarian aturan cuti
+  dengan featur searach pada halaman Aturan cuti</div>
 
-<div class='scenario node' test-id='2' status='fail'>
+<div class='scenario outline node' test-id='2' status='pass'>
 
-	<span class='duration right label'>00 00 18.291</span>
+	<span class='duration right label'>00 00 14.920</span>
 	<div class="bdd-test">
-		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario: Menghapus data jabatan dengan feature delete pada tabel jabatan dengan data jabatan yang tidak terkait dengn user .</div>
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario Outline: Pencarian aturan cuti</div>
 	</div>
 	
+		<div class='node-desc'><br><br><table class='markup-table table '><tr><td>namaAturan</td></tr><tr><td>Cuti Hamil</td></tr></table></div>
 	
 	
 	<ul class='steps'>
-		<li test-id='4' class='node given Pass' status='Pass'>
-			<div class="step-name" title="(com.dikahadir.definitions.jabatan.HapusJabatan.navigasiKeHalamanJabatanEdit())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given user sudah login sebagai admin dan berada di halaman Manajemen jabatan</div>
+		<li test-id='3' class='node scenario Pass' status='Pass'>
+			<div class="step-name" title="()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Pencarian aturan cuti</div>
 
 
-		</li>
-		<li test-id='5' class='node when Pass' status='Pass'>
-			<div class="step-name" title="(com.dikahadir.definitions.jabatan.HapusJabatan.clickTombolAction(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When user mengklik tombol action pada jabatan "Test Jabatan"</div>
+			<ul class='gc steps'>
+				<li test-id='5' class='gc given Pass' status='Pass'>
+					<h6 class="step-name" title="com.dikahadir.definitions.aturancuti.ResetAturanCutiTest.userSudahLoginDanBeradaDiHalamanAturanCuti()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given user login sebagai admin dan berada di halaman Aturan cuti</h6>
 
+				</li>
+				<li test-id='6' class='gc when Pass' status='Pass'>
+					<h6 class="step-name" title="com.dikahadir.definitions.aturancuti.ResetAturanCutiTest.userInputNamaAturanCuti(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When user menginputkan "Cuti Hamil" dalam field cari berdasarkan nama</h6>
 
-		</li>
-		<li test-id='6' class='node and Pass' status='Pass'>
-			<div class="step-name" title="(com.dikahadir.definitions.jabatan.HapusJabatan.clickMenuDelete())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And user mengklik tombol delete pada menu dropdown</div>
+				</li>
+				<li test-id='7' class='gc and Pass' status='Pass'>
+					<h6 class="step-name" title="com.dikahadir.definitions.aturancuti.ResetAturanCutiTest.userKlikTombolSearch()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And user mengklik tombol search di halaman aturan cuti</h6>
 
+				</li>
+				<li test-id='8' class='gc and Pass' status='Pass'>
+					<h6 class="step-name" title="com.dikahadir.definitions.aturancuti.ResetAturanCutiTest.userKlikTombolReset()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And user mengklik tombol Reset</h6>
 
-		</li>
-		<li test-id='7' class='node and Pass' status='Pass'>
-			<div class="step-name" title="(com.dikahadir.definitions.jabatan.HapusJabatan.clickButtonConfirmDelete())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And user mengklik tombol Ya pada form hapus jabatan</div>
+				</li>
+				<li test-id='9' class='gc then Pass' status='Pass'>
+					<h6 class="step-name" title="com.dikahadir.definitions.aturancuti.ResetAturanCutiTest.tabelKembaliMenampilkanSemuaAturanCuti()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then tabel kembali menampilkan semua aturan cuti</h6>
 
-
-		</li>
-		<li test-id='8' class='node then Fail' status='Fail'>
-			<div class="step-name" title="(com.dikahadir.definitions.jabatan.HapusJabatan.pesanSukses(java.lang.String))"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>Then pesan sukses "Berhasil Delete Jabatan" akan diatmpilkan sistem</div>
-
-
-					<textarea disabled class="code-block">java.lang.AssertionError: Pesan sukses tidak sesuai expected [Berhasil Delete Jabatan] but found [Gagal Delete Jabatan]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:656)
-	at com.dikahadir.definitions.jabatan.HapusJabatan.pesanSukses(HapusJabatan.java:49)
-	at ✽.pesan sukses "Berhasil Delete Jabatan" akan diatmpilkan sistem(file:///C:/Hegar/sqabatch23/TA/web_hadir/src/test/resources/features/jabatan/HapusJabatan.feature:10)
-</textarea>
-		</li>
-		<li test-id='9' class='node * Pass' status='Pass'>
-			<div class="step-name" title="(AFTER)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>com.dikahadir.Hooks.tearDown(io.cucumber.java.Scenario)</div>
-
-
-					<div class="node-step">Menghapus data jabatan dengan feature delete pada tabel jabatan dengan data jabatan yang tidak terkait dengn user .</div>
-					<div class='screenshots'>
-						<img width='80' height='40' onerror='this.style.display="none"' data-featherlight='../Screenshots/embedded1.png' src='../Screenshots/embedded1.png'>
-					</div>
+				</li>
+			</ul>
 		</li>
 	</ul>
 </div>
-<div class='scenario node' test-id='10' status='fail'>
-
-	<span class='duration right label'>00 00 27.348</span>
-	<div class="bdd-test">
-		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario: Menghapus data jabatan dengan feature delete pada tabel jabatan dengan data jabatan yang terkait dengn user .</div>
-	</div>
-	
-	
-	
-	<ul class='steps'>
-		<li test-id='12' class='node given Pass' status='Pass'>
-			<div class="step-name" title="(com.dikahadir.definitions.jabatan.HapusJabatan.navigasiKeHalamanJabatanEdit())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given user sudah login sebagai admin dan berada di halaman Manajemen jabatan</div>
-
-
-		</li>
-		<li test-id='13' class='node when Fail' status='Fail'>
-			<div class="step-name" title="(com.dikahadir.definitions.jabatan.HapusJabatan.clickTombolAction(java.lang.String))"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>When user mengklik tombol action pada jabatan "SQA"</div>
-
-
-					<textarea disabled class="code-block">java.lang.RuntimeException: Jabatan dengan nama 'SQA' tidak ditemukan di semua halaman.
-	at com.dikahadir.page.JabatanPage.clickActionButtonWithPagination(JabatanPage.java:160)
-	at com.dikahadir.definitions.jabatan.HapusJabatan.clickTombolAction(HapusJabatan.java:29)
-	at ✽.user mengklik tombol action pada jabatan "SQA"(file:///C:/Hegar/sqabatch23/TA/web_hadir/src/test/resources/features/jabatan/HapusJabatan.feature:14)
-</textarea>
-		</li>
-		<li test-id='14' class='node and Skip' status='Skip'>
-			<div class="step-name" title="(com.dikahadir.definitions.jabatan.HapusJabatan.clickMenuDelete())"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And user mengklik tombol delete pada menu dropdown</div>
-
-
-					<div class="node-step">Step skipped</div>
-		</li>
-		<li test-id='15' class='node and Skip' status='Skip'>
-			<div class="step-name" title="(com.dikahadir.definitions.jabatan.HapusJabatan.clickButtonConfirmDelete())"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And user mengklik tombol Ya pada form hapus jabatan</div>
-
-
-					<div class="node-step">Step skipped</div>
-		</li>
-		<li test-id='16' class='node then Skip' status='Skip'>
-			<div class="step-name" title="(com.dikahadir.definitions.jabatan.HapusJabatan.pesanGagal(java.lang.String))"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>Then pesan gagal "Gagal Delete Jabatan" akan diatmpilkan sistem</div>
-
-
-					<div class="node-step">Step skipped</div>
-		</li>
-		<li test-id='17' class='node * Pass' status='Pass'>
-			<div class="step-name" title="(AFTER)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>com.dikahadir.Hooks.tearDown(io.cucumber.java.Scenario)</div>
-
-
-					<div class="node-step">Menghapus data jabatan dengan feature delete pada tabel jabatan dengan data jabatan yang terkait dengn user .</div>
-					<div class='screenshots'>
-						<img width='80' height='40' onerror='this.style.display="none"' data-featherlight='../Screenshots/embedded2.png' src='../Screenshots/embedded2.png'>
 					</div>
-		</li>
-	</ul>
+				</li>
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='11'>
+					<div class='test-heading'>
+						<span class='test-name'>Tombol Search</span>
+						<span class='test-time'>Aug 23, 2025 03:07:48 PM</span>
+						<span class='test-status right pass'>Pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class="sr-filters bdd-filters">
+	<a class="btn-floating waves-effect waves-light pass green" title="pass"><i class='material-icons'>check_circle</i></a>
+	<a class="btn-floating waves-effect waves-light fail red" title="fail"><i class='material-icons'>cancel</i></a>
+	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
+	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
 </div>
-<div class='scenario node' test-id='18' status='fail'>
+	<div class='test-desc'>  Seabagai user saya ingin melakukan pencarian aturan cuti
+  dengan featur searach pada halaman Aturan cuti</div>
 
-	<span class='duration right label'>00 00 13.011</span>
+<div class='scenario outline node' test-id='12' status='pass'>
+
+	<span class='duration right label'>00 00 11.917</span>
 	<div class="bdd-test">
-		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario: Batal menghapus jabatan dengan menekan tombol batal pada form hapus jabatan</div>
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario Outline: Pencarian aturan cuti</div>
 	</div>
 	
+		<div class='node-desc'><br><br><table class='markup-table table '><tr><td>namaAturan</td></tr><tr><td>Cuti Hamil</td></tr></table></div>
 	
 	
 	<ul class='steps'>
-		<li test-id='20' class='node given Pass' status='Pass'>
-			<div class="step-name" title="(com.dikahadir.definitions.jabatan.HapusJabatan.navigasiKeHalamanJabatanEdit())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given user sudah login sebagai admin dan berada di halaman Manajemen jabatan</div>
+		<li test-id='13' class='node scenario Pass' status='Pass'>
+			<div class="step-name" title="()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Pencarian aturan cuti</div>
 
 
-		</li>
-		<li test-id='21' class='node when Fail' status='Fail'>
-			<div class="step-name" title="(com.dikahadir.definitions.jabatan.HapusJabatan.clickTombolAction(java.lang.String))"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>When user mengklik tombol action pada jabatan "STOFF"</div>
+			<ul class='gc steps'>
+				<li test-id='15' class='gc given Pass' status='Pass'>
+					<h6 class="step-name" title="com.dikahadir.definitions.aturancuti.SearchAturanCutiTest.userSudahLoginDanBeradaDiHalamanAturanCuti()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given user sudah login sebagai admin dan berada di halaman Aturan cuti</h6>
 
+				</li>
+				<li test-id='16' class='gc when Pass' status='Pass'>
+					<h6 class="step-name" title="com.dikahadir.definitions.aturancuti.SearchAturanCutiTest.userInputNamaAturanCuti(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When user menginput "Cuti Hamil" dalam field cari berdasarkan nama</h6>
 
-					<textarea disabled class="code-block">java.lang.RuntimeException: Jabatan dengan nama 'STOFF' tidak ditemukan di semua halaman.
-	at com.dikahadir.page.JabatanPage.clickActionButtonWithPagination(JabatanPage.java:160)
-	at com.dikahadir.definitions.jabatan.HapusJabatan.clickTombolAction(HapusJabatan.java:29)
-	at ✽.user mengklik tombol action pada jabatan "STOFF"(file:///C:/Hegar/sqabatch23/TA/web_hadir/src/test/resources/features/jabatan/HapusJabatan.feature:21)
-</textarea>
-		</li>
-		<li test-id='22' class='node and Skip' status='Skip'>
-			<div class="step-name" title="(com.dikahadir.definitions.jabatan.HapusJabatan.clickMenuDelete())"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And user mengklik tombol delete pada menu dropdown</div>
+				</li>
+				<li test-id='17' class='gc and Pass' status='Pass'>
+					<h6 class="step-name" title="com.dikahadir.definitions.aturancuti.SearchAturanCutiTest.userKlikTombolSearch()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And user menekan tombol search di halaman aturan cuti</h6>
 
+				</li>
+				<li test-id='18' class='gc then Pass' status='Pass'>
+					<h6 class="step-name" title="com.dikahadir.definitions.aturancuti.SearchAturanCutiTest.munculNamaAturanCutiYangDicari(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then muncul nama aturan cuti yang dicari "Cuti Hamil"</h6>
 
-					<div class="node-step">Step skipped</div>
-		</li>
-		<li test-id='23' class='node and Skip' status='Skip'>
-			<div class="step-name" title="(com.dikahadir.definitions.jabatan.HapusJabatan.clickButtonCancelDelete())"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And user mengklik tombol Batal pada form hapus jabatan</div>
-
-
-					<div class="node-step">Step skipped</div>
-		</li>
-		<li test-id='24' class='node then Skip' status='Skip'>
-			<div class="step-name" title="(com.dikahadir.definitions.jabatan.HapusJabatan.formHapusTertutup())"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>Then form pada hapus jabatan akan tertutup</div>
-
-
-					<div class="node-step">Step skipped</div>
-		</li>
-		<li test-id='25' class='node * Pass' status='Pass'>
-			<div class="step-name" title="(AFTER)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>com.dikahadir.Hooks.tearDown(io.cucumber.java.Scenario)</div>
-
-
-					<div class="node-step">Batal menghapus jabatan dengan menekan tombol batal pada form hapus jabatan</div>
-					<div class='screenshots'>
-						<img width='80' height='40' onerror='this.style.display="none"' data-featherlight='../Screenshots/embedded3.png' src='../Screenshots/embedded3.png'>
-					</div>
+				</li>
+			</ul>
 		</li>
 	</ul>
 </div>
@@ -377,113 +307,7 @@
 	</div>
 	<!-- subview right -->
 </div>
-<!-- test view --><div id='exception-view' class='view hide'>
-	<section id='controls'>
-		<div class='controls grey lighten-4'>
-			<!-- search -->
-			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
-				<a href="#" class='search-div'>
-				<i class='material-icons'>search</i> Search
-				</a>
-				<div class='input-field left hide'>
-					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
-				</div>
-			</div>
-			<!-- search -->
-		</div>
-	</section>
-	<div class='subview-left left'>
-		<div class='view-summary'>
-			<ul id='exception-collection' class='exception-collection'>
-				<li class='exception displayed active'>
-					<div class='exception-heading'>
-						<span class='exception-name'>java.lang.RuntimeException</span>
-						<span class='exception-count right'><span class='label red lighten-1 white-text'>2</span></span>
-					</div>
-					<div class='exception-content hide'>
-						<div class='exception-tests'>
-							<table class='bordered table-results'>
-								<thead>
-									<tr>
-										<th>Timestamp</th>
-										<th>TestName</th>
-										<th>StackTrace</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>Aug 23, 2025 11:48:07 AM</td>
-										<td class='linked' test-id='13'>When user mengklik tombol action pada jabatan "SQA"</td>
-										<td>
-											<textarea disabled class="code-block">java.lang.RuntimeException: Jabatan dengan nama 'SQA' tidak ditemukan di semua halaman.
-	at com.dikahadir.page.JabatanPage.clickActionButtonWithPagination(JabatanPage.java:160)
-	at com.dikahadir.definitions.jabatan.HapusJabatan.clickTombolAction(HapusJabatan.java:29)
-	at ✽.user mengklik tombol action pada jabatan "SQA"(file:///C:/Hegar/sqabatch23/TA/web_hadir/src/test/resources/features/jabatan/HapusJabatan.feature:14)
-</textarea>
-										</td>
-									</tr>
-									<tr>
-										<td>Aug 23, 2025 11:48:34 AM</td>
-										<td class='linked' test-id='21'>When user mengklik tombol action pada jabatan "STOFF"</td>
-										<td>
-											<textarea disabled class="code-block">java.lang.RuntimeException: Jabatan dengan nama 'SQA' tidak ditemukan di semua halaman.
-	at com.dikahadir.page.JabatanPage.clickActionButtonWithPagination(JabatanPage.java:160)
-	at com.dikahadir.definitions.jabatan.HapusJabatan.clickTombolAction(HapusJabatan.java:29)
-	at ✽.user mengklik tombol action pada jabatan "SQA"(file:///C:/Hegar/sqabatch23/TA/web_hadir/src/test/resources/features/jabatan/HapusJabatan.feature:14)
-</textarea>
-										</td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</li>
-				<li class='exception displayed active'>
-					<div class='exception-heading'>
-						<span class='exception-name'>java.lang.AssertionError</span>
-						<span class='exception-count right'><span class='label red lighten-1 white-text'>1</span></span>
-					</div>
-					<div class='exception-content hide'>
-						<div class='exception-tests'>
-							<table class='bordered table-results'>
-								<thead>
-									<tr>
-										<th>Timestamp</th>
-										<th>TestName</th>
-										<th>StackTrace</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>Aug 23, 2025 11:47:55 AM</td>
-										<td class='linked' test-id='8'>Then pesan sukses "Berhasil Delete Jabatan" akan diatmpilkan sistem</td>
-										<td>
-											<textarea disabled class="code-block">java.lang.AssertionError: Pesan sukses tidak sesuai expected [Berhasil Delete Jabatan] but found [Gagal Delete Jabatan]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:656)
-	at com.dikahadir.definitions.jabatan.HapusJabatan.pesanSukses(HapusJabatan.java:49)
-	at ✽.pesan sukses "Berhasil Delete Jabatan" akan diatmpilkan sistem(file:///C:/Hegar/sqabatch23/TA/web_hadir/src/test/resources/features/jabatan/HapusJabatan.feature:10)
-</textarea>
-										</td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</li>
-			</ul>
-		</div>
-	</div>
-	<div class='subview-right left'>
-		<div class='view-summary'>
-			<h5 class='exception-name'></h5>
-		</div>
-	</div>
-</div>
-<!-- exception view --><div id='dashboard-view' class='view hide'>
+<!-- test view --><div id='dashboard-view' class='view hide'>
 	<div class='card-panel transparent np-v'>
 		<h5>Dashboard</h5>
 
@@ -491,37 +315,37 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Features
-					<div class='panel-lead'>1</div>
+					<div class='panel-lead'>2</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Scenarios
-					<div class='panel-lead'>3</div>
+					<div class='panel-lead'>2</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Steps
-					<div class='panel-lead'>18</div>
+					<div class='panel-lead'>9</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Aug 23, 2025 11:47:38 AM</div>
+					<div class='panel-lead'>Aug 23, 2025 03:07:32 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Aug 23, 2025 11:48:38 AM</div>
+			 		<div class='panel-lead'>Aug 23, 2025 03:08:01 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>00 01 00.095</div>
+					<div class='panel-lead'>00 00 28.204</div>
 				</div>
 			</div>
 			<div class='col s4'>
@@ -556,35 +380,35 @@
 		<!-- container -->
 		<script>
 			var statusGroup = {
-                parentCount: 1,
-				passParent: 0,
-				failParent: 1,
+                parentCount: 2,
+				passParent: 2,
+				failParent: 0,
 				fatalParent: 0,
 				errorParent: 0,
 				warningParent: 0,
 				skipParent: 0,
-				childCount: 3,
-				passChild: 0,
-				failChild: 3,
+				childCount: 2,
+				passChild: 2,
+				failChild: 0,
 				fatalChild: 0,
 				errorChild: 0,
 				warningChild: 0,
 				skipChild: 0,
 				infoChild: 0,
-				grandChildCount: 18,
+				grandChildCount: 9,
 				passGrandChild: 9,
-				failGrandChild: 3,
+				failGrandChild: 0,
 				fatalGrandChild: 0,
 				errorGrandChild: 0,
 				warningGrandChild: 0,
-				skipGrandChild: 6,
+				skipGrandChild: 0,
 				infoGrandChild: 0,
 			};
 			</script>
 		
 		<script>
 			var timeline = {
-			        "Hapus Jabatan":58.715
+			        "Tombol Reset":14.93,"Tombol Search":11.917
 			};
 		</script>
 		

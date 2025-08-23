@@ -1,119 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="0" failed="3" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-08-23T11:47:38 WIB" name="Main Test" finished-at="2025-08-23T11:48:39 WIB" duration-ms="60705">
+  <suite started-at="2025-08-23T15:07:32 WIB" name="Main Test" finished-at="2025-08-23T15:08:01 WIB" duration-ms="28741">
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.dikahadir.runners.RunnerJabatanTest@4218d6a3]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.dikahadir.runners.RunnerAturanCutiTest@4218d6a3]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2025-08-23T11:47:38 WIB" name="Test Math" finished-at="2025-08-23T11:48:39 WIB" duration-ms="60705">
-      <class name="com.dikahadir.runners.RunnerJabatanTest">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.dikahadir.runners.RunnerJabatanTest@4218d6a3]" started-at="2025-08-23T11:47:38 WIB" name="setUpClass" finished-at="2025-08-23T11:47:39 WIB" duration-ms="684" status="PASS">
+    <test started-at="2025-08-23T15:07:32 WIB" name="Test Math" finished-at="2025-08-23T15:08:01 WIB" duration-ms="28741">
+      <class name="com.dikahadir.runners.RunnerAturanCutiTest">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.dikahadir.runners.RunnerAturanCutiTest@4218d6a3]" started-at="2025-08-23T15:07:32 WIB" name="setUpClass" finished-at="2025-08-23T15:07:33 WIB" duration-ms="893" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@2e952845]]>
+                <![CDATA[org.testng.TestRunner@62b57479]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.dikahadir.runners.RunnerJabatanTest@4218d6a3]" started-at="2025-08-23T11:47:39 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-23T11:47:57 WIB" duration-ms="18595" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.dikahadir.runners.RunnerAturanCutiTest@4218d6a3]" started-at="2025-08-23T15:07:33 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-23T15:07:48 WIB" duration-ms="15253" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Menghapus data jabatan dengan feature delete pada tabel jabatan dengan data jabatan yang tidak terkait dengn user ."]]>
+                <![CDATA["Pencarian aturan cuti"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["Hapus Jabatan"]]>
+                <![CDATA["Tombol Reset"]]>
               </value>
             </param>
           </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[Pesan sukses tidak sesuai expected [Berhasil Delete Jabatan] but found [Gagal Delete Jabatan]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Pesan sukses tidak sesuai expected [Berhasil Delete Jabatan] but found [Gagal Delete Jabatan]
-at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.failNotEquals(Assert.java:1578)
-at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-at org.testng.Assert.assertEquals(Assert.java:132)
-at org.testng.Assert.assertEquals(Assert.java:656)
-at com.dikahadir.definitions.jabatan.HapusJabatan.pesanSukses(HapusJabatan.java:49)
-at ✽.pesan sukses "Berhasil Delete Jabatan" akan diatmpilkan sistem(file:///C:/Hegar/sqabatch23/TA/web_hadir/src/test/resources/features/jabatan/HapusJabatan.feature:10)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.dikahadir.runners.RunnerJabatanTest@4218d6a3]" started-at="2025-08-23T11:47:57 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-23T11:48:25 WIB" duration-ms="27377" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.dikahadir.runners.RunnerAturanCutiTest@4218d6a3]" started-at="2025-08-23T15:07:48 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-23T15:08:00 WIB" duration-ms="11924" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Menghapus data jabatan dengan feature delete pada tabel jabatan dengan data jabatan yang terkait dengn user ."]]>
+                <![CDATA["Pencarian aturan cuti"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["Hapus Jabatan"]]>
+                <![CDATA["Tombol Search"]]>
               </value>
             </param>
           </params>
-          <exception class="java.lang.RuntimeException">
-            <message>
-              <![CDATA[Jabatan dengan nama 'SQA' tidak ditemukan di semua halaman.]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.RuntimeException: Jabatan dengan nama 'SQA' tidak ditemukan di semua halaman.
-at com.dikahadir.page.JabatanPage.clickActionButtonWithPagination(JabatanPage.java:160)
-at com.dikahadir.definitions.jabatan.HapusJabatan.clickTombolAction(HapusJabatan.java:29)
-at ✽.user mengklik tombol action pada jabatan "SQA"(file:///C:/Hegar/sqabatch23/TA/web_hadir/src/test/resources/features/jabatan/HapusJabatan.feature:14)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.RuntimeException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.dikahadir.runners.RunnerJabatanTest@4218d6a3]" started-at="2025-08-23T11:48:25 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-23T11:48:38 WIB" duration-ms="13027" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Batal menghapus jabatan dengan menekan tombol batal pada form hapus jabatan"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Hapus Jabatan"]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.RuntimeException">
-            <message>
-              <![CDATA[Jabatan dengan nama 'STOFF' tidak ditemukan di semua halaman.]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.RuntimeException: Jabatan dengan nama 'STOFF' tidak ditemukan di semua halaman.
-at com.dikahadir.page.JabatanPage.clickActionButtonWithPagination(JabatanPage.java:160)
-at com.dikahadir.definitions.jabatan.HapusJabatan.clickTombolAction(HapusJabatan.java:29)
-at ✽.user mengklik tombol action pada jabatan "STOFF"(file:///C:/Hegar/sqabatch23/TA/web_hadir/src/test/resources/features/jabatan/HapusJabatan.feature:21)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.RuntimeException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.dikahadir.runners.RunnerJabatanTest@4218d6a3]" started-at="2025-08-23T11:48:38 WIB" name="tearDownClass" finished-at="2025-08-23T11:48:39 WIB" duration-ms="958" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.dikahadir.runners.RunnerAturanCutiTest@4218d6a3]" started-at="2025-08-23T15:08:00 WIB" name="tearDownClass" finished-at="2025-08-23T15:08:01 WIB" duration-ms="596" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
-      </class> <!-- com.dikahadir.runners.RunnerJabatanTest -->
+      </class> <!-- com.dikahadir.runners.RunnerAturanCutiTest -->
     </test> <!-- Test Math -->
   </suite> <!-- Main Test -->
 </testng-results>
