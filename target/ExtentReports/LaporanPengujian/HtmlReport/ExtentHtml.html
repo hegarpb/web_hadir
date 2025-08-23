@@ -48,7 +48,7 @@
 		<!-- nav-right -->
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<a href='#!'>
-			<span class='label blue darken-3 suite-start-time'>Aug 23, 2025 10:45:31 PM</span>
+			<span class='label blue darken-3 suite-start-time'>Aug 24, 2025 12:37:26 AM</span>
 			</a>
 		</ul>
 	</div>
@@ -176,7 +176,7 @@
 				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='1'>
 					<div class='test-heading'>
 						<span class='test-name'>Edit Jabatan</span>
-						<span class='test-time'>Aug 23, 2025 10:45:32 PM</span>
+						<span class='test-time'>Aug 24, 2025 12:37:27 AM</span>
 						<span class='test-status right pass'>Pass</span>
 					</div>
 					<div class='test-content hide'>
@@ -191,17 +191,17 @@
 
 <div class='scenario outline node' test-id='2' status='pass'>
 
-	<span class='duration right label'>00 00 24.989</span>
+	<span class='duration right label'>00 00 28.669</span>
 	<div class="bdd-test">
-		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario Outline: Mengubah nama jabatan dengan fitur edit dengan data yang valid.</div>
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario Outline: Validasi batal mengubah data jabatan</div>
 	</div>
 	
-		<div class='node-desc'><br><br><table class='markup-table table '><tr><td>namaBaru</td><td>levelBaru</td></tr><tr><td>EDitBaru9</td><td>7</td></tr></table></div>
+		<div class='node-desc'><br><br><table class='markup-table table '><tr><td>namaBaru</td><td>levelBaru</td></tr><tr><td>TestBatal</td><td>25</td></tr></table></div>
 	
 	
 	<ul class='steps'>
 		<li test-id='3' class='node scenario Pass' status='Pass'>
-			<div class="step-name" title="()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Mengubah nama jabatan dengan fitur edit dengan data yang valid.</div>
+			<div class="step-name" title="()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Validasi batal mengubah data jabatan</div>
 
 
 			<ul class='gc steps'>
@@ -210,7 +210,7 @@
 
 				</li>
 				<li test-id='6' class='gc when Pass' status='Pass'>
-					<h6 class="step-name" title="com.dikahadir.definitions.jabatan.EditJabatanTest.menekanTombolAction(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When user menekan tombol action pada jabatan "101"</h6>
+					<h6 class="step-name" title="com.dikahadir.definitions.jabatan.EditJabatanTest.menekanTombolAction(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When user menekan tombol action pada level jabatan "107"</h6>
 
 				</li>
 				<li test-id='7' class='gc and Pass' status='Pass'>
@@ -218,19 +218,19 @@
 
 				</li>
 				<li test-id='8' class='gc and Pass' status='Pass'>
-					<h6 class="step-name" title="com.dikahadir.definitions.jabatan.EditJabatanTest.mengubahNama(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And user mengubah nama jabatan menjadi "EDitBaru9"</h6>
+					<h6 class="step-name" title="com.dikahadir.definitions.jabatan.EditJabatanTest.mengubahNama(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And user mengubah nama jabatan menjadi "TestBatal"</h6>
 
 				</li>
 				<li test-id='9' class='gc and Pass' status='Pass'>
-					<h6 class="step-name" title="com.dikahadir.definitions.jabatan.EditJabatanTest.mengubahLevel(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And user mengubah level jabatan menjadi "7"</h6>
+					<h6 class="step-name" title="com.dikahadir.definitions.jabatan.EditJabatanTest.mengubahLevel(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And user mengubah level jabatan menjadi "25"</h6>
 
 				</li>
 				<li test-id='10' class='gc and Pass' status='Pass'>
-					<h6 class="step-name" title="com.dikahadir.definitions.jabatan.EditJabatanTest.penggunaMenekanTombolSimpan()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And user menekan tombol simpan</h6>
+					<h6 class="step-name" title="com.dikahadir.definitions.jabatan.EditJabatanTest.cancelEdit()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And user menekan tombol batal pada form edit jabatan</h6>
 
 				</li>
 				<li test-id='11' class='gc then Pass' status='Pass'>
-					<h6 class="step-name" title="com.dikahadir.definitions.jabatan.EditJabatanTest.sistemMenampilkanPesan(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then sistem akan menampilkan pesan "Berhasil Edit Jabatan"</h6>
+					<h6 class="step-name" title="com.dikahadir.definitions.jabatan.EditJabatanTest.formEditTertutup()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then form pada edit jabatan akan tertutup</h6>
 
 				</li>
 			</ul>
@@ -287,19 +287,19 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Aug 23, 2025 10:45:31 PM</div>
+					<div class='panel-lead'>Aug 24, 2025 12:37:26 AM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Aug 23, 2025 10:46:00 PM</div>
+			 		<div class='panel-lead'>Aug 24, 2025 12:37:56 AM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>00 00 28.317</div>
+					<div class='panel-lead'>00 00 30.140</div>
 				</div>
 			</div>
 			<div class='col s4'>
@@ -362,7 +362,7 @@
 		
 		<script>
 			var timeline = {
-			        "Edit Jabatan":24.995
+			        "Edit Jabatan":28.675
 			};
 		</script>
 		

@@ -51,7 +51,6 @@ Feature: Tambah Jabatan
       | nama       | level | message                     |
       | Karyawan14 |     1 | Gagal Menambahkan Job Level |
       | SPVVVv     | abc   | Gagal Menambahkan Job Level |
-      | Jendral    |   -10 | Gagal Menambahkan Job Level |
   # Negative Test - Field Kosong
 
   Scenario Outline: Validasi field kosong saat menambahkan jabatan

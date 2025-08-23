@@ -9,7 +9,7 @@ import io.cucumber.testng.CucumberOptions;
         // "src/test/resources/features/jabatan/SearchJabatan.feature",
         // "src/test/resources/features/jabatan/ResetSearchJabatan.feature",
         "src/test/resources/features/jabatan/EditJabatan.feature"
-        // "src/test/resources/features/jabatan/HapusJabatan.feature",
+        // "src/test/resources/features/jabatan/HapusJabatan.feature"
         // "src/test/resources/features/jabatan/Pagination.feature"
 
     },

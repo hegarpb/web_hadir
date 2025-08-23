@@ -56,7 +56,12 @@ public class JabatanPage {
         levelInput.clear();
         levelInput.sendKeys(value);
     }
+    
 
+    public void clickButtonBatal(){
+        safeClick(wait.until(ExpectedConditions.elementToBeClickable(JabatanRepository.buttonBatal)));
+    }
+    
     public void clickButtonTambahForm() {
         safeClick(wait.until(ExpectedConditions.elementToBeClickable(JabatanRepository.buttonTambah)));
     }
@@ -65,8 +70,8 @@ public class JabatanPage {
         safeClick(wait.until(ExpectedConditions.elementToBeClickable(JabatanRepository.buttonConfirmDelete)));
     }
 
-    public void clickButtonCancel() {
-        safeClick(wait.until(ExpectedConditions.elementToBeClickable(JabatanRepository.buttonCancel)));
+    public void clickButtonCancelDelete() {
+        safeClick(wait.until(ExpectedConditions.elementToBeClickable(JabatanRepository.buttonCancelDelete)));
     }
 
     public void clickButtonSimpanEdit() {
@@ -133,33 +138,7 @@ public class JabatanPage {
 
     // ================== ACTION WITH PAGINATION ================== //
 
-//   public void clickActionButtonWithPagination(String namaJabatan) {
-//         boolean found = false;
 
-//         while (true) {
-//             wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(JabatanRepository.tableRows));
-//             wait.until(ExpectedConditions.visibilityOfElementLocated(JabatanRepository.tableContainer));
-
-//             List<WebElement> elements = driver.findElements(JabatanRepository.buttonAction(namaJabatan));
-//             if (!elements.isEmpty()) {
-//                 safeClick(elements.get(0)); // 🔹 pakai safeClick
-//                 found = true;
-//                 break;
-//             }
-
-//             // tombol next
-//             List<WebElement> nextButtons = driver.findElements(JabatanRepository.buttonNextPage);
-//             if (nextButtons.isEmpty() || !nextButtons.get(0).isEnabled()) {
-//                 break;
-//             }
-//             safeClick(nextButtons.get(0)); // 🔹 pakai safeClick
-//             wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(JabatanRepository.tableRows));
-//         }
-
-//         if (!found) {
-//             throw new RuntimeException("Jabatan dengan nama '" + namaJabatan + "' tidak ditemukan di semua halaman.");
-//         }
-//     }
  public void clickActionButtonRowPertama() {
     try {
         // Pastikan table dan rows muncul
@@ -245,6 +224,8 @@ public void clickDeleteMenu() {
         throw new RuntimeException("❌ Gagal klik menu Delete. Detail: " + e.getMessage(), e);
     }
 }
+
+
 
 public void printAllDropdownOptions() {
     List<WebElement> options = driver.findElements(By.xpath("//li[@role='menuitem']"));

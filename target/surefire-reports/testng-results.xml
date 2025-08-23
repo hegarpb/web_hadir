@@ -2,30 +2,30 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-08-23T22:45:31 WIB" name="Main Test" finished-at="2025-08-23T22:46:00 WIB" duration-ms="29017">
+  <suite started-at="2025-08-24T00:37:26 WIB" name="Main Test" finished-at="2025-08-24T00:37:57 WIB" duration-ms="30811">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.dikahadir.runners.RunnerJabatanTest@4218d6a3]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2025-08-23T22:45:31 WIB" name="Test Math" finished-at="2025-08-23T22:46:00 WIB" duration-ms="29017">
+    <test started-at="2025-08-24T00:37:26 WIB" name="Test Math" finished-at="2025-08-24T00:37:57 WIB" duration-ms="30811">
       <class name="com.dikahadir.runners.RunnerJabatanTest">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.dikahadir.runners.RunnerJabatanTest@4218d6a3]" started-at="2025-08-23T22:45:31 WIB" name="setUpClass" finished-at="2025-08-23T22:45:32 WIB" duration-ms="712" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.dikahadir.runners.RunnerJabatanTest@4218d6a3]" started-at="2025-08-24T00:37:26 WIB" name="setUpClass" finished-at="2025-08-24T00:37:27 WIB" duration-ms="784" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@1f2f0109]]>
+                <![CDATA[org.testng.TestRunner@7980cf2c]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.dikahadir.runners.RunnerJabatanTest@4218d6a3]" started-at="2025-08-23T22:45:32 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-23T22:45:57 WIB" duration-ms="25375" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.dikahadir.runners.RunnerJabatanTest@4218d6a3]" started-at="2025-08-24T00:37:27 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-24T00:37:56 WIB" duration-ms="29037" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Mengubah nama jabatan dengan fitur edit dengan data yang valid."]]>
+                <![CDATA["Validasi batal mengubah data jabatan"]]>
               </value>
             </param>
             <param index="1">
@@ -37,7 +37,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.dikahadir.runners.RunnerJabatanTest@4218d6a3]" started-at="2025-08-23T22:45:57 WIB" name="tearDownClass" finished-at="2025-08-23T22:46:00 WIB" duration-ms="2824" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.dikahadir.runners.RunnerJabatanTest@4218d6a3]" started-at="2025-08-24T00:37:56 WIB" name="tearDownClass" finished-at="2025-08-24T00:37:57 WIB" duration-ms="916" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
