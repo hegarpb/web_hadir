@@ -24,7 +24,6 @@ public class HapusAturanCutiTest {
     this.wait = new WebDriverWait(Hooks.getDriver(), Duration.ofSeconds(10)); 
     aturanCutiPage.navigateToAturanCuti();
 
-    // Tunggu tabel siap dipakai
     aturanCutiPage.waitTableUpdated(null);
     }
 

@@ -42,7 +42,6 @@ public class ViewAturanCuti {
 
         String currentUrl = Hooks.getDriver().getCurrentUrl();
 
-        // Validasi URL mengandung path yang benar
         Assert.assertTrue(
             currentUrl.contains("/management/unit-leave/"),
             "URL detail aturan cuti tidak sesuai! Current URL: " + currentUrl

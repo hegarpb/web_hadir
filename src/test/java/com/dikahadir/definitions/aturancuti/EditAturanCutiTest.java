@@ -1,6 +1,7 @@
 package com.dikahadir.definitions.aturancuti;
 
 import java.time.Duration;
+import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -9,6 +10,7 @@ import org.testng.Assert;
 
 import com.dikahadir.Hooks;
 import com.dikahadir.page.AturanCutiPage;
+import com.dikahadir.repository.AturanCutiRepository;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -66,19 +68,54 @@ public void inputBulanKerjaSisa(String bulanKerjaSisaBaru){
     aturanCutiPage.inputJumlahBulanKerjaSisaCuti(bulanKerjaSisaBaru);
 }
 @When("user menekan tombol Simpan pada form sunting aturan cuti")
-public void clickButtonSimpan(){
+public void clickButtonSimpan() {
     aturanCutiPage.clickButtonSimpanEdit();
+
 }
-@When("user menekan tombol batal tutup pada form sunting Aturan Cuti")
+@When("user menekan tombol tutup pada form sunting Aturan Cuti")
 public void clickTombolBatal(){
     aturanCutiPage.clickButtonTutup();
 }
-@Then("sistem akan menampilkan pesan sukses {string}")
+@Then("sistem akan menampilkan pesan {string}.")
 public void getPesanSukses(String expectedMessage){
     String actualMessage=aturanCutiPage.getMessageText();
     Assert.assertEquals(actualMessage, expectedMessage,"Validasi Aturan Cuti tidak sesuai!");
 
 }
+@Then("pesan validasi akan muncul pada field kosong")
+public void pesanValidasiMunculSaatEditKosong() {
+    aturanCutiPage = new AturanCutiPage(Hooks.getDriver());
+
+    if (aturanCutiPage.isElementPresent(AturanCutiRepository.nameError)) {
+        Assert.assertEquals(aturanCutiPage.getErrorNamaAturan(), "Nama aturan cuti harus diisi!");
+    }
+
+    if (aturanCutiPage.isElementPresent(AturanCutiRepository.tanggalBatasError)) {
+        Assert.assertEquals(aturanCutiPage.getErrorTanggalBatas(), "Tanggal batas sisa cuti harus diisi!");
+    }
+
+   if (aturanCutiPage.isElementPresent(AturanCutiRepository.maksimalSisaError)) {
+        Assert.assertEquals(aturanCutiPage.getErrorMaksimalSisa(), "Maksimal sisa cuti harus diisi!");
+    }
+    if (aturanCutiPage.isElementPresent(AturanCutiRepository.maksimalSisaError)) {
+        Assert.assertEquals(aturanCutiPage.getErrorMaksimalSisa(), "Maksimal sisa cuti harus diisi!");
+    }
+}
+
+@Then("data aturan cuti {string} ditampilkan di tabel.")
+ public void tampilDataBaruDItambahkan(String namaAturanBaru) throws InterruptedException{
+
+    aturanCutiPage.inputSearchText(namaAturanBaru);
+    aturanCutiPage.clickButtonSearch();
+    Thread.sleep(5000);
+    List<String> hasil = aturanCutiPage.getAllNamaAturan();
+    boolean ditemukan = hasil.stream()
+            .anyMatch(nama -> nama.equalsIgnoreCase(namaAturanBaru));
+
+    Assert.assertTrue(ditemukan,
+            "Data aturan cuti '" + namaAturanBaru + "' tidak ditemukan di tabel. Hasil tabel: " + hasil);
+}
+
 @Then("form sunting aturan cuti akan tertutup")
 public void formEditTutup(){
 // Tunggu sampai form/modal sunting hilang

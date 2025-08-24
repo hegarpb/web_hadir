@@ -13,7 +13,6 @@ public class ResetAturanCutiTest {
     public void userSudahLoginDanBeradaDiHalamanAturanCuti() {
        this.aturanCutiPage = new AturanCutiPage(Hooks.getDriver());
         this.aturanCutiPage.navigateToAturanCuti();
-        // Simpan jumlah awal data tabel
         jumlahAwal = aturanCutiPage.getJumlahAturanCuti();
     }
 
