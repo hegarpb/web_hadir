@@ -12,7 +12,6 @@ public class AturanCutiRepository {
     public static final By inputEligiblePengaturanCuti = By.xpath("//input[@id='eligible_leave_total_month']");
    public static final By inputTanggalBatasSisaCuti = By.xpath("//input[@placeholder='d']");
     public static final By inputBulanBatasSisaCuti = By.xpath("//input[@placeholder='m']");
-
     public static final By inputMaksimalSisaCuti = By.xpath("//input[@id='max_carry_forward']");
     public static final By inputJumlahBulanKerjaSisaCuti = By.xpath("//input[@id='carry_forward_total_month']");
 
@@ -24,6 +23,8 @@ public class AturanCutiRepository {
     public static final By buttonTambahAturan = By.xpath("//button[normalize-space()='Tambahkan Aturan Cuti']");
     public static final By buttonTambahkan = By.xpath("//button[normalize-space()='Tambahkan']");
      public static By buttonSimpan= By.xpath("//button[normalize-space()='Simpan']");
+     public static By buttonHapus = By.xpath("//button[@type='button' and normalize-space()='Hapus']");
+
 
     // ==============================
     // Table

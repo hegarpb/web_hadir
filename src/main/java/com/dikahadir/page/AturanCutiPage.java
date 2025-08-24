@@ -102,6 +102,10 @@ public class AturanCutiPage {
         safeClick(wait.until(ExpectedConditions.elementToBeClickable(AturanCutiRepository.buttonSimpan)));
     }
 
+    public void clickConfirmHapus(){
+       safeClick(wait.until(ExpectedConditions.elementToBeClickable(AturanCutiRepository.buttonHapus)));
+    }
+
      public void clickActionButtonRowPertama() {
     try {
         // Pastikan table dan rows muncul

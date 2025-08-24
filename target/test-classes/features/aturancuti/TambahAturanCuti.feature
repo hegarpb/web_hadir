@@ -14,8 +14,8 @@ Feature: Tambah Aturan Cuti
     Then sistem menampilkan pesan "Sukses Membuat Aturan Cuti"
 
     Examples:
-      | namaAturan    | eligible | tanggalBatas | bulanBatas | maksimalSisa | jumlahBulanKerja |
-      | Cuti Tahunan4 |       12 |            5 |          2 |           10 |                6 |
+      | namaAturan      | eligible | tanggalBatas | bulanBatas | maksimalSisa | jumlahBulanKerja |
+      | Cuti Tahunanaja |       12 |            5 |          2 |           10 |                6 |
 
   Scenario Outline: Tambah aturan cuti dengan data invalid
     Given user melakukan login dan berada di halaman manajemen Aturan Cuti
@@ -31,5 +31,5 @@ Feature: Tambah Aturan Cuti
 
     Examples:
       | namaAturan    | eligible | tanggalBatas | bulanBatas | maksimalSisa | jumlahBulanKerja |
-      | Cuti Invalid1 |      -12 |            8 |          6 |          -10 |               -6 |
-      | Cuti Invalid2 | ABC      |            9 |          4 | asd          | bsa              |
+      | Cuti Invalid3 |      -12 |            8 |          6 |          -10 |               -6 |
+      | Cuti Invalid4 | ABC      |            9 |          4 | asd          | bsa              |

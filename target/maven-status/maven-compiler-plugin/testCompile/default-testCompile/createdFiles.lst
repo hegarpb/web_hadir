@@ -1,9 +1,11 @@
 com\dikahadir\definitions\jabatan\HapusJabatan.class
 com\dikahadir\definitions\jabatan\EditJabatanTest.class
 com\dikahadir\Hooks.class
+com\dikahadir\definitions\aturancuti\HapusAturanCutiTest.class
 com\dikahadir\runners\RunnerJabatanTest.class
 com\dikahadir\runners\RunnerAturanCutiTest.class
 com\dikahadir\definitions\aturancuti\EditAturanCuti.class
+com\dikahadir\definitions\aturancuti\ViewAturanCuti.class
 com\dikahadir\definitions\aturancuti\ResetAturanCutiTest.class
 com\dikahadir\definitions\jabatan\ResetSearchLevelJabatanTest.class
 com\dikahadir\definitions\jabatan\PaginationTest.class

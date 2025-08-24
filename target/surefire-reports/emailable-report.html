@@ -9,21 +9,67 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Main Test</th></tr>
-<tr><td><a href="#t0">Test Math</a></td><td class="num">4</td><td class="num">0</td><td class="num">0</td><td class="num attn">2</td><td class="num">134.066</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Test Math</a></td><td class="num">5</td><td class="num">0</td><td class="num">0</td><td class="num attn">3</td><td class="num">164.773</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Main Test</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test Math &#8212; failed</th></tr><tr class="failedeven"><td rowspan="2">com.dikahadir.runners.RunnerAturanCutiTest</td><td><a href="#m0">runScenario</a></td><td rowspan="2">1756002900363</td><td rowspan="2">24448</td></tr><tr class="failedeven"><td><a href="#m1">runScenario</a></td></tr><tr><th colspan="4">Test Math &#8212; passed</th></tr><tr class="passedeven"><td rowspan="4">com.dikahadir.runners.RunnerAturanCutiTest</td><td><a href="#m2">runScenario</a></td><td rowspan="4">1756002824704</td><td rowspan="4">18083</td></tr><tr class="passedeven"><td><a href="#m3">runScenario</a></td></tr><tr class="passedeven"><td><a href="#m4">runScenario</a></td></tr><tr class="passedeven"><td><a href="#m5">runScenario</a></td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Main Test</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test Math &#8212; failed</th></tr><tr class="failedeven"><td rowspan="3">com.dikahadir.runners.RunnerAturanCutiTest</td><td><a href="#m0">runScenario</a></td><td rowspan="3">1756025002845</td><td rowspan="3">24227</td></tr><tr class="failedeven"><td><a href="#m1">runScenario</a></td></tr><tr class="failedeven"><td><a href="#m2">runScenario</a></td></tr><tr><th colspan="4">Test Math &#8212; passed</th></tr><tr class="passedeven"><td rowspan="5">com.dikahadir.runners.RunnerAturanCutiTest</td><td><a href="#m3">runScenario</a></td><td rowspan="5">1756025135340</td><td rowspan="5">30738</td></tr><tr class="passedeven"><td><a href="#m4">runScenario</a></td></tr><tr class="passedeven"><td><a href="#m5">runScenario</a></td></tr><tr class="passedeven"><td><a href="#m6">runScenario</a></td></tr><tr class="passedeven"><td><a href="#m7">runScenario</a></td></tr></tbody>
 </table>
-<h2>Test Math</h2><h3 id="m0">com.dikahadir.runners.RunnerAturanCutiTest#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Tambah aturan cuti dengan data invalid&quot;</td><td>&quot;Tambah Aturan Cuti&quot;</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">java.lang.AssertionError: Pesan sukses tidak sesuai! expected [Gagal Membuat Aturan Cuti] but found [Sukses Membuat Aturan Cuti]
-	at com.dikahadir.definitions.aturancuti.TambahAturanCutiTest.aturanCutiBerhasilDitambahkan(TambahAturanCutiTest.java:63)
-	at ✽.sistem menampilkan pesan &quot;Gagal Membuat Aturan Cuti&quot;(file:///C:/Hegar/sqabatch23/TA/web_hadir/src/test/resources/features/aturancuti/TambahAturanCuti.feature:30)
-... Removed 5 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Test Math</h2><h3 id="m0">com.dikahadir.runners.RunnerAturanCutiTest#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;mengedit aturan cuti&quot;</td><td>&quot;Edit Aturan Cuti&quot;</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">java.lang.RuntimeException: ❌ Gagal klik tombol action di row pertama
+	at com.dikahadir.page.AturanCutiPage.clickActionButtonRowPertama(AturanCutiPage.java:136)
+	at com.dikahadir.definitions.aturancuti.EditAturanCuti.clickTombolAction(EditAturanCuti.java:29)
+	at ✽.user menekan tombol action pada aturan cuti &quot;Cuti Tahunan 5&quot;(file:///C:/Hegar/sqabatch23/TA/web_hadir/src/test/resources/features/aturancuti/EditAturanCuti.feature:7)
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: .//button[contains(@class,&apos;MuiIconButton&apos;)]
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.34.0&apos;, revision: &apos;707dcb4246*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.8&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [d926e9b6-7378-4a3e-a661-74387ce6222d, findChildElement {id=03957aa2-b0f7-4d26-99a6-2934ff42158f, using=xpath, value=.//button[contains(@class,&apos;MuiIconButton&apos;)]}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 142.0, moz:accessibilityChecks: false, moz:buildID: 20250811145442, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 85012, moz:profile: C:\Users\LENOVO\AppData\Loc..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Session ID: d926e9b6-7378-4a3e-a661-74387ce6222d
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
+	at org.openqa.selenium.remote.RemoteWebElement.findElement(RemoteWebElement.java:211)
+	at com.dikahadir.page.AturanCutiPage.clickActionButtonRowPertama(AturanCutiPage.java:119)
+	at com.dikahadir.definitions.aturancuti.EditAturanCuti.clickTombolAction(EditAturanCuti.java:29)
+	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
+	at io.cucumber.java.Invoker.invoke(Invoker.java:24)
+	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
+	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)
+	at io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)
+	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
+	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:84)
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:56)
+	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:84)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
+	at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:132)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
+	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:129)
+	at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 34 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 <h3 id="m1">com.dikahadir.runners.RunnerAturanCutiTest#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Tambah aturan cuti dengan data invalid&quot;</td><td>&quot;Tambah Aturan Cuti&quot;</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">java.lang.AssertionError: Pesan sukses tidak sesuai! expected [Gagal Membuat Aturan Cuti] but found [Sukses Membuat Aturan Cuti]
 	at com.dikahadir.definitions.aturancuti.TambahAturanCutiTest.aturanCutiBerhasilDitambahkan(TambahAturanCutiTest.java:63)
 	at ✽.sistem menampilkan pesan &quot;Gagal Membuat Aturan Cuti&quot;(file:///C:/Hegar/sqabatch23/TA/web_hadir/src/test/resources/features/aturancuti/TambahAturanCuti.feature:30)
 ... Removed 5 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">com.dikahadir.runners.RunnerAturanCutiTest#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;mengedit aturan cuti&quot;</td><td>&quot;Edit Aturan Cuti&quot;</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">com.dikahadir.runners.RunnerAturanCutiTest#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Pencarian aturan cuti&quot;</td><td>&quot;Tombol Reset&quot;</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m4">com.dikahadir.runners.RunnerAturanCutiTest#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Tambah aturan cuti baru dengan data valid&quot;</td><td>&quot;Tambah Aturan Cuti&quot;</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">com.dikahadir.runners.RunnerAturanCutiTest#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Tambah aturan cuti dengan data invalid&quot;</td><td>&quot;Tambah Aturan Cuti&quot;</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">java.lang.AssertionError: Pesan sukses tidak sesuai! expected [Gagal Membuat Aturan Cuti] but found [Sukses Membuat Aturan Cuti]
+	at com.dikahadir.definitions.aturancuti.TambahAturanCutiTest.aturanCutiBerhasilDitambahkan(TambahAturanCutiTest.java:63)
+	at ✽.sistem menampilkan pesan &quot;Gagal Membuat Aturan Cuti&quot;(file:///C:/Hegar/sqabatch23/TA/web_hadir/src/test/resources/features/aturancuti/TambahAturanCuti.feature:30)
+... Removed 5 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">com.dikahadir.runners.RunnerAturanCutiTest#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Melihat detail aturan cuti&quot;</td><td>&quot;View Aturan Cuti&quot;</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">com.dikahadir.runners.RunnerAturanCutiTest#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Pencarian aturan cuti&quot;</td><td>&quot;Tombol Reset&quot;</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 <h3 id="m5">com.dikahadir.runners.RunnerAturanCutiTest#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Pencarian aturan cuti&quot;</td><td>&quot;Tombol Search&quot;</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">com.dikahadir.runners.RunnerAturanCutiTest#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Hapus Aturan Cuti&quot;</td><td>&quot;Delete Aturan Cuti&quot;</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m7">com.dikahadir.runners.RunnerAturanCutiTest#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Tambah aturan cuti baru dengan data valid&quot;</td><td>&quot;Tambah Aturan Cuti&quot;</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

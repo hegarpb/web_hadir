@@ -16,5 +16,5 @@ Feature: Edit Aturan Cuti
     Then sistem akan menampilkan pesan sukses "Sukses Mengubah Aturan Cuti"
 
     Examples:
-      | namaAturan    | namaAturanBaru | eligableBaru | tanggalBatasBaru | bulanBatasBaru | maksimalSisaBaru | jumlahBulanKerjaSisaBaru |
-      | Cuti Tahunan3 | Edit Revisi2   |           12 |               30 |             12 |                7 |                        9 |
+      | namaAturan     | namaAturanBaru | eligableBaru | tanggalBatasBaru | bulanBatasBaru | maksimalSisaBaru | jumlahBulanKerjaSisaBaru |
+      | Cuti Tahunan 5 | Edit Revisi5   |           12 |               10 |             10 |                5 |                        3 |
