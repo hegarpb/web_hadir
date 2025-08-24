@@ -56,7 +56,12 @@ public class JabatanPage {
         levelInput.clear();
         levelInput.sendKeys(value);
     }
+    
 
+    public void clickButtonBatal(){
+        safeClick(wait.until(ExpectedConditions.elementToBeClickable(JabatanRepository.buttonBatal)));
+    }
+    
     public void clickButtonTambahForm() {
         safeClick(wait.until(ExpectedConditions.elementToBeClickable(JabatanRepository.buttonTambah)));
     }
@@ -65,8 +70,8 @@ public class JabatanPage {
         safeClick(wait.until(ExpectedConditions.elementToBeClickable(JabatanRepository.buttonConfirmDelete)));
     }
 
-    public void clickButtonCancel() {
-        safeClick(wait.until(ExpectedConditions.elementToBeClickable(JabatanRepository.buttonCancel)));
+    public void clickButtonCancelDelete() {
+        safeClick(wait.until(ExpectedConditions.elementToBeClickable(JabatanRepository.buttonCancelDelete)));
     }
 
     public void clickButtonSimpanEdit() {
@@ -133,48 +138,37 @@ public class JabatanPage {
 
     // ================== ACTION WITH PAGINATION ================== //
 
-  public void clickActionButtonWithPagination(String namaJabatan) {
-        boolean found = false;
 
-        while (true) {
-            wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(JabatanRepository.tableRows));
-            wait.until(ExpectedConditions.visibilityOfElementLocated(JabatanRepository.tableContainer));
+ public void clickActionButtonRowPertama() {
+    try {
+        // Pastikan table dan rows muncul
+        wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(JabatanRepository.tableRows));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(JabatanRepository.tableContainer));
 
-            List<WebElement> elements = driver.findElements(JabatanRepository.buttonAction(namaJabatan));
-            if (!elements.isEmpty()) {
-                safeClick(elements.get(0)); // 🔹 pakai safeClick
-                found = true;
-                break;
-            }
+        // Ambil row pertama
+        WebElement firstRow = driver.findElements(JabatanRepository.tableRows).get(0);
 
-            // tombol next
-            List<WebElement> nextButtons = driver.findElements(JabatanRepository.buttonNextPage);
-            if (nextButtons.isEmpty() || !nextButtons.get(0).isEnabled()) {
-                break;
-            }
-            safeClick(nextButtons.get(0)); // 🔹 pakai safeClick
-            wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(JabatanRepository.tableRows));
+        // Cari tombol action di row pertama (button wrapper, bukan svg langsung)
+        WebElement actionButton = firstRow.findElement(
+            By.xpath(".//button[contains(@class,'MuiIconButton')]")
+        );
+
+        // Tunggu sampai bisa diklik
+        wait.until(ExpectedConditions.elementToBeClickable(actionButton));
+
+        try {
+            actionButton.click(); // coba klik biasa
+            System.out.println("✅ Klik berhasil dengan click()");
+        } catch (Exception e) {
+            // fallback pakai JS kalau gagal
+            ((JavascriptExecutor) driver).executeScript("arguments[0].click();", actionButton);
+            System.out.println("⚡ Klik berhasil dengan JavaScriptExecutor");
         }
 
-        if (!found) {
-            throw new RuntimeException("Jabatan dengan nama '" + namaJabatan + "' tidak ditemukan di semua halaman.");
-        }
+    } catch (Exception e) {
+        throw new RuntimeException("❌ Gagal klik tombol action di row pertama", e);
     }
-    public void clickFirstRowEditButton() {
-    // Tunggu sampai minimal 1 row ada
-    wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(JabatanRepository.tableRows));
-
-    // Ambil row pertama
-    WebElement firstRow = driver.findElements(JabatanRepository.tableRows).get(0);
-
-    // Cari tombol edit dalam row tersebut
-    WebElement editButton = firstRow.findElement(JabatanRepository.editButtonInRow);
-
-    // Klik tombol edit
-    editButton.click();
-    System.out.println("✏️ Klik tombol Edit pada row pertama tabel.");
 }
-
 
 public void clickEditMenu() {
     try {
@@ -231,6 +225,8 @@ public void clickDeleteMenu() {
     }
 }
 
+
+
 public void printAllDropdownOptions() {
     List<WebElement> options = driver.findElements(By.xpath("//li[@role='menuitem']"));
     System.out.println("=== Dropdown Options Found ===");
@@ -261,37 +257,6 @@ public void clickFirstPageButton() {
     firstPageBtn.click();
     System.out.println("⬅️ Klik tombol First Page (halaman awal).");
 }
-
-
-    
-
-    public boolean isJabatanExistInTableWithPagination(String nama, String level) {
-        while (true) {
-            wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(JabatanRepository.tableRows));
-
-            List<WebElement> rows = driver.findElements(JabatanRepository.tableRows);
-            for (WebElement row : rows) {
-                String cellNama = row.findElement(By.xpath("./td[1]")).getText().trim().replace("\u00A0", " ");
-                String cellLevel = row.findElement(By.xpath("./td[2]")).getText().trim().replace("\u00A0", " ");
-
-                if (cellNama.equals(nama) && cellLevel.equals(level)) {
-                    return true;
-                }
-            }
-
-            // cek apakah tombol next masih aktif
-            List<WebElement> nextButtons = driver.findElements(
-                By.xpath("//button[normalize-space()='Next' and not(@disabled)]")
-            );
-            if (nextButtons.isEmpty()) {
-                break; // sudah di halaman terakhir
-            }
-
-            safeClick(nextButtons.get(0)); // 🔹 pakai safeClick
-            wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(JabatanRepository.tableRows));
-        }
-        return false;
-    }
 
     // ================== HELPER ================== //
 

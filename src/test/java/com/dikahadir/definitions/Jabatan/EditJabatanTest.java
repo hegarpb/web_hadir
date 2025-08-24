@@ -1,5 +1,4 @@
 package com.dikahadir.definitions.jabatan;
-
 import org.testng.Assert;
 
 import com.dikahadir.Hooks;
@@ -21,9 +20,12 @@ public void navigasiKeHalamanJabatanEdit() {
     jabatanPage.waitTableUpdated(null);
 }
 
-    @When("user menekan tombol action pada jabatan {string}")
-    public void menekanTombolAction(String namaJabatan) {
-        jabatanPage.clickActionButtonWithPagination(namaJabatan);
+    @When("user menekan tombol action pada level jabatan {string}")
+    public void menekanTombolAction(String level) throws InterruptedException {
+        jabatanPage.inputSearchText(level);
+        jabatanPage.clickSearchJabatan();
+        Thread.sleep(5000);
+        jabatanPage.clickActionButtonRowPertama();
     }
 
     @When("user menekan tombol edit pada menu dropdown")
@@ -48,7 +50,7 @@ public void navigasiKeHalamanJabatanEdit() {
 
     @When("user menekan tombol batal pada form edit jabatan")
     public void cancelEdit() {
-        jabatanPage.clickButtonCancel();
+        jabatanPage.clickButtonBatal();
     }
 
     @Then("sistem akan menampilkan pesan {string}")

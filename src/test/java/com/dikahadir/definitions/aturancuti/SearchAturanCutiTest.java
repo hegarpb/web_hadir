@@ -20,11 +20,13 @@ public class SearchAturanCutiTest {
     @When("user menginput {string} dalam field cari berdasarkan nama")
     public void userInputNamaAturanCuti(String namaAturan) {
         aturanCutiPage.inputSearchText(namaAturan);
+       
     }
 
     @When("user menekan tombol search di halaman aturan cuti")
-    public void userKlikTombolSearch() {
+    public void userKlikTombolSearch() throws InterruptedException {
         aturanCutiPage.clickButtonSearch();
+         Thread.sleep(5000);
     
     }
     

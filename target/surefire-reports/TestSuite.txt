@@ -1,8 +1,18 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 4, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 93.12 s <<< FAILURE! -- in TestSuite
-com.dikahadir.runners.RunnerAturanCutiTest.runScenario["Tambah aturan cuti dengan data invalid", "Tambah Aturan Cuti"](4) -- Time elapsed: 22.47 s <<< FAILURE!
+Tests run: 6, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 134.9 s <<< FAILURE! -- in TestSuite
+com.dikahadir.runners.RunnerAturanCutiTest.runScenario["Tambah aturan cuti dengan data invalid", "Tambah Aturan Cuti"](5) -- Time elapsed: 24.45 s <<< FAILURE!
+java.lang.AssertionError: Pesan sukses tidak sesuai! expected [Gagal Membuat Aturan Cuti] but found [Sukses Membuat Aturan Cuti]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at com.dikahadir.definitions.aturancuti.TambahAturanCutiTest.aturanCutiBerhasilDitambahkan(TambahAturanCutiTest.java:63)
+	at ✽.sistem menampilkan pesan "Gagal Membuat Aturan Cuti"(file:///C:/Hegar/sqabatch23/TA/web_hadir/src/test/resources/features/aturancuti/TambahAturanCuti.feature:30)
+
+com.dikahadir.runners.RunnerAturanCutiTest.runScenario["Tambah aturan cuti dengan data invalid", "Tambah Aturan Cuti"](6) -- Time elapsed: 32.42 s <<< FAILURE!
 java.lang.AssertionError: Pesan sukses tidak sesuai! expected [Gagal Membuat Aturan Cuti] but found [Sukses Membuat Aturan Cuti]
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.failNotEquals(Assert.java:1578)

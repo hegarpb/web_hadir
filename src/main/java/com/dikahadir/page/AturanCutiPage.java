@@ -61,7 +61,7 @@ public class AturanCutiPage {
     }
 
     public void inputBulanBatasSisaCuti(String value){
-        WebElement inputBulanBatasSisaCuti= wait.until(ExpectedConditions.visibilityOfElementLocated(AturanCutiRepository.inputBulanCuti));
+        WebElement inputBulanBatasSisaCuti= wait.until(ExpectedConditions.visibilityOfElementLocated(AturanCutiRepository.inputBulanBatasSisaCuti));
         inputBulanBatasSisaCuti.clear();
         inputBulanBatasSisaCuti.sendKeys(value);
     }
@@ -98,6 +98,133 @@ public class AturanCutiPage {
         wait.until(d -> driver.findElement(AturanCutiRepository.inputSearch).getAttribute("value").isEmpty());
         waitTableToBeVisible();
     }
+     public void clickButtonSimpanEdit() {
+        safeClick(wait.until(ExpectedConditions.elementToBeClickable(AturanCutiRepository.buttonSimpan)));
+    }
+
+     public void clickActionButtonRowPertama() {
+    try {
+        // Pastikan table dan rows muncul
+        wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(AturanCutiRepository.tableRows));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(AturanCutiRepository.tableContainer));
+
+        // Ambil row pertama
+        WebElement firstRow = driver.findElements(AturanCutiRepository.tableRows).get(0);
+
+        // Cari tombol action di row pertama (button wrapper, bukan svg langsung)
+        WebElement actionButton = firstRow.findElement(
+            By.xpath(".//button[contains(@class,'MuiIconButton')]")
+        );
+
+        // Tunggu sampai bisa diklik
+        wait.until(ExpectedConditions.elementToBeClickable(actionButton));
+
+        try {
+            actionButton.click(); // coba klik biasa
+            System.out.println("✅ Klik berhasil dengan click()");
+        } catch (Exception e) {
+            // fallback pakai JS kalau gagal
+            ((JavascriptExecutor) driver).executeScript("arguments[0].click();", actionButton);
+            System.out.println("⚡ Klik berhasil dengan JavaScriptExecutor");
+        }
+
+    } catch (Exception e) {
+        throw new RuntimeException("❌ Gagal klik tombol action di row pertama", e);
+    }
+}
+
+public void clickEditMenu() {
+    try {
+        // Pastikan semua menu dropdown sudah ada di DOM
+        List<WebElement> menuItems = wait.until(
+            ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("//li[@role='menuitem']"))
+        );
+
+        for (WebElement item : menuItems) {
+            String text = item.getText().trim();
+            if (text.equalsIgnoreCase("Edit")) {
+                // Scroll ke elemen biar benar-benar kelihatan
+                ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", item);
+
+                // Klik pakai JS langsung
+                ((JavascriptExecutor) driver).executeScript("arguments[0].click();", item);
+                return;
+            }
+        }
+
+        throw new RuntimeException("❌ Menu 'Edit' tidak ditemukan di dropdown!");
+
+    } catch (Exception e) {
+        printAllDropdownOptions(); // debug isi dropdown
+        throw new RuntimeException("❌ Gagal klik menu Edit. Detail: " + e.getMessage(), e);
+    }
+}
+
+public void clickDeleteMenu() {
+    try {
+        // Pastikan semua menu dropdown sudah ada di DOM
+        List<WebElement> menuItems = wait.until(
+            ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("//li[@role='menuitem']"))
+        );
+
+        for (WebElement item : menuItems) {
+            String text = item.getText().trim();
+            if (text.equalsIgnoreCase("Delete")) {
+                // Scroll ke elemen biar benar-benar kelihatan
+                ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", item);
+
+                // Klik pakai JS langsung
+                ((JavascriptExecutor) driver).executeScript("arguments[0].click();", item);
+                return;
+            }
+        }
+
+        throw new RuntimeException("❌ Menu 'Delete' tidak ditemukan di dropdown!");
+
+    } catch (Exception e) {
+        printAllDropdownOptions(); // debug isi dropdown
+        throw new RuntimeException("❌ Gagal klik menu Delete. Detail: " + e.getMessage(), e);
+    }
+}
+
+public void clickViewMenu() {
+    try {
+        // Pastikan semua menu dropdown sudah ada di DOM
+        List<WebElement> menuItems = wait.until(
+            ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("//li[@role='menuitem']"))
+        );
+
+        for (WebElement item : menuItems) {
+            String text = item.getText().trim();
+            if (text.equalsIgnoreCase("View")) {
+                // Scroll ke elemen biar benar-benar kelihatan
+                ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", item);
+
+                // Klik pakai JS langsung
+                ((JavascriptExecutor) driver).executeScript("arguments[0].click();", item);
+                return;
+            }
+        }
+
+        throw new RuntimeException("❌ Menu 'View' tidak ditemukan di dropdown!");
+
+    } catch (Exception e) {
+        printAllDropdownOptions(); // debug isi dropdown
+        throw new RuntimeException("❌ Gagal klik menu View. Detail: " + e.getMessage(), e);
+    }
+}
+
+
+public void printAllDropdownOptions() {
+    List<WebElement> options = driver.findElements(By.xpath("//li[@role='menuitem']"));
+    System.out.println("=== Dropdown Options Found ===");
+    for (WebElement option : options) {
+        System.out.println("Option: [" + option.getText().trim() + "]");
+    }
+    System.out.println("=== End of Options ===");
+}
+
+
 
     /** Validasi input search kosong */
     public boolean isSearchFieldEmpty() {
@@ -149,10 +276,34 @@ public class AturanCutiPage {
 
      public String getMessageText() {
         WebElement messageElement = wait.until(ExpectedConditions.presenceOfElementLocated(AturanCutiRepository.message));
-        wait.until(ExpectedConditions.not(ExpectedConditions.textToBe(JabatanRepository.message, "")));
+        wait.until(ExpectedConditions.not(ExpectedConditions.textToBe(AturanCutiRepository.message, "")));
         return messageElement.getText();
     }
 
+    public void waitTableUpdated(Integer oldRowCount) {
+    try {
+        wait.until(driver -> {
+            int newCount = driver.findElements(By.xpath("//table//tbody/tr")).size();
+
+            if (oldRowCount == null) {
+                // Mode pertama kali buka halaman: cukup pastikan ada row
+                return newCount > 0;
+            } else {
+                // Mode reload: pastikan jumlah row berubah
+                return newCount != oldRowCount && newCount > 0;
+            }
+        });
+
+        if (oldRowCount == null) {
+            System.out.println("✅ Tabel jabatan sudah muncul di halaman.");
+        } else {
+            System.out.println("🔄 Tabel berhasil reload setelah pindah halaman.");
+        }
+
+    } catch (TimeoutException e) {
+        throw new RuntimeException("❌ Timeout: Tabel tidak muncul/update sesuai harapan.");
+    }
+}
     /** Safe click dengan JS fallback */
     private void safeClick(WebElement element) {
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
