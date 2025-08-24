@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test Math</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>5/3/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>2/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Sun Aug 24 15:43:22 WIB 2025</td>
+<td>Started on:</td><td>Sun Aug 24 17:08:56 WIB 2025</td>
 </tr>
-<tr><td>Total time:</td><td>164 seconds (164773 ms)</td>
+<tr><td>Total time:</td><td>54 seconds (54109 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,177 +67,6 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td><b>Attribute(s)</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='com.dikahadir.runners.RunnerAturanCutiTest.runScenario()'><b>runScenario</b><br>Test class: com.dikahadir.runners.RunnerAturanCutiTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "mengedit aturan cuti", "Edit Aturan Cuti"</td>
-<td><div><pre>java.lang.RuntimeException: ❌ Gagal klik tombol action di row pertama
-	at com.dikahadir.page.AturanCutiPage.clickActionButtonRowPertama(AturanCutiPage.java:136)
-	at com.dikahadir.definitions.aturancuti.EditAturanCuti.clickTombolAction(EditAturanCuti.java:29)
-	at ✽.user menekan tombol action pada aturan cuti &quot;Cuti Tahunan 5&quot;(file:///C:/Hegar/sqabatch23/TA/web_hadir/src/test/resources/features/aturancuti/EditAturanCuti.feature:7)
-Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: .//button[contains(@class,&apos;MuiIconButton&apos;)]
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: &apos;4.34.0&apos;, revision: &apos;707dcb4246*&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.8&apos;
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Command: [d926e9b6-7378-4a3e-a661-74387ce6222d, findChildElement {id=03957aa2-b0f7-4d26-99a6-2934ff42158f, using=xpath, value=.//button[contains(@class,&apos;MuiIconButton&apos;)]}]
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 142.0, moz:accessibilityChecks: false, moz:buildID: 20250811145442, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 85012, moz:profile: C:\Users\LENOVO\AppData\Loc..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
-Session ID: d926e9b6-7378-4a3e-a661-74387ce6222d
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
-	at org.openqa.selenium.remote.RemoteWebElement.findElement(RemoteWebElement.java:211)
-	at com.dikahadir.page.AturanCutiPage.clickActionButtonRowPertama(AturanCutiPage.java:119)
-	at com.dikahadir.definitions.aturancuti.EditAturanCuti.clickTombolAction(EditAturanCuti.java:29)
-	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
-	at io.cucumber.java.Invoker.invoke(Invoker.java:24)
-	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
-	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)
-	at io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)
-	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
-	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
-	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:84)
-	at io.cucumber.core.runner.TestStep.run(TestStep.java:56)
-	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)
-	at io.cucumber.core.runner.TestCase.run(TestCase.java:84)
-	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
-	at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:132)
-	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
-	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
-	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
-	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:129)
-	at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 34 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace750795985", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace750795985'><pre>java.lang.RuntimeException: ❌ Gagal klik tombol action di row pertama
-	at com.dikahadir.page.AturanCutiPage.clickActionButtonRowPertama(AturanCutiPage.java:136)
-	at com.dikahadir.definitions.aturancuti.EditAturanCuti.clickTombolAction(EditAturanCuti.java:29)
-	at ✽.user menekan tombol action pada aturan cuti &quot;Cuti Tahunan 5&quot;(file:///C:/Hegar/sqabatch23/TA/web_hadir/src/test/resources/features/aturancuti/EditAturanCuti.feature:7)
-Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: .//button[contains(@class,&apos;MuiIconButton&apos;)]
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: &apos;4.34.0&apos;, revision: &apos;707dcb4246*&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.8&apos;
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Command: [d926e9b6-7378-4a3e-a661-74387ce6222d, findChildElement {id=03957aa2-b0f7-4d26-99a6-2934ff42158f, using=xpath, value=.//button[contains(@class,&apos;MuiIconButton&apos;)]}]
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 142.0, moz:accessibilityChecks: false, moz:buildID: 20250811145442, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 85012, moz:profile: C:\Users\LENOVO\AppData\Loc..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
-Session ID: d926e9b6-7378-4a3e-a661-74387ce6222d
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
-	at org.openqa.selenium.remote.RemoteWebElement.findElement(RemoteWebElement.java:211)
-	at com.dikahadir.page.AturanCutiPage.clickActionButtonRowPertama(AturanCutiPage.java:119)
-	at com.dikahadir.definitions.aturancuti.EditAturanCuti.clickTombolAction(EditAturanCuti.java:29)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
-	at io.cucumber.java.Invoker.invoke(Invoker.java:24)
-	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
-	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)
-	at io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)
-	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
-	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
-	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:84)
-	at io.cucumber.core.runner.TestStep.run(TestStep.java:56)
-	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)
-	at io.cucumber.core.runner.TestCase.run(TestCase.java:84)
-	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
-	at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:132)
-	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
-	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
-	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
-	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:129)
-	at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at org.testng.TestRunner.privateRun(TestRunner.java:739)
-	at org.testng.TestRunner.run(TestRunner.java:614)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-	at org.testng.TestNG.runSuites(TestNG.java:1112)
-	at org.testng.TestNG.run(TestNG.java:1079)
-	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
-	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
-	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
-	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
-	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-</pre></div></td>
-<td>24</td>
-<td>com.dikahadir.runners.RunnerAturanCutiTest@4218d6a3</td></tr>
-<tr>
-<td title='com.dikahadir.runners.RunnerAturanCutiTest.runScenario()'><b>runScenario</b><br>Test class: com.dikahadir.runners.RunnerAturanCutiTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Tambah aturan cuti dengan data invalid", "Tambah Aturan Cuti"</td>
-<td><div><pre>java.lang.AssertionError: Pesan sukses tidak sesuai! expected [Gagal Membuat Aturan Cuti] but found [Sukses Membuat Aturan Cuti]
-	at com.dikahadir.definitions.aturancuti.TambahAturanCutiTest.aturanCutiBerhasilDitambahkan(TambahAturanCutiTest.java:63)
-	at ✽.sistem menampilkan pesan &quot;Gagal Membuat Aturan Cuti&quot;(file:///C:/Hegar/sqabatch23/TA/web_hadir/src/test/resources/features/aturancuti/TambahAturanCuti.feature:30)
-... Removed 5 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace705400860", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace705400860'><pre>java.lang.AssertionError: Pesan sukses tidak sesuai! expected [Gagal Membuat Aturan Cuti] but found [Sukses Membuat Aturan Cuti]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:656)
-	at com.dikahadir.definitions.aturancuti.TambahAturanCutiTest.aturanCutiBerhasilDitambahkan(TambahAturanCutiTest.java:63)
-	at ✽.sistem menampilkan pesan &quot;Gagal Membuat Aturan Cuti&quot;(file:///C:/Hegar/sqabatch23/TA/web_hadir/src/test/resources/features/aturancuti/TambahAturanCuti.feature:30)
-</pre></div></td>
-<td>16</td>
-<td>com.dikahadir.runners.RunnerAturanCutiTest@4218d6a3</td></tr>
-<tr>
-<td title='com.dikahadir.runners.RunnerAturanCutiTest.runScenario()'><b>runScenario</b><br>Test class: com.dikahadir.runners.RunnerAturanCutiTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Tambah aturan cuti dengan data invalid", "Tambah Aturan Cuti"</td>
-<td><div><pre>java.lang.AssertionError: Pesan sukses tidak sesuai! expected [Gagal Membuat Aturan Cuti] but found [Sukses Membuat Aturan Cuti]
-	at com.dikahadir.definitions.aturancuti.TambahAturanCutiTest.aturanCutiBerhasilDitambahkan(TambahAturanCutiTest.java:63)
-	at ✽.sistem menampilkan pesan &quot;Gagal Membuat Aturan Cuti&quot;(file:///C:/Hegar/sqabatch23/TA/web_hadir/src/test/resources/features/aturancuti/TambahAturanCuti.feature:30)
-... Removed 5 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1256358106", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1256358106'><pre>java.lang.AssertionError: Pesan sukses tidak sesuai! expected [Gagal Membuat Aturan Cuti] but found [Sukses Membuat Aturan Cuti]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:656)
-	at com.dikahadir.definitions.aturancuti.TambahAturanCutiTest.aturanCutiBerhasilDitambahkan(TambahAturanCutiTest.java:63)
-	at ✽.sistem menampilkan pesan &quot;Gagal Membuat Aturan Cuti&quot;(file:///C:/Hegar/sqabatch23/TA/web_hadir/src/test/resources/features/aturancuti/TambahAturanCuti.feature:30)
-</pre></div></td>
-<td>13</td>
-<td>com.dikahadir.runners.RunnerAturanCutiTest@4218d6a3</td></tr>
-</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -247,29 +76,14 @@ Session ID: d926e9b6-7378-4a3e-a661-74387ce6222d
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.dikahadir.runners.RunnerAturanCutiTest.runScenario()'><b>runScenario</b><br>Test class: com.dikahadir.runners.RunnerAturanCutiTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Melihat detail aturan cuti", "View Aturan Cuti"</td>
+<td title='com.dikahadir.runners.RunnerAturanCutiTest.runScenario()'><b>runScenario</b><br>Test class: com.dikahadir.runners.RunnerAturanCutiTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "mengedit aturan cuti", "Edit Aturan Cuti"</td>
 <td></td>
-<td>30</td>
+<td>26</td>
 <td>com.dikahadir.runners.RunnerAturanCutiTest@4218d6a3</td></tr>
 <tr>
-<td title='com.dikahadir.runners.RunnerAturanCutiTest.runScenario()'><b>runScenario</b><br>Test class: com.dikahadir.runners.RunnerAturanCutiTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Pencarian aturan cuti", "Tombol Reset"</td>
-<td></td>
-<td>11</td>
-<td>com.dikahadir.runners.RunnerAturanCutiTest@4218d6a3</td></tr>
-<tr>
-<td title='com.dikahadir.runners.RunnerAturanCutiTest.runScenario()'><b>runScenario</b><br>Test class: com.dikahadir.runners.RunnerAturanCutiTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Pencarian aturan cuti", "Tombol Search"</td>
-<td></td>
-<td>20</td>
-<td>com.dikahadir.runners.RunnerAturanCutiTest@4218d6a3</td></tr>
-<tr>
-<td title='com.dikahadir.runners.RunnerAturanCutiTest.runScenario()'><b>runScenario</b><br>Test class: com.dikahadir.runners.RunnerAturanCutiTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Hapus Aturan Cuti", "Delete Aturan Cuti"</td>
+<td title='com.dikahadir.runners.RunnerAturanCutiTest.runScenario()'><b>runScenario</b><br>Test class: com.dikahadir.runners.RunnerAturanCutiTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Batal Edit", "Edit Aturan Cuti"</td>
 <td></td>
 <td>25</td>
-<td>com.dikahadir.runners.RunnerAturanCutiTest@4218d6a3</td></tr>
-<tr>
-<td title='com.dikahadir.runners.RunnerAturanCutiTest.runScenario()'><b>runScenario</b><br>Test class: com.dikahadir.runners.RunnerAturanCutiTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Tambah aturan cuti baru dengan data valid", "Tambah Aturan Cuti"</td>
-<td></td>
-<td>19</td>
 <td>com.dikahadir.runners.RunnerAturanCutiTest@4218d6a3</td></tr>
 </table><p>
 </body>

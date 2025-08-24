@@ -105,7 +105,9 @@ public class AturanCutiPage {
     public void clickConfirmHapus(){
        safeClick(wait.until(ExpectedConditions.elementToBeClickable(AturanCutiRepository.buttonHapus)));
     }
-
+public void clickBatalEdit(){
+       safeClick(wait.until(ExpectedConditions.elementToBeClickable(AturanCutiRepository.buttonBatalEdit)));
+    }
      public void clickActionButtonRowPertama() {
     try {
         // Pastikan table dan rows muncul
@@ -299,7 +301,7 @@ public void printAllDropdownOptions() {
         });
 
         if (oldRowCount == null) {
-            System.out.println("✅ Tabel jabatan sudah muncul di halaman.");
+            System.out.println("✅ Tabel  sudah muncul di halaman.");
         } else {
             System.out.println("🔄 Tabel berhasil reload setelah pindah halaman.");
         }

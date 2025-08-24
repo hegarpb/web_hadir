@@ -24,6 +24,8 @@ public class AturanCutiRepository {
     public static final By buttonTambahkan = By.xpath("//button[normalize-space()='Tambahkan']");
      public static By buttonSimpan= By.xpath("//button[normalize-space()='Simpan']");
      public static By buttonHapus = By.xpath("//button[@type='button' and normalize-space()='Hapus']");
+     public static By buttonBatalEdit=By.xpath("//button[@type='button' and normalize-space()='Tutup']");
+
 
 
     // ==============================

@@ -12,9 +12,20 @@ Feature: Edit Aturan Cuti
     And user menginput bulan batas sisa cuti "<bulanBatasBaru>" pada form sunting aturan cuti
     And user menginput maksimal sisa cuti "<maksimalSisaBaru>" pada form sunting aturan cuti
     And user menginput jumlah bulan kerja sisa cuti "<jumlahBulanKerjaSisaBaru>" pada form sunting aturan cuti
-    And user menekan tombol Simpan pada form tambahkan aturan cuti
+    And user menekan tombol Simpan pada form sunting aturan cuti
     Then sistem akan menampilkan pesan sukses "Sukses Mengubah Aturan Cuti"
 
     Examples:
-      | namaAturan     | namaAturanBaru | eligableBaru | tanggalBatasBaru | bulanBatasBaru | maksimalSisaBaru | jumlahBulanKerjaSisaBaru |
-      | Cuti Tahunan 5 | Edit Revisi5   |           12 |               10 |             10 |                5 |                        3 |
+      | namaAturan    | namaAturanBaru | eligableBaru | tanggalBatasBaru | bulanBatasBaru | maksimalSisaBaru | jumlahBulanKerjaSisaBaru |
+      | Cuti Invalid3 | Edit Cuti      |           12 |               10 |             10 |                5 |                        3 |
+
+  Scenario Outline: Batal Edit
+    Given user sudah login dan diarahkan ke halaman Aturan Cuti
+    And user menekan tombol action pada aturan cuti "<namaAturan>"
+    And user menekan tombol edit pada aturan cuti
+    And user menekan tombol batal tutup pada form sunting Aturan Cuti
+    Then form sunting aturan cuti akan tertutup
+
+    Examples:
+      | namaAturan    |
+      | Cuti Tahunan6 |

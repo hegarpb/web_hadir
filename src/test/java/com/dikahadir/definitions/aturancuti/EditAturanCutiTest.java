@@ -1,5 +1,10 @@
 package com.dikahadir.definitions.aturancuti;
 
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 import com.dikahadir.Hooks;
@@ -9,14 +14,17 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class EditAturanCuti {
+public class EditAturanCutiTest {
 private AturanCutiPage aturanCutiPage;
+private WebDriverWait wait;
+
 
 @Given("user sudah login dan diarahkan ke halaman Aturan Cuti")
 public void navigateToAturanCutiPage(){
     this.aturanCutiPage = new AturanCutiPage(Hooks.getDriver());
+    this.wait = new WebDriverWait(Hooks.getDriver(), Duration.ofSeconds(10)); 
     aturanCutiPage.navigateToAturanCuti();
-
+    
     // Tunggu tabel siap dipakai
     aturanCutiPage.waitTableUpdated(null);
 }
@@ -57,14 +65,26 @@ public void inputMaksimalSisaCuti(String maksimalSisaBaru){
 public void inputBulanKerjaSisa(String bulanKerjaSisaBaru){
     aturanCutiPage.inputJumlahBulanKerjaSisaCuti(bulanKerjaSisaBaru);
 }
-@When("user menekan tombol Simpan pada form tambahkan aturan cuti")
+@When("user menekan tombol Simpan pada form sunting aturan cuti")
 public void clickButtonSimpan(){
     aturanCutiPage.clickButtonSimpanEdit();
+}
+@When("user menekan tombol batal tutup pada form sunting Aturan Cuti")
+public void clickTombolBatal(){
+    aturanCutiPage.clickBatalEdit();
 }
 @Then("sistem akan menampilkan pesan sukses {string}")
 public void getPesanSukses(String expectedMessage){
     String actualMessage=aturanCutiPage.getMessageText();
     Assert.assertEquals(actualMessage, expectedMessage,"Validasi Aturan Cuti tidak sesuai!");
 
+}
+@Then("form sunting aturan cuti akan tertutup")
+public void formEditTutup(){
+// Tunggu sampai form/modal sunting hilang
+    boolean isFormClosed = wait.until(
+        ExpectedConditions.invisibilityOfElementLocated(By.xpath("//h2[normalize-space()='Sunting Aturan Cuti']"))
+    );
+    Assert.assertTrue(isFormClosed, "Form Sunting Aturan Cuti masih terlihat padahal harusnya sudah tertutup!");
 }
 }

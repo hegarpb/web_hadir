@@ -4,7 +4,6 @@ import org.testng.Assert;
 
 import com.dikahadir.Hooks;
 import com.dikahadir.page.AturanCutiPage;
-import com.dikahadir.page.JabatanPage;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
