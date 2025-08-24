@@ -5,15 +5,23 @@ import com.dikahadir.page.AturanCutiPage;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
 import io.cucumber.java.en.Then;
+
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 public class TambahAturanCutiTest {
 
     private AturanCutiPage aturanCutiPage;
+    private WebDriverWait wait;
 
     @Given("user melakukan login dan berada di halaman manajemen Aturan Cuti")
     public void userBeradaDiHalamanTambahAturanCuti() {
-        aturanCutiPage = new AturanCutiPage(Hooks.getDriver());
+        this.aturanCutiPage = new AturanCutiPage(Hooks.getDriver());
+        this.wait = new WebDriverWait(Hooks.getDriver(), Duration.ofSeconds(10)); 
         aturanCutiPage.navigateToAturanCuti();
     }
 
@@ -57,10 +65,24 @@ public class TambahAturanCutiTest {
         aturanCutiPage.clickButtonTambahkan();
     }
 
+    @When ("user menekan tombol tutup pada form tambahkan aturan cuti")
+    public void clickButtonTutup(){
+        aturanCutiPage.clickButtonTutup();
+    }
+
     @Then("sistem menampilkan pesan {string}")
     public void aturanCutiBerhasilDitambahkan(String expectedMessage) {
         String actualMessage = aturanCutiPage.getMessageText();
         Assert.assertEquals(actualMessage, expectedMessage, 
             "Pesan sukses tidak sesuai!");
     }
+
+    @Then("form tambah aturan cuti akan tertutup")
+    public void tutupFormTambahAturan(){
+         boolean isFormClosed = wait.until(
+        ExpectedConditions.invisibilityOfElementLocated(By.xpath("//h2[normalize-space()='Tambahkan Aturan Cuti']"))
+    );
+    Assert.assertTrue(isFormClosed, "Form Tambahkan Aturan Cuti masih terlihat padahal harusnya sudah tertutup!");
 }
+    }
+

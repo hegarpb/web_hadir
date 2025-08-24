@@ -13,8 +13,8 @@ public class SearchAturanCutiTest {
 
     @Given("user sudah login sebagai admin dan berada di halaman Aturan cuti")
     public void userSudahLoginDanBeradaDiHalamanAturanCuti() {
-        aturanCutiPage = new AturanCutiPage(Hooks.getDriver());
-        aturanCutiPage.navigateToAturanCuti();
+        this.aturanCutiPage = new AturanCutiPage(Hooks.getDriver());
+        this.aturanCutiPage.navigateToAturanCuti();
     }
 
     @When("user menginput {string} dalam field cari berdasarkan nama")
@@ -37,5 +37,11 @@ public void munculNamaAturanCutiYangDicari(String expectedNama) {
     boolean ditemukan = hasil.stream().anyMatch(nama -> nama.equalsIgnoreCase(expectedNama));
     Assert.assertTrue(ditemukan,"Nama aturan cuti '" + expectedNama + "' tidak ditemukan di hasil pencarian. Hasil: " + hasil);
 }
+@Then("tidak muncul nama aturan cuti yang dicari")
+public void TidakAdaNamaAturan() {
+    Assert.assertTrue(aturanCutiPage.isTableEmpty(),
+        "Seharusnya tidak ada hasil pencarian, tetapi ditemukan: " + aturanCutiPage.getAllNamaAturan());
+}
+
 
 }

@@ -5,7 +5,7 @@ import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(
     features = {
-        "src/test/resources/features/aturancuti/EditAturanCuti.feature"
+        "src/test/resources/features/aturancuti/SearchAturanCuti.feature"
 
     },
     glue = {

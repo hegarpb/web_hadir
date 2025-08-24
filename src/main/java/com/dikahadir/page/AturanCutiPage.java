@@ -8,7 +8,6 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.dikahadir.repository.AturanCutiRepository;
-import com.dikahadir.repository.JabatanRepository;
 
 public class AturanCutiPage {
     
@@ -105,8 +104,11 @@ public class AturanCutiPage {
     public void clickConfirmHapus(){
        safeClick(wait.until(ExpectedConditions.elementToBeClickable(AturanCutiRepository.buttonHapus)));
     }
-public void clickBatalEdit(){
+public void clickButtonTutup(){
        safeClick(wait.until(ExpectedConditions.elementToBeClickable(AturanCutiRepository.buttonBatalEdit)));
+    }
+    public void clickButtonBatal(){
+       safeClick(wait.until(ExpectedConditions.elementToBeClickable(AturanCutiRepository.buttonBatal)));
     }
      public void clickActionButtonRowPertama() {
     try {
@@ -246,15 +248,16 @@ public void printAllDropdownOptions() {
 
     /** Ambil semua nama aturan cuti (kolom pertama tabel) - untuk search test */
     public List<String> getAllNamaAturan() {
-        waitTableToBeVisible();
-        List<WebElement> elements = wait.until(
-            ExpectedConditions.presenceOfAllElementsLocatedBy(AturanCutiRepository.tableFirstColumn)
-        );
-        return elements.stream()
-                .map(el -> el.getText().trim())
-                .filter(text -> !text.isEmpty())
-                .toList();
-    }
+    waitTableToBeVisible();
+    List<WebElement> elements = wait.until(
+        ExpectedConditions.presenceOfAllElementsLocatedBy(AturanCutiRepository.tableFirstColumn)
+    );
+    return elements.stream()
+            .map(el -> el.getText().trim())
+            .filter(text -> !text.isEmpty() && !text.equalsIgnoreCase("Tidak Ada Data"))
+            .toList();
+}
+
 
     /** Tunggu URL berubah dari yang lama */
     public void waitUrlChanged(String oldUrl) {
@@ -319,4 +322,8 @@ public void printAllDropdownOptions() {
             ((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
         }
     }
+    public boolean isTableEmpty() {
+    return getAllNamaAturan().isEmpty();
+}
+
 }

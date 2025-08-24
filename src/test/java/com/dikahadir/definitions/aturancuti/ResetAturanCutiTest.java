@@ -11,8 +11,8 @@ public class ResetAturanCutiTest {
 
     @Given("user login sebagai admin dan berada di halaman Aturan cuti")
     public void userSudahLoginDanBeradaDiHalamanAturanCuti() {
-        aturanCutiPage = new AturanCutiPage(Hooks.getDriver());
-        aturanCutiPage.navigateToAturanCuti();
+       this.aturanCutiPage = new AturanCutiPage(Hooks.getDriver());
+        this.aturanCutiPage.navigateToAturanCuti();
         // Simpan jumlah awal data tabel
         jumlahAwal = aturanCutiPage.getJumlahAturanCuti();
     }

@@ -71,7 +71,7 @@ public void clickButtonSimpan(){
 }
 @When("user menekan tombol batal tutup pada form sunting Aturan Cuti")
 public void clickTombolBatal(){
-    aturanCutiPage.clickBatalEdit();
+    aturanCutiPage.clickButtonTutup();
 }
 @Then("sistem akan menampilkan pesan sukses {string}")
 public void getPesanSukses(String expectedMessage){

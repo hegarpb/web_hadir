@@ -1,5 +1,10 @@
 package com.dikahadir.definitions.aturancuti;
 
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 import com.dikahadir.Hooks;
@@ -11,10 +16,12 @@ import io.cucumber.java.en.When;
 
 public class HapusAturanCutiTest {
     private AturanCutiPage aturanCutiPage;
+    private WebDriverWait wait;
 
     @Given("user sudah login sebagai admin dan berada di halaman Aturan Cuti.")
     public void navigateToAturanCutiPage(){
     this.aturanCutiPage = new AturanCutiPage(Hooks.getDriver());
+    this.wait = new WebDriverWait(Hooks.getDriver(), Duration.ofSeconds(10)); 
     aturanCutiPage.navigateToAturanCuti();
 
     // Tunggu tabel siap dipakai
@@ -39,6 +46,20 @@ public class HapusAturanCutiTest {
         aturanCutiPage.clickConfirmHapus();
     }
 
+    @When("user menekan tombol batal")
+    public void clickTombolBatal(){
+        aturanCutiPage.clickButtonBatal();
+    }
+
+    @Then("tidak ada nama aturan cuti yang terhapus")
+     public void batalHapus() {
+        boolean isFormClosed = wait.until(
+            ExpectedConditions.invisibilityOfElementLocated(
+                By.xpath("//p[contains(@class,'MuiTypography-body1') and contains(text(),'Apakah anda yakin')]")
+            )
+        );
+        Assert.assertTrue(isFormClosed, "Pesan konfirmasi hapus Aturan Cuti masih terlihat padahal harusnya sudah tertutup!");
+    }
     @Then ("pesan {string} akan ditampilkan sistem.")
     public void pesanSistem(String expectedMessage ){
     String actualMessage=aturanCutiPage.getMessageText();

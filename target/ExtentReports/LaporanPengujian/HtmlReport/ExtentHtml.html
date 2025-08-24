@@ -48,7 +48,7 @@
 		<!-- nav-right -->
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<a href='#!'>
-			<span class='label blue darken-3 suite-start-time'>Aug 24, 2025 05:08:56 PM</span>
+			<span class='label blue darken-3 suite-start-time'>Aug 24, 2025 10:54:17 PM</span>
 			</a>
 		</ul>
 	</div>
@@ -146,7 +146,7 @@
                 </div>
                 <div class='block text-small'>
                     <span class='tooltipped' data-position='top' data-tooltip='100%'>
-                    <span class='strong'>16</span> steps passed</span>
+                    <span class='strong'>8</span> steps passed</span>
                 </div>
                 <div class='block text-small'>
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
@@ -175,8 +175,8 @@
 			<ul id='test-collection' class='test-collection'>
 				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='1'>
 					<div class='test-heading'>
-						<span class='test-name'>Edit Aturan Cuti</span>
-						<span class='test-time'>Aug 24, 2025 05:08:57 PM</span>
+						<span class='test-name'>Tombol Search</span>
+						<span class='test-time'>Aug 24, 2025 10:54:18 PM</span>
 						<span class='test-status right pass'>Pass</span>
 					</div>
 					<div class='test-content hide'>
@@ -186,107 +186,75 @@
 	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
 	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
 </div>
-	<div class='test-desc'>        Sebaga user saya ingin mengedit aturan cuti
-        dengan feature edit di halaman aturan cuti</div>
+	<div class='test-desc'>  Seabagai user saya ingin melakukan pencarian aturan cuti
+  dengan featur searach pada halaman Aturan cuti</div>
 
 <div class='scenario outline node' test-id='2' status='pass'>
 
-	<span class='duration right label'>00 00 26.096</span>
+	<span class='duration right label'>00 00 25.762</span>
 	<div class="bdd-test">
-		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario Outline: mengedit aturan cuti</div>
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario Outline: Pencarian aturan cuti</div>
 	</div>
 	
-		<div class='node-desc'><br><br><table class='markup-table table '><tr><td>namaAturan</td><td>namaAturanBaru</td><td>eligableBaru</td><td>tanggalBatasBaru</td><td>bulanBatasBaru</td><td>maksimalSisaBaru</td><td>jumlahBulanKerjaSisaBaru</td></tr><tr><td>Cuti Invalid3</td><td>Edit Cuti</td><td>12</td><td>10</td><td>10</td><td>5</td><td>3</td></tr></table></div>
+		<div class='node-desc'><br><br><table class='markup-table table '><tr><td>namaAturan</td></tr><tr><td>Cuti Hamil</td></tr></table></div>
 	
 	
 	<ul class='steps'>
 		<li test-id='3' class='node scenario Pass' status='Pass'>
-			<div class="step-name" title="()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>mengedit aturan cuti</div>
+			<div class="step-name" title="()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Pencarian aturan cuti</div>
 
 
 			<ul class='gc steps'>
 				<li test-id='5' class='gc given Pass' status='Pass'>
-					<h6 class="step-name" title="com.dikahadir.definitions.aturancuti.EditAturanCutiTest.navigateToAturanCutiPage()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given user sudah login dan diarahkan ke halaman Aturan Cuti</h6>
+					<h6 class="step-name" title="com.dikahadir.definitions.aturancuti.SearchAturanCutiTest.userSudahLoginDanBeradaDiHalamanAturanCuti()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given user sudah login sebagai admin dan berada di halaman Aturan cuti</h6>
 
 				</li>
-				<li test-id='6' class='gc and Pass' status='Pass'>
-					<h6 class="step-name" title="com.dikahadir.definitions.aturancuti.EditAturanCutiTest.clickTombolAction(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And user menekan tombol action pada aturan cuti "Cuti Invalid3"</h6>
+				<li test-id='6' class='gc when Pass' status='Pass'>
+					<h6 class="step-name" title="com.dikahadir.definitions.aturancuti.SearchAturanCutiTest.userInputNamaAturanCuti(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When user menginput "Cuti Hamil" dalam field cari berdasarkan nama</h6>
 
 				</li>
 				<li test-id='7' class='gc and Pass' status='Pass'>
-					<h6 class="step-name" title="com.dikahadir.definitions.aturancuti.EditAturanCutiTest.editAturanCuti()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And user menekan tombol edit pada aturan cuti</h6>
+					<h6 class="step-name" title="com.dikahadir.definitions.aturancuti.SearchAturanCutiTest.userKlikTombolSearch()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And user menekan tombol search di halaman aturan cuti</h6>
 
 				</li>
-				<li test-id='8' class='gc and Pass' status='Pass'>
-					<h6 class="step-name" title="com.dikahadir.definitions.aturancuti.EditAturanCutiTest.inputNamaAturanBaru(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And user menginput nama aturan cuti "Edit Cuti" pada form sunting aturan cuti</h6>
-
-				</li>
-				<li test-id='9' class='gc and Pass' status='Pass'>
-					<h6 class="step-name" title="com.dikahadir.definitions.aturancuti.EditAturanCutiTest.inputEligableBaru(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And user menginput Eligible pengaturan cuti "12" pada form sunting aturan cuti</h6>
-
-				</li>
-				<li test-id='10' class='gc and Pass' status='Pass'>
-					<h6 class="step-name" title="com.dikahadir.definitions.aturancuti.EditAturanCutiTest.inputTanggalBatasBaru(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And user menginput tanggal batas sisa cuti "10" pada form sunting aturan cuti</h6>
-
-				</li>
-				<li test-id='11' class='gc and Pass' status='Pass'>
-					<h6 class="step-name" title="com.dikahadir.definitions.aturancuti.EditAturanCutiTest.inputBulanBatasBaru(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And user menginput bulan batas sisa cuti "10" pada form sunting aturan cuti</h6>
-
-				</li>
-				<li test-id='12' class='gc and Pass' status='Pass'>
-					<h6 class="step-name" title="com.dikahadir.definitions.aturancuti.EditAturanCutiTest.inputMaksimalSisaCuti(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And user menginput maksimal sisa cuti "5" pada form sunting aturan cuti</h6>
-
-				</li>
-				<li test-id='13' class='gc and Pass' status='Pass'>
-					<h6 class="step-name" title="com.dikahadir.definitions.aturancuti.EditAturanCutiTest.inputBulanKerjaSisa(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And user menginput jumlah bulan kerja sisa cuti "3" pada form sunting aturan cuti</h6>
-
-				</li>
-				<li test-id='14' class='gc and Pass' status='Pass'>
-					<h6 class="step-name" title="com.dikahadir.definitions.aturancuti.EditAturanCutiTest.clickButtonSimpan()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And user menekan tombol Simpan pada form sunting aturan cuti</h6>
-
-				</li>
-				<li test-id='15' class='gc then Pass' status='Pass'>
-					<h6 class="step-name" title="com.dikahadir.definitions.aturancuti.EditAturanCutiTest.getPesanSukses(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then sistem akan menampilkan pesan sukses "Sukses Mengubah Aturan Cuti"</h6>
+				<li test-id='8' class='gc then Pass' status='Pass'>
+					<h6 class="step-name" title="com.dikahadir.definitions.aturancuti.SearchAturanCutiTest.munculNamaAturanCutiYangDicari(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then muncul nama aturan cuti yang dicari "Cuti Hamil"</h6>
 
 				</li>
 			</ul>
 		</li>
 	</ul>
 </div>
-<div class='scenario outline node' test-id='17' status='pass'>
+<div class='scenario outline node' test-id='10' status='pass'>
 
-	<span class='duration right label'>00 00 25.906</span>
+	<span class='duration right label'>00 00 17.786</span>
 	<div class="bdd-test">
-		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario Outline: Batal Edit</div>
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario Outline: Pencarian aturan cuti</div>
 	</div>
 	
-		<div class='node-desc'><br><br><table class='markup-table table '><tr><td>namaAturan</td></tr><tr><td>Cuti Tahunan6</td></tr></table></div>
+		<div class='node-desc'><br><br><table class='markup-table table '><tr><td>namaAturan</td></tr><tr><td>abcdef</td></tr></table></div>
 	
 	
 	<ul class='steps'>
-		<li test-id='18' class='node scenario Pass' status='Pass'>
-			<div class="step-name" title="()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Batal Edit</div>
+		<li test-id='11' class='node scenario Pass' status='Pass'>
+			<div class="step-name" title="()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Pencarian aturan cuti</div>
 
 
 			<ul class='gc steps'>
-				<li test-id='20' class='gc given Pass' status='Pass'>
-					<h6 class="step-name" title="com.dikahadir.definitions.aturancuti.EditAturanCutiTest.navigateToAturanCutiPage()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given user sudah login dan diarahkan ke halaman Aturan Cuti</h6>
+				<li test-id='13' class='gc given Pass' status='Pass'>
+					<h6 class="step-name" title="com.dikahadir.definitions.aturancuti.SearchAturanCutiTest.userSudahLoginDanBeradaDiHalamanAturanCuti()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given user sudah login sebagai admin dan berada di halaman Aturan cuti</h6>
 
 				</li>
-				<li test-id='21' class='gc and Pass' status='Pass'>
-					<h6 class="step-name" title="com.dikahadir.definitions.aturancuti.EditAturanCutiTest.clickTombolAction(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And user menekan tombol action pada aturan cuti "Cuti Tahunan6"</h6>
+				<li test-id='14' class='gc when Pass' status='Pass'>
+					<h6 class="step-name" title="com.dikahadir.definitions.aturancuti.SearchAturanCutiTest.userInputNamaAturanCuti(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When user menginput "abcdef" dalam field cari berdasarkan nama</h6>
 
 				</li>
-				<li test-id='22' class='gc and Pass' status='Pass'>
-					<h6 class="step-name" title="com.dikahadir.definitions.aturancuti.EditAturanCutiTest.editAturanCuti()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And user menekan tombol edit pada aturan cuti</h6>
+				<li test-id='15' class='gc and Pass' status='Pass'>
+					<h6 class="step-name" title="com.dikahadir.definitions.aturancuti.SearchAturanCutiTest.userKlikTombolSearch()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And user menekan tombol search di halaman aturan cuti</h6>
 
 				</li>
-				<li test-id='23' class='gc and Pass' status='Pass'>
-					<h6 class="step-name" title="com.dikahadir.definitions.aturancuti.EditAturanCutiTest.clickTombolBatal()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And user menekan tombol batal tutup pada form sunting Aturan Cuti</h6>
-
-				</li>
-				<li test-id='24' class='gc then Pass' status='Pass'>
-					<h6 class="step-name" title="com.dikahadir.definitions.aturancuti.EditAturanCutiTest.formEditTutup()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then form sunting aturan cuti akan tertutup</h6>
+				<li test-id='16' class='gc then Pass' status='Pass'>
+					<h6 class="step-name" title="com.dikahadir.definitions.aturancuti.SearchAturanCutiTest.TidakAdaNamaAturan()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then tidak muncul nama aturan cuti yang dicari</h6>
 
 				</li>
 			</ul>
@@ -337,25 +305,25 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Steps
-					<div class='panel-lead'>16</div>
+					<div class='panel-lead'>8</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Aug 24, 2025 05:08:56 PM</div>
+					<div class='panel-lead'>Aug 24, 2025 10:54:17 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Aug 24, 2025 05:09:50 PM</div>
+			 		<div class='panel-lead'>Aug 24, 2025 10:55:02 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>00 00 53.502</div>
+					<div class='panel-lead'>00 00 45.281</div>
 				</div>
 			</div>
 			<div class='col s4'>
@@ -405,8 +373,8 @@
 				warningChild: 0,
 				skipChild: 0,
 				infoChild: 0,
-				grandChildCount: 16,
-				passGrandChild: 16,
+				grandChildCount: 8,
+				passGrandChild: 8,
 				failGrandChild: 0,
 				fatalGrandChild: 0,
 				errorGrandChild: 0,
@@ -418,7 +386,7 @@
 		
 		<script>
 			var timeline = {
-			        "Edit Aturan Cuti":52.038
+			        "Tombol Search":43.582
 			};
 		</script>
 		

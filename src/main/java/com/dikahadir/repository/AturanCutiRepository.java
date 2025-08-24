@@ -18,13 +18,16 @@ public class AturanCutiRepository {
     // ==============================
     // Buttons
     // ==============================
-    public static final By buttonReset = By.xpath("//button[normalize-space()='Reset']");
-    public static final By buttonSearch = By.xpath("//button[normalize-space()='Search']");
-    public static final By buttonTambahAturan = By.xpath("//button[normalize-space()='Tambahkan Aturan Cuti']");
-    public static final By buttonTambahkan = By.xpath("//button[normalize-space()='Tambahkan']");
+    public static  By buttonReset = By.xpath("//button[normalize-space()='Reset']");
+    public static  By buttonSearch = By.xpath("//button[normalize-space()='Search']");
+    public static  By buttonTambahAturan = By.xpath("//button[normalize-space()='Tambahkan Aturan Cuti']");
+    public static  By buttonTambahkan = By.xpath("//button[normalize-space()='Tambahkan']");
      public static By buttonSimpan= By.xpath("//button[normalize-space()='Simpan']");
      public static By buttonHapus = By.xpath("//button[@type='button' and normalize-space()='Hapus']");
      public static By buttonBatalEdit=By.xpath("//button[@type='button' and normalize-space()='Tutup']");
+     public static By buttonBatal= By.xpath("//button[normalize-space()='Batal']");
+     public static By pesanKonfirmasi = By.xpath("//p[contains(@class,'MuiTypography-body1') and contains(text(),'Apakah anda yakin')]");
+
 
 
 
