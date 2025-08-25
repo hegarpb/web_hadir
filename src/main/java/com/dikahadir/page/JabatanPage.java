@@ -246,7 +246,7 @@ public class JabatanPage {
         } catch (ElementClickInterceptedException e) {
             ((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
         }
-    } 
+    }
 
 public void waitTableUpdated(Integer oldRowCount) {
     try {

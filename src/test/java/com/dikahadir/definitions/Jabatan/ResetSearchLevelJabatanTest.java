@@ -42,7 +42,7 @@ public void klikTombol(String buttonName) {
 @Then("semua jabatan yang ditampilkan tidak dalam keadaan terfilter")
 public void verifikasiTidakTerfilter() {
     String currentUrl = jabatanPage.getCurrentUrl();
-    System.out.println("🔍 URL setelah reset: " + currentUrl);
+    System.out.println("URL setelah reset: " + currentUrl);
 
     Assert.assertEquals(
         currentUrl,
