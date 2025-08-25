@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Main_Test" class="navigator-link">
-              <span class="suite-name border-passed">Main Test</span>
+              <span class="suite-name border-failed">Main Test</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -92,7 +92,26 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">25 methods, 2 failed,   23 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Main_Test" class="hide-methods failed suite-Main_Test"> (hide)</a> <!-- hide-methods failed suite-Main_Test -->
+                      <a href="#" panel-name="suite-Main_Test" class="show-methods failed suite-Main_Test"> (show)</a> <!-- show-methods failed suite-Main_Test -->
+                    </span>
+                    <div class="method-list-content failed suite-Main_Test">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Main_Test" title="com.dikahadir.runners.RunnerJabatanTest" class="method navigator-link" hash-for-method="runScenario(&quot;Mengubah nama jabatan dan level jabatan dengan nama jabatan dan level jabatan yang sudah ada,inputa...)">runScenario("Mengubah nama jabatan dan level jabatan dengan nama jabatan dan level jabatan yang sudah ada,inputa...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Main_Test" title="com.dikahadir.runners.RunnerJabatanTest" class="method navigator-link" hash-for-method="runScenario(&quot;Menghapus data jabatan dengan feature delete pada tabel jabatan&quot;, &quot;Hapus Jabatan&quot;)">runScenario("Menghapus data jabatan dengan feature delete pada tabel jabatan", "Hapus Jabatan")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Main_Test -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -103,7 +122,117 @@
                     <div class="method-list-content passed suite-Main_Test">
                       <span>
                         <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Main_Test" title="com.dikahadir.runners.RunnerJabatanTest" class="method navigator-link" hash-for-method="runScenario(&quot;Tambah jabatan baru dengan data nama yang sudah ada tetapi level berbeda&quot;, &quot;Tambah Jabatan&quot;)">runScenario("Tambah jabatan baru dengan data nama yang sudah ada tetapi level berbeda", "Tambah Jabatan")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Main_Test" title="com.dikahadir.runners.RunnerJabatanTest" class="method navigator-link" hash-for-method="runScenario(&quot;Validasi field kosong saat menambahkan jabatan&quot;, &quot;Tambah Jabatan&quot;)">runScenario("Validasi field kosong saat menambahkan jabatan", "Tambah Jabatan")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Main_Test" title="com.dikahadir.runners.RunnerJabatanTest" class="method navigator-link" hash-for-method="runScenario(&quot;Validasi field kosong saat mengubah data jabatan&quot;, &quot;Edit Jabatan&quot;)">runScenario("Validasi field kosong saat mengubah data jabatan", "Edit Jabatan")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Main_Test" title="com.dikahadir.runners.RunnerJabatanTest" class="method navigator-link" hash-for-method="runScenario(&quot;Tambah jabatan baru dengan data  Nama baru dan level yang sudah ada&quot;, &quot;Tambah Jabatan&quot;)">runScenario("Tambah jabatan baru dengan data  Nama baru dan level yang sudah ada", "Tambah Jabatan")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Main_Test" title="com.dikahadir.runners.RunnerJabatanTest" class="method navigator-link" hash-for-method="runScenario(&quot;Batal menghapus jabatan dengan menekan tombol batal pada form hapus jabatan&quot;, &quot;Hapus Jabatan&quot;)">runScenario("Batal menghapus jabatan dengan menekan tombol batal pada form hapus jabatan", "Hapus Jabatan")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Main_Test" title="com.dikahadir.runners.RunnerJabatanTest" class="method navigator-link" hash-for-method="runScenario(&quot;Validasi penambahan jabatan dengan data invalid (nama yang sama dan level yang sama,inputan level n...)">runScenario("Validasi penambahan jabatan dengan data invalid (nama yang sama dan level yang sama,inputan level n...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Main_Test" title="com.dikahadir.runners.RunnerJabatanTest" class="method navigator-link" hash-for-method="runScenario(&quot;Validasi penambahan jabatan dengan data invalid (nama yang sama dan level yang sama,inputan level n...)">runScenario("Validasi penambahan jabatan dengan data invalid (nama yang sama dan level yang sama,inputan level n...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Main_Test" title="com.dikahadir.runners.RunnerJabatanTest" class="method navigator-link" hash-for-method="runScenario(&quot;Validasi batal mengubah data jabatan&quot;, &quot;Edit Jabatan&quot;)">runScenario("Validasi batal mengubah data jabatan", "Edit Jabatan")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Main_Test" title="com.dikahadir.runners.RunnerJabatanTest" class="method navigator-link" hash-for-method="runScenario(&quot;Berpindah ke halaman selnajutnya dengan menekan tombol selanjutnya&quot;, &quot;Tombol Pagination&quot;)">runScenario("Berpindah ke halaman selnajutnya dengan menekan tombol selanjutnya", "Tombol Pagination")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Main_Test" title="com.dikahadir.runners.RunnerJabatanTest" class="method navigator-link" hash-for-method="runScenario(&quot;Berpindah ke halaman sebelumnya dengan menekan tombol sebelumnya&quot;, &quot;Tombol Pagination&quot;)">runScenario("Berpindah ke halaman sebelumnya dengan menekan tombol sebelumnya", "Tombol Pagination")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Main_Test" title="com.dikahadir.runners.RunnerJabatanTest" class="method navigator-link" hash-for-method="runScenario(&quot;Berpindah ke halaman sebelumnya dengan menekan tombol sebelumnya&quot;, &quot;Tombol Pagination&quot;)">runScenario("Berpindah ke halaman sebelumnya dengan menekan tombol sebelumnya", "Tombol Pagination")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Main_Test" title="com.dikahadir.runners.RunnerJabatanTest" class="method navigator-link" hash-for-method="runScenario(&quot;Search jabatan berdasarkan level&quot;, &quot;Search Level Jabatan&quot;)">runScenario("Search jabatan berdasarkan level", "Search Level Jabatan")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Main_Test" title="com.dikahadir.runners.RunnerJabatanTest" class="method navigator-link" hash-for-method="runScenario(&quot;Search jabatan dengan level yang tidak ada&quot;, &quot;Search Level Jabatan&quot;)">runScenario("Search jabatan dengan level yang tidak ada", "Search Level Jabatan")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Main_Test" title="com.dikahadir.runners.RunnerJabatanTest" class="method navigator-link" hash-for-method="runScenario(&quot;Validasi field kosong saat mengubah data jabatan&quot;, &quot;Edit Jabatan&quot;)">runScenario("Validasi field kosong saat mengubah data jabatan", "Edit Jabatan")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Main_Test" title="com.dikahadir.runners.RunnerJabatanTest" class="method navigator-link" hash-for-method="runScenario(&quot;Search jabatan dengan input alfabet&quot;, &quot;Search Level Jabatan&quot;)">runScenario("Search jabatan dengan input alfabet", "Search Level Jabatan")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Main_Test" title="com.dikahadir.runners.RunnerJabatanTest" class="method navigator-link" hash-for-method="runScenario(&quot;Mengubah nama jabatan dengan fitur edit dengan data yang valid.&quot;, &quot;Edit Jabatan&quot;)">runScenario("Mengubah nama jabatan dengan fitur edit dengan data yang valid.", "Edit Jabatan")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Main_Test" title="com.dikahadir.runners.RunnerJabatanTest" class="method navigator-link" hash-for-method="runScenario(&quot;Mengubah nama jabatan tetapi level tidak diubah&quot;, &quot;Edit Jabatan&quot;)">runScenario("Mengubah nama jabatan tetapi level tidak diubah", "Edit Jabatan")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Main_Test" title="com.dikahadir.runners.RunnerJabatanTest" class="method navigator-link" hash-for-method="runScenario(&quot;Reset filter setelah melakukan pencarian&quot;, &quot;Reset Search Level Jabatan&quot;)">runScenario("Reset filter setelah melakukan pencarian", "Reset Search Level Jabatan")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Main_Test" title="com.dikahadir.runners.RunnerJabatanTest" class="method navigator-link" hash-for-method="runScenario(&quot;Mengubah level jabatan tetapi nama tidak diubah&quot;, &quot;Edit Jabatan&quot;)">runScenario("Mengubah level jabatan tetapi nama tidak diubah", "Edit Jabatan")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Main_Test" title="com.dikahadir.runners.RunnerJabatanTest" class="method navigator-link" hash-for-method="runScenario(&quot;Berpindah ke halaman sebelumnya dengan menekan tombol sebelumnya&quot;, &quot;Tombol Pagination&quot;)">runScenario("Berpindah ke halaman sebelumnya dengan menekan tombol sebelumnya", "Tombol Pagination")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Main_Test" title="com.dikahadir.runners.RunnerJabatanTest" class="method navigator-link" hash-for-method="runScenario(&quot;Batal menambah jabatan dengan menekan tombol batal pada form tambah jabatan&quot;, &quot;Tambah Jabatan&quot;)">runScenario("Batal menambah jabatan dengan menekan tombol batal pada form tambah jabatan", "Tambah Jabatan")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Main_Test" title="com.dikahadir.runners.RunnerJabatanTest" class="method navigator-link" hash-for-method="runScenario(&quot;Tambah jabatan baru dengan data nama baru dan level baru&quot;, &quot;Tambah Jabatan&quot;)">runScenario("Tambah jabatan baru dengan data nama baru dan level baru", "Tambah Jabatan")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Main_Test" title="com.dikahadir.runners.RunnerJabatanTest" class="method navigator-link" hash-for-method="runScenario(&quot;Validasi field kosong saat menambahkan jabatan&quot;, &quot;Tambah Jabatan&quot;)">runScenario("Validasi field kosong saat menambahkan jabatan", "Tambah Jabatan")</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Main_Test -->
@@ -118,6 +247,44 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Main_Test" class="panel Main_Test">
+          <div class="suite-Main_Test-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.dikahadir.runners.RunnerJabatanTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Mengubah nama jabatan dan level jabatan dengan nama jabatan dan level jabatan yang sudah ada,inputa...)">
+                  </a> <!-- runScenario("Mengubah nama jabatan dan level jabatan dengan nama jabatan dan level jabatan yang sudah ada,inputa...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Mengubah nama jabatan dan level jabatan dengan nama jabatan dan level jabatan yang sudah ada,inputan level mengandung angka negtif","Edit Jabatan")</span>
+                  <div class="stack-trace">java.lang.AssertionError: Pesan sukses tidak sesuai expected [Gagal Edit Jabatan] but found [Berhasil Edit Jabatan]
+	at com.dikahadir.definitions.jabatan.EditJabatanTest.sistemMenampilkanPesan(EditJabatanTest.java:59)
+	at ✽.sistem akan menampilkan pesan &quot;Gagal Edit Jabatan&quot;(file:///C:/Hegar/sqabatch23/TA/web_hadir/src/test/resources/features/jabatan/EditJabatan.feature:51)
+... Removed 5 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Menghapus data jabatan dengan feature delete pada tabel jabatan&quot;, &quot;Hapus Jabatan&quot;)">
+                  </a> <!-- runScenario("Menghapus data jabatan dengan feature delete pada tabel jabatan", "Hapus Jabatan") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Menghapus data jabatan dengan feature delete pada tabel jabatan","Hapus Jabatan")</span>
+                  <div class="stack-trace">java.lang.AssertionError: Pesan sukses tidak sesuai expected [Berhasil Delete Jabatan] but found [Gagal Delete Jabatan]
+	at com.dikahadir.definitions.jabatan.HapusJabatan.pesanSukses(HapusJabatan.java:47)
+	at ✽.pesan sukses &quot;Berhasil Delete Jabatan&quot; akan diatmpilkan sistem(file:///C:/Hegar/sqabatch23/TA/web_hadir/src/test/resources/features/jabatan/HapusJabatan.feature:10)
+... Removed 5 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Main_Test-class-failed -->
           <div class="suite-Main_Test-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -126,10 +293,230 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
+                  <a name="runScenario(&quot;Tambah jabatan baru dengan data nama yang sudah ada tetapi level berbeda&quot;, &quot;Tambah Jabatan&quot;)">
+                  </a> <!-- runScenario("Tambah jabatan baru dengan data nama yang sudah ada tetapi level berbeda", "Tambah Jabatan") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Tambah jabatan baru dengan data nama yang sudah ada tetapi level berbeda","Tambah Jabatan")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Validasi field kosong saat menambahkan jabatan&quot;, &quot;Tambah Jabatan&quot;)">
+                  </a> <!-- runScenario("Validasi field kosong saat menambahkan jabatan", "Tambah Jabatan") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Validasi field kosong saat menambahkan jabatan","Tambah Jabatan")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Validasi field kosong saat mengubah data jabatan&quot;, &quot;Edit Jabatan&quot;)">
+                  </a> <!-- runScenario("Validasi field kosong saat mengubah data jabatan", "Edit Jabatan") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Validasi field kosong saat mengubah data jabatan","Edit Jabatan")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Tambah jabatan baru dengan data  Nama baru dan level yang sudah ada&quot;, &quot;Tambah Jabatan&quot;)">
+                  </a> <!-- runScenario("Tambah jabatan baru dengan data  Nama baru dan level yang sudah ada", "Tambah Jabatan") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Tambah jabatan baru dengan data  Nama baru dan level yang sudah ada","Tambah Jabatan")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Batal menghapus jabatan dengan menekan tombol batal pada form hapus jabatan&quot;, &quot;Hapus Jabatan&quot;)">
+                  </a> <!-- runScenario("Batal menghapus jabatan dengan menekan tombol batal pada form hapus jabatan", "Hapus Jabatan") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Batal menghapus jabatan dengan menekan tombol batal pada form hapus jabatan","Hapus Jabatan")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Validasi penambahan jabatan dengan data invalid (nama yang sama dan level yang sama,inputan level n...)">
+                  </a> <!-- runScenario("Validasi penambahan jabatan dengan data invalid (nama yang sama dan level yang sama,inputan level n...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Validasi penambahan jabatan dengan data invalid (nama yang sama dan level yang sama,inputan level non numeric,level negtif atau minus)","Tambah Jabatan")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Validasi penambahan jabatan dengan data invalid (nama yang sama dan level yang sama,inputan level n...)">
+                  </a> <!-- runScenario("Validasi penambahan jabatan dengan data invalid (nama yang sama dan level yang sama,inputan level n...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Validasi penambahan jabatan dengan data invalid (nama yang sama dan level yang sama,inputan level non numeric,level negtif atau minus)","Tambah Jabatan")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
                   <a name="runScenario(&quot;Validasi batal mengubah data jabatan&quot;, &quot;Edit Jabatan&quot;)">
                   </a> <!-- runScenario("Validasi batal mengubah data jabatan", "Edit Jabatan") -->
                   <span class="method-name">runScenario</span>
                   <span class="parameters">("Validasi batal mengubah data jabatan","Edit Jabatan")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Berpindah ke halaman selnajutnya dengan menekan tombol selanjutnya&quot;, &quot;Tombol Pagination&quot;)">
+                  </a> <!-- runScenario("Berpindah ke halaman selnajutnya dengan menekan tombol selanjutnya", "Tombol Pagination") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Berpindah ke halaman selnajutnya dengan menekan tombol selanjutnya","Tombol Pagination")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Berpindah ke halaman sebelumnya dengan menekan tombol sebelumnya&quot;, &quot;Tombol Pagination&quot;)">
+                  </a> <!-- runScenario("Berpindah ke halaman sebelumnya dengan menekan tombol sebelumnya", "Tombol Pagination") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Berpindah ke halaman sebelumnya dengan menekan tombol sebelumnya","Tombol Pagination")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Berpindah ke halaman sebelumnya dengan menekan tombol sebelumnya&quot;, &quot;Tombol Pagination&quot;)">
+                  </a> <!-- runScenario("Berpindah ke halaman sebelumnya dengan menekan tombol sebelumnya", "Tombol Pagination") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Berpindah ke halaman sebelumnya dengan menekan tombol sebelumnya","Tombol Pagination")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Search jabatan berdasarkan level&quot;, &quot;Search Level Jabatan&quot;)">
+                  </a> <!-- runScenario("Search jabatan berdasarkan level", "Search Level Jabatan") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Search jabatan berdasarkan level","Search Level Jabatan")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Search jabatan dengan level yang tidak ada&quot;, &quot;Search Level Jabatan&quot;)">
+                  </a> <!-- runScenario("Search jabatan dengan level yang tidak ada", "Search Level Jabatan") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Search jabatan dengan level yang tidak ada","Search Level Jabatan")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Validasi field kosong saat mengubah data jabatan&quot;, &quot;Edit Jabatan&quot;)">
+                  </a> <!-- runScenario("Validasi field kosong saat mengubah data jabatan", "Edit Jabatan") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Validasi field kosong saat mengubah data jabatan","Edit Jabatan")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Search jabatan dengan input alfabet&quot;, &quot;Search Level Jabatan&quot;)">
+                  </a> <!-- runScenario("Search jabatan dengan input alfabet", "Search Level Jabatan") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Search jabatan dengan input alfabet","Search Level Jabatan")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Mengubah nama jabatan dengan fitur edit dengan data yang valid.&quot;, &quot;Edit Jabatan&quot;)">
+                  </a> <!-- runScenario("Mengubah nama jabatan dengan fitur edit dengan data yang valid.", "Edit Jabatan") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Mengubah nama jabatan dengan fitur edit dengan data yang valid.","Edit Jabatan")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Mengubah nama jabatan tetapi level tidak diubah&quot;, &quot;Edit Jabatan&quot;)">
+                  </a> <!-- runScenario("Mengubah nama jabatan tetapi level tidak diubah", "Edit Jabatan") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Mengubah nama jabatan tetapi level tidak diubah","Edit Jabatan")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Reset filter setelah melakukan pencarian&quot;, &quot;Reset Search Level Jabatan&quot;)">
+                  </a> <!-- runScenario("Reset filter setelah melakukan pencarian", "Reset Search Level Jabatan") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Reset filter setelah melakukan pencarian","Reset Search Level Jabatan")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Mengubah level jabatan tetapi nama tidak diubah&quot;, &quot;Edit Jabatan&quot;)">
+                  </a> <!-- runScenario("Mengubah level jabatan tetapi nama tidak diubah", "Edit Jabatan") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Mengubah level jabatan tetapi nama tidak diubah","Edit Jabatan")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Berpindah ke halaman sebelumnya dengan menekan tombol sebelumnya&quot;, &quot;Tombol Pagination&quot;)">
+                  </a> <!-- runScenario("Berpindah ke halaman sebelumnya dengan menekan tombol sebelumnya", "Tombol Pagination") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Berpindah ke halaman sebelumnya dengan menekan tombol sebelumnya","Tombol Pagination")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Batal menambah jabatan dengan menekan tombol batal pada form tambah jabatan&quot;, &quot;Tambah Jabatan&quot;)">
+                  </a> <!-- runScenario("Batal menambah jabatan dengan menekan tombol batal pada form tambah jabatan", "Tambah Jabatan") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Batal menambah jabatan dengan menekan tombol batal pada form tambah jabatan","Tambah Jabatan")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Tambah jabatan baru dengan data nama baru dan level baru&quot;, &quot;Tambah Jabatan&quot;)">
+                  </a> <!-- runScenario("Tambah jabatan baru dengan data nama baru dan level baru", "Tambah Jabatan") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Tambah jabatan baru dengan data nama baru dan level baru","Tambah Jabatan")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Validasi field kosong saat menambahkan jabatan&quot;, &quot;Tambah Jabatan&quot;)">
+                  </a> <!-- runScenario("Validasi field kosong saat menambahkan jabatan", "Tambah Jabatan") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Validasi field kosong saat menambahkan jabatan","Tambah Jabatan")</span>
                   <em>
 (Runs Cucumber Scenarios)                  </em>
                 </div> <!-- method-content -->
@@ -196,16 +583,112 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(25);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'runScenario')
 data.setCell(0, 2, 'com.dikahadir.runners.RunnerJabatanTest')
-data.setCell(0, 3, 29037);
+data.setCell(0, 3, 37490);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'runScenario')
+data.setCell(1, 2, 'com.dikahadir.runners.RunnerJabatanTest')
+data.setCell(1, 3, 25429);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'runScenario')
+data.setCell(2, 2, 'com.dikahadir.runners.RunnerJabatanTest')
+data.setCell(2, 3, 25381);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'runScenario')
+data.setCell(3, 2, 'com.dikahadir.runners.RunnerJabatanTest')
+data.setCell(3, 3, 22398);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'runScenario')
+data.setCell(4, 2, 'com.dikahadir.runners.RunnerJabatanTest')
+data.setCell(4, 3, 22393);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'runScenario')
+data.setCell(5, 2, 'com.dikahadir.runners.RunnerJabatanTest')
+data.setCell(5, 3, 22174);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'runScenario')
+data.setCell(6, 2, 'com.dikahadir.runners.RunnerJabatanTest')
+data.setCell(6, 3, 21482);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'runScenario')
+data.setCell(7, 2, 'com.dikahadir.runners.RunnerJabatanTest')
+data.setCell(7, 3, 21238);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'runScenario')
+data.setCell(8, 2, 'com.dikahadir.runners.RunnerJabatanTest')
+data.setCell(8, 3, 21014);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'runScenario')
+data.setCell(9, 2, 'com.dikahadir.runners.RunnerJabatanTest')
+data.setCell(9, 3, 20834);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'runScenario')
+data.setCell(10, 2, 'com.dikahadir.runners.RunnerJabatanTest')
+data.setCell(10, 3, 20428);
+data.setCell(11, 0, 11)
+data.setCell(11, 1, 'runScenario')
+data.setCell(11, 2, 'com.dikahadir.runners.RunnerJabatanTest')
+data.setCell(11, 3, 19246);
+data.setCell(12, 0, 12)
+data.setCell(12, 1, 'runScenario')
+data.setCell(12, 2, 'com.dikahadir.runners.RunnerJabatanTest')
+data.setCell(12, 3, 18911);
+data.setCell(13, 0, 13)
+data.setCell(13, 1, 'runScenario')
+data.setCell(13, 2, 'com.dikahadir.runners.RunnerJabatanTest')
+data.setCell(13, 3, 18048);
+data.setCell(14, 0, 14)
+data.setCell(14, 1, 'runScenario')
+data.setCell(14, 2, 'com.dikahadir.runners.RunnerJabatanTest')
+data.setCell(14, 3, 18002);
+data.setCell(15, 0, 15)
+data.setCell(15, 1, 'runScenario')
+data.setCell(15, 2, 'com.dikahadir.runners.RunnerJabatanTest')
+data.setCell(15, 3, 17442);
+data.setCell(16, 0, 16)
+data.setCell(16, 1, 'runScenario')
+data.setCell(16, 2, 'com.dikahadir.runners.RunnerJabatanTest')
+data.setCell(16, 3, 17259);
+data.setCell(17, 0, 17)
+data.setCell(17, 1, 'runScenario')
+data.setCell(17, 2, 'com.dikahadir.runners.RunnerJabatanTest')
+data.setCell(17, 3, 16983);
+data.setCell(18, 0, 18)
+data.setCell(18, 1, 'runScenario')
+data.setCell(18, 2, 'com.dikahadir.runners.RunnerJabatanTest')
+data.setCell(18, 3, 16920);
+data.setCell(19, 0, 19)
+data.setCell(19, 1, 'runScenario')
+data.setCell(19, 2, 'com.dikahadir.runners.RunnerJabatanTest')
+data.setCell(19, 3, 15838);
+data.setCell(20, 0, 20)
+data.setCell(20, 1, 'runScenario')
+data.setCell(20, 2, 'com.dikahadir.runners.RunnerJabatanTest')
+data.setCell(20, 3, 15519);
+data.setCell(21, 0, 21)
+data.setCell(21, 1, 'runScenario')
+data.setCell(21, 2, 'com.dikahadir.runners.RunnerJabatanTest')
+data.setCell(21, 3, 15195);
+data.setCell(22, 0, 22)
+data.setCell(22, 1, 'runScenario')
+data.setCell(22, 2, 'com.dikahadir.runners.RunnerJabatanTest')
+data.setCell(22, 3, 14300);
+data.setCell(23, 0, 23)
+data.setCell(23, 1, 'runScenario')
+data.setCell(23, 2, 'com.dikahadir.runners.RunnerJabatanTest')
+data.setCell(23, 3, 13952);
+data.setCell(24, 0, 24)
+data.setCell(24, 1, 'runScenario')
+data.setCell(24, 2, 'com.dikahadir.runners.RunnerJabatanTest')
+data.setCell(24, 3, 12923);
 window.suiteTableData['Main_Test']= { tableData: data, tableDiv: 'times-div-Main_Test'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 29 seconds</span>
+              <span class="suite-total-time">Total running time: 8 minutes</span>
               <div id="times-div-Main_Test">
               </div> <!-- times-div-Main_Test -->
             </div> <!-- times-div -->
@@ -233,16 +716,116 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">com.dikahadir.runners.RunnerJabatanTest</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
-                <span class="method-name">setUpClass(org.testng.TestRunner@7980cf2c)</span>
+                <span class="method-name">setUpClass(org.testng.TestRunner@2d094add)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
+                <span class="method-name">runScenario("Mengubah nama jabatan dengan fitur edit dengan data yang valid.", "Edit Jabatan")</span>
+                <span class="method-start">957 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Mengubah nama jabatan tetapi level tidak diubah", "Edit Jabatan")</span>
+                <span class="method-start">38475 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Mengubah level jabatan tetapi nama tidak diubah", "Edit Jabatan")</span>
+                <span class="method-start">60868 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">runScenario("Mengubah nama jabatan dan level jabatan dengan nama jabatan dan level jabatan yang sudah ada,inputa...)</span>
+                <span class="method-start">81898 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Validasi field kosong saat mengubah data jabatan", "Edit Jabatan")</span>
+                <span class="method-start">101150 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Validasi field kosong saat mengubah data jabatan", "Edit Jabatan")</span>
+                <span class="method-start">120077 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
                 <span class="method-name">runScenario("Validasi batal mengubah data jabatan", "Edit Jabatan")</span>
-                <span class="method-start">798 ms</span>
+                <span class="method-start">141330 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">runScenario("Menghapus data jabatan dengan feature delete pada tabel jabatan", "Hapus Jabatan")</span>
+                <span class="method-start">163736 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Batal menghapus jabatan dengan menekan tombol batal pada form hapus jabatan", "Hapus Jabatan")</span>
+                <span class="method-start">185929 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Berpindah ke halaman selnajutnya dengan menekan tombol selanjutnya", "Tombol Pagination")</span>
+                <span class="method-start">211393 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Berpindah ke halaman sebelumnya dengan menekan tombol sebelumnya", "Tombol Pagination")</span>
+                <span class="method-start">228334 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Berpindah ke halaman sebelumnya dengan menekan tombol sebelumnya", "Tombol Pagination")</span>
+                <span class="method-start">249831 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Berpindah ke halaman sebelumnya dengan menekan tombol sebelumnya", "Tombol Pagination")</span>
+                <span class="method-start">265366 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Reset filter setelah melakukan pencarian", "Reset Search Level Jabatan")</span>
+                <span class="method-start">281230 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Search jabatan berdasarkan level", "Search Level Jabatan")</span>
+                <span class="method-start">295562 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Search jabatan dengan level yang tidak ada", "Search Level Jabatan")</span>
+                <span class="method-start">308501 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Search jabatan dengan input alfabet", "Search Level Jabatan")</span>
+                <span class="method-start">322485 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Tambah jabatan baru dengan data nama baru dan level baru", "Tambah Jabatan")</span>
+                <span class="method-start">343340 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Tambah jabatan baru dengan data nama yang sudah ada tetapi level berbeda", "Tambah Jabatan")</span>
+                <span class="method-start">361403 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Tambah jabatan baru dengan data  Nama baru dan level yang sudah ada", "Tambah Jabatan")</span>
+                <span class="method-start">378668 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Validasi penambahan jabatan dengan data invalid (nama yang sama dan level yang sama,inputan level n...)</span>
+                <span class="method-start">396686 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Validasi penambahan jabatan dengan data invalid (nama yang sama dan level yang sama,inputan level n...)</span>
+                <span class="method-start">414152 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Validasi field kosong saat menambahkan jabatan", "Tambah Jabatan")</span>
+                <span class="method-start">439580 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Validasi field kosong saat menambahkan jabatan", "Tambah Jabatan")</span>
+                <span class="method-start">456595 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Batal menambah jabatan dengan menekan tombol batal pada form tambah jabatan", "Tambah Jabatan")</span>
+                <span class="method-start">471790 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownClass</span>
-                <span class="method-start">29855 ms</span>
+                <span class="method-start">492296 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

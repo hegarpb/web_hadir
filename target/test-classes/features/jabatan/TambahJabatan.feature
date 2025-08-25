@@ -12,8 +12,8 @@ Feature: Tambah Jabatan
     Then sistem menampilkan pesan sukses "<message>"
 
     Examples:
-      | nama            | level | message                        |
-      | Kel3 ValidData3 |     9 | Berhasil Menambahkan Job Level |
+      | nama       | level | message                        |
+      | Supervisor |   101 | Berhasil Menambahkan Job Level |
 #Positive Test Data Valid 
 
   Scenario Outline: Tambah jabatan baru dengan data nama yang sudah ada tetapi level berbeda
@@ -24,8 +24,8 @@ Feature: Tambah Jabatan
     Then sistem menampilkan pesan sukses "<message>"
 
     Examples:
-      | nama     | level | message                        |
-      | SPVBaru5 |     2 | Berhasil Menambahkan Job Level |
+      | nama       | level | message                        |
+      | Supervisor |   102 | Berhasil Menambahkan Job Level |
          # Positive Test Data Valid 
 
   Scenario Outline: Tambah jabatan baru dengan data  Nama baru dan level yang sudah ada
@@ -36,8 +36,8 @@ Feature: Tambah Jabatan
     Then sistem menampilkan pesan sukses "<message>"
 
     Examples:
-      | nama                  | level | message                        |
-      | Assistant Manager HKK |     1 | Berhasil Menambahkan Job Level |
+      | nama              | level | message                        |
+      | Assistant Manager |   103 | Berhasil Menambahkan Job Level |
   # Negative Test - Data Invalid 
 
   Scenario Outline: Validasi penambahan jabatan dengan data invalid (nama yang sama dan level yang sama,inputan level non numeric,level negtif atau minus)
@@ -49,8 +49,9 @@ Feature: Tambah Jabatan
 
     Examples:
       | nama       | level | message                     |
-      | Karyawan14 |     1 | Gagal Menambahkan Job Level |
-      | SPVVVv     | abc   | Gagal Menambahkan Job Level |
+      | Supervisor |   101 | Gagal Menambahkan Job Level |
+      | Staff SQA  | abc   | Gagal Menambahkan Job Level |
+      | Staff HR   |   -20 | Gagal Menambahkan Job Level |
   # Negative Test - Field Kosong
 
   Scenario Outline: Validasi field kosong saat menambahkan jabatan
@@ -75,5 +76,5 @@ Feature: Tambah Jabatan
     Then form pada tambah jabatan akan tertutup
 
     Examples:
-      | nama      | level |
-      | TestBatal |     3 |
+      | nama    | level |
+      | Manager |     3 |

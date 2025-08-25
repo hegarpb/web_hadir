@@ -1,4 +1,24 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 32.03 s -- in TestSuite
+Tests run: 25, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 495.0 s <<< FAILURE! -- in TestSuite
+com.dikahadir.runners.RunnerJabatanTest.runScenario["Mengubah nama jabatan dan level jabatan dengan nama jabatan dan level jabatan yang sudah ada,inputan level mengandung angka negtif", "Edit Jabatan"](4) -- Time elapsed: 19.30 s <<< FAILURE!
+java.lang.AssertionError: Pesan sukses tidak sesuai expected [Gagal Edit Jabatan] but found [Berhasil Edit Jabatan]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at com.dikahadir.definitions.jabatan.EditJabatanTest.sistemMenampilkanPesan(EditJabatanTest.java:59)
+	at ✽.sistem akan menampilkan pesan "Gagal Edit Jabatan"(file:///C:/Hegar/sqabatch23/TA/web_hadir/src/test/resources/features/jabatan/EditJabatan.feature:51)
+
+com.dikahadir.runners.RunnerJabatanTest.runScenario["Menghapus data jabatan dengan feature delete pada tabel jabatan", "Hapus Jabatan"](8) -- Time elapsed: 21.89 s <<< FAILURE!
+java.lang.AssertionError: Pesan sukses tidak sesuai expected [Berhasil Delete Jabatan] but found [Gagal Delete Jabatan]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at com.dikahadir.definitions.jabatan.HapusJabatan.pesanSukses(HapusJabatan.java:47)
+	at ✽.pesan sukses "Berhasil Delete Jabatan" akan diatmpilkan sistem(file:///C:/Hegar/sqabatch23/TA/web_hadir/src/test/resources/features/jabatan/HapusJabatan.feature:10)
+

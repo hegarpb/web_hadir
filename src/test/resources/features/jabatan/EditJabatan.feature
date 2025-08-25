@@ -5,7 +5,7 @@ Feature: Edit Jabatan
 
   Scenario Outline: Mengubah nama jabatan dengan fitur edit dengan data yang valid.
     Given user sudah login dan user berada di halaman Manajemen Jabatan
-    When user menekan tombol action pada level jabatan "101"
+    When user menekan tombol action pada level jabatan "10"
     And user menekan tombol edit pada menu dropdown
     And user mengubah nama jabatan menjadi "<namaBaru>"
     And user mengubah level jabatan menjadi "<levelBaru>"
@@ -13,12 +13,12 @@ Feature: Edit Jabatan
     Then sistem akan menampilkan pesan "Berhasil Edit Jabatan"
 
     Examples:
-      | namaBaru     | levelBaru |
-      | TestEditBaru |         7 |
+      | namaBaru | levelBaru |
+      | Direktur |       105 |
 
   Scenario Outline: Mengubah nama jabatan tetapi level tidak diubah
     Given user sudah login dan user berada di halaman Manajemen Jabatan
-    When user menekan tombol action pada level jabatan "102"
+    When user menekan tombol action pada level jabatan "8"
     And user menekan tombol edit pada menu dropdown
     And user mengubah nama jabatan menjadi "<namaBaru>"
     And user menekan tombol simpan
@@ -26,11 +26,11 @@ Feature: Edit Jabatan
 
     Examples:
       | namaBaru   |
-      | SekjenBaru |
+      | Komisiaris |
 
   Scenario Outline: Mengubah level jabatan tetapi nama tidak diubah
     Given user sudah login dan user berada di halaman Manajemen Jabatan
-    When user menekan tombol action pada level jabatan "104"
+    When user menekan tombol action pada level jabatan "6"
     And user menekan tombol edit pada menu dropdown
     And user mengubah level jabatan menjadi "<levelBaru>"
     And user menekan tombol simpan
@@ -43,7 +43,7 @@ Feature: Edit Jabatan
 
   Scenario Outline: Mengubah nama jabatan dan level jabatan dengan nama jabatan dan level jabatan yang sudah ada,inputan level mengandung angka negtif
     Given user sudah login dan user berada di halaman Manajemen Jabatan
-    When user menekan tombol action pada level jabatan "105"
+    When user menekan tombol action pada level jabatan "4"
     And user menekan tombol edit pada menu dropdown
     And user mengubah nama jabatan menjadi "<namaBaru>"
     And user mengubah level jabatan menjadi "<levelBaru>"
@@ -56,7 +56,7 @@ Feature: Edit Jabatan
 
   Scenario Outline: Validasi field kosong saat mengubah data jabatan
     Given user sudah login dan user berada di halaman Manajemen Jabatan
-    When user menekan tombol action pada level jabatan "106"
+    When user menekan tombol action pada level jabatan "5"
     And user menekan tombol edit pada menu dropdown
     And user mengubah nama jabatan menjadi "<namaBaru>"
     And user mengubah level jabatan menjadi "<levelBaru>"
@@ -71,7 +71,7 @@ Feature: Edit Jabatan
 
   Scenario Outline: Validasi batal mengubah data jabatan
     Given user sudah login dan user berada di halaman Manajemen Jabatan
-    When user menekan tombol action pada level jabatan "107"
+    When user menekan tombol action pada level jabatan "10"
     And user menekan tombol edit pada menu dropdown
     And user mengubah nama jabatan menjadi "<namaBaru>"
     And user mengubah level jabatan menjadi "<levelBaru>"

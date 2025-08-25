@@ -11,7 +11,7 @@ Feature: Search Level Jabatan
 
     Examples:
       | level |
-      |     2 |
+      |     9 |
   #Negative Test
 
   Scenario Outline: Search jabatan dengan level yang tidak ada
