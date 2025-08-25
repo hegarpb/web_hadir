@@ -64,7 +64,6 @@ public void formHapusTertutup() {
     }
 
 
-
     @Then("sistem menampilkan pesan error {string}")
     public void pesanError(String expectedMessage){
         String actualMessage = jabatanPage.getMessageText();
