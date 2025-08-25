@@ -164,7 +164,7 @@ public class JabatanPage {
     public void clickEditMenu() {
     try {
         List<WebElement> menuItems = wait.until(
-            ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("//li[@role='menuitem']"))
+            ExpectedConditions.presenceOfAllElementsLocatedBy(JabatanRepository.dropdownMenuItems)
         );
 
         for (WebElement item : menuItems) {
@@ -189,7 +189,7 @@ public class JabatanPage {
     public void clickDeleteMenu() {
     try {
         List<WebElement> menuItems = wait.until(
-            ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("//li[@role='menuitem']"))
+            ExpectedConditions.presenceOfAllElementsLocatedBy(JabatanRepository.dropdownMenuItems)
         );
 
         for (WebElement item : menuItems) {
@@ -214,64 +214,29 @@ public class JabatanPage {
 
     public void printAllDropdownOptions() {
     List<WebElement> options = driver.findElements(By.xpath("//li[@role='menuitem']"));
-    System.out.println("=== Dropdown Options Found ===");
     for (WebElement option : options) {
         System.out.println("Option: [" + option.getText().trim() + "]");
     }
-    System.out.println("=== End of Options ===");
 }
 
     public void clickNextPageButton() {
     WebElement nextButton = wait.until(ExpectedConditions.elementToBeClickable(JabatanRepository.buttonNextPage));
     ((JavascriptExecutor) driver).executeScript("arguments[0].click();", nextButton);
-    System.out.println("➡️ Klik tombol Next Page");
 }   
     public void clickPrevPageButton() {
         WebElement prevButton = wait.until(ExpectedConditions.elementToBeClickable(JabatanRepository.buttonPrevPage));
         ((JavascriptExecutor) driver).executeScript("arguments[0].click();", prevButton);
-        System.out.println("⬅️ Klik tombol Previous Page");
     }
 
     public void clickLastPageButton() {
     WebElement lastBtn = wait.until(ExpectedConditions.elementToBeClickable(JabatanRepository.buttonLastPage));
     ((JavascriptExecutor) driver).executeScript("arguments[0].click();", lastBtn);
-    System.out.println("⏩ Klik tombol Last Page");
 }
     public void clickFirstPageButton() {
     WebElement firstPageBtn = wait.until(ExpectedConditions.elementToBeClickable(JabatanRepository.buttonFirstPage));
     firstPageBtn.click();
-    System.out.println("⬅️ Klik tombol First Page (halaman awal).");
 }
     
-
-    public boolean isJabatanExistInTableWithPagination(String nama, String level) {
-        while (true) {
-            wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(JabatanRepository.tableRows));
-
-            List<WebElement> rows = driver.findElements(JabatanRepository.tableRows);
-            for (WebElement row : rows) {
-                String cellNama = row.findElement(By.xpath("./td[1]")).getText().trim().replace("\u00A0", " ");
-                String cellLevel = row.findElement(By.xpath("./td[2]")).getText().trim().replace("\u00A0", " ");
-
-                if (cellNama.equals(nama) && cellLevel.equals(level)) {
-                    return true;
-                }
-            }
-
-            
-            List<WebElement> nextButtons = driver.findElements(
-                By.xpath("//button[normalize-space()='Next' and not(@disabled)]")
-            );
-            if (nextButtons.isEmpty()) {
-                break; 
-            }
-
-            safeClick(nextButtons.get(0)); 
-            wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(JabatanRepository.tableRows));
-        }
-        return false;
-    }
-
     // ================== HELPER ================== //
 
     private void safeClick(WebElement element) {

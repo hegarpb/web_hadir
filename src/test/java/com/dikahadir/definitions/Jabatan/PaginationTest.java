@@ -48,7 +48,7 @@ public void keHalamanTerakhir(){
 
         String newUrl = Hooks.getDriver().getCurrentUrl();
         Assert.assertTrue(newUrl.contains("page="),
-                "❌ URL tidak berubah ke halaman berikutnya. Current: " + newUrl);
+                "URL tidak berubah ke halaman berikutnya. Current: " + newUrl);
     }
 
    
@@ -60,7 +60,7 @@ public void halamanBerpindahKeHalamanSebelumnya() {
 
     String newUrl = jabatanPage.getCurrentUrl();
     Assert.assertTrue(newUrl.contains("page="),
-        "❌ URL tidak berubah ke halaman sebelumnya. Current: " + newUrl);
+        " URL tidak berubah ke halaman sebelumnya. Current: " + newUrl);
 }
 
 
@@ -71,7 +71,7 @@ String oldUrl = jabatanPage.getCurrentUrl();
 
         String newUrl = jabatanPage.getCurrentUrl();
         Assert.assertTrue(newUrl.contains("page="),
-                "❌ URL tidak berubah ke halaman terakhir. Current: " + newUrl);
+                " URL tidak berubah ke halaman terakhir. Current: " + newUrl);
     }
 
     @Then("halaman akan berpindah ke halaman awal")
@@ -81,7 +81,7 @@ public void halamanAwal() {
 
     String newUrl = jabatanPage.getCurrentUrl();
     Assert.assertTrue(newUrl.contains("page=") || newUrl.endsWith("/jabatan"),
-            "❌ URL tidak berubah ke halaman awal. Current: " + newUrl);
+            "URL tidak berubah ke halaman awal. Current: " + newUrl);
 }
 }
 
