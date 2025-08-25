@@ -7,11 +7,9 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.testng.Assert;
 
-public class ResetSearchLevelJabatanTest {
+public class ResetLevelJabatanTest {
 
     private  JabatanPage jabatanPage;
-
-    
 
     @Given("user sudah login dan diarahkan ke halaman Manajemen Jabatan")
     public void navigasiKeHalamanJabatanResetSearch() {
