@@ -180,11 +180,7 @@ public class JabatanPage {
         throw new RuntimeException(" Menu 'Edit' tidak ditemukan di dropdown!");
 
     } catch (Exception e) {
-<<<<<<< HEAD
         printAllDropdownOptions(); 
-=======
-        printAllDropdownOptions(); // debug isi dropdown
->>>>>>> d2c87038d055e10d7565ecd53f9caf7d1311b11f
         throw new RuntimeException(" Gagal klik menu Edit. Detail: " + e.getMessage(), e);
     }
 }
@@ -209,11 +205,7 @@ public class JabatanPage {
         throw new RuntimeException(" Menu 'Delete' tidak ditemukan di dropdown!");
 
     } catch (Exception e) {
-<<<<<<< HEAD
         printAllDropdownOptions(); 
-=======
-        printAllDropdownOptions(); // debug isi dropdown
->>>>>>> d2c87038d055e10d7565ecd53f9caf7d1311b11f
         throw new RuntimeException(" Gagal klik menu Delete. Detail: " + e.getMessage(), e);
     }
 }
@@ -314,8 +306,4 @@ public void waitUrlChanged(String oldUrl) {
         throw new RuntimeException(" Timeout: URL tidak berubah setelah klik pagination.");
     }
 }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> d2c87038d055e10d7565ecd53f9caf7d1311b11f
