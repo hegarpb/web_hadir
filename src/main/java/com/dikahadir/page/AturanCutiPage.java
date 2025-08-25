@@ -141,13 +141,13 @@ public class AturanCutiPage {
 
             try {
                 actionButton.click();
-                System.out.println("✅ Klik berhasil dengan click()");
+                System.out.println("Klik berhasil dengan click()");
             } catch (Exception e) {
                 ((JavascriptExecutor) driver).executeScript("arguments[0].click();", actionButton);
-                System.out.println("⚡ Klik berhasil dengan JavaScriptExecutor");
+                System.out.println("Klik berhasil dengan JavaScriptExecutor");
             }
         } catch (Exception e) {
-            throw new RuntimeException(" Gagal klik tombol action di row pertama", e);
+            throw new RuntimeException("Gagal klik tombol action di row pertama", e);
         }
     }
 
@@ -158,7 +158,7 @@ public class AturanCutiPage {
     private void clickDropdownOption(String optionText) {
         try {
             List<WebElement> menuItems = wait.until(
-                ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("//li[@role='menuitem']"))
+                ExpectedConditions.presenceOfAllElementsLocatedBy(AturanCutiRepository.dropdownMenuItems)
             );
 
             for (WebElement item : menuItems) {
@@ -169,15 +169,15 @@ public class AturanCutiPage {
                     return;
                 }
             }
-            throw new RuntimeException("❌ Menu '" + optionText + "' tidak ditemukan di dropdown!");
+            throw new RuntimeException("Menu '" + optionText + "' tidak ditemukan di dropdown!");
         } catch (Exception e) {
             printAllDropdownOptions();
-            throw new RuntimeException("❌ Gagal klik menu " + optionText + ". Detail: " + e.getMessage(), e);
+            throw new RuntimeException("Gagal klik menu " + optionText + ". Detail: " + e.getMessage(), e);
         }
     }
 
     public void printAllDropdownOptions() {
-        List<WebElement> options = driver.findElements(By.xpath("//li[@role='menuitem']"));
+        List<WebElement> options = driver.findElements(AturanCutiRepository.dropdownMenuItems);
         System.out.println("=== Dropdown Options Found ===");
         for (WebElement option : options) {
             System.out.println("Option: [" + option.getText().trim() + "]");
@@ -220,12 +220,10 @@ public class AturanCutiPage {
             });
 
             if (oldRowCount == null) {
-                System.out.println("✅ Tabel  sudah muncul di halaman.");
             } else {
-                System.out.println("🔄 Tabel berhasil reload setelah pindah halaman.");
             }
         } catch (TimeoutException e) {
-            throw new RuntimeException("❌ Timeout: Tabel tidak muncul/update sesuai harapan.");
+            throw new RuntimeException("Timeout: Tabel tidak muncul/update sesuai harapan.");
         }
     }
 
