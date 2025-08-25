@@ -20,7 +20,7 @@ public class PaginationTest {
     public void navigateToJabatanPage() {
         this.jabatanPage = new JabatanPage(Hooks.getDriver());
         jabatanPage.navigateToJabatanPage();
-        jabatanPage.waitTableUpdated(null); // tunggu tabel pertama kali muncul
+        jabatanPage.waitTableUpdated(null); 
     }
 
     @When("user menekan tombol selanjutnya")

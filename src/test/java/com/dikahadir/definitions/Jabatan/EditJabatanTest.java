@@ -12,7 +12,7 @@ public class EditJabatanTest {
     private JabatanPage jabatanPage;
 
     @Given("user sudah login dan user berada di halaman Manajemen Jabatan")
-public void navigasiKeHalamanJabatanEdit() {
+    public void navigasiKeHalamanJabatanEdit() {
     this.jabatanPage = new JabatanPage(Hooks.getDriver());
     jabatanPage.navigateToJabatanPage();
 
