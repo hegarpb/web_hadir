@@ -38,7 +38,6 @@ public class LoginPage {
     }
 
     public void performLogin(String email, String password) {
-        // Panggil metode yang sudah stabil
         setEmail(email);
         setPassword(password);
         clickLoginButton();
