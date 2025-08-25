@@ -18,8 +18,8 @@ Feature: Edit Aturan Cuti
     And data aturan cuti "<namaAturanBaru>" ditampilkan di tabel.
 
     Examples:
-      | namaAturan  | namaAturanBaru | eligibleBaru | tanggalBatasBaru | bulanBatasBaru | maksimalSisaBaru | jumlahBulanKerjaSisaBaru |
-      | Edit Cuti 2 | Cuti Edit      |           12 |               10 |             10 |                5 |                        3 |
+      | namaAturan | namaAturanBaru | eligibleBaru | tanggalBatasBaru | bulanBatasBaru | maksimalSisaBaru | jumlahBulanKerjaSisaBaru |
+      | Cuti Edit1 | Cuti Revisi    |           10 |               10 |             10 |                5 |                        3 |
 #Negative Test- Data Invalid
 
   Scenario Outline: Mengedit aturan cuti dengan data invalid
@@ -36,9 +36,9 @@ Feature: Edit Aturan Cuti
     Then sistem akan menampilkan pesan "Gagal Mengubah Aturan Cuti".
 
     Examples:
-      | namaAturan  | namaAturanBaru | eligibleBaru | tanggalBatasBaru | bulanBatasBaru | maksimalSisaBaru | jumlahBulanKerjaSisaBaru |
-      | Edit Cuti   | Edit Invalid   |          -12 |               10 |             10 |               -5 |                       -3 |
-      | Edit Cuti 2 | Edit Invalid   | abc          |               10 |             10 | abc              | abc                      |
+      | namaAturan | namaAturanBaru | eligibleBaru | tanggalBatasBaru | bulanBatasBaru | maksimalSisaBaru | jumlahBulanKerjaSisaBaru |
+      | Cuti Edit2 | Edit Invalid1  |          -12 |               10 |             10 |               -5 |                       -3 |
+      | Cuti Edit3 | Edit Invalid2  | abc          |               12 |              6 | abc              | abc                      |
 
   Scenario Outline: Mengedit aturan cuti dengan  field kosong
     Given user sudah login dan diarahkan ke halaman Aturan Cuti
@@ -54,8 +54,8 @@ Feature: Edit Aturan Cuti
     Then pesan validasi akan muncul pada field kosong
 
     Examples:
-      | namaAturan    | namaAturanBaru | eligibleBaru | tanggalBatasBaru | bulanBatasBaru | maksimalSisaBaru | jumlahBulanKerjaBru |
-      | Cuti Tambahan | Field Kosong   |           12 |                  |                |               10 |                   6 |
+      | namaAturan        | namaAturanBaru | eligibleBaru | tanggalBatasBaru | bulanBatasBaru | maksimalSisaBaru | jumlahBulanKerjaBru |
+      | Cuti Field Kosong |                |           12 |                  |                |               10 |                   6 |
 
   Scenario Outline: Batal Edit
     Given user sudah login dan diarahkan ke halaman Aturan Cuti
@@ -65,5 +65,5 @@ Feature: Edit Aturan Cuti
     Then form sunting aturan cuti akan tertutup
 
     Examples:
-      | namaAturan    |
-      | Cuti Tahunan6 |
+      | namaAturan      |
+      | Cuti Batal Edit |

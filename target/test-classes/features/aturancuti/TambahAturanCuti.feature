@@ -32,8 +32,8 @@ Feature: Tambah Aturan Cuti
 
     Examples:
       | namaAturan    | eligible | tanggalBatas | bulanBatas | maksimalSisa | jumlahBulanKerja |
-      | Cuti Invalid3 |      -12 |            8 |          6 |          -10 |               -6 |
-      | Cuti Invalid4 | ABC      |            9 |          4 | asd          | bsa              |
+      | Cuti Invalid1 | abc      |            9 |          4 | abc          | abc              |
+      | Cuti Invalid2 |      -12 |            8 |          6 |          -10 |               -6 |
 
   Scenario Outline: validasi field kosong
     Given user melakukan login dan berada di halaman manajemen Aturan Cuti

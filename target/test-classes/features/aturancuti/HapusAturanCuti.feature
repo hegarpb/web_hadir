@@ -10,8 +10,8 @@ Feature: Delete Aturan Cuti
     And pesan "Berhasil Menghapus Aturan Cuti" akan ditampilkan sistem.
 
     Examples:
-      | namaAturan    |
-      | Cuti Tahunan6 |
+      | namaAturan  |
+      | Cuti Delete |
 
   Scenario Outline: Batal Aturan Cuti
     Given user sudah login sebagai admin dan berada di halaman Aturan Cuti.
