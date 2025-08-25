@@ -52,7 +52,7 @@ public void navigasiKeHalamanJabatanEdit() {
     public void cancelEdit() {
         jabatanPage.clickButtonBatal();
     }
-    
+
     @Then("sistem akan menampilkan pesan {string}")
     public void sistemMenampilkanPesan(String expectedMessage) {
         String actualMessage = jabatanPage.getMessageText();
