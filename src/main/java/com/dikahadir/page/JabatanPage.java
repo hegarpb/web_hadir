@@ -136,7 +136,7 @@ public class JabatanPage {
         wait.until(ExpectedConditions.urlToBe("https://magang.dikahadir.com/management/job-level"));
     }
 
-    // ================== ACTION WITH PAGINATION ================== //
+    // ================== ACTION  ================== //
 
 
     public void clickActionButtonRowPertama() {
