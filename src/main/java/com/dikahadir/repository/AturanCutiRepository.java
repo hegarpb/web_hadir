@@ -46,6 +46,13 @@ public class AturanCutiRepository {
     public static By tableContainer = By.xpath("//div[contains(@class,'MuiTableContainer-root')]");
 
     // ==============================
+    // Form
+    // ==============================
+    public static By formEditAturanCuti = By.xpath("//h2[normalize-space()='Sunting Aturan Cuti']");
+    public static By confirmDeleteDialog= By.xpath("//p[contains(@class,'MuiTypography-body1') and contains(text(),'Apakah anda yakin')]");
+    public static By formTambahAturan= By.xpath("//h2[normalize-space()='Tambahkan Aturan Cuti']");
+
+    // ==============================
     // Validation Errors
     // ==============================
     public static By nameError = By.xpath(
