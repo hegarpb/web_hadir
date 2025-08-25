@@ -180,7 +180,7 @@ public class JabatanPage {
         throw new RuntimeException(" Menu 'Edit' tidak ditemukan di dropdown!");
 
     } catch (Exception e) {
-        printAllDropdownOptions(); // debug isi dropdown
+        printAllDropdownOptions(); 
         throw new RuntimeException(" Gagal klik menu Edit. Detail: " + e.getMessage(), e);
     }
 }
@@ -205,7 +205,7 @@ public class JabatanPage {
         throw new RuntimeException(" Menu 'Delete' tidak ditemukan di dropdown!");
 
     } catch (Exception e) {
-        printAllDropdownOptions(); // debug isi dropdown
+        printAllDropdownOptions(); 
         throw new RuntimeException(" Gagal klik menu Delete. Detail: " + e.getMessage(), e);
     }
 }
