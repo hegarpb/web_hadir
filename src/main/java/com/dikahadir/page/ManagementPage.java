@@ -1,6 +1,5 @@
 package com.dikahadir.page;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -40,16 +39,6 @@ public class ManagementPage {
     userBarElement.click();
       }
 
-     public void navigateToUserBar(){
-        WebElement userBarElement = wait.until(ExpectedConditions.elementToBeClickable(ManagementRepository.userBar));
-    ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", userBarElement);
-    userBarElement.click();
-
-    // Tunggu sampai field search user muncul → tanda halaman User sudah terbuka
-    wait.until(ExpectedConditions.visibilityOfElementLocated(
-        com.dikahadir.repository.UserRepository.inputSearchUser
-    ));
-    }
 
     public String getCurrentURL() {
         return driver.getCurrentUrl();

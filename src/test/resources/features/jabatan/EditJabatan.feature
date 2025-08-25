@@ -18,7 +18,7 @@ Feature: Edit Jabatan
 
   Scenario Outline: Mengubah nama jabatan tetapi level tidak diubah
     Given user sudah login dan user berada di halaman Manajemen Jabatan
-    When user menekan tombol action pada level jabatan "8"
+    When user menekan tombol action pada level jabatan "9"
     And user menekan tombol edit pada menu dropdown
     And user mengubah nama jabatan menjadi "<namaBaru>"
     And user menekan tombol simpan
