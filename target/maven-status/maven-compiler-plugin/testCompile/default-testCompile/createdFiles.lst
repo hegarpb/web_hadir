@@ -1,5 +1,6 @@
 com\dikahadir\definitions\jabatan\HapusJabatan.class
 com\dikahadir\definitions\jabatan\EditJabatanTest.class
+com\dikahadir\definitions\jadwal\SearchJadwalTest.class
 com\dikahadir\Hooks.class
 com\dikahadir\definitions\aturancuti\HapusAturanCutiTest.class
 com\dikahadir\runners\RunnerJabatanTest.class
@@ -11,5 +12,6 @@ com\dikahadir\definitions\jabatan\PaginationTest.class
 com\dikahadir\definitions\jabatan\SearchLevelJabatanTest.class
 com\dikahadir\definitions\jabatan\TambahJabatanTest.class
 com\dikahadir\definitions\aturancuti\TambahAturanCutiTest.class
+com\dikahadir\runners\RunnerJadwalTest.class
 com\dikahadir\definitions\aturancuti\EditAturanCutiTest.class
 com\dikahadir\definitions\aturancuti\SearchAturanCutiTest.class

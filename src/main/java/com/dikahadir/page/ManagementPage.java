@@ -39,6 +39,12 @@ public class ManagementPage {
     userBarElement.click();
       }
 
+      public void clickJadwalMenu(){
+        WebElement userBarElement = wait.until(ExpectedConditions.elementToBeClickable(ManagementRepository.jadwalMenu));
+    ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", userBarElement);
+    userBarElement.click();
+      }
+
 
     public String getCurrentURL() {
         return driver.getCurrentUrl();

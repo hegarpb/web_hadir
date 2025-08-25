@@ -4,7 +4,8 @@
   <test name="Test Math">
     <classes>
       <!-- <class name="com.dikahadir.runners.RunnerJabatanTest"></class> -->
-      <class name="com.dikahadir.runners.RunnerAturanCutiTest"></class>
+      <!-- <class name="com.dikahadir.runners.RunnerAturanCutiTest"></class> -->
+      <class name="com.dikahadir.runners.RunnerJadwalTest"></class>
     </classes>
   </test>
 </suite>

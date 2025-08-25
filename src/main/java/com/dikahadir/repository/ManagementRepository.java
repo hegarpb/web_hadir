@@ -7,6 +7,8 @@ public class ManagementRepository {
     public static By jabatanMenu = By.xpath("//p[normalize-space()='Jabatan']");
      public static By userBar=By.xpath("(//p[text()='User'])[1]");
      public static By aturanCutiMenu= By.xpath("//p[normalize-space()='Aturan Cuti']");
+     public static By jadwalMenu= By.xpath("//p[normalize-space()='Jadwal']");
+
 
 
 }
