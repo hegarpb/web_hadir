@@ -139,40 +139,30 @@ public class JabatanPage {
     // ================== ACTION WITH PAGINATION ================== //
 
 
- public void clickActionButtonRowPertama() {
+    public void clickActionButtonRowPertama() {
     try {
-        // Pastikan table dan rows muncul
         wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(JabatanRepository.tableRows));
         wait.until(ExpectedConditions.visibilityOfElementLocated(JabatanRepository.tableContainer));
 
-        // Ambil row pertama
-        WebElement firstRow = driver.findElements(JabatanRepository.tableRows).get(0);
-
-        // Cari tombol action di row pertama (button wrapper, bukan svg langsung)
-        WebElement actionButton = firstRow.findElement(
-            By.xpath(".//button[contains(@class,'MuiIconButton')]")
+        WebElement actionButton = wait.until(
+            ExpectedConditions.elementToBeClickable(JabatanRepository.buttonActionRowPertama)
         );
 
-        // Tunggu sampai bisa diklik
-        wait.until(ExpectedConditions.elementToBeClickable(actionButton));
-
         try {
-            actionButton.click(); // coba klik biasa
-            System.out.println("✅ Klik berhasil dengan click()");
+            actionButton.click(); 
         } catch (Exception e) {
-            // fallback pakai JS kalau gagal
+            
             ((JavascriptExecutor) driver).executeScript("arguments[0].click();", actionButton);
-            System.out.println("⚡ Klik berhasil dengan JavaScriptExecutor");
         }
 
     } catch (Exception e) {
-        throw new RuntimeException("❌ Gagal klik tombol action di row pertama", e);
+        throw new RuntimeException(" Gagal klik tombol action di row pertama", e);
     }
 }
 
-public void clickEditMenu() {
+
+    public void clickEditMenu() {
     try {
-        // Pastikan semua menu dropdown sudah ada di DOM
         List<WebElement> menuItems = wait.until(
             ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("//li[@role='menuitem']"))
         );
@@ -180,27 +170,24 @@ public void clickEditMenu() {
         for (WebElement item : menuItems) {
             String text = item.getText().trim();
             if (text.equalsIgnoreCase("Edit")) {
-                // Scroll ke elemen biar benar-benar kelihatan
                 ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", item);
 
-                // Klik pakai JS langsung
                 ((JavascriptExecutor) driver).executeScript("arguments[0].click();", item);
                 return;
             }
         }
 
-        throw new RuntimeException("❌ Menu 'Edit' tidak ditemukan di dropdown!");
+        throw new RuntimeException(" Menu 'Edit' tidak ditemukan di dropdown!");
 
     } catch (Exception e) {
-        printAllDropdownOptions(); // debug isi dropdown
-        throw new RuntimeException("❌ Gagal klik menu Edit. Detail: " + e.getMessage(), e);
+        printAllDropdownOptions(); 
+        throw new RuntimeException(" Gagal klik menu Edit. Detail: " + e.getMessage(), e);
     }
 }
 
 
-public void clickDeleteMenu() {
+    public void clickDeleteMenu() {
     try {
-        // Pastikan semua menu dropdown sudah ada di DOM
         List<WebElement> menuItems = wait.until(
             ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("//li[@role='menuitem']"))
         );
@@ -208,26 +195,24 @@ public void clickDeleteMenu() {
         for (WebElement item : menuItems) {
             String text = item.getText().trim();
             if (text.equalsIgnoreCase("Delete")) {
-                // Scroll ke elemen biar benar-benar kelihatan
                 ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", item);
 
-                // Klik pakai JS langsung
                 ((JavascriptExecutor) driver).executeScript("arguments[0].click();", item);
                 return;
             }
         }
 
-        throw new RuntimeException("❌ Menu 'Delete' tidak ditemukan di dropdown!");
+        throw new RuntimeException(" Menu 'Delete' tidak ditemukan di dropdown!");
 
     } catch (Exception e) {
-        printAllDropdownOptions(); // debug isi dropdown
-        throw new RuntimeException("❌ Gagal klik menu Delete. Detail: " + e.getMessage(), e);
+        printAllDropdownOptions(); 
+        throw new RuntimeException(" Gagal klik menu Delete. Detail: " + e.getMessage(), e);
     }
 }
 
 
 
-public void printAllDropdownOptions() {
+    public void printAllDropdownOptions() {
     List<WebElement> options = driver.findElements(By.xpath("//li[@role='menuitem']"));
     System.out.println("=== Dropdown Options Found ===");
     for (WebElement option : options) {
@@ -241,22 +226,51 @@ public void printAllDropdownOptions() {
     ((JavascriptExecutor) driver).executeScript("arguments[0].click();", nextButton);
     System.out.println("➡️ Klik tombol Next Page");
 }   
-public void clickPrevPageButton() {
-    WebElement prevButton = wait.until(ExpectedConditions.elementToBeClickable(JabatanRepository.buttonPrevPage));
-    ((JavascriptExecutor) driver).executeScript("arguments[0].click();", prevButton);
-    System.out.println("⬅️ Klik tombol Previous Page");
-}
+    public void clickPrevPageButton() {
+        WebElement prevButton = wait.until(ExpectedConditions.elementToBeClickable(JabatanRepository.buttonPrevPage));
+        ((JavascriptExecutor) driver).executeScript("arguments[0].click();", prevButton);
+        System.out.println("⬅️ Klik tombol Previous Page");
+    }
 
-public void clickLastPageButton() {
+    public void clickLastPageButton() {
     WebElement lastBtn = wait.until(ExpectedConditions.elementToBeClickable(JabatanRepository.buttonLastPage));
     ((JavascriptExecutor) driver).executeScript("arguments[0].click();", lastBtn);
     System.out.println("⏩ Klik tombol Last Page");
 }
-public void clickFirstPageButton() {
+    public void clickFirstPageButton() {
     WebElement firstPageBtn = wait.until(ExpectedConditions.elementToBeClickable(JabatanRepository.buttonFirstPage));
     firstPageBtn.click();
     System.out.println("⬅️ Klik tombol First Page (halaman awal).");
 }
+    
+
+    public boolean isJabatanExistInTableWithPagination(String nama, String level) {
+        while (true) {
+            wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(JabatanRepository.tableRows));
+
+            List<WebElement> rows = driver.findElements(JabatanRepository.tableRows);
+            for (WebElement row : rows) {
+                String cellNama = row.findElement(By.xpath("./td[1]")).getText().trim().replace("\u00A0", " ");
+                String cellLevel = row.findElement(By.xpath("./td[2]")).getText().trim().replace("\u00A0", " ");
+
+                if (cellNama.equals(nama) && cellLevel.equals(level)) {
+                    return true;
+                }
+            }
+
+            
+            List<WebElement> nextButtons = driver.findElements(
+                By.xpath("//button[normalize-space()='Next' and not(@disabled)]")
+            );
+            if (nextButtons.isEmpty()) {
+                break; 
+            }
+
+            safeClick(nextButtons.get(0)); 
+            wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(JabatanRepository.tableRows));
+        }
+        return false;
+    }
 
     // ================== HELPER ================== //
 
@@ -265,7 +279,6 @@ public void clickFirstPageButton() {
         try {
             wait.until(ExpectedConditions.elementToBeClickable(element)).click();
         } catch (ElementClickInterceptedException e) {
-            // fallback JS click kalau ketutupan element lain
             ((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
         }
     }
@@ -273,36 +286,24 @@ public void clickFirstPageButton() {
 public void waitTableUpdated(Integer oldRowCount) {
     try {
         wait.until(driver -> {
-            int newCount = driver.findElements(By.xpath("//table//tbody/tr")).size();
+            int newCount = driver.findElements(JabatanRepository.tableRows).size();
 
             if (oldRowCount == null) {
-                // Mode pertama kali buka halaman: cukup pastikan ada row
                 return newCount > 0;
             } else {
-                // Mode reload: pastikan jumlah row berubah
                 return newCount != oldRowCount && newCount > 0;
             }
         });
-
-        if (oldRowCount == null) {
-            System.out.println("✅ Tabel jabatan sudah muncul di halaman.");
-        } else {
-            System.out.println("🔄 Tabel berhasil reload setelah pindah halaman.");
-        }
-
     } catch (TimeoutException e) {
-        throw new RuntimeException("❌ Timeout: Tabel tidak muncul/update sesuai harapan.");
+        throw new RuntimeException(" Timeout: Tabel tidak muncul/update sesuai harapan.");
     }
 }
+
 public void waitUrlChanged(String oldUrl) {
     try {
         wait.until(ExpectedConditions.not(ExpectedConditions.urlToBe(oldUrl)));
-        System.out.println("🌐 URL berhasil berubah dari: " + oldUrl + " -> " + driver.getCurrentUrl());
     } catch (TimeoutException e) {
-        throw new RuntimeException("❌ Timeout: URL tidak berubah setelah klik pagination.");
+        throw new RuntimeException(" Timeout: URL tidak berubah setelah klik pagination.");
     }
 }
-
-
-
 }
