@@ -9,14 +9,13 @@ import org.testng.Assert;
 
 public class ResetSearchLevelJabatanTest {
 
-    private final JabatanPage jabatanPage;
+    private  JabatanPage jabatanPage;
 
-    public ResetSearchLevelJabatanTest() {
-        this.jabatanPage = new JabatanPage(Hooks.getDriver());
-    }
+    
 
     @Given("user sudah login dan diarahkan ke halaman Manajemen Jabatan")
     public void navigasiKeHalamanJabatanResetSearch() {
+        this.jabatanPage = new JabatanPage(Hooks.getDriver());
         jabatanPage.navigateToJabatanPage();
         
     }
