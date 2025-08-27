@@ -5,7 +5,7 @@
     <classes>
       <!-- <class name="com.dikahadir.runners.RunnerJabatanTest"></class> -->
       <!-- <class name="com.dikahadir.runners.RunnerAturanCutiTest"></class> -->
-      <class name="com.dikahadir.runners.RunnerJadwalTest"></class>
+      <class name="com.dikahadir.runners.RunnerTest1"></class>
     </classes>
   </test>
 </suite>

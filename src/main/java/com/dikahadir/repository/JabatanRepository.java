@@ -26,8 +26,7 @@ public class JabatanRepository {
     public static By tableRows           = By.xpath("//table/tbody/tr");
     public static By tampilSearchLevel   = By.xpath("//table/tbody/tr/td[2]");
     public static By tableContainer      = By.xpath("//div[contains(@class,'MuiTableContainer-root')]");
-    public static By loadingSpinner      = By.xpath("//div[contains(@class,'MuiCircularProgress-root')]");
-
+    public static By tableFirstColumn = By.xpath("//table[contains(@class,'MuiTable-root')]//tbody/tr/td[2]");
     public static By buttonNextPage         = By.xpath("//button[@aria-label='Go to next page' and not(@disabled)]");
     public static By buttonNextPageDisabled = By.xpath("//button[@aria-label='Go to next page' and @disabled]");
     public static By buttonPrevPage         = By.xpath("//button[@aria-label='Go to previous page' and not(@disabled)]");

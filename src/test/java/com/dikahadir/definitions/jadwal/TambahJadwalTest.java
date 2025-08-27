@@ -69,35 +69,34 @@ public class TambahJadwalTest {
         jadwalPage.clickButtonBatal();
     }
 
-    @Then("muncul pesan sukses dan nama jadwal {string} akan muncul dalam tabel")
-    public void displayNamaJadwal(String value) throws InterruptedException {
-        jadwalPage.displayNamaJadwal(value);
-        Thread.sleep(3000);
-        List<String> hasil = jadwalPage.getAllJadwal();
-        Assert.assertTrue(hasil.contains(value),
-                "Nama jadwal tidak ditemukan dalam tabel!");
+    @Then("muncul pesan {string}")
+    public void displayNamaJadwal(String expectedMessage)  {
+       String actual = jadwalPage.getPopupMessage();
+        Assert.assertEquals(actual, expectedMessage, "Pesan popup tidak sesuai!");
+      
     }
 
     @Then("muncul pesan validasi pada field tipe jadwal {string}")
-    public void validasiTipeJadwal(String expectedMessage) {
+    public void validasiTipeJadwal(String pesanTipe) {
         String actualMessage = jadwalPage.getValidationTipeJadwal();
-        Assert.assertEquals(actualMessage, expectedMessage,
+        Assert.assertEquals(actualMessage, pesanTipe,
                 "pesan Validasi tipe jadwal tidak sesuai!");
     }
 
     @Then("muncul pesan validasi pada field nama jadwal kerja {string}")
-    public void validasiNamaJadwal(String expectedMessage) throws InterruptedException {
-        String actualMessage = jadwalPage.getValidationNamaJadwal();
-        Assert.assertEquals(actualMessage, expectedMessage,
+    public void validasiNamaJadwal(String pesanNama)  {
+        String actualMessage = jadwalPage.getNativeValidationNamaJadwal();
+        Assert.assertEquals(actualMessage, pesanNama,
                 "pesan Validasi nama jadwal tidak sesuai!");
     }
 
     @Then("muncul pesan validasi pada field toleransi keterlambatan {string}")
-    public void validasiToleransi(String expectedMessage) {
-        String actualMessage = jadwalPage.getValidationToleransi();
-        Assert.assertEquals(actualMessage, expectedMessage,
+    public void validasiToleransi(String pesanToleransi) {
+        String actualMessage = jadwalPage.getNativeValidationToleransi();
+        Assert.assertEquals(actualMessage, pesanToleransi,
                 "pesan Validasi toleransi keterlambatan tidak sesuai!");
     }
+
 
     @Then("modal tambah jadwal akan tertutup")
     public void modalTambahJadwalTertutup() {

@@ -13,6 +13,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import com.dikahadir.repository.JabatanRepository;
+import com.dikahadir.repository.JadwalRepository;
+
 public class JadwalPage {
     private WebDriver driver;
     private WebDriverWait wait;
@@ -22,7 +25,7 @@ public class JadwalPage {
     // LOCATORS
     // ============================
     // Search & Filter
-    private By inputSearchJadwal = By.xpath("//input[@placeholder='cari berdasarkan nama']");
+    private By inputSearchJadwal = By.xpath("//input[@id='search']");
     private By buttonSearchJadwal = By.xpath("//button[normalize-space()='Search']");
     private By buttonReset = By.xpath("//button[normalize-space()='Reset']");
 
@@ -256,22 +259,32 @@ public class JadwalPage {
     // ============================
     // VALIDATION
     // ============================
-    public String getValidationNamaJadwal() {
-        return getValidationMessage(inputNamaJadwalKerja);
-    }
+ 
 
-    public String getValidationToleransi() {
-        return getValidationMessage(inputToleransiKeterlambatan);
-    }
+public String getNativeValidationNamaJadwal() {
+    WebElement element = driver.findElement(By.id("nameJadwal"));
+    JavascriptExecutor js = (JavascriptExecutor) driver;
+    return (String) js.executeScript("return arguments[0].validationMessage;", element);
+}
 
-    public String getValidationTipeJadwal() {
-        return getValidationMessage(dropdownTipeJadwal);
-    }
+   public String getNativeValidationToleransi() {
+    WebElement element = driver.findElement(By.id("t_keterlambatan"));
+    JavascriptExecutor js = (JavascriptExecutor) driver;
+    return (String) js.executeScript("return arguments[0].validationMessage;", element);
+}
 
-    private String getValidationMessage(By locator) {
-        WebElement element = driver.findElement(locator);
-        return (String)((JavascriptExecutor) driver).executeScript("return arguments[0].validationMessage;", element);
-    }
+
+
+
+ public String getValidationTipeJadwal() {
+    JavascriptExecutor js = (JavascriptExecutor) driver;
+    String message = (String) js.executeScript(
+        "return document.getElementById('typeJadwal-helper-text')?.textContent;"
+    );
+    return message != null ? message.trim() : null;
+}
+
+   
 
     // ============================
     // MODAL

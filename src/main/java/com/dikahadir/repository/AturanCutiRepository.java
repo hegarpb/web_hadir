@@ -46,6 +46,20 @@ public class AturanCutiRepository {
     public static By tableContainer = By.xpath("//div[contains(@class,'MuiTableContainer-root')]");
 
     // ==============================
+    // Form
+    // ==============================
+    public static By formEditAturanCuti = By.xpath("//h2[normalize-space()='Sunting Aturan Cuti']");
+    public static By confirmDeleteDialog= By.xpath("//p[contains(@class,'MuiTypography-body1') and contains(text(),'Apakah anda yakin')]");
+    public static By formTambahAturan= By.xpath("//h2[normalize-space()='Tambahkan Aturan Cuti']");
+
+    // ==============================
+    // Menu
+    // ==============================
+    public static By editMenu          = By.xpath("//li[@role='menuitem' and contains(.,'Edit')]");
+    public static By deleteMenu        = By.xpath("//li[@role='menuitem' and contains(.,'Delete')]");
+    public static By dropdownMenuItems = By.xpath("//li[@role='menuitem']");
+    public static By buttonActionRowPertama = By.xpath("//table/tbody/tr[1]//button[contains(@class,'MuiIconButton')]");
+    // ==============================
     // Validation Errors
     // ==============================
     public static By nameError = By.xpath(

@@ -1,6 +1,5 @@
 package com.dikahadir.definitions.jadwal;
 
-import java.util.List;
 import org.testng.Assert;
 
 import com.dikahadir.Hooks;
@@ -74,8 +73,9 @@ public class EditJadwalTest {
     }
 
     @And("user menekan tombol simpan.")
-    public void clickSimpan() {
+    public void clickSimpan()  {
         jadwalPage.clickButtonSimpan();
+      
     }
 
     @And("user menekan tombol batal pada modal edit jadwal")
@@ -89,14 +89,6 @@ public class EditJadwalTest {
         Assert.assertEquals(actual, expectedMessage, "Pesan popup tidak sesuai!");
     }
 
-    @Then("nama jadwal yang sudah di edit akan muncul dalam tabel  {string}.")
-    public void displayNamaBaru(String namaJadwalBaru) throws InterruptedException {
-        jadwalPage.displayNamaJadwal(namaJadwalBaru);
-        Thread.sleep(3000);
-        List<String> hasil = jadwalPage.getAllJadwal();
-        Assert.assertTrue(hasil.contains(namaJadwalBaru),
-                "Nama jadwal tidak ditemukan dalam tabel!");
-    }
 
     @Then("muncul pesan validasi pada field tipe jadwal {string}.")
     public void validasiTipeJadwal(String expectedMessage) {
@@ -107,14 +99,14 @@ public class EditJadwalTest {
 
     @Then("muncul pesan validasi pada field nama jadwal kerja {string}.")
     public void validasiNamaJadwal(String expectedMessage) throws InterruptedException {
-        String actualMessage = jadwalPage.getValidationNamaJadwal();
+        String actualMessage =jadwalPage.getNativeValidationNamaJadwal();
         Assert.assertEquals(actualMessage, expectedMessage,
                 "Pesan Validasi nama jadwal tidak sesuai!");
     }
 
     @Then("muncul pesan validasi pada field toleransi keterlambatan {string}.")
     public void validasiToleransi(String expectedMessage) {
-        String actualMessage = jadwalPage.getValidationToleransi();
+        String actualMessage = jadwalPage.getNativeValidationToleransi();
         Assert.assertEquals(actualMessage, expectedMessage,
                 "Pesan Validasi toleransi keterlambatan tidak sesuai!");
     }

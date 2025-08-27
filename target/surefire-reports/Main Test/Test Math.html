@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test Math</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>9/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>23/3/0</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Aug 27 17:07:35 WIB 2025</td>
+<td>Started on:</td><td>Thu Aug 28 01:23:58 WIB 2025</td>
 </tr>
-<tr><td>Total time:</td><td>213 seconds (213810 ms)</td>
+<tr><td>Total time:</td><td>491 seconds (491573 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,33 +76,56 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.dikahadir.runners.RunnerJadwalTest.runScenario()'><b>runScenario</b><br>Test class: com.dikahadir.runners.RunnerJadwalTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Edit jadwal", "Edit Jadwal"</td>
-<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of any elements located by By.xpath: //div[contains(@class, &apos;MuiSelect-select&apos;) and contains(text(), &apos;Libur&apos;)] (tried for 10 second(s) with 500 milliseconds interval)
-Build info: version: &apos;4.34.0&apos;, revision: &apos;707dcb4246*&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.8&apos;
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 142.0, moz:accessibilityChecks: false, moz:buildID: 20250811145442, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 252376, moz:profile: C:\Users\LENOVO\AppData\Loc..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
-Session ID: 895a17f6-f316-42c7-aefe-e272a576c3a1
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at com.dikahadir.page.JadwalPage.isiSemuaHari(JadwalPage.java:183)
-	at com.dikahadir.definitions.jadwal.EditJadwalTest.isiHariKerja(EditJadwalTest.java:63)
-	at ✽.user mengisi jumlah hari kerja.(file:///C:/Hegar/sqabatch23/TA/web_hadir/src/test/resources/features/jadwal/EditJadwal.feature:14)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1287875609", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1287875609'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of any elements located by By.xpath: //div[contains(@class, &apos;MuiSelect-select&apos;) and contains(text(), &apos;Libur&apos;)] (tried for 10 second(s) with 500 milliseconds interval)
-Build info: version: &apos;4.34.0&apos;, revision: &apos;707dcb4246*&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.8&apos;
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 142.0, moz:accessibilityChecks: false, moz:buildID: 20250811145442, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 252376, moz:profile: C:\Users\LENOVO\AppData\Loc..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
-Session ID: 895a17f6-f316-42c7-aefe-e272a576c3a1
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at com.dikahadir.page.JadwalPage.isiSemuaHari(JadwalPage.java:183)
-	at com.dikahadir.definitions.jadwal.EditJadwalTest.isiHariKerja(EditJadwalTest.java:63)
-	at ✽.user mengisi jumlah hari kerja.(file:///C:/Hegar/sqabatch23/TA/web_hadir/src/test/resources/features/jadwal/EditJadwal.feature:14)
+<td title='com.dikahadir.runners.RunnerTest1.runScenario()'><b>runScenario</b><br>Test class: com.dikahadir.runners.RunnerTest1<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Tambah jabatan baru dengan data  Nama baru dan level yang sudah ada", "Tambah Jabatan"</td>
+<td><div><pre>java.lang.AssertionError: Pesan sukses tidak sesuai! expected [Berhasil Menambahkan Job Level] but found [Gagal Menambahkan Job Level]
+	at com.dikahadir.definitions.jabatan.TambahJabatanTest.pesanSukses(TambahJabatanTest.java:63)
+	at ✽.sistem menampilkan pesan sukses &quot;Berhasil Menambahkan Job Level&quot;(file:///C:/Hegar/sqabatch23/TA/web_hadir/src/test/resources/features/jabatan/TambahJabatan.feature:38)
+... Removed 5 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1673947520", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1673947520'><pre>java.lang.AssertionError: Pesan sukses tidak sesuai! expected [Berhasil Menambahkan Job Level] but found [Gagal Menambahkan Job Level]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at com.dikahadir.definitions.jabatan.TambahJabatanTest.pesanSukses(TambahJabatanTest.java:63)
+	at ✽.sistem menampilkan pesan sukses &quot;Berhasil Menambahkan Job Level&quot;(file:///C:/Hegar/sqabatch23/TA/web_hadir/src/test/resources/features/jabatan/TambahJabatan.feature:38)
 </pre></div></td>
-<td>33</td>
-<td>com.dikahadir.runners.RunnerJadwalTest@4218d6a3</td></tr>
+<td>16</td>
+<td>com.dikahadir.runners.RunnerTest1@4218d6a3</td></tr>
+<tr>
+<td title='com.dikahadir.runners.RunnerTest1.runScenario()'><b>runScenario</b><br>Test class: com.dikahadir.runners.RunnerTest1<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Tambah jabatan baru dengan data nama yang sudah ada tetapi level berbeda", "Tambah Jabatan"</td>
+<td><div><pre>java.lang.AssertionError: Pesan sukses tidak sesuai! expected [Berhasil Menambahkan Job Level] but found [Gagal Menambahkan Job Level]
+	at com.dikahadir.definitions.jabatan.TambahJabatanTest.pesanSukses(TambahJabatanTest.java:63)
+	at ✽.sistem menampilkan pesan sukses &quot;Berhasil Menambahkan Job Level&quot;(file:///C:/Hegar/sqabatch23/TA/web_hadir/src/test/resources/features/jabatan/TambahJabatan.feature:25)
+... Removed 5 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace492836007", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace492836007'><pre>java.lang.AssertionError: Pesan sukses tidak sesuai! expected [Berhasil Menambahkan Job Level] but found [Gagal Menambahkan Job Level]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at com.dikahadir.definitions.jabatan.TambahJabatanTest.pesanSukses(TambahJabatanTest.java:63)
+	at ✽.sistem menampilkan pesan sukses &quot;Berhasil Menambahkan Job Level&quot;(file:///C:/Hegar/sqabatch23/TA/web_hadir/src/test/resources/features/jabatan/TambahJabatan.feature:25)
+</pre></div></td>
+<td>18</td>
+<td>com.dikahadir.runners.RunnerTest1@4218d6a3</td></tr>
+<tr>
+<td title='com.dikahadir.runners.RunnerTest1.runScenario()'><b>runScenario</b><br>Test class: com.dikahadir.runners.RunnerTest1<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Mengubah nama jabatan dan level jabatan dengan nama jabatan dan level jabatan yang sudah ada,inputan level mengandung angka negtif", "Edit Jabatan"</td>
+<td><div><pre>java.lang.AssertionError: Pesan sukses tidak sesuai expected [Gagal Edit Jabatan] but found [Berhasil Edit Jabatan]
+	at com.dikahadir.definitions.jabatan.EditJabatanTest.sistemMenampilkanPesan(EditJabatanTest.java:59)
+	at ✽.sistem akan menampilkan pesan &quot;Gagal Edit Jabatan&quot;(file:///C:/Hegar/sqabatch23/TA/web_hadir/src/test/resources/features/jabatan/EditJabatan.feature:53)
+... Removed 5 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace631851861", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace631851861'><pre>java.lang.AssertionError: Pesan sukses tidak sesuai expected [Gagal Edit Jabatan] but found [Berhasil Edit Jabatan]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at com.dikahadir.definitions.jabatan.EditJabatanTest.sistemMenampilkanPesan(EditJabatanTest.java:59)
+	at ✽.sistem akan menampilkan pesan &quot;Gagal Edit Jabatan&quot;(file:///C:/Hegar/sqabatch23/TA/web_hadir/src/test/resources/features/jabatan/EditJabatan.feature:53)
+</pre></div></td>
+<td>20</td>
+<td>com.dikahadir.runners.RunnerTest1@4218d6a3</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -113,50 +136,120 @@ Session ID: 895a17f6-f316-42c7-aefe-e272a576c3a1
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.dikahadir.runners.RunnerJadwalTest.runScenario()'><b>runScenario</b><br>Test class: com.dikahadir.runners.RunnerJadwalTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Tambah jadwal dengan data valid", "Tambah jadwal"</td>
+<td title='com.dikahadir.runners.RunnerTest1.runScenario()'><b>runScenario</b><br>Test class: com.dikahadir.runners.RunnerTest1<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validasi batal mengubah data jabatan", "Edit Jabatan"</td>
 <td></td>
-<td>36</td>
-<td>com.dikahadir.runners.RunnerJadwalTest@4218d6a3</td></tr>
+<td>21</td>
+<td>com.dikahadir.runners.RunnerTest1@4218d6a3</td></tr>
 <tr>
-<td title='com.dikahadir.runners.RunnerJadwalTest.runScenario()'><b>runScenario</b><br>Test class: com.dikahadir.runners.RunnerJadwalTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Edit jadwal dengan field kosong", "Edit Jadwal"</td>
+<td title='com.dikahadir.runners.RunnerTest1.runScenario()'><b>runScenario</b><br>Test class: com.dikahadir.runners.RunnerTest1<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Berpindah ke halaman sebelumnya dengan menekan tombol sebelumnya", "Tombol Pagination"</td>
 <td></td>
 <td>20</td>
-<td>com.dikahadir.runners.RunnerJadwalTest@4218d6a3</td></tr>
+<td>com.dikahadir.runners.RunnerTest1@4218d6a3</td></tr>
 <tr>
-<td title='com.dikahadir.runners.RunnerJadwalTest.runScenario()'><b>runScenario</b><br>Test class: com.dikahadir.runners.RunnerJadwalTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Search jadwal dengan data valid", "Sebagai user saya ingin mencari nama jadwal"</td>
-<td></td>
-<td>16</td>
-<td>com.dikahadir.runners.RunnerJadwalTest@4218d6a3</td></tr>
-<tr>
-<td title='com.dikahadir.runners.RunnerJadwalTest.runScenario()'><b>runScenario</b><br>Test class: com.dikahadir.runners.RunnerJadwalTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Batal Edit", "Edit Jadwal"</td>
-<td></td>
-<td>15</td>
-<td>com.dikahadir.runners.RunnerJadwalTest@4218d6a3</td></tr>
-<tr>
-<td title='com.dikahadir.runners.RunnerJadwalTest.runScenario()'><b>runScenario</b><br>Test class: com.dikahadir.runners.RunnerJadwalTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Menampilkan detail jadwal", "Detail Jadwal"</td>
+<td title='com.dikahadir.runners.RunnerTest1.runScenario()'><b>runScenario</b><br>Test class: com.dikahadir.runners.RunnerTest1<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Search jabatan berdasarkan level", "Search Level Jabatan"</td>
 <td></td>
 <td>18</td>
-<td>com.dikahadir.runners.RunnerJadwalTest@4218d6a3</td></tr>
+<td>com.dikahadir.runners.RunnerTest1@4218d6a3</td></tr>
 <tr>
-<td title='com.dikahadir.runners.RunnerJadwalTest.runScenario()'><b>runScenario</b><br>Test class: com.dikahadir.runners.RunnerJadwalTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Delete jadwal", "Delete Jadwal"</td>
+<td title='com.dikahadir.runners.RunnerTest1.runScenario()'><b>runScenario</b><br>Test class: com.dikahadir.runners.RunnerTest1<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validasi field kosong saat menambahkan jabatan", "Tambah Jabatan"</td>
 <td></td>
 <td>15</td>
-<td>com.dikahadir.runners.RunnerJadwalTest@4218d6a3</td></tr>
+<td>com.dikahadir.runners.RunnerTest1@4218d6a3</td></tr>
 <tr>
-<td title='com.dikahadir.runners.RunnerJadwalTest.runScenario()'><b>runScenario</b><br>Test class: com.dikahadir.runners.RunnerJadwalTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Edit jadwal dengan field kosong", "Edit Jadwal"</td>
+<td title='com.dikahadir.runners.RunnerTest1.runScenario()'><b>runScenario</b><br>Test class: com.dikahadir.runners.RunnerTest1<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Mengubah nama jabatan tetapi level tidak diubah", "Edit Jabatan"</td>
 <td></td>
 <td>20</td>
-<td>com.dikahadir.runners.RunnerJadwalTest@4218d6a3</td></tr>
+<td>com.dikahadir.runners.RunnerTest1@4218d6a3</td></tr>
 <tr>
-<td title='com.dikahadir.runners.RunnerJadwalTest.runScenario()'><b>runScenario</b><br>Test class: com.dikahadir.runners.RunnerJadwalTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Reset Pencarian jadwal", "Tombol Reset"</td>
-<td></td>
-<td>14</td>
-<td>com.dikahadir.runners.RunnerJadwalTest@4218d6a3</td></tr>
-<tr>
-<td title='com.dikahadir.runners.RunnerJadwalTest.runScenario()'><b>runScenario</b><br>Test class: com.dikahadir.runners.RunnerJadwalTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Search jadwal dengan data invalid", "Sebagai user saya ingin mencari nama jadwal"</td>
+<td title='com.dikahadir.runners.RunnerTest1.runScenario()'><b>runScenario</b><br>Test class: com.dikahadir.runners.RunnerTest1<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Mengubah level jabatan tetapi nama tidak diubah", "Edit Jabatan"</td>
 <td></td>
 <td>19</td>
-<td>com.dikahadir.runners.RunnerJadwalTest@4218d6a3</td></tr>
+<td>com.dikahadir.runners.RunnerTest1@4218d6a3</td></tr>
+<tr>
+<td title='com.dikahadir.runners.RunnerTest1.runScenario()'><b>runScenario</b><br>Test class: com.dikahadir.runners.RunnerTest1<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validasi field kosong saat mengubah data jabatan", "Edit Jabatan"</td>
+<td></td>
+<td>24</td>
+<td>com.dikahadir.runners.RunnerTest1@4218d6a3</td></tr>
+<tr>
+<td title='com.dikahadir.runners.RunnerTest1.runScenario()'><b>runScenario</b><br>Test class: com.dikahadir.runners.RunnerTest1<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Mengubah nama jabatan dengan fitur edit dengan data yang valid.", "Edit Jabatan"</td>
+<td></td>
+<td>25</td>
+<td>com.dikahadir.runners.RunnerTest1@4218d6a3</td></tr>
+<tr>
+<td title='com.dikahadir.runners.RunnerTest1.runScenario()'><b>runScenario</b><br>Test class: com.dikahadir.runners.RunnerTest1<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validasi penambahan jabatan dengan data invalid (nama yang sama dan level yang sama,inputan level non numeric,level negtif atau minus)", "Tambah Jabatan"</td>
+<td></td>
+<td>15</td>
+<td>com.dikahadir.runners.RunnerTest1@4218d6a3</td></tr>
+<tr>
+<td title='com.dikahadir.runners.RunnerTest1.runScenario()'><b>runScenario</b><br>Test class: com.dikahadir.runners.RunnerTest1<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Berpindah ke halaman sebelumnya dengan menekan tombol sebelumnya", "Tombol Pagination"</td>
+<td></td>
+<td>14</td>
+<td>com.dikahadir.runners.RunnerTest1@4218d6a3</td></tr>
+<tr>
+<td title='com.dikahadir.runners.RunnerTest1.runScenario()'><b>runScenario</b><br>Test class: com.dikahadir.runners.RunnerTest1<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Menghapus data jabatan dengan feature delete pada tabel jabatan", "Hapus Jabatan"</td>
+<td></td>
+<td>20</td>
+<td>com.dikahadir.runners.RunnerTest1@4218d6a3</td></tr>
+<tr>
+<td title='com.dikahadir.runners.RunnerTest1.runScenario()'><b>runScenario</b><br>Test class: com.dikahadir.runners.RunnerTest1<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Search jabatan dengan input alfabet", "Search Level Jabatan"</td>
+<td></td>
+<td>14</td>
+<td>com.dikahadir.runners.RunnerTest1@4218d6a3</td></tr>
+<tr>
+<td title='com.dikahadir.runners.RunnerTest1.runScenario()'><b>runScenario</b><br>Test class: com.dikahadir.runners.RunnerTest1<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validasi field kosong saat menambahkan jabatan", "Tambah Jabatan"</td>
+<td></td>
+<td>15</td>
+<td>com.dikahadir.runners.RunnerTest1@4218d6a3</td></tr>
+<tr>
+<td title='com.dikahadir.runners.RunnerTest1.runScenario()'><b>runScenario</b><br>Test class: com.dikahadir.runners.RunnerTest1<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Batal menambah jabatan dengan menekan tombol batal pada form tambah jabatan", "Tambah Jabatan"</td>
+<td></td>
+<td>16</td>
+<td>com.dikahadir.runners.RunnerTest1@4218d6a3</td></tr>
+<tr>
+<td title='com.dikahadir.runners.RunnerTest1.runScenario()'><b>runScenario</b><br>Test class: com.dikahadir.runners.RunnerTest1<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Berpindah ke halaman selnajutnya dengan menekan tombol selanjutnya", "Tombol Pagination"</td>
+<td></td>
+<td>16</td>
+<td>com.dikahadir.runners.RunnerTest1@4218d6a3</td></tr>
+<tr>
+<td title='com.dikahadir.runners.RunnerTest1.runScenario()'><b>runScenario</b><br>Test class: com.dikahadir.runners.RunnerTest1<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Search jabatan dengan level yang tidak ada", "Search Level Jabatan"</td>
+<td></td>
+<td>17</td>
+<td>com.dikahadir.runners.RunnerTest1@4218d6a3</td></tr>
+<tr>
+<td title='com.dikahadir.runners.RunnerTest1.runScenario()'><b>runScenario</b><br>Test class: com.dikahadir.runners.RunnerTest1<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validasi penambahan jabatan dengan data invalid (nama yang sama dan level yang sama,inputan level non numeric,level negtif atau minus)", "Tambah Jabatan"</td>
+<td></td>
+<td>16</td>
+<td>com.dikahadir.runners.RunnerTest1@4218d6a3</td></tr>
+<tr>
+<td title='com.dikahadir.runners.RunnerTest1.runScenario()'><b>runScenario</b><br>Test class: com.dikahadir.runners.RunnerTest1<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validasi field kosong saat mengubah data jabatan", "Edit Jabatan"</td>
+<td></td>
+<td>20</td>
+<td>com.dikahadir.runners.RunnerTest1@4218d6a3</td></tr>
+<tr>
+<td title='com.dikahadir.runners.RunnerTest1.runScenario()'><b>runScenario</b><br>Test class: com.dikahadir.runners.RunnerTest1<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Reset filter setelah melakukan pencarian", "Reset Search Level Jabatan"</td>
+<td></td>
+<td>22</td>
+<td>com.dikahadir.runners.RunnerTest1@4218d6a3</td></tr>
+<tr>
+<td title='com.dikahadir.runners.RunnerTest1.runScenario()'><b>runScenario</b><br>Test class: com.dikahadir.runners.RunnerTest1<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Berpindah ke halaman sebelumnya dengan menekan tombol sebelumnya", "Tombol Pagination"</td>
+<td></td>
+<td>17</td>
+<td>com.dikahadir.runners.RunnerTest1@4218d6a3</td></tr>
+<tr>
+<td title='com.dikahadir.runners.RunnerTest1.runScenario()'><b>runScenario</b><br>Test class: com.dikahadir.runners.RunnerTest1<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Batal menghapus jabatan dengan menekan tombol batal pada form hapus jabatan", "Hapus Jabatan"</td>
+<td></td>
+<td>22</td>
+<td>com.dikahadir.runners.RunnerTest1@4218d6a3</td></tr>
+<tr>
+<td title='com.dikahadir.runners.RunnerTest1.runScenario()'><b>runScenario</b><br>Test class: com.dikahadir.runners.RunnerTest1<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Tambah jabatan baru dengan data nama baru dan level baru", "Tambah Jabatan"</td>
+<td></td>
+<td>20</td>
+<td>com.dikahadir.runners.RunnerTest1@4218d6a3</td></tr>
+<tr>
+<td title='com.dikahadir.runners.RunnerTest1.runScenario()'><b>runScenario</b><br>Test class: com.dikahadir.runners.RunnerTest1<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validasi penambahan jabatan dengan data invalid (nama yang sama dan level yang sama,inputan level non numeric,level negtif atau minus)", "Tambah Jabatan"</td>
+<td></td>
+<td>15</td>
+<td>com.dikahadir.runners.RunnerTest1@4218d6a3</td></tr>
 </table><p>
 </body>
 </html>

@@ -3,13 +3,13 @@
 <suite name="Failed suite [Main Test]" guice-stage="DEVELOPMENT" verbose="0">
   <test thread-count="5" name="Test Math(failed)" verbose="0">
     <classes>
-      <class name="com.dikahadir.runners.RunnerJadwalTest">
+      <class name="com.dikahadir.runners.RunnerTest1">
         <methods>
           <include name="setUpClass"/>
           <include name="tearDownClass"/>
-          <include name="runScenario" invocation-numbers="1"/>
+          <include name="runScenario" invocation-numbers="18 3 19"/>
         </methods>
-      </class> <!-- com.dikahadir.runners.RunnerJadwalTest -->
+      </class> <!-- com.dikahadir.runners.RunnerTest1 -->
     </classes>
   </test> <!-- Test Math(failed) -->
 </suite> <!-- Failed suite [Main Test] -->

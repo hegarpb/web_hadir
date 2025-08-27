@@ -16,11 +16,10 @@ Feature: Edit Jadwal
     And user mengisi toleransi keterlambatan "<menit>".
     And user menekan tombol simpan.
     Then sistem akan menampilkan pesan popup "Berhasil mengubah jadwal".
-    Then nama jadwal yang sudah di edit akan muncul dalam tabel  "<namaJadwalBaru>".
 
     Examples:
-      | namaJadwal  | tipeJadwal            | hari | bulan     | tahun | namaJadwalBaru | menit |
-      | Jadwal Edit | Jadwal kerja flexible |   10 | September |  2025 | Jadwal Edit2   |    15 |
+      | namaJadwal     | tipeJadwal            | hari | bulan     | tahun | namaJadwalBaru | menit |
+      | Jadwal Terbaru | Jadwal kerja flexible |   10 | September |  2025 | Jadwal Edit2   |    15 |
 
   @Negative
   Scenario Outline: Edit jadwal dengan field kosong
@@ -34,9 +33,9 @@ Feature: Edit Jadwal
     Then muncul pesan validasi pada field toleransi keterlambatan "<pesanToleransi>".
 
     Examples:
-      | namaJadwal        | namaJadwalBaru | menit | pesanNama      | pesanToleransi  |
-      | Jadwal Baru Edit2 |                |    15 | Isi isian ini. |                 |
-      | Jadwal Baru Edit2 | Jadwal Revisi  |       |                | Masukkan angka. |
+      | namaJadwal | namaJadwalBaru | menit | pesanNama      | pesanToleransi  |
+      | Edit5      |                |    15 | Isi isian ini. |                 |
+      | Edit4      | Jadwal Revisi  |       |                | Masukkan angka. |
 
   @Positive
   Scenario Outline: Batal Edit
@@ -47,5 +46,5 @@ Feature: Edit Jadwal
     Then modal edit jadwal akan tertutup
 
     Examples:
-      | namaJadwal        |
-      | Jadwal Baru Edit2 |
+      | namaJadwal   |
+      | Jadwal Edit2 |

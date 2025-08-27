@@ -3,13 +3,11 @@ package com.dikahadir.definitions.jadwal;
 import java.time.Duration;
 import java.util.List;
 
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 import com.dikahadir.Hooks;
 import com.dikahadir.page.JadwalPage;
-import com.dikahadir.repository.JadwalRepository;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -23,7 +21,6 @@ public class SearchJadwalTest {
         this.jadwalPage = new JadwalPage(Hooks.getDriver());
         jadwalPage.navigateToJadwalPage();
         WebDriverWait wait = new WebDriverWait(Hooks.getDriver(), Duration.ofSeconds(10));
-        wait.until(ExpectedConditions.visibilityOfElementLocated(JadwalRepository.inputSearchJadwal));
     }
 
     @When("user menginput {string} pada kolom pencarian")

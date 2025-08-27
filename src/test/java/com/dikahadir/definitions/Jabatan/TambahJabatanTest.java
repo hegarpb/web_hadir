@@ -1,14 +1,15 @@
 package com.dikahadir.definitions.jabatan;
 
 import java.time.Duration;
+import java.util.List;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 import com.dikahadir.Hooks;
 import com.dikahadir.page.JabatanPage;
+import com.dikahadir.repository.JabatanRepository;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -25,7 +26,7 @@ public class TambahJabatanTest {
         jabatanPage.navigateToJabatanPage();
 
         WebDriverWait wait = new WebDriverWait(Hooks.getDriver(), Duration.ofSeconds(10));
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[normalize-space()='Tambahkan']")));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(JabatanRepository.buttonTambahkanJabatan));
     }
     @When ("user menekan tombol tambahkan")
     public void clickTombolTambahkan(){
@@ -62,8 +63,19 @@ public void formHapusTertutup() {
         Assert.assertEquals(actualMessage, expectedMessage, 
             "Pesan sukses tidak sesuai!");
     }
+    @Then("level jabatan akan di tampilkan {string}")
+    public void tampilLevel(String level) throws InterruptedException{
+        jabatanPage.inputSearchText(level);
+        jabatanPage.clickSearchJabatan();
+       Thread.sleep(5000);
+    List<String> hasil = jabatanPage.getAllLevel();
+    boolean ditemukan = hasil.stream()
+            .anyMatch(nama -> nama.equalsIgnoreCase(level));
 
+    Assert.assertTrue(ditemukan,
+            "Data Level '" + level + "' tidak ditemukan di tabel. Hasil tabel: " + hasil);
 
+    }
     @Then("sistem menampilkan pesan error {string}")
     public void pesanError(String expectedMessage){
         String actualMessage = jabatanPage.getMessageText();

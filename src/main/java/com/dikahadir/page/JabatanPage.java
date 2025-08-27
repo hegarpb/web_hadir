@@ -1,3 +1,4 @@
+
 package com.dikahadir.page;
 
 import com.dikahadir.repository.JabatanRepository;
@@ -270,6 +271,20 @@ public class JabatanPage {
             wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(JabatanRepository.tableRows));
         }
         return false;
+    }
+public List<String> getAllLevel() {
+        waitTableToBeVisible();
+        List<WebElement> elements = wait.until(
+            ExpectedConditions.presenceOfAllElementsLocatedBy(JabatanRepository.tableFirstColumn)
+        );
+        return elements.stream()
+            .map(el -> el.getText().trim())
+            .filter(text -> !text.isEmpty() && !text.equalsIgnoreCase("Tidak Ada Data"))
+            .toList();
+    }
+
+     private void waitTableToBeVisible() {
+        wait.until(ExpectedConditions.visibilityOfElementLocated(JabatanRepository.tableContainer));
     }
 
     // ================== HELPER ================== //

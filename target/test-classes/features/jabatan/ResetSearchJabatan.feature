@@ -2,6 +2,7 @@ Feature: Reset Search Level Jabatan
   Sebagai pengguna, saya ingin dapat mereset filter level jabatan
   untuk melihat kembali semua daftar jabatan tanpa filter.
 
+  @Positive
   Scenario: Reset filter setelah melakukan pencarian
     Given user sudah login dan diarahkan ke halaman Manajemen Jabatan
     When user sudah menginput level jabatan dengan level "2"

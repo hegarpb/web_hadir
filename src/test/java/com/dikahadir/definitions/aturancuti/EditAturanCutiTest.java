@@ -3,7 +3,6 @@ package com.dikahadir.definitions.aturancuti;
 import java.time.Duration;
 import java.util.List;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -68,8 +67,9 @@ public void inputBulanKerjaSisa(String bulanKerjaSisaBaru){
     aturanCutiPage.inputJumlahBulanKerjaSisaCuti(bulanKerjaSisaBaru);
 }
 @When("user menekan tombol Simpan pada form sunting aturan cuti")
-public void clickButtonSimpan() {
+public void clickButtonSimpan() throws InterruptedException {
     aturanCutiPage.clickButtonSimpanEdit();
+    Thread.sleep(3000);
 
 }
 @When("user menekan tombol tutup pada form sunting Aturan Cuti")
@@ -120,7 +120,7 @@ public void pesanValidasiMunculSaatEditKosong() {
 public void formEditTutup(){
 // Tunggu sampai form/modal sunting hilang
     boolean isFormClosed = wait.until(
-        ExpectedConditions.invisibilityOfElementLocated(By.xpath("//h2[normalize-space()='Sunting Aturan Cuti']"))
+        ExpectedConditions.invisibilityOfElementLocated(AturanCutiRepository.formEditAturanCuti)
     );
     Assert.assertTrue(isFormClosed, "Form Sunting Aturan Cuti masih terlihat padahal harusnya sudah tertutup!");
 }

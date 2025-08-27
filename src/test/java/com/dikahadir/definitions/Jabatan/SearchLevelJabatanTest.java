@@ -26,7 +26,7 @@ public class SearchLevelJabatanTest {
         wait.until(ExpectedConditions.visibilityOfElementLocated(JabatanRepository.inputSearchText));
     }
 
-    @When("user menginput {string} pada field {string}")
+    @When("user menginput {string} pada field pencarian")
     public void inputSearch(String level){
         jabatanPage.inputSearchText(level);
     }

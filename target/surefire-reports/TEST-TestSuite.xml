@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="TestSuite" time="214.678" tests="10" errors="0" skipped="0" failures="1">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="TestSuite" time="493.798" tests="26" errors="0" skipped="0" failures="3">
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -16,7 +16,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="US"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-21\bin"/>
-    <property name="sun.java.command" value="C:\Users\LENOVO\AppData\Local\Temp\surefire5693220292223468992\surefirebooter-20250827170733912_3.jar C:\Users\LENOVO\AppData\Local\Temp\surefire5693220292223468992 2025-08-27T17-07-33_671-jvmRun1 surefire-20250827170733912_1tmp surefire_0-20250827170733912_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\LENOVO\AppData\Local\Temp\surefire4846223642028250579\surefirebooter-20250828012354719_3.jar C:\Users\LENOVO\AppData\Local\Temp\surefire4846223642028250579 2025-08-28T01-23-53_184-jvmRun1 surefire-20250828012354719_1tmp surefire_0-20250828012354719_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Hegar\sqabatch23\TA\web_hadir\target\test-classes;C:\Hegar\sqabatch23\TA\web_hadir\target\classes;C:\Users\LENOVO\.m2\repository\org\slf4j\slf4j-simple\1.7.36\slf4j-simple-1.7.36.jar;C:\Users\LENOVO\.m2\repository\org\slf4j\slf4j-api\1.7.36\slf4j-api-1.7.36.jar;C:\Users\LENOVO\.m2\repository\org\testng\testng\7.10.2\testng-7.10.2.jar;C:\Users\LENOVO\.m2\repository\com\beust\jcommander\1.82\jcommander-1.82.jar;C:\Users\LENOVO\.m2\repository\org\webjars\jquery\3.7.1\jquery-3.7.1.jar;C:\Users\LENOVO\.m2\repository\io\cucumber\cucumber-java\7.15.0\cucumber-java-7.15.0.jar;C:\Users\LENOVO\.m2\repository\io\cucumber\cucumber-core\7.15.0\cucumber-core-7.15.0.jar;C:\Users\LENOVO\.m2\repository\io\cucumber\cucumber-gherkin\7.15.0\cucumber-gherkin-7.15.0.jar;C:\Users\LENOVO\.m2\repository\io\cucumber\cucumber-gherkin-messages\7.15.0\cucumber-gherkin-messages-7.15.0.jar;C:\Users\LENOVO\.m2\repository\io\cucumber\gherkin\26.2.0\gherkin-26.2.0.jar;C:\Users\LENOVO\.m2\repository\io\cucumber\messages\22.0.0\messages-22.0.0.jar;C:\Users\LENOVO\.m2\repository\io\cucumber\tag-expressions\6.0.0\tag-expressions-6.0.0.jar;C:\Users\LENOVO\.m2\repository\io\cucumber\cucumber-expressions\17.0.1\cucumber-expressions-17.0.1.jar;C:\Users\LENOVO\.m2\repository\io\cucumber\datatable\7.15.0\datatable-7.15.0.jar;C:\Users\LENOVO\.m2\repository\io\cucumber\cucumber-plugin\7.15.0\cucumber-plugin-7.15.0.jar;C:\Users\LENOVO\.m2\repository\io\cucumber\docstring\7.15.0\docstring-7.15.0.jar;C:\Users\LENOVO\.m2\repository\io\cucumber\html-formatter\20.4.0\html-formatter-20.4.0.jar;C:\Users\LENOVO\.m2\repository\io\cucumber\junit-xml-formatter\0.2.0\junit-xml-formatter-0.2.0.jar;C:\Users\LENOVO\.m2\repository\io\cucumber\ci-environment\10.0.0\ci-environment-10.0.0.jar;C:\Users\LENOVO\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\LENOVO\.m2\repository\io\cucumber\cucumber-testng\7.15.0\cucumber-testng-7.15.0.jar;C:\Users\LENOVO\.m2\repository\org\seleniumhq\selenium\selenium-java\4.34.0\selenium-java-4.34.0.jar;C:\Users\LENOVO\.m2\repository\org\seleniumhq\selenium\selenium-api\4.34.0\selenium-api-4.34.0.jar;C:\Users\LENOVO\.m2\repository\org\jspecify\jspecify\1.0.0\jspecify-1.0.0.jar;C:\Users\LENOVO\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\4.34.0\selenium-chrome-driver-4.34.0.jar;C:\Users\LENOVO\.m2\repository\com\google\auto\service\auto-service-annotations\1.1.1\auto-service-annotations-1.1.1.jar;C:\Users\LENOVO\.m2\repository\org\seleniumhq\selenium\selenium-chromium-driver\4.34.0\selenium-chromium-driver-4.34.0.jar;C:\Users\LENOVO\.m2\repository\org\seleniumhq\selenium\selenium-json\4.34.0\selenium-json-4.34.0.jar;C:\Users\LENOVO\.m2\repository\org\seleniumhq\selenium\selenium-manager\4.34.0\selenium-manager-4.34.0.jar;C:\Users\LENOVO\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v136\4.34.0\selenium-devtools-v136-4.34.0.jar;C:\Users\LENOVO\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v137\4.34.0\selenium-devtools-v137-4.34.0.jar;C:\Users\LENOVO\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v138\4.34.0\selenium-devtools-v138-4.34.0.jar;C:\Users\LENOVO\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\4.34.0\selenium-edge-driver-4.34.0.jar;C:\Users\LENOVO\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\4.34.0\selenium-firefox-driver-4.34.0.jar;C:\Users\LENOVO\.m2\repository\org\seleniumhq\selenium\selenium-http\4.34.0\selenium-http-4.34.0.jar;C:\Users\LENOVO\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\4.34.0\selenium-ie-driver-4.34.0.jar;C:\Users\LENOVO\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\4.34.0\selenium-remote-driver-4.34.0.jar;C:\Users\LENOVO\.m2\repository\com\google\guava\guava\33.4.8-jre\guava-33.4.8-jre.jar;C:\Users\LENOVO\.m2\repository\com\google\guava\failureaccess\1.0.3\failureaccess-1.0.3.jar;C:\Users\LENOVO\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:\Users\LENOVO\.m2\repository\com\google\errorprone\error_prone_annotations\2.36.0\error_prone_annotations-2.36.0.jar;C:\Users\LENOVO\.m2\repository\com\google\j2objc\j2objc-annotations\3.0.0\j2objc-annotations-3.0.0.jar;C:\Users\LENOVO\.m2\repository\io\opentelemetry\opentelemetry-api\1.51.0\opentelemetry-api-1.51.0.jar;C:\Users\LENOVO\.m2\repository\io\opentelemetry\opentelemetry-context\1.51.0\opentelemetry-context-1.51.0.jar;C:\Users\LENOVO\.m2\repository\io\opentelemetry\opentelemetry-exporter-logging\1.51.0\opentelemetry-exporter-logging-1.51.0.jar;C:\Users\LENOVO\.m2\repository\io\opentelemetry\opentelemetry-sdk-common\1.51.0\opentelemetry-sdk-common-1.51.0.jar;C:\Users\LENOVO\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure-spi\1.51.0\opentelemetry-sdk-extension-autoconfigure-spi-1.51.0.jar;C:\Users\LENOVO\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure\1.51.0\opentelemetry-sdk-extension-autoconfigure-1.51.0.jar;C:\Users\LENOVO\.m2\repository\io\opentelemetry\opentelemetry-sdk-trace\1.51.0\opentelemetry-sdk-trace-1.51.0.jar;C:\Users\LENOVO\.m2\repository\io\opentelemetry\opentelemetry-sdk\1.51.0\opentelemetry-sdk-1.51.0.jar;C:\Users\LENOVO\.m2\repository\io\opentelemetry\opentelemetry-sdk-metrics\1.51.0\opentelemetry-sdk-metrics-1.51.0.jar;C:\Users\LENOVO\.m2\repository\io\opentelemetry\opentelemetry-sdk-logs\1.51.0\opentelemetry-sdk-logs-1.51.0.jar;C:\Users\LENOVO\.m2\repository\net\bytebuddy\byte-buddy\1.17.6\byte-buddy-1.17.6.jar;C:\Users\LENOVO\.m2\repository\org\seleniumhq\selenium\selenium-os\4.34.0\selenium-os-4.34.0.jar;C:\Users\LENOVO\.m2\repository\org\apache\commons\commons-exec\1.5.0\commons-exec-1.5.0.jar;C:\Users\LENOVO\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\4.34.0\selenium-safari-driver-4.34.0.jar;C:\Users\LENOVO\.m2\repository\org\seleniumhq\selenium\selenium-support\4.34.0\selenium-support-4.34.0.jar;C:\Users\LENOVO\.m2\repository\com\aventstack\extentreports\5.1.1\extentreports-5.1.1.jar;C:\Users\LENOVO\.m2\repository\io\reactivex\rxjava3\rxjava\3.1.6\rxjava-3.1.6.jar;C:\Users\LENOVO\.m2\repository\org\reactivestreams\reactive-streams\1.0.4\reactive-streams-1.0.4.jar;C:\Users\LENOVO\.m2\repository\org\freemarker\freemarker\2.3.32\freemarker-2.3.32.jar;C:\Users\LENOVO\.m2\repository\org\projectlombok\lombok\1.18.26\lombok-1.18.26.jar;C:\Users\LENOVO\.m2\repository\com\google\code\gson\gson\2.10.1\gson-2.10.1.jar;C:\Users\LENOVO\.m2\repository\tech\grasshopper\extentreports-cucumber7-adapter\1.14.0\extentreports-cucumber7-adapter-1.14.0.jar;C:\Users\LENOVO\.m2\repository\tech\grasshopper\extent-pdf-report\2.12.0\extent-pdf-report-2.12.0.jar;C:\Users\LENOVO\.m2\repository\tech\grasshopper\cucumber-pdf-report\2.14.0\cucumber-pdf-report-2.14.0.jar;C:\Users\LENOVO\.m2\repository\org\apache\pdfbox\pdfbox\2.0.26\pdfbox-2.0.26.jar;C:\Users\LENOVO\.m2\repository\org\apache\pdfbox\fontbox\2.0.26\fontbox-2.0.26.jar;C:\Users\LENOVO\.m2\repository\org\knowm\xchart\xchart\3.8.0\xchart-3.8.0.jar;C:\Users\LENOVO\.m2\repository\de\erichseifert\vectorgraphics2d\VectorGraphics2D\0.13\VectorGraphics2D-0.13.jar;C:\Users\LENOVO\.m2\repository\de\rototor\pdfbox\graphics2d\0.30\graphics2d-0.30.jar;C:\Users\LENOVO\.m2\repository\com\madgag\animated-gif-lib\1.4\animated-gif-lib-1.4.jar;C:\Users\LENOVO\.m2\repository\org\yaml\snakeyaml\2.0\snakeyaml-2.0.jar;C:\Users\LENOVO\.m2\repository\tech\grasshopper\table-layout\1.5.1\table-layout-1.5.1.jar;C:\Users\LENOVO\.m2\repository\tech\grasshopper\rest-assured-cucumber-pdf-report\1.5.0\rest-assured-cucumber-pdf-report-1.5.0.jar;C:\Users\LENOVO\.m2\repository\org\jsoup\jsoup\1.15.3\jsoup-1.15.3.jar;C:\Users\LENOVO\.m2\repository\com\aventstack\klov-reporter\5.1.0\klov-reporter-5.1.0.jar;C:\Users\LENOVO\.m2\repository\org\mongodb\mongodb-driver\3.6.4\mongodb-driver-3.6.4.jar;C:\Users\LENOVO\.m2\repository\org\mongodb\mongodb-driver-core\3.6.4\mongodb-driver-core-3.6.4.jar;C:\Users\LENOVO\.m2\repository\org\mongodb\bson\3.6.4\bson-3.6.4.jar;C:\Users\LENOVO\.m2\repository\org\apache\httpcomponents\httpclient\4.5.13\httpclient-4.5.13.jar;C:\Users\LENOVO\.m2\repository\org\apache\httpcomponents\httpcore\4.4.13\httpcore-4.4.13.jar;C:\Users\LENOVO\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\LENOVO\.m2\repository\commons-codec\commons-codec\1.11\commons-codec-1.11.jar;C:\Users\LENOVO\.m2\repository\org\apache\httpcomponents\httpmime\4.5.13\httpmime-4.5.13.jar;C:\Users\LENOVO\.m2\repository\tech\grasshopper\htmlextentreporter\1.1.0\htmlextentreporter-1.1.0.jar;C:\Users\LENOVO\.m2\repository\tech\grasshopper\extent-excel-report\1.4.0\extent-excel-report-1.4.0.jar;C:\Users\LENOVO\.m2\repository\org\apache\poi\poi\5.2.3\poi-5.2.3.jar;C:\Users\LENOVO\.m2\repository\org\apache\commons\commons-collections4\4.4\commons-collections4-4.4.jar;C:\Users\LENOVO\.m2\repository\org\apache\commons\commons-math3\3.6.1\commons-math3-3.6.1.jar;C:\Users\LENOVO\.m2\repository\commons-io\commons-io\2.11.0\commons-io-2.11.0.jar;C:\Users\LENOVO\.m2\repository\com\zaxxer\SparseBitSet\1.2\SparseBitSet-1.2.jar;C:\Users\LENOVO\.m2\repository\org\apache\logging\log4j\log4j-api\2.18.0\log4j-api-2.18.0.jar;C:\Users\LENOVO\.m2\repository\org\apache\poi\poi-ooxml\5.2.3\poi-ooxml-5.2.3.jar;C:\Users\LENOVO\.m2\repository\org\apache\poi\poi-ooxml-lite\5.2.3\poi-ooxml-lite-5.2.3.jar;C:\Users\LENOVO\.m2\repository\org\apache\xmlbeans\xmlbeans\5.1.1\xmlbeans-5.1.1.jar;C:\Users\LENOVO\.m2\repository\org\apache\commons\commons-compress\1.21\commons-compress-1.21.jar;C:\Users\LENOVO\.m2\repository\com\github\virtuald\curvesapi\1.07\curvesapi-1.07.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -31,7 +31,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\LENOVO\AppData\Local\Temp\surefire5693220292223468992\surefirebooter-20250827170733912_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\LENOVO\AppData\Local\Temp\surefire4846223642028250579\surefirebooter-20250828012354719_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="21.0.8+12-LTS-250"/>
@@ -60,28 +60,83 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="65.0"/>
   </properties>
-  <testcase name="runScenario[&quot;Menampilkan detail jadwal&quot;, &quot;Detail Jadwal&quot;](1)" classname="com.dikahadir.runners.RunnerJadwalTest" time="18.513"/>
-  <testcase name="runScenario[&quot;Edit jadwal&quot;, &quot;Edit Jadwal&quot;](2)" classname="com.dikahadir.runners.RunnerJadwalTest" time="34.008">
-    <failure message="Expected condition failed: waiting for presence of any elements located by By.xpath: //div[contains(@class, &apos;MuiSelect-select&apos;) and contains(text(), &apos;Libur&apos;)] (tried for 10 second(s) with 500 milliseconds interval)&#10;Build info: version: &apos;4.34.0&apos;, revision: &apos;707dcb4246*&apos;&#10;System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.8&apos;&#10;Driver info: org.openqa.selenium.firefox.FirefoxDriver&#10;Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 142.0, moz:accessibilityChecks: false, moz:buildID: 20250811145442, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 252376, moz:profile: C:\Users\LENOVO\AppData\Loc..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}&#10;Session ID: 895a17f6-f316-42c7-aefe-e272a576c3a1" type="org.openqa.selenium.TimeoutException"><![CDATA[org.openqa.selenium.TimeoutException: 
-Expected condition failed: waiting for presence of any elements located by By.xpath: //div[contains(@class, 'MuiSelect-select') and contains(text(), 'Libur')] (tried for 10 second(s) with 500 milliseconds interval)
-Build info: version: '4.34.0', revision: '707dcb4246*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.8'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 142.0, moz:accessibilityChecks: false, moz:buildID: 20250811145442, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 252376, moz:profile: C:\Users\LENOVO\AppData\Loc..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
-Session ID: 895a17f6-f316-42c7-aefe-e272a576c3a1
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at com.dikahadir.page.JadwalPage.isiSemuaHari(JadwalPage.java:183)
-	at com.dikahadir.definitions.jadwal.EditJadwalTest.isiHariKerja(EditJadwalTest.java:63)
-	at ✽.user mengisi jumlah hari kerja.(file:///C:/Hegar/sqabatch23/TA/web_hadir/src/test/resources/features/jadwal/EditJadwal.feature:14)
+  <testcase name="runScenario[&quot;Mengubah nama jabatan dengan fitur edit dengan data yang valid.&quot;, &quot;Edit Jabatan&quot;](1)" classname="com.dikahadir.runners.RunnerTest1" time="25.398"/>
+  <testcase name="runScenario[&quot;Mengubah nama jabatan tetapi level tidak diubah&quot;, &quot;Edit Jabatan&quot;](2)" classname="com.dikahadir.runners.RunnerTest1" time="20.698"/>
+  <testcase name="runScenario[&quot;Mengubah level jabatan tetapi nama tidak diubah&quot;, &quot;Edit Jabatan&quot;](3)" classname="com.dikahadir.runners.RunnerTest1" time="19.155"/>
+  <testcase name="runScenario[&quot;Mengubah nama jabatan dan level jabatan dengan nama jabatan dan level jabatan yang sudah ada,inputan level mengandung angka negtif&quot;, &quot;Edit Jabatan&quot;](4)" classname="com.dikahadir.runners.RunnerTest1" time="20.736">
+    <failure message="Pesan sukses tidak sesuai expected [Gagal Edit Jabatan] but found [Berhasil Edit Jabatan]" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: Pesan sukses tidak sesuai expected [Gagal Edit Jabatan] but found [Berhasil Edit Jabatan]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at com.dikahadir.definitions.jabatan.EditJabatanTest.sistemMenampilkanPesan(EditJabatanTest.java:59)
+	at ✽.sistem akan menampilkan pesan "Gagal Edit Jabatan"(file:///C:/Hegar/sqabatch23/TA/web_hadir/src/test/resources/features/jabatan/EditJabatan.feature:53)
 ]]></failure>
   </testcase>
-  <testcase name="runScenario[&quot;Edit jadwal dengan field kosong&quot;, &quot;Edit Jadwal&quot;](3)" classname="com.dikahadir.runners.RunnerJadwalTest" time="20.801"/>
-  <testcase name="runScenario[&quot;Edit jadwal dengan field kosong&quot;, &quot;Edit Jadwal&quot;](4)" classname="com.dikahadir.runners.RunnerJadwalTest" time="20.204"/>
-  <testcase name="runScenario[&quot;Batal Edit&quot;, &quot;Edit Jadwal&quot;](5)" classname="com.dikahadir.runners.RunnerJadwalTest" time="15.753"/>
-  <testcase name="runScenario[&quot;Delete jadwal&quot;, &quot;Delete Jadwal&quot;](6)" classname="com.dikahadir.runners.RunnerJadwalTest" time="15.57"/>
-  <testcase name="runScenario[&quot;Reset Pencarian jadwal&quot;, &quot;Tombol Reset&quot;](7)" classname="com.dikahadir.runners.RunnerJadwalTest" time="14.203"/>
-  <testcase name="runScenario[&quot;Search jadwal dengan data valid&quot;, &quot;Sebagai user saya ingin mencari nama jadwal&quot;](8)" classname="com.dikahadir.runners.RunnerJadwalTest" time="16.476"/>
-  <testcase name="runScenario[&quot;Search jadwal dengan data invalid&quot;, &quot;Sebagai user saya ingin mencari nama jadwal&quot;](9)" classname="com.dikahadir.runners.RunnerJadwalTest" time="19.725"/>
-  <testcase name="runScenario[&quot;Tambah jadwal dengan data valid&quot;, &quot;Tambah jadwal&quot;](10)" classname="com.dikahadir.runners.RunnerJadwalTest" time="36.266"/>
+  <testcase name="runScenario[&quot;Validasi field kosong saat mengubah data jabatan&quot;, &quot;Edit Jabatan&quot;](5)" classname="com.dikahadir.runners.RunnerTest1" time="20.542"/>
+  <testcase name="runScenario[&quot;Validasi field kosong saat mengubah data jabatan&quot;, &quot;Edit Jabatan&quot;](6)" classname="com.dikahadir.runners.RunnerTest1" time="24.841"/>
+  <testcase name="runScenario[&quot;Validasi batal mengubah data jabatan&quot;, &quot;Edit Jabatan&quot;](7)" classname="com.dikahadir.runners.RunnerTest1" time="21.141"/>
+  <testcase name="runScenario[&quot;Menghapus data jabatan dengan feature delete pada tabel jabatan&quot;, &quot;Hapus Jabatan&quot;](8)" classname="com.dikahadir.runners.RunnerTest1" time="20.453"/>
+  <testcase name="runScenario[&quot;Batal menghapus jabatan dengan menekan tombol batal pada form hapus jabatan&quot;, &quot;Hapus Jabatan&quot;](9)" classname="com.dikahadir.runners.RunnerTest1" time="22.014"/>
+  <testcase name="runScenario[&quot;Berpindah ke halaman selnajutnya dengan menekan tombol selanjutnya&quot;, &quot;Tombol Pagination&quot;](10)" classname="com.dikahadir.runners.RunnerTest1" time="16.602">
+    <system-out><![CDATA[➡️ Klik tombol Next Page
+]]></system-out>
+  </testcase>
+  <testcase name="runScenario[&quot;Berpindah ke halaman sebelumnya dengan menekan tombol sebelumnya&quot;, &quot;Tombol Pagination&quot;](11)" classname="com.dikahadir.runners.RunnerTest1" time="20.683">
+    <system-out><![CDATA[➡️ Klik tombol Next Page
+⬅️ Klik tombol Previous Page
+]]></system-out>
+  </testcase>
+  <testcase name="runScenario[&quot;Berpindah ke halaman sebelumnya dengan menekan tombol sebelumnya&quot;, &quot;Tombol Pagination&quot;](12)" classname="com.dikahadir.runners.RunnerTest1" time="14.953">
+    <system-out><![CDATA[⏩ Klik tombol Last Page
+]]></system-out>
+  </testcase>
+  <testcase name="runScenario[&quot;Berpindah ke halaman sebelumnya dengan menekan tombol sebelumnya&quot;, &quot;Tombol Pagination&quot;](13)" classname="com.dikahadir.runners.RunnerTest1" time="17.854">
+    <system-out><![CDATA[⏩ Klik tombol Last Page
+⬅️ Klik tombol First Page (halaman awal).
+]]></system-out>
+  </testcase>
+  <testcase name="runScenario[&quot;Reset filter setelah melakukan pencarian&quot;, &quot;Reset Search Level Jabatan&quot;](14)" classname="com.dikahadir.runners.RunnerTest1" time="22.585">
+    <system-out><![CDATA[ URL setelah reset: https://magang.dikahadir.com/management/job-level
+]]></system-out>
+  </testcase>
+  <testcase name="runScenario[&quot;Search jabatan berdasarkan level&quot;, &quot;Search Level Jabatan&quot;](15)" classname="com.dikahadir.runners.RunnerTest1" time="18.855"/>
+  <testcase name="runScenario[&quot;Search jabatan dengan level yang tidak ada&quot;, &quot;Search Level Jabatan&quot;](16)" classname="com.dikahadir.runners.RunnerTest1" time="17.042">
+    <system-out><![CDATA[🔍 Current URL: https://magang.dikahadir.com/management/job-level?level%5B%24like%5D=%2510000%25
+]]></system-out>
+  </testcase>
+  <testcase name="runScenario[&quot;Search jabatan dengan input alfabet&quot;, &quot;Search Level Jabatan&quot;](17)" classname="com.dikahadir.runners.RunnerTest1" time="14.797">
+    <system-out><![CDATA[🔍 Current URL: https://magang.dikahadir.com/management/job-level?level%5B%24like%5D=%25abc%25
+]]></system-out>
+  </testcase>
+  <testcase name="runScenario[&quot;Tambah jabatan baru dengan data nama baru dan level baru&quot;, &quot;Tambah Jabatan&quot;](18)" classname="com.dikahadir.runners.RunnerTest1" time="20.187"/>
+  <testcase name="runScenario[&quot;Tambah jabatan baru dengan data nama yang sudah ada tetapi level berbeda&quot;, &quot;Tambah Jabatan&quot;](19)" classname="com.dikahadir.runners.RunnerTest1" time="18.339">
+    <failure message="Pesan sukses tidak sesuai! expected [Berhasil Menambahkan Job Level] but found [Gagal Menambahkan Job Level]" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: Pesan sukses tidak sesuai! expected [Berhasil Menambahkan Job Level] but found [Gagal Menambahkan Job Level]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at com.dikahadir.definitions.jabatan.TambahJabatanTest.pesanSukses(TambahJabatanTest.java:63)
+	at ✽.sistem menampilkan pesan sukses "Berhasil Menambahkan Job Level"(file:///C:/Hegar/sqabatch23/TA/web_hadir/src/test/resources/features/jabatan/TambahJabatan.feature:25)
+]]></failure>
+  </testcase>
+  <testcase name="runScenario[&quot;Tambah jabatan baru dengan data  Nama baru dan level yang sudah ada&quot;, &quot;Tambah Jabatan&quot;](20)" classname="com.dikahadir.runners.RunnerTest1" time="16.733">
+    <failure message="Pesan sukses tidak sesuai! expected [Berhasil Menambahkan Job Level] but found [Gagal Menambahkan Job Level]" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: Pesan sukses tidak sesuai! expected [Berhasil Menambahkan Job Level] but found [Gagal Menambahkan Job Level]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at com.dikahadir.definitions.jabatan.TambahJabatanTest.pesanSukses(TambahJabatanTest.java:63)
+	at ✽.sistem menampilkan pesan sukses "Berhasil Menambahkan Job Level"(file:///C:/Hegar/sqabatch23/TA/web_hadir/src/test/resources/features/jabatan/TambahJabatan.feature:38)
+]]></failure>
+  </testcase>
+  <testcase name="runScenario[&quot;Validasi penambahan jabatan dengan data invalid (nama yang sama dan level yang sama,inputan level non numeric,level negtif atau minus)&quot;, &quot;Tambah Jabatan&quot;](21)" classname="com.dikahadir.runners.RunnerTest1" time="16.016"/>
+  <testcase name="runScenario[&quot;Validasi penambahan jabatan dengan data invalid (nama yang sama dan level yang sama,inputan level non numeric,level negtif atau minus)&quot;, &quot;Tambah Jabatan&quot;](22)" classname="com.dikahadir.runners.RunnerTest1" time="15.189"/>
+  <testcase name="runScenario[&quot;Validasi penambahan jabatan dengan data invalid (nama yang sama dan level yang sama,inputan level non numeric,level negtif atau minus)&quot;, &quot;Tambah Jabatan&quot;](23)" classname="com.dikahadir.runners.RunnerTest1" time="15.481"/>
+  <testcase name="runScenario[&quot;Validasi field kosong saat menambahkan jabatan&quot;, &quot;Tambah Jabatan&quot;](24)" classname="com.dikahadir.runners.RunnerTest1" time="15.657"/>
+  <testcase name="runScenario[&quot;Validasi field kosong saat menambahkan jabatan&quot;, &quot;Tambah Jabatan&quot;](25)" classname="com.dikahadir.runners.RunnerTest1" time="15.263"/>
+  <testcase name="runScenario[&quot;Batal menambah jabatan dengan menekan tombol batal pada form tambah jabatan&quot;, &quot;Tambah Jabatan&quot;](26)" classname="com.dikahadir.runners.RunnerTest1" time="16.557"/>
 </testsuite>

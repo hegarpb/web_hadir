@@ -11,7 +11,6 @@ import io.cucumber.java.en.When;
 import java.time.Duration;
 import java.util.List;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -27,6 +26,7 @@ public class TambahAturanCutiTest {
         this.aturanCutiPage = new AturanCutiPage(Hooks.getDriver());
         this.wait = new WebDriverWait(Hooks.getDriver(), Duration.ofSeconds(10)); 
         aturanCutiPage.navigateToAturanCuti();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(AturanCutiRepository.buttonTambahAturan));
     }
 
     @When("user menekan tombol Tambahkan Aturan Cuti")
@@ -84,9 +84,8 @@ public class TambahAturanCutiTest {
     @Then("form tambah aturan cuti akan tertutup")
     public void tutupFormTambahAturan(){
          boolean isFormClosed = wait.until(
-        ExpectedConditions.invisibilityOfElementLocated(By.xpath("//h2[normalize-space()='Tambahkan Aturan Cuti']"))
-    );
-    Assert.assertTrue(isFormClosed, "Form Tambahkan Aturan Cuti masih terlihat padahal harusnya sudah tertutup!");
+        ExpectedConditions.invisibilityOfElementLocated(AturanCutiRepository.formTambahAturan));
+    Assert.assertTrue(isFormClosed, "Form Tambahkan Aturan Cuti harusnya sudah tertutup!");
 }
     @Then("data aturan cuti {string} ditampilkan di tabel")
     public void tampilDataBaruDItambahkan(String namaAturan) throws InterruptedException{
@@ -116,4 +115,3 @@ public class TambahAturanCutiTest {
 }
 
     }
-

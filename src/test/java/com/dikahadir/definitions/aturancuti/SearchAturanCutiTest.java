@@ -27,8 +27,10 @@ public class SearchAturanCutiTest {
     public void userKlikTombolSearch() throws InterruptedException {
         aturanCutiPage.clickButtonSearch();
          Thread.sleep(5000);
+    
     }
     
+
    @Then("muncul nama aturan cuti yang dicari {string}")
 public void munculNamaAturanCutiYangDicari(String expectedNama) {
     List<String> hasil = aturanCutiPage.getAllNamaAturan();
