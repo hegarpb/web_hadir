@@ -4,9 +4,9 @@ com\dikahadir\Hooks.class
 com\dikahadir\definitions\aturancuti\HapusAturanCutiTest.class
 com\dikahadir\runners\RunnerJabatanTest.class
 com\dikahadir\runners\RunnerAturanCutiTest.class
+com\dikahadir\definitions\jabatan\ResetLevelJabatanTest.class
 com\dikahadir\definitions\aturancuti\ViewAturanCuti.class
 com\dikahadir\definitions\aturancuti\ResetAturanCutiTest.class
-com\dikahadir\definitions\jabatan\ResetSearchLevelJabatanTest.class
 com\dikahadir\definitions\jabatan\PaginationTest.class
 com\dikahadir\definitions\jabatan\SearchLevelJabatanTest.class
 com\dikahadir\definitions\jabatan\TambahJabatanTest.class

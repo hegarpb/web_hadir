@@ -67,8 +67,9 @@ public void inputBulanKerjaSisa(String bulanKerjaSisaBaru){
     aturanCutiPage.inputJumlahBulanKerjaSisaCuti(bulanKerjaSisaBaru);
 }
 @When("user menekan tombol Simpan pada form sunting aturan cuti")
-public void clickButtonSimpan() {
+public void clickButtonSimpan() throws InterruptedException {
     aturanCutiPage.clickButtonSimpanEdit();
+    Thread.sleep(3000);
 
 }
 @When("user menekan tombol tutup pada form sunting Aturan Cuti")

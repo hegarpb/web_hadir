@@ -2,6 +2,7 @@ Feature: Delete Aturan Cuti
          Sebagai user saya ingin menghapus aturan cuti
         dengan feature Delete aturan cuti
 
+  @Positive
   Scenario Outline: Hapus Aturan Cuti
     Given user sudah login sebagai admin dan berada di halaman Aturan Cuti.
     When user menekan tombol action pada nama "<namaAturan>" aturan cuti.
@@ -13,7 +14,8 @@ Feature: Delete Aturan Cuti
       | namaAturan  |
       | Cuti Delete |
 
-  Scenario Outline: Batal Aturan Cuti
+  @Positive
+  Scenario Outline: Batal Hapus Aturan Cuti
     Given user sudah login sebagai admin dan berada di halaman Aturan Cuti.
     When user menekan tombol action pada nama "<namaAturan>" aturan cuti.
     When user menekan tombol delete

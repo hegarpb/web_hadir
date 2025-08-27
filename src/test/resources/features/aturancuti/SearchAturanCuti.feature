@@ -1,8 +1,8 @@
 Feature: Tombol Search
   Seabagai user saya ingin melakukan pencarian aturan cuti
   dengan featur searach pada halaman Aturan cuti
-#Positive Test - Data valid
 
+  @Positive
   Scenario Outline: Pencarian aturan cuti dengan data valid
     Given user sudah login sebagai admin dan berada di halaman Aturan cuti
     When user menginput "<namaAturan>" dalam field cari berdasarkan nama
@@ -12,8 +12,8 @@ Feature: Tombol Search
     Examples:
       | namaAturan |
       | Cuti Hamil |
-#Negative Test - data invalid
 
+  @Negative
   Scenario Outline: Pencarian aturan cuti dengan data invalid
     Given user sudah login sebagai admin dan berada di halaman Aturan cuti
     When user menginput "<namaAturan>" dalam field cari berdasarkan nama

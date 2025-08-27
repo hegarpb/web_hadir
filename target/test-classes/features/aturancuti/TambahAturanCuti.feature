@@ -1,6 +1,7 @@
 Feature: Tambah Aturan Cuti
   Sebagai user saya ingin menambahkan aturan cuti dengan feature tambah aturan cuti
 
+  @Positive
   Scenario Outline: Tambah aturan cuti baru dengan data valid
     Given user melakukan login dan berada di halaman manajemen Aturan Cuti
     When user menekan tombol Tambahkan Aturan Cuti
@@ -18,6 +19,7 @@ Feature: Tambah Aturan Cuti
       | namaAturan    | eligible | tanggalBatas | bulanBatas | maksimalSisa | jumlahBulanKerja |
       | Cuti Tambahan |       12 |            5 |          2 |           10 |                6 |
 
+  @Negative
   Scenario Outline: Tambah aturan cuti dengan data invalid
     Given user melakukan login dan berada di halaman manajemen Aturan Cuti
     When user menekan tombol Tambahkan Aturan Cuti
@@ -35,6 +37,7 @@ Feature: Tambah Aturan Cuti
       | Cuti Invalid1 | abc      |            9 |          4 | abc          | abc              |
       | Cuti Invalid2 |      -12 |            8 |          6 |          -10 |               -6 |
 
+  @Negative
   Scenario Outline: validasi field kosong
     Given user melakukan login dan berada di halaman manajemen Aturan Cuti
     When user menekan tombol Tambahkan Aturan Cuti
@@ -51,6 +54,7 @@ Feature: Tambah Aturan Cuti
       | namaAturan | eligible | tanggalBatas | bulanBatas | maksimalSisa | jumlahBulanKerja |
       |            |       12 |              |            |           10 |                6 |
 
+  @Positive
   Scenario Outline: Button Tutup Aturan Cuti
     Given user melakukan login dan berada di halaman manajemen Aturan Cuti
     When user menekan tombol Tambahkan Aturan Cuti

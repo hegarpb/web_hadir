@@ -5,7 +5,5 @@ com\dikahadir\utils\DriverManager.class
 com\dikahadir\repository\AturanCutiRepository.class
 com\dikahadir\repository\ManagementRepository.class
 com\dikahadir\utils\DriverUtil.class
-com\dikahadir\page\UserPage.class
-com\dikahadir\repository\UserRepository.class
 com\dikahadir\page\LoginPage.class
 com\dikahadir\page\ManagementPage.class

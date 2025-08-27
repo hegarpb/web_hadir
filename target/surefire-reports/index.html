@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Main_Test" class="navigator-link">
-              <span class="suite-name border-passed">Main Test</span>
+              <span class="suite-name border-failed">Main Test</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -92,7 +92,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">3 methods,   3 passed</span>
+                    <span class="method-stats">4 methods, 1 failed,   3 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Main_Test" class="hide-methods failed suite-Main_Test"> (hide)</a> <!-- hide-methods failed suite-Main_Test -->
+                      <a href="#" panel-name="suite-Main_Test" class="show-methods failed suite-Main_Test"> (show)</a> <!-- show-methods failed suite-Main_Test -->
+                    </span>
+                    <div class="method-list-content failed suite-Main_Test">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Main_Test" title="com.dikahadir.runners.RunnerAturanCutiTest" class="method navigator-link" hash-for-method="runScenario(&quot;Mengedit aturan cuti dengan data invalid&quot;, &quot;Edit Aturan Cuti&quot;)">runScenario("Mengedit aturan cuti dengan data invalid", "Edit Aturan Cuti")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Main_Test -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -103,7 +117,7 @@
                     <div class="method-list-content passed suite-Main_Test">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Main_Test" title="com.dikahadir.runners.RunnerAturanCutiTest" class="method navigator-link" hash-for-method="runScenario(&quot;Mengedit aturan cuti dengan  field kosong&quot;, &quot;Edit Aturan Cuti&quot;)">runScenario("Mengedit aturan cuti dengan  field kosong", "Edit Aturan Cuti")</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Main_Test" title="com.dikahadir.runners.RunnerAturanCutiTest" class="method navigator-link" hash-for-method="runScenario(&quot;mengedit aturan cuti dengan data valid&quot;, &quot;Edit Aturan Cuti&quot;)">runScenario("mengedit aturan cuti dengan data valid", "Edit Aturan Cuti")</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -113,7 +127,7 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Main_Test" title="com.dikahadir.runners.RunnerAturanCutiTest" class="method navigator-link" hash-for-method="runScenario(&quot;mengedit aturan cuti dengan data valid&quot;, &quot;Edit Aturan Cuti&quot;)">runScenario("mengedit aturan cuti dengan data valid", "Edit Aturan Cuti")</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Main_Test" title="com.dikahadir.runners.RunnerAturanCutiTest" class="method navigator-link" hash-for-method="runScenario(&quot;Mengedit aturan cuti dengan  field kosong&quot;, &quot;Edit Aturan Cuti&quot;)">runScenario("Mengedit aturan cuti dengan  field kosong", "Edit Aturan Cuti")</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Main_Test -->
@@ -128,6 +142,29 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Main_Test" class="panel Main_Test">
+          <div class="suite-Main_Test-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.dikahadir.runners.RunnerAturanCutiTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Mengedit aturan cuti dengan data invalid&quot;, &quot;Edit Aturan Cuti&quot;)">
+                  </a> <!-- runScenario("Mengedit aturan cuti dengan data invalid", "Edit Aturan Cuti") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Mengedit aturan cuti dengan data invalid","Edit Aturan Cuti")</span>
+                  <div class="stack-trace">java.lang.AssertionError: Validasi Aturan Cuti tidak sesuai! expected [Gagal Mengubah Aturan Cuti] but found [Sukses Mengubah Aturan Cuti]
+	at com.dikahadir.definitions.aturancuti.EditAturanCutiTest.getPesanSukses(EditAturanCutiTest.java:82)
+	at ✽.sistem akan menampilkan pesan &quot;Gagal Mengubah Aturan Cuti&quot;.(file:///C:/Hegar/sqabatch23/TA/web_hadir/src/test/resources/features/aturancuti/EditAturanCuti.feature:36)
+... Removed 5 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Main_Test-class-failed -->
           <div class="suite-Main_Test-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -136,10 +173,10 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="runScenario(&quot;Mengedit aturan cuti dengan  field kosong&quot;, &quot;Edit Aturan Cuti&quot;)">
-                  </a> <!-- runScenario("Mengedit aturan cuti dengan  field kosong", "Edit Aturan Cuti") -->
+                  <a name="runScenario(&quot;mengedit aturan cuti dengan data valid&quot;, &quot;Edit Aturan Cuti&quot;)">
+                  </a> <!-- runScenario("mengedit aturan cuti dengan data valid", "Edit Aturan Cuti") -->
                   <span class="method-name">runScenario</span>
-                  <span class="parameters">("Mengedit aturan cuti dengan  field kosong","Edit Aturan Cuti")</span>
+                  <span class="parameters">("mengedit aturan cuti dengan data valid","Edit Aturan Cuti")</span>
                   <em>
 (Runs Cucumber Scenarios)                  </em>
                 </div> <!-- method-content -->
@@ -156,10 +193,10 @@
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="runScenario(&quot;mengedit aturan cuti dengan data valid&quot;, &quot;Edit Aturan Cuti&quot;)">
-                  </a> <!-- runScenario("mengedit aturan cuti dengan data valid", "Edit Aturan Cuti") -->
+                  <a name="runScenario(&quot;Mengedit aturan cuti dengan  field kosong&quot;, &quot;Edit Aturan Cuti&quot;)">
+                  </a> <!-- runScenario("Mengedit aturan cuti dengan  field kosong", "Edit Aturan Cuti") -->
                   <span class="method-name">runScenario</span>
-                  <span class="parameters">("mengedit aturan cuti dengan data valid","Edit Aturan Cuti")</span>
+                  <span class="parameters">("Mengedit aturan cuti dengan  field kosong","Edit Aturan Cuti")</span>
                   <em>
 (Runs Cucumber Scenarios)                  </em>
                 </div> <!-- method-content -->
@@ -226,19 +263,23 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(3);
+data.addRows(4);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'runScenario')
 data.setCell(0, 2, 'com.dikahadir.runners.RunnerAturanCutiTest')
-data.setCell(0, 3, 43763);
+data.setCell(0, 3, 32568);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'runScenario')
 data.setCell(1, 2, 'com.dikahadir.runners.RunnerAturanCutiTest')
-data.setCell(1, 3, 33490);
+data.setCell(1, 3, 20209);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'runScenario')
 data.setCell(2, 2, 'com.dikahadir.runners.RunnerAturanCutiTest')
-data.setCell(2, 3, 24507);
+data.setCell(2, 3, 19122);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'runScenario')
+data.setCell(3, 2, 'com.dikahadir.runners.RunnerAturanCutiTest')
+data.setCell(3, 3, 16982);
 window.suiteTableData['Main_Test']= { tableData: data, tableDiv: 'times-div-Main_Test'}
 return data;
 }
@@ -271,24 +312,30 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">com.dikahadir.runners.RunnerAturanCutiTest</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
-                <span class="method-name">setUpClass(org.testng.TestRunner@5bf4764d)</span>
+                <span class="method-name">setUpClass(org.testng.TestRunner@2af9a5ef)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">runScenario("mengedit aturan cuti dengan data valid", "Edit Aturan Cuti")</span>
-                <span class="method-start">763 ms</span>
+                <span class="method-start">772 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">runScenario("Mengedit aturan cuti dengan data invalid", "Edit Aturan Cuti")</span>
+                <span class="method-start">33344 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">runScenario("Mengedit aturan cuti dengan  field kosong", "Edit Aturan Cuti")</span>
-                <span class="method-start">44573 ms</span>
+                <span class="method-start">52470 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">runScenario("Batal Edit", "Edit Aturan Cuti")</span>
-                <span class="method-start">78079 ms</span>
+                <span class="method-start">72680 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownClass</span>
-                <span class="method-start">102616 ms</span>
+                <span class="method-start">89667 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
