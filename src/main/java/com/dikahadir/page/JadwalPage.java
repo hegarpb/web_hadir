@@ -13,290 +13,219 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import com.dikahadir.repository.AturanCutiRepository;
-import com.dikahadir.repository.JadwalRepository;
-
 public class JadwalPage {
     private WebDriver driver;
     private WebDriverWait wait;
-    private ManagementPage managementPage;
     private String defaultUrl = "https://magang.dikahadir.com/management/schedule";
 
-    
+    // ============================
+    // LOCATORS
+    // ============================
+    // Search & Filter
+    private By inputSearchJadwal = By.xpath("//input[@placeholder='cari berdasarkan nama']");
+    private By buttonSearchJadwal = By.xpath("//button[normalize-space()='Search']");
+    private By buttonReset = By.xpath("//button[normalize-space()='Reset']");
 
+    // Table
+    private By tabelJadwal = By.xpath("//table[contains(@class,'MuiTable-root')]");
+    private By tableFirstColumn = By.xpath("//table[contains(@class,'MuiTable-root')]//tbody/tr/td[1]");
+    private By tableRows = By.xpath("//table[contains(@class,'MuiTable-root')]//tbody/tr");
+    private By tableContainer = By.xpath("//table[contains(@class,'MuiTable-root')]");
 
+    // Form Tambah/Edit
+    private By buttonTambahJadwal = By.xpath("//button[normalize-space()='Tambahkan']");
+    private By dropdownTipeJadwal = By.id("typeJadwal");
+    private By inputNamaJadwalKerja = By.id("nameJadwal");
+    private By inputHariKerja = By.xpath("//label[normalize-space()='Hari kerja']/following::input[1]");
+    private By buttonPilihHari = By.xpath("//label[normalize-space()='Hari kerja']/following::button[1]");
+    private By inputToleransiKeterlambatan = By.xpath("//label[normalize-space()='Toleransi Keterlambatan']/following::input[1]");
+    private By inputLibur = By.xpath("//div[contains(@class, 'MuiSelect-select') and contains(text(), 'Libur')]");
+    private By pilihanHari = By.xpath("//ul[@role='listbox']/li");
+
+    // Calendar / Date Picker
+    private By iconCalendar = By.xpath("//button[contains(@aria-label,'Choose date')]//*[name()='svg']");
+    private By headerCalendar = By.xpath("//div[contains(@class,'MuiPickersCalendarHeader-label')]");
+    private By tombolNextMonth = By.xpath("//button//*[name()='svg' and @data-testid='ArrowRightIcon']/..");
+    private By tombolPrevMonth = By.xpath("//button//*[name()='svg' and @data-testid='ArrowLeftIcon']/..");
+
+    // Buttons
+    private By buttonTambah = By.xpath("//button[normalize-space()='Tambah']");
+    private By buttonBatal = By.xpath("//button[normalize-space()='Batal']");
+    private By buttonTerapkan = By.xpath("//button[normalize-space()='Terapkan']");
+    private By buttonSimpan = By.xpath("//button[normalize-space()='Simpan']");
+    private By buttonConfirm = By.xpath("//button[normalize-space()='Ya']");
+
+    // Modal / Dialog
+    private By alertDialog = By.id("alert-dialog-slide-title");
+    private By modalHeader = By.xpath("//h2[@id='alert-dialog-slide-title' and contains(text(), 'Jumlah Hari Kerja')]");
+
+    // Dropdown Menu
+    private By dropdownMenuItems = By.xpath("//li[@role='menuitem']");
+
+    // Popup / Snackbar
+    private By popupMessage = By.xpath("(//div[contains(@class,'MuiSnackbarContent-message')])[1]");
+
+    // ============================
+    // CONSTRUCTOR
+    // ============================
     public JadwalPage(WebDriver driver) {
         this.driver = driver;
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        this.managementPage = new ManagementPage(driver);       
     }
 
-    /* ==============================
-       🔹 Navigation & Page Control
-    ============================== */
+    // ============================
+    // NAVIGATION
+    // ============================
     public void navigateToJadwalPage() {
-        managementPage.clickJadwalMenu();
-    }
-
-    public String getCurrentUrl() {
-        return driver.getCurrentUrl();
+        driver.get(defaultUrl);
     }
 
     public void waitUrlToBeDefault() {
         wait.until(ExpectedConditions.urlToBe(defaultUrl));
     }
 
-    /* ==============================
-       🔹 Search & Reset Jadwal
-    ============================== */
+    // ============================
+    // SEARCH & RESET
+    // ============================
     public void inputSearchJadwal(String value) {
-        WebElement searchInput = wait.until(
-                ExpectedConditions.visibilityOfElementLocated(JadwalRepository.inputSearchJadwal));
-        searchInput.clear();
-        searchInput.sendKeys(value);
+        WebElement input = wait.until(ExpectedConditions.visibilityOfElementLocated(inputSearchJadwal));
+        input.clear();
+        input.sendKeys(value);
     }
 
     public void clickSearchJadwal() {
-        safeClick(wait.until(ExpectedConditions.elementToBeClickable(JadwalRepository.buttonSearchJadwal)));
+        safeClick(wait.until(ExpectedConditions.elementToBeClickable(buttonSearchJadwal)));
     }
 
     public void clickResetSearchJadwal() {
-        safeClick(wait.until(ExpectedConditions.elementToBeClickable(JadwalRepository.buttonReset)));
+        safeClick(wait.until(ExpectedConditions.elementToBeClickable(buttonReset)));
     }
 
-    /* ==============================
-       🔹 Form Input (Tambah/Edit Jadwal)
-    ============================== */
+    // ============================
+    // FORM INPUT
+    // ============================
     public void clickTambahJadwal() {
-        safeClick(wait.until(ExpectedConditions.elementToBeClickable(JadwalRepository.buttonTambahJadwal)));
+        safeClick(wait.until(ExpectedConditions.elementToBeClickable(buttonTambahJadwal)));
     }
 
     public void inputNamaJadwal(String value) {
-        WebElement inputNamaJadwal = wait.until(
-                ExpectedConditions.visibilityOfElementLocated(JadwalRepository.inputNamaJadwalKerja));
-        inputNamaJadwal.clear();
-        inputNamaJadwal.sendKeys(value);
+        WebElement input = wait.until(ExpectedConditions.visibilityOfElementLocated(inputNamaJadwalKerja));
+        input.clear();
+        input.sendKeys(value);
     }
 
-   public void setTipeJadwal(String tipe) {
-    if (tipe == null || tipe.isBlank()) {
-        return;
+    public void setTipeJadwal(String tipe) {
+        if (tipe == null || tipe.isBlank()) return;
+        WebElement dropdown = wait.until(ExpectedConditions.elementToBeClickable(dropdownTipeJadwal));
+        dropdown.click();
+        WebElement option = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//li[normalize-space()='" + tipe + "']")));
+        option.click();
+        wait.until(ExpectedConditions.invisibilityOf(option));
     }
 
-    WebElement element = wait.until(
-        ExpectedConditions.elementToBeClickable(JadwalRepository.dropdownTipeJadwal)
-    );
-    element.click();
-
-    wait.until(ExpectedConditions.visibilityOfElementLocated(JadwalRepository.dropdownTipeJadwal));
-
-    WebElement option = wait.until(ExpectedConditions.elementToBeClickable(
-        By.xpath("//li[normalize-space()='" + tipe + "']"))
-    );
-    option.click();
-
-    wait.until(ExpectedConditions.invisibilityOfElementLocated(By.id("menu-typeJadwal")));
-}
-
-    public void clickIconCalendar(){
-        WebElement icon = wait.until(
-            ExpectedConditions.elementToBeClickable(JadwalRepository.iconCalendar)
-    );
-    icon.click();
+    public void clickIconCalendar() {
+        safeClick(wait.until(ExpectedConditions.elementToBeClickable(iconCalendar)));
     }
 
-    public void setBulanTahun(String bulan,String tahun){
-        
-
-    WebElement header = wait.until(ExpectedConditions.visibilityOfElementLocated(JadwalRepository.headerCalendar));
-
-    while (true) {
-        String text = header.getText();
-
-        if (text.contains(bulan) && text.contains(tahun)) {
-            break; 
+    public void setBulanTahun(String bulan, String tahun) {
+        WebElement header = wait.until(ExpectedConditions.visibilityOfElementLocated(headerCalendar));
+        while (!header.getText().contains(bulan) || !header.getText().contains(tahun)) {
+            safeClick(wait.until(ExpectedConditions.elementToBeClickable(tombolNextMonth)));
+            header = wait.until(ExpectedConditions.visibilityOfElementLocated(headerCalendar));
         }
-
-        WebElement next = wait.until(ExpectedConditions.elementToBeClickable(JadwalRepository.tombolNextMonth));
-        next.click();
-
-        header = wait.until(ExpectedConditions.visibilityOfElementLocated(JadwalRepository.headerCalendar
-        ));
     }
-}
 
-    
-
- public void setTanggal(String hari, String bulan, String tahun) {
-    setBulanTahun(bulan, tahun);
-
-    WebElement day = wait.until(ExpectedConditions.elementToBeClickable(
-        By.xpath("//button[@role='gridcell' and normalize-space()='" + hari + "']")));
-    day.click();
-}
+    public void setTanggal(String hari, String bulan, String tahun) {
+        setBulanTahun(bulan, tahun);
+        WebElement day = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@role='gridcell' and normalize-space()='" + hari + "']")));
+        day.click();
+    }
 
     public void clickButtonHariKerja() {
-        WebElement buttonHariKerja = wait.until(
-                ExpectedConditions.elementToBeClickable(JadwalRepository.buttonPilihHari));
-        buttonHariKerja.click();
+        safeClick(wait.until(ExpectedConditions.elementToBeClickable(buttonPilihHari)));
     }
 
     public void clickButtonTerapkan() {
-        WebElement buttonTerapkan = wait.until(
-                ExpectedConditions.elementToBeClickable(JadwalRepository.buttonTerapkan));
-        buttonTerapkan.click();
+        safeClick(wait.until(ExpectedConditions.elementToBeClickable(buttonTerapkan)));
     }
 
-   public void clickButtonTambah() {
-    // Tunggu backdrop benar-benar hilang
-    try {
-        wait.until(ExpectedConditions.invisibilityOfElementLocated(
-            By.cssSelector("div.MuiBackdrop-root.MuiModal-backdrop")
-        ));
-    } catch (TimeoutException e) {
-        System.out.println("Backdrop masih terlihat, lanjut pakai JS click...");
+    public void clickButtonTambah() {
+        safeClick(wait.until(ExpectedConditions.elementToBeClickable(buttonTambah)));
     }
 
-    WebElement buttonTambah = wait.until(
-        ExpectedConditions.elementToBeClickable(JadwalRepository.buttonTambah)
-    );
-
-    try {
-        buttonTambah.click();
-    } catch (ElementClickInterceptedException e) {
-        // Fallback pakai JS click kalau masih ketutupan
-        ((JavascriptExecutor) driver).executeScript("arguments[0].click();", buttonTambah);
+    public void clickButtonBatal() {
+        safeClick(wait.until(ExpectedConditions.elementToBeClickable(buttonBatal)));
     }
-}
 
-
-public void clickButtonBatal(){
-    WebElement buttonBatal = wait.until(
-                ExpectedConditions.elementToBeClickable(JadwalRepository.buttonBatal));
-        buttonBatal.click();
-}
-
-public void modalTutup() {
-    try {
-        boolean isClosed = wait.until(
-            ExpectedConditions.invisibilityOfElementLocated(JadwalRepository.alertDialog)
-        );
-        if (!isClosed) {
-            throw new AssertionError("Modal tambah jadwal masih terbuka!");
-        }
-    } catch (TimeoutException e) {
-        throw new AssertionError("Modal tambah jadwal tidak tertutup dalam waktu yang diharapkan!");
+    public void clickButtonSimpan() {
+        safeClick(wait.until(ExpectedConditions.elementToBeClickable(buttonSimpan)));
     }
-}
 
-public void clickButtonSimpan(){
-     WebElement buttonSimpan = wait.until(
-                ExpectedConditions.elementToBeClickable(JadwalRepository.buttonSimpan));
-        buttonSimpan.click();
-}
-
-    public void clickButonYa(){
-        WebElement buttonConfirm = wait.until(
-                ExpectedConditions.elementToBeClickable(JadwalRepository.buttonConfirm));
-        buttonConfirm.click();
+    public void clickButtonConfirm() {
+        safeClick(wait.until(ExpectedConditions.elementToBeClickable(buttonConfirm)));
     }
 
     public void inputToleransiTerlambat(String menit) {
-    WebElement waktu = wait.until(
-            ExpectedConditions.elementToBeClickable(JadwalRepository.inputToleransiKeterlambatan));
-    
-    ((JavascriptExecutor) driver).executeScript("arguments[0].click();", waktu);
-    waktu.clear();
-    waktu.sendKeys(menit);
-}
-
-   public boolean isElementModalHeaderVisible() {
-    try {
-        WebElement element = driver.findElement(JadwalRepository.modalHeader);
-        return element.isDisplayed();
-    } catch (NoSuchElementException e) {
-        return false;
+        WebElement input = wait.until(ExpectedConditions.visibilityOfElementLocated(inputToleransiKeterlambatan));
+        input.clear();
+        input.sendKeys(menit);
     }
-   }
 
-   public List<WebElement> getDaftarInputLibur() {
-    List<WebElement> daftarInputLibur = wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(JadwalRepository.inputLibur));
-    return daftarInputLibur;
-   }
-
-   public void clickLiburListbox(int index) {
-    List<WebElement> daftarInputLibur = wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(JadwalRepository.pilihanHari));
-    daftarInputLibur.get(index).click();
-   }
-
-    public void isiSemuaHari()  {
-        byte index = 1;
-
+    public boolean isElementModalHeaderVisible() {
         try {
-            
-            for (WebElement element: getDaftarInputLibur()) {
-                element.click();
-                clickLiburListbox(index);
-                Thread.sleep(2000);
-                index++;
-            }
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-            e.getStackTrace();
+            return driver.findElement(modalHeader).isDisplayed();
+        } catch (NoSuchElementException e) {
+            return false;
         }
-}
-
-
-    /* ==============================
-       🔹 Table Handling
-    ============================== */
-    public List<String> getAllJadwal() {
-        waitTableToBeVisible();
-        List<WebElement> rows = driver.findElements(JadwalRepository.tableFirstColumn);
-
-        if (rows.isEmpty()) {
-            return List.of();
-        }
-
-        return rows.stream()
-                .map(el -> el.getText().trim())
-                .filter(text -> !text.isEmpty() && !text.equalsIgnoreCase("Tidak Ada Data"))
-                .toList();
     }
 
-    public int getJumlahJadwal() {
-        waitTableToBeVisible();
-        return driver.findElements(AturanCutiRepository.tableRows).size();
+    public void isiSemuaHari() throws InterruptedException {
+        List<WebElement> daftarInputLibur = wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(inputLibur));
+        int index = 1;
+        for (WebElement libur : daftarInputLibur) {
+            libur.click();
+            List<WebElement> pilihan = wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(pilihanHari));
+            if (index < pilihan.size()) {
+                pilihan.get(index).click();
+            }
+            Thread.sleep(1000);
+            index++;
+        }
+    }
+
+    public void displayNamaJadwal(String nama) {
+        inputSearchJadwal(nama);
+        clickSearchJadwal();
+        wait.until(ExpectedConditions.textToBePresentInElementLocated(tableFirstColumn, nama));
+    }
+
+    // ============================
+    // TABLE HANDLING
+    // ============================
+    public List<String> getAllJadwal() {
+        wait.until(ExpectedConditions.visibilityOfElementLocated(tabelJadwal));
+        List<WebElement> rows = driver.findElements(tableFirstColumn);
+        return rows.stream()
+                .map(WebElement::getText)
+                .filter(t -> !t.isEmpty() && !t.equalsIgnoreCase("Tidak Ada Data"))
+                .toList();
     }
 
     public boolean isTableEmpty() {
         return getAllJadwal().isEmpty();
     }
 
-    /* ==============================
-       🔹Tombol Action
-    ============================== */
-   public void clickActionButtonRowPertama() {
+    // ============================
+    // DROPDOWN ACTION MENU
+    // ============================
+    public void clickActionButtonRowPertama() {
         try {
-            wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(AturanCutiRepository.tableRows));
-            wait.until(ExpectedConditions.visibilityOfElementLocated(AturanCutiRepository.tableContainer));
-
-            WebElement firstRow = driver.findElements(AturanCutiRepository.tableRows).get(0);
-            WebElement actionButton = firstRow.findElement(
-                By.xpath(".//button[contains(@class,'MuiIconButton')]")
-            );
-
-            wait.until(ExpectedConditions.elementToBeClickable(actionButton));
-
-            try {
-                actionButton.click();
-                System.out.println(" Klik berhasil dengan click()");
-            } catch (Exception e) {
-                ((JavascriptExecutor) driver).executeScript("arguments[0].click();", actionButton);
-                System.out.println("⚡ Klik berhasil dengan JavaScriptExecutor");
-            }
+            wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(tableRows));
+            WebElement firstRow = driver.findElements(tableRows).get(0);
+            WebElement actionButton = firstRow.findElement(By.xpath(".//button[contains(@class,'MuiIconButton')]"));
+            safeClick(actionButton);
         } catch (Exception e) {
-            throw new RuntimeException(" Gagal klik tombol action di row pertama", e);
+            throw new RuntimeException("Gagal klik tombol action di row pertama", e);
         }
     }
 
@@ -305,94 +234,79 @@ public void clickButtonSimpan(){
     public void clickDetailMenu() { clickDropdownOption("Detail"); }
 
     private void clickDropdownOption(String optionText) {
-        try {
-            List<WebElement> menuItems = wait.until(
-                ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("//li[@role='menuitem']"))
-            );
-
-            for (WebElement item : menuItems) {
-                String text = item.getText().trim();
-                if (text.equalsIgnoreCase(optionText)) {
-                    ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", item);
-                    ((JavascriptExecutor) driver).executeScript("arguments[0].click();", item);
-                    return;
-                }
+        List<WebElement> menuItems = wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(dropdownMenuItems));
+        for (WebElement item : menuItems) {
+            if (item.getText().trim().equalsIgnoreCase(optionText)) {
+                ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", item);
+                ((JavascriptExecutor) driver).executeScript("arguments[0].click();", item);
+                return;
             }
-            throw new RuntimeException(" Menu '" + optionText + "' tidak ditemukan di dropdown!");
-        } catch (Exception e) {
-            printAllDropdownOptions();
-            throw new RuntimeException(" Gagal klik menu " + optionText + ". Detail: " + e.getMessage(), e);
         }
+        throw new RuntimeException("Menu '" + optionText + "' tidak ditemukan!");
     }
 
-     public void printAllDropdownOptions() {
-        List<WebElement> options = driver.findElements(By.xpath("//li[@role='menuitem']"));
-        System.out.println("=== Dropdown Options Found ===");
-        for (WebElement option : options) {
-            System.out.println("Option: [" + option.getText().trim() + "]");
-        }
-        System.out.println("=== End of Options ===");
+    // ============================
+    // POPUP / SNACKBAR
+    // ============================
+    public String getPopupMessage() {
+        WebElement popup = wait.until(ExpectedConditions.visibilityOfElementLocated(popupMessage));
+        return popup.getText().trim();
     }
 
-
-    /* ==============================
-       🔹 Popup / Snackbar
-    ============================== */
-   public String getPopupMessage() {
-    WebElement popup = wait.until(
-        ExpectedConditions.visibilityOfElementLocated(
-            By.xpath("(//div[contains(@class,'MuiSnackbarContent-message')])[1]")
-        )
-    );
-    return popup.getText().trim();
-}
-
-
-  public String getValidationNamaJadwal() {
-    wait.until(ExpectedConditions.presenceOfElementLocated(JadwalRepository.inputNamaJadwalKerja)).getAttribute("validationMessage");
-    return driver.findElement(JadwalRepository.inputNamaJadwalKerja).getAttribute("validationMessage");
-}
-
-
-public String getValidationToleransi() {
-    wait.until(ExpectedConditions.visibilityOfElementLocated(JadwalRepository.inputToleransiKeterlambatan)).getAttribute("validationMessage");
-    return driver.findElement(JadwalRepository.inputToleransiKeterlambatan).getAttribute("validationMessage");
+    // ============================
+    // VALIDATION
+    // ============================
+    public String getValidationNamaJadwal() {
+        return getValidationMessage(inputNamaJadwalKerja);
     }
+
+    public String getValidationToleransi() {
+        return getValidationMessage(inputToleransiKeterlambatan);
+    }
+
     public String getValidationTipeJadwal() {
-    WebElement hiddenInput = driver.findElement(JadwalRepository.dropdownTipeJadwal);
-    return (String) ((JavascriptExecutor) driver).executeScript(
-            "return arguments[0].validationMessage;", hiddenInput
-    );
-}
-
-
-
-    /* ==============================
-       🔹 Utility
-    ============================== */
-    private void waitTableToBeVisible() {
-        wait.until(ExpectedConditions.visibilityOfElementLocated(JadwalRepository.tabelJadwal));
+        return getValidationMessage(dropdownTipeJadwal);
     }
 
+    private String getValidationMessage(By locator) {
+        WebElement element = driver.findElement(locator);
+        return (String)((JavascriptExecutor) driver).executeScript("return arguments[0].validationMessage;", element);
+    }
+
+    // ============================
+    // MODAL
+    // ============================
+    public void modalTutup() {
+        try {
+            boolean isClosed = wait.until(
+                ExpectedConditions.invisibilityOfElementLocated(alertDialog)
+            );
+            if (!isClosed) {
+                throw new AssertionError("Modal tambah/edit jadwal masih terbuka!");
+            }
+        } catch (TimeoutException e) {
+            throw new AssertionError("Modal tambah/edit jadwal tidak tertutup dalam waktu yang diharapkan!");
+        }
+    }
+
+    // ============================
+    // UTILITY
+    // ============================
     private void safeClick(WebElement element) {
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
         try {
-            wait.until(ExpectedConditions.elementToBeClickable(element)).click();
+            element.click();
         } catch (ElementClickInterceptedException e) {
             ((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
         }
     }
-
-    public void displayNamaJadwal(String value) {
-    wait.until(ExpectedConditions.invisibilityOfElementLocated(JadwalRepository.modalHeader));
-
-    inputSearchJadwal(value);
-    clickSearchJadwal();
-
-    wait.until(ExpectedConditions.textToBePresentInElementLocated(
-        JadwalRepository.tableFirstColumn, value
-    ));
+    public int getJumlahJadwal() {
+    wait.until(ExpectedConditions.visibilityOfElementLocated(tabelJadwal));
+    List<WebElement> rows = driver.findElements(tableFirstColumn);
+    // Hitung yang valid (tidak kosong dan bukan "Tidak Ada Data")
+    return (int) rows.stream()
+            .map(WebElement::getText)
+            .filter(t -> !t.isEmpty() && !t.equalsIgnoreCase("Tidak Ada Data"))
+            .count();
 }
-
-
 }

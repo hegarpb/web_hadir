@@ -59,7 +59,7 @@ public class EditJadwalTest {
     }
 
     @And("user mengisi jumlah hari kerja.")
-    public void isiHariKerja() {
+    public void isiHariKerja() throws InterruptedException {
         jadwalPage.isiSemuaHari();
     }
 

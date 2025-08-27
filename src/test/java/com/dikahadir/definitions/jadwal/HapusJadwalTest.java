@@ -33,7 +33,7 @@ public class HapusJadwalTest {
 
     @When("user menekan tombol Ya pada pesan konfirmasi dialog")
     public void confirmDialog(){
-        jadwalPage.clickButonYa();
+        jadwalPage.clickButtonConfirm();
     }
 
     @Then("nama jadwal akan terhapus dari tabel dan sistem akan menpilkan pesan {string}")

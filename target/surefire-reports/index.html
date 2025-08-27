@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Main_Test" class="navigator-link">
-              <span class="suite-name border-passed">Main Test</span>
+              <span class="suite-name border-failed">Main Test</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -92,7 +92,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">10 methods,   10 passed</span>
+                    <span class="method-stats">10 methods, 1 failed,   9 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Main_Test" class="hide-methods failed suite-Main_Test"> (hide)</a> <!-- hide-methods failed suite-Main_Test -->
+                      <a href="#" panel-name="suite-Main_Test" class="show-methods failed suite-Main_Test"> (show)</a> <!-- show-methods failed suite-Main_Test -->
+                    </span>
+                    <div class="method-list-content failed suite-Main_Test">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Main_Test" title="com.dikahadir.runners.RunnerJadwalTest" class="method navigator-link" hash-for-method="runScenario(&quot;Edit jadwal&quot;, &quot;Edit Jadwal&quot;)">runScenario("Edit jadwal", "Edit Jadwal")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Main_Test -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -103,22 +117,12 @@
                     <div class="method-list-content passed suite-Main_Test">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Main_Test" title="com.dikahadir.runners.RunnerJadwalTest" class="method navigator-link" hash-for-method="runScenario(&quot;Edit jadwal dengan field kosong&quot;, &quot;Edit Jadwal&quot;)">runScenario("Edit jadwal dengan field kosong", "Edit Jadwal")</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Main_Test" title="com.dikahadir.runners.RunnerJadwalTest" class="method navigator-link" hash-for-method="runScenario(&quot;Search jadwal dengan data invalid&quot;, &quot;Sebagai user saya ingin mencari nama jadwal&quot;)">runScenario("Search jadwal dengan data invalid", "Sebagai user saya ingin mencari nama jadwal")</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Main_Test" title="com.dikahadir.runners.RunnerJadwalTest" class="method navigator-link" hash-for-method="runScenario(&quot;Tambah jadwal dengan data valid&quot;, &quot;Tambah jadwal&quot;)">runScenario("Tambah jadwal dengan data valid", "Tambah jadwal")</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Main_Test" title="com.dikahadir.runners.RunnerJadwalTest" class="method navigator-link" hash-for-method="runScenario(&quot;Edit jadwal&quot;, &quot;Edit Jadwal&quot;)">runScenario("Edit jadwal", "Edit Jadwal")</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Main_Test" title="com.dikahadir.runners.RunnerJadwalTest" class="method navigator-link" hash-for-method="runScenario(&quot;Edit jadwal dengan field kosong&quot;, &quot;Edit Jadwal&quot;)">runScenario("Edit jadwal dengan field kosong", "Edit Jadwal")</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -128,17 +132,7 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Main_Test" title="com.dikahadir.runners.RunnerJadwalTest" class="method navigator-link" hash-for-method="runScenario(&quot;Delete jadwal&quot;, &quot;Delete Jadwal&quot;)">runScenario("Delete jadwal", "Delete Jadwal")</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Main_Test" title="com.dikahadir.runners.RunnerJadwalTest" class="method navigator-link" hash-for-method="runScenario(&quot;Batal Edit&quot;, &quot;Edit Jadwal&quot;)">runScenario("Batal Edit", "Edit Jadwal")</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Main_Test" title="com.dikahadir.runners.RunnerJadwalTest" class="method navigator-link" hash-for-method="runScenario(&quot;Reset Pencarian jadwal&quot;, &quot;Tombol Reset&quot;)">runScenario("Reset Pencarian jadwal", "Tombol Reset")</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -148,7 +142,22 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Main_Test" title="com.dikahadir.runners.RunnerJadwalTest" class="method navigator-link" hash-for-method="runScenario(&quot;Delete jadwal&quot;, &quot;Delete Jadwal&quot;)">runScenario("Delete jadwal", "Delete Jadwal")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Main_Test" title="com.dikahadir.runners.RunnerJadwalTest" class="method navigator-link" hash-for-method="runScenario(&quot;Edit jadwal dengan field kosong&quot;, &quot;Edit Jadwal&quot;)">runScenario("Edit jadwal dengan field kosong", "Edit Jadwal")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Main_Test" title="com.dikahadir.runners.RunnerJadwalTest" class="method navigator-link" hash-for-method="runScenario(&quot;Reset Pencarian jadwal&quot;, &quot;Tombol Reset&quot;)">runScenario("Reset Pencarian jadwal", "Tombol Reset")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Main_Test" title="com.dikahadir.runners.RunnerJadwalTest" class="method navigator-link" hash-for-method="runScenario(&quot;Search jadwal dengan data invalid&quot;, &quot;Sebagai user saya ingin mencari nama jadwal&quot;)">runScenario("Search jadwal dengan data invalid", "Sebagai user saya ingin mencari nama jadwal")</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Main_Test -->
@@ -163,32 +172,43 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Main_Test" class="panel Main_Test">
+          <div class="suite-Main_Test-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.dikahadir.runners.RunnerJadwalTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Edit jadwal&quot;, &quot;Edit Jadwal&quot;)">
+                  </a> <!-- runScenario("Edit jadwal", "Edit Jadwal") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Edit jadwal","Edit Jadwal")</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of any elements located by By.xpath: //div[contains(@class, &apos;MuiSelect-select&apos;) and contains(text(), &apos;Libur&apos;)] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.34.0&apos;, revision: &apos;707dcb4246*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.8&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 142.0, moz:accessibilityChecks: false, moz:buildID: 20250811145442, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 252376, moz:profile: C:\Users\LENOVO\AppData\Loc..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Session ID: 895a17f6-f316-42c7-aefe-e272a576c3a1
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at com.dikahadir.page.JadwalPage.isiSemuaHari(JadwalPage.java:183)
+	at com.dikahadir.definitions.jadwal.EditJadwalTest.isiHariKerja(EditJadwalTest.java:63)
+	at ✽.user mengisi jumlah hari kerja.(file:///C:/Hegar/sqabatch23/TA/web_hadir/src/test/resources/features/jadwal/EditJadwal.feature:14)
+
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Main_Test-class-failed -->
           <div class="suite-Main_Test-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
               <span class="class-name">com.dikahadir.runners.RunnerJadwalTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="runScenario(&quot;Edit jadwal dengan field kosong&quot;, &quot;Edit Jadwal&quot;)">
-                  </a> <!-- runScenario("Edit jadwal dengan field kosong", "Edit Jadwal") -->
-                  <span class="method-name">runScenario</span>
-                  <span class="parameters">("Edit jadwal dengan field kosong","Edit Jadwal")</span>
-                  <em>
-(Runs Cucumber Scenarios)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="runScenario(&quot;Search jadwal dengan data invalid&quot;, &quot;Sebagai user saya ingin mencari nama jadwal&quot;)">
-                  </a> <!-- runScenario("Search jadwal dengan data invalid", "Sebagai user saya ingin mencari nama jadwal") -->
-                  <span class="method-name">runScenario</span>
-                  <span class="parameters">("Search jadwal dengan data invalid","Sebagai user saya ingin mencari nama jadwal")</span>
-                  <em>
-(Runs Cucumber Scenarios)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
                   <a name="runScenario(&quot;Tambah jadwal dengan data valid&quot;, &quot;Tambah jadwal&quot;)">
@@ -201,10 +221,10 @@
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="runScenario(&quot;Edit jadwal&quot;, &quot;Edit Jadwal&quot;)">
-                  </a> <!-- runScenario("Edit jadwal", "Edit Jadwal") -->
+                  <a name="runScenario(&quot;Edit jadwal dengan field kosong&quot;, &quot;Edit Jadwal&quot;)">
+                  </a> <!-- runScenario("Edit jadwal dengan field kosong", "Edit Jadwal") -->
                   <span class="method-name">runScenario</span>
-                  <span class="parameters">("Edit jadwal","Edit Jadwal")</span>
+                  <span class="parameters">("Edit jadwal dengan field kosong","Edit Jadwal")</span>
                   <em>
 (Runs Cucumber Scenarios)                  </em>
                 </div> <!-- method-content -->
@@ -221,30 +241,10 @@
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="runScenario(&quot;Delete jadwal&quot;, &quot;Delete Jadwal&quot;)">
-                  </a> <!-- runScenario("Delete jadwal", "Delete Jadwal") -->
-                  <span class="method-name">runScenario</span>
-                  <span class="parameters">("Delete jadwal","Delete Jadwal")</span>
-                  <em>
-(Runs Cucumber Scenarios)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
                   <a name="runScenario(&quot;Batal Edit&quot;, &quot;Edit Jadwal&quot;)">
                   </a> <!-- runScenario("Batal Edit", "Edit Jadwal") -->
                   <span class="method-name">runScenario</span>
                   <span class="parameters">("Batal Edit","Edit Jadwal")</span>
-                  <em>
-(Runs Cucumber Scenarios)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="runScenario(&quot;Reset Pencarian jadwal&quot;, &quot;Tombol Reset&quot;)">
-                  </a> <!-- runScenario("Reset Pencarian jadwal", "Tombol Reset") -->
-                  <span class="method-name">runScenario</span>
-                  <span class="parameters">("Reset Pencarian jadwal","Tombol Reset")</span>
                   <em>
 (Runs Cucumber Scenarios)                  </em>
                 </div> <!-- method-content -->
@@ -261,10 +261,40 @@
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
+                  <a name="runScenario(&quot;Delete jadwal&quot;, &quot;Delete Jadwal&quot;)">
+                  </a> <!-- runScenario("Delete jadwal", "Delete Jadwal") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Delete jadwal","Delete Jadwal")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
                   <a name="runScenario(&quot;Edit jadwal dengan field kosong&quot;, &quot;Edit Jadwal&quot;)">
                   </a> <!-- runScenario("Edit jadwal dengan field kosong", "Edit Jadwal") -->
                   <span class="method-name">runScenario</span>
                   <span class="parameters">("Edit jadwal dengan field kosong","Edit Jadwal")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Reset Pencarian jadwal&quot;, &quot;Tombol Reset&quot;)">
+                  </a> <!-- runScenario("Reset Pencarian jadwal", "Tombol Reset") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Reset Pencarian jadwal","Tombol Reset")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Search jadwal dengan data invalid&quot;, &quot;Sebagai user saya ingin mencari nama jadwal&quot;)">
+                  </a> <!-- runScenario("Search jadwal dengan data invalid", "Sebagai user saya ingin mencari nama jadwal") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Search jadwal dengan data invalid","Sebagai user saya ingin mencari nama jadwal")</span>
                   <em>
 (Runs Cucumber Scenarios)                  </em>
                 </div> <!-- method-content -->
@@ -335,48 +365,48 @@ data.addRows(10);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'runScenario')
 data.setCell(0, 2, 'com.dikahadir.runners.RunnerJadwalTest')
-data.setCell(0, 3, 45404);
+data.setCell(0, 3, 36257);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'runScenario')
 data.setCell(1, 2, 'com.dikahadir.runners.RunnerJadwalTest')
-data.setCell(1, 3, 45235);
+data.setCell(1, 3, 33930);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'runScenario')
 data.setCell(2, 2, 'com.dikahadir.runners.RunnerJadwalTest')
-data.setCell(2, 3, 26221);
+data.setCell(2, 3, 20906);
 data.setCell(3, 0, 3)
 data.setCell(3, 1, 'runScenario')
 data.setCell(3, 2, 'com.dikahadir.runners.RunnerJadwalTest')
-data.setCell(3, 3, 24392);
+data.setCell(3, 3, 20189);
 data.setCell(4, 0, 4)
 data.setCell(4, 1, 'runScenario')
 data.setCell(4, 2, 'com.dikahadir.runners.RunnerJadwalTest')
-data.setCell(4, 3, 20386);
+data.setCell(4, 3, 19719);
 data.setCell(5, 0, 5)
 data.setCell(5, 1, 'runScenario')
 data.setCell(5, 2, 'com.dikahadir.runners.RunnerJadwalTest')
-data.setCell(5, 3, 17270);
+data.setCell(5, 3, 18457);
 data.setCell(6, 0, 6)
 data.setCell(6, 1, 'runScenario')
 data.setCell(6, 2, 'com.dikahadir.runners.RunnerJadwalTest')
-data.setCell(6, 3, 17149);
+data.setCell(6, 3, 16484);
 data.setCell(7, 0, 7)
 data.setCell(7, 1, 'runScenario')
 data.setCell(7, 2, 'com.dikahadir.runners.RunnerJadwalTest')
-data.setCell(7, 3, 16879);
+data.setCell(7, 3, 15758);
 data.setCell(8, 0, 8)
 data.setCell(8, 1, 'runScenario')
 data.setCell(8, 2, 'com.dikahadir.runners.RunnerJadwalTest')
-data.setCell(8, 3, 16510);
+data.setCell(8, 3, 15554);
 data.setCell(9, 0, 9)
 data.setCell(9, 1, 'runScenario')
 data.setCell(9, 2, 'com.dikahadir.runners.RunnerJadwalTest')
-data.setCell(9, 3, 16142);
+data.setCell(9, 3, 14203);
 window.suiteTableData['Main_Test']= { tableData: data, tableDiv: 'times-div-Main_Test'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 4 minutes</span>
+              <span class="suite-total-time">Total running time: 3 minutes</span>
               <div id="times-div-Main_Test">
               </div> <!-- times-div-Main_Test -->
             </div> <!-- times-div -->
@@ -404,52 +434,54 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">com.dikahadir.runners.RunnerJadwalTest</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
-                <span class="method-name">setUpClass(org.testng.TestRunner@7aca299e)</span>
+                <span class="method-name">setUpClass(org.testng.TestRunner@5383bf08)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">runScenario("Menampilkan detail jadwal", "Detail Jadwal")</span>
-                <span class="method-start">799 ms</span>
+                <span class="method-start">749 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">runScenario("Edit jadwal", "Edit Jadwal")</span>
-                <span class="method-start">21185 ms</span>
+                <span class="method-start">19216 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">runScenario("Edit jadwal dengan field kosong", "Edit Jadwal")</span>
-                <span class="method-start">66604 ms</span>
+                <span class="method-start">53180 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">runScenario("Edit jadwal dengan field kosong", "Edit Jadwal")</span>
-                <span class="method-start">91012 ms</span>
+                <span class="method-start">74092 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">runScenario("Batal Edit", "Edit Jadwal")</span>
-                <span class="method-start">107891 ms</span>
+                <span class="method-start">94297 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">runScenario("Delete jadwal", "Delete Jadwal")</span>
-                <span class="method-start">125164 ms</span>
+                <span class="method-start">110055 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">runScenario("Reset Pencarian jadwal", "Tombol Reset")</span>
-                <span class="method-start">151385 ms</span>
+                <span class="method-start">125625 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">runScenario("Search jadwal dengan data valid", "Sebagai user saya ingin mencari nama jadwal")</span>
-                <span class="method-start">167527 ms</span>
+                <span class="method-start">139828 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">runScenario("Search jadwal dengan data invalid", "Sebagai user saya ingin mencari nama jadwal")</span>
-                <span class="method-start">184037 ms</span>
+                <span class="method-start">156321 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">runScenario("Tambah jadwal dengan data valid", "Tambah jadwal")</span>
-                <span class="method-start">201186 ms</span>
+                <span class="method-start">176048 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownClass</span>
-                <span class="method-start">246475 ms</span>
+                <span class="method-start">212352 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

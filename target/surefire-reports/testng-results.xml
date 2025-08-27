@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="10" passed="10" failed="0" skipped="0">
+<testng-results ignored="0" total="10" passed="9" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-08-27T16:17:11 WIB" name="Main Test" finished-at="2025-08-27T16:21:19 WIB" duration-ms="247686">
+  <suite started-at="2025-08-27T17:07:35 WIB" name="Main Test" finished-at="2025-08-27T17:11:09 WIB" duration-ms="213810">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.dikahadir.runners.RunnerJadwalTest@4218d6a3]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2025-08-27T16:17:11 WIB" name="Test Math" finished-at="2025-08-27T16:21:19 WIB" duration-ms="247686">
+    <test started-at="2025-08-27T17:07:35 WIB" name="Test Math" finished-at="2025-08-27T17:11:09 WIB" duration-ms="213810">
       <class name="com.dikahadir.runners.RunnerJadwalTest">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.dikahadir.runners.RunnerJadwalTest@4218d6a3]" started-at="2025-08-27T16:17:11 WIB" name="setUpClass" finished-at="2025-08-27T16:17:12 WIB" duration-ms="780" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.dikahadir.runners.RunnerJadwalTest@4218d6a3]" started-at="2025-08-27T17:07:35 WIB" name="setUpClass" finished-at="2025-08-27T17:07:36 WIB" duration-ms="735" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@7aca299e]]>
+                <![CDATA[org.testng.TestRunner@5383bf08]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.dikahadir.runners.RunnerJadwalTest@4218d6a3]" started-at="2025-08-27T16:17:12 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-27T16:17:33 WIB" duration-ms="20386" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.dikahadir.runners.RunnerJadwalTest@4218d6a3]" started-at="2025-08-27T17:07:36 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-27T17:07:55 WIB" duration-ms="18457" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -37,7 +37,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.dikahadir.runners.RunnerJadwalTest@4218d6a3]" started-at="2025-08-27T16:17:33 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-27T16:18:18 WIB" duration-ms="45404" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.dikahadir.runners.RunnerJadwalTest@4218d6a3]" started-at="2025-08-27T17:07:55 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-27T17:08:29 WIB" duration-ms="33930" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -50,10 +50,34 @@
               </value>
             </param>
           </params>
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for presence of any elements located by By.xpath: //div[contains(@class, 'MuiSelect-select') and contains(text(), 'Libur')] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.34.0', revision: '707dcb4246*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.8'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 142.0, moz:accessibilityChecks: false, moz:buildID: 20250811145442, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 252376, moz:profile: C:\Users\LENOVO\AppData\Loc..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Session ID: 895a17f6-f316-42c7-aefe-e272a576c3a1]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of any elements located by By.xpath: //div[contains(@class, 'MuiSelect-select') and contains(text(), 'Libur')] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.34.0', revision: '707dcb4246*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.8'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 142.0, moz:accessibilityChecks: false, moz:buildID: 20250811145442, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 252376, moz:profile: C:\Users\LENOVO\AppData\Loc..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Session ID: 895a17f6-f316-42c7-aefe-e272a576c3a1
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+at com.dikahadir.page.JadwalPage.isiSemuaHari(JadwalPage.java:183)
+at com.dikahadir.definitions.jadwal.EditJadwalTest.isiHariKerja(EditJadwalTest.java:63)
+at ✽.user mengisi jumlah hari kerja.(file:///C:/Hegar/sqabatch23/TA/web_hadir/src/test/resources/features/jadwal/EditJadwal.feature:14)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.dikahadir.runners.RunnerJadwalTest@4218d6a3]" started-at="2025-08-27T16:18:18 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-27T16:18:42 WIB" duration-ms="24392" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.dikahadir.runners.RunnerJadwalTest@4218d6a3]" started-at="2025-08-27T17:08:29 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-27T17:08:49 WIB" duration-ms="20906" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -69,7 +93,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.dikahadir.runners.RunnerJadwalTest@4218d6a3]" started-at="2025-08-27T16:18:42 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-27T16:18:59 WIB" duration-ms="16879" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.dikahadir.runners.RunnerJadwalTest@4218d6a3]" started-at="2025-08-27T17:08:49 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-27T17:09:10 WIB" duration-ms="20189" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -85,7 +109,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.dikahadir.runners.RunnerJadwalTest@4218d6a3]" started-at="2025-08-27T16:18:59 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-27T16:19:17 WIB" duration-ms="17270" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.dikahadir.runners.RunnerJadwalTest@4218d6a3]" started-at="2025-08-27T17:09:10 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-27T17:09:25 WIB" duration-ms="15758" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -101,7 +125,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.dikahadir.runners.RunnerJadwalTest@4218d6a3]" started-at="2025-08-27T16:19:17 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-27T16:19:43 WIB" duration-ms="26221" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.dikahadir.runners.RunnerJadwalTest@4218d6a3]" started-at="2025-08-27T17:09:25 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-27T17:09:41 WIB" duration-ms="15554" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -117,7 +141,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.dikahadir.runners.RunnerJadwalTest@4218d6a3]" started-at="2025-08-27T16:19:43 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-27T16:19:59 WIB" duration-ms="16142" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.dikahadir.runners.RunnerJadwalTest@4218d6a3]" started-at="2025-08-27T17:09:41 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-27T17:09:55 WIB" duration-ms="14203" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -133,7 +157,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.dikahadir.runners.RunnerJadwalTest@4218d6a3]" started-at="2025-08-27T16:19:59 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-27T16:20:15 WIB" duration-ms="16510" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.dikahadir.runners.RunnerJadwalTest@4218d6a3]" started-at="2025-08-27T17:09:55 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-27T17:10:12 WIB" duration-ms="16484" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -149,7 +173,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.dikahadir.runners.RunnerJadwalTest@4218d6a3]" started-at="2025-08-27T16:20:15 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-27T16:20:33 WIB" duration-ms="17149" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.dikahadir.runners.RunnerJadwalTest@4218d6a3]" started-at="2025-08-27T17:10:12 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-27T17:10:31 WIB" duration-ms="19719" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -165,7 +189,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.dikahadir.runners.RunnerJadwalTest@4218d6a3]" started-at="2025-08-27T16:20:33 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-27T16:21:18 WIB" duration-ms="45235" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.dikahadir.runners.RunnerJadwalTest@4218d6a3]" started-at="2025-08-27T17:10:31 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-27T17:11:08 WIB" duration-ms="36257" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -181,7 +205,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.dikahadir.runners.RunnerJadwalTest@4218d6a3]" started-at="2025-08-27T16:21:18 WIB" name="tearDownClass" finished-at="2025-08-27T16:21:19 WIB" duration-ms="1158" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.dikahadir.runners.RunnerJadwalTest@4218d6a3]" started-at="2025-08-27T17:11:08 WIB" name="tearDownClass" finished-at="2025-08-27T17:11:09 WIB" duration-ms="1406" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

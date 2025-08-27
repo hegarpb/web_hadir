@@ -19,8 +19,8 @@ Feature: Edit Jadwal
     Then nama jadwal yang sudah di edit akan muncul dalam tabel  "<namaJadwalBaru>".
 
     Examples:
-      | namaJadwal  | tipeJadwal            | hari | bulan     | tahun | namaJadwalBaru    | menit |
-      | Jadwal Baru | Jadwal kerja flexible |   10 | September |  2025 | Jadwal Baru Edit2 |    15 |
+      | namaJadwal  | tipeJadwal            | hari | bulan     | tahun | namaJadwalBaru | menit |
+      | Jadwal Edit | Jadwal kerja flexible |   10 | September |  2025 | Jadwal Edit2   |    15 |
 
   @Negative
   Scenario Outline: Edit jadwal dengan field kosong
