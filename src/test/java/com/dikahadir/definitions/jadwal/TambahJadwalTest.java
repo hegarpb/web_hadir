@@ -1,0 +1,106 @@
+package com.dikahadir.definitions.jadwal;
+
+import com.dikahadir.Hooks;
+import com.dikahadir.page.JadwalPage;
+import io.cucumber.java.en.*;
+import org.testng.Assert;
+
+import java.util.List;
+
+public class TambahJadwalTest {
+
+    private JadwalPage jadwalPage;
+
+    @Given("user sudah login dan berada di halaman jadwal")
+    public void userSudahLoginDanBeradaDiHalamanJadwal() {
+        this.jadwalPage = new JadwalPage(Hooks.getDriver());
+        jadwalPage.navigateToJadwalPage();
+    }
+
+    @When("user menekan tombol Tambahkan pada halaman jadwal")
+    public void userMenekanTombolTambahkan() {
+        jadwalPage.clickTambahJadwal();
+    }
+
+    @And("user memilih menu dropdown tipe jadwal kerja {string}")
+    public void userMemilihMenuDropdownTipeJadwalKerja(String tipe) {
+        jadwalPage.setTipeJadwal(tipe);
+    }
+
+    @And("user menginput tanggal efektif {string} {string} {string}")
+    public void userMenginputTanggalEfektif(String hari, String bulan, String tahun) throws InterruptedException {
+        jadwalPage.clickIconCalendar();
+        jadwalPage.setTanggal(hari, bulan, tahun);
+        Thread.sleep(2000);
+    }
+
+    @And("user menginput nama jadwal kerja {string}")
+    public void userMenginputNamaJadwalKerja(String namaJadwal) {
+        jadwalPage.inputNamaJadwal(namaJadwal);
+    }
+
+    @And("user menekan tombol hari kerja")
+    public void userMenekanTombolHariKerja() {
+        jadwalPage.clickButtonHariKerja();
+    }
+
+    @And("user mengisi jumlah hari kerja:")
+    public void userMengisiJumlahHariKerja() {
+        jadwalPage.isiSemuaHari();
+    }
+
+    @And("user menekan tombol terapkan pada form tambah jadwal")
+    public void userMenekanTombolTerapkanPadaFormTambahJadwal() {
+        jadwalPage.clickButtonTerapkan();
+    }
+
+    @And("user mengisi toleransi keterlambatan {string}")
+    public void userMengisiToleransiKeterlambatan(String menit) {
+        jadwalPage.inputToleransiTerlambat(menit);
+    }
+
+    @And("user menekan tombol tambah")
+    public void clickButtonTambah() throws InterruptedException {
+        jadwalPage.clickButtonTambah();
+    }
+
+    @And("user menekan tombol batal pada modal tambah jadwal")
+    public void clickTombolBatal() {
+        jadwalPage.clickButtonBatal();
+    }
+
+    @Then("muncul pesan sukses dan nama jadwal {string} akan muncul dalam tabel")
+    public void displayNamaJadwal(String value) throws InterruptedException {
+        jadwalPage.displayNamaJadwal(value);
+        Thread.sleep(3000);
+        List<String> hasil = jadwalPage.getAllJadwal();
+        Assert.assertTrue(hasil.contains(value),
+                "Nama jadwal tidak ditemukan dalam tabel!");
+    }
+
+    @Then("muncul pesan validasi pada field tipe jadwal {string}")
+    public void validasiTipeJadwal(String expectedMessage) {
+        String actualMessage = jadwalPage.getValidationTipeJadwal();
+        Assert.assertEquals(actualMessage, expectedMessage,
+                "pesan Validasi tipe jadwal tidak sesuai!");
+    }
+
+    @Then("muncul pesan validasi pada field nama jadwal kerja {string}")
+    public void validasiNamaJadwal(String expectedMessage) throws InterruptedException {
+        String actualMessage = jadwalPage.getValidationNamaJadwal();
+        Assert.assertEquals(actualMessage, expectedMessage,
+                "pesan Validasi nama jadwal tidak sesuai!");
+    }
+
+    @Then("muncul pesan validasi pada field toleransi keterlambatan {string}")
+    public void validasiToleransi(String expectedMessage) {
+        String actualMessage = jadwalPage.getValidationToleransi();
+        Assert.assertEquals(actualMessage, expectedMessage,
+                "pesan Validasi toleransi keterlambatan tidak sesuai!");
+    }
+
+    @Then("modal tambah jadwal akan tertutup")
+    public void modalTambahJadwalTertutup() {
+        jadwalPage.modalTutup();
+    }
+}

@@ -11,8 +11,6 @@ public class ResetLevelJabatanTest {
 
     private JabatanPage jabatanPage;
 
-   
-
     @Given("user sudah login dan diarahkan ke halaman Manajemen Jabatan")
     public void navigasiKeHalamanJabatanResetSearch() {
         this.jabatanPage = new JabatanPage(Hooks.getDriver());

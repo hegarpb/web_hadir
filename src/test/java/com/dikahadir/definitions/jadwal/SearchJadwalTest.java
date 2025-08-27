@@ -28,7 +28,7 @@ public class SearchJadwalTest {
 
     @When("user menginput {string} pada kolom pencarian")
     public void inputNamaJadwal(String namaJadwal){
-        jadwalPage.inputSearchJawal(namaJadwal);
+        jadwalPage.inputSearchJadwal(namaJadwal);
     }
     @When("user menekan tombol search pada halaman jadwal")
     public void clickTombolSearchJadwal() throws InterruptedException{
@@ -37,12 +37,12 @@ public class SearchJadwalTest {
     }
     @Then("{string} yang dicari user akan ditampilkan")
     public void tampilNamaJadwal(String expectedJadwal){
- List<String> hasil = jadwalPage.getAllJadwal();
+    List<String> hasil = jadwalPage.getAllJadwal();
     boolean ditemukan = hasil.stream().anyMatch(nama -> nama.equalsIgnoreCase(expectedJadwal));
     Assert.assertTrue(ditemukan,"Nama jadwal '" + expectedJadwal + "' tidak ditemukan di hasil pencarian. Hasil: " + hasil);
     }
     @Then("nama jadwal yang dicari user tidak akan ditampilkan")
-public void TidakAdaNamaAturan() {
+    public void TidakAdaNamaAturan() {
     Assert.assertTrue(jadwalPage.isTableEmpty(),
         "Seharusnya tidak ada hasil pencarian, tetapi ditemukan: " + jadwalPage.getAllJadwal());
 }

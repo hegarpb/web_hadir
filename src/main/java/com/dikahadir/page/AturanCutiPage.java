@@ -15,7 +15,7 @@ public class AturanCutiPage {
     private WebDriverWait wait;
     private ManagementPage managementPage;
 
-    private final String defaultUrl = "https://magang.dikahadir.com/management/unit-leave";
+    private String defaultUrl = "https://magang.dikahadir.com/management/unit-leave";
 
     public AturanCutiPage(WebDriver driver){
         this.driver = driver;
@@ -147,7 +147,7 @@ public class AturanCutiPage {
                 System.out.println("⚡ Klik berhasil dengan JavaScriptExecutor");
             }
         } catch (Exception e) {
-            throw new RuntimeException("❌ Gagal klik tombol action di row pertama", e);
+            throw new RuntimeException(" Gagal klik tombol action di row pertama", e);
         }
     }
 
@@ -169,10 +169,10 @@ public class AturanCutiPage {
                     return;
                 }
             }
-            throw new RuntimeException("❌ Menu '" + optionText + "' tidak ditemukan di dropdown!");
+            throw new RuntimeException("Menu '" + optionText + "' tidak ditemukan di dropdown!");
         } catch (Exception e) {
             printAllDropdownOptions();
-            throw new RuntimeException("❌ Gagal klik menu " + optionText + ". Detail: " + e.getMessage(), e);
+            throw new RuntimeException("Gagal klik menu " + optionText + ". Detail: " + e.getMessage(), e);
         }
     }
 
