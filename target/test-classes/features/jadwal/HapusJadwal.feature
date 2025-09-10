@@ -11,5 +11,5 @@ Feature: Delete Jadwal
     Then nama jadwal akan terhapus dari tabel dan sistem akan menpilkan pesan "Berhasil hapus jadwal"
 
     Examples:
-      | namaJadwal     |
-      | Jadwal Terbaru |
+      | namaJadwal   |
+      | Jadwal Hapus |

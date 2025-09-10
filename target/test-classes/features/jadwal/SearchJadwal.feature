@@ -1,4 +1,5 @@
-Feature: Sebagai user saya ingin mencari nama jadwal
+Feature: Search
+Sebagai user saya ingin mencari nama jadwal
          menggunakan feature search pada halaman jadwal
 
   @Positive

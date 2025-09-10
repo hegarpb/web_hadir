@@ -17,8 +17,8 @@ Feature: Tambah jadwal
     Then muncul pesan "Berhasil menambahkan jadwal"
 
     Examples:
-      | tipeJadwal            | hari | bulan     | tahun | namaJadwal     | menit |
-      | Jadwal kerja flexible |    5 | September |  2025 | Jadwal Terbaru |    15 |
+      | tipeJadwal            | hari | bulan     | tahun | namaJadwal   | menit |
+      | Jadwal kerja flexible |    5 | September |  2025 | Acara Outing |    15 |
 
   @Positive
   Scenario Outline: tombol batal
@@ -32,7 +32,7 @@ Feature: Tambah jadwal
       | Jadwal kerja flexible |    5 | September |  2025 | Jadwal     |    15 |
 
   @Negative
-  Scenario Outline: Menambahkan jadwal dengan field kosong pada nama jadwal dant toleransi keterlambatan
+  Scenario Outline: Menambahkan jadwal dengan field kosong pada ntipe jadwal
     Given user sudah login dan berada di halaman jadwal
     When user menekan tombol Tambahkan pada halaman jadwal
     And user memilih menu dropdown tipe jadwal kerja "<tipeJadwal>"
@@ -46,7 +46,7 @@ Feature: Tambah jadwal
       |            | Jadwal Kosong |    15 | Silahkan pilih jadwal |
 
   @Negative
-  Scenario Outline: Menambahkan jadwal dengan field kosong pada nama jadwal dant toleransi keterlambatan
+  Scenario Outline: Menambahkan jadwal dengan field kosong pada nama jadwal
     Given user sudah login dan berada di halaman jadwal
     When user menekan tombol Tambahkan pada halaman jadwal
     And user memilih menu dropdown tipe jadwal kerja "<tipeJadwal>"
@@ -61,7 +61,7 @@ Feature: Tambah jadwal
   # @Negative
 
   @Negative
-  Scenario Outline: Menambahkan jadwal dengan field kosong pada nama jadwal dant toleransi keterlambatan
+  Scenario Outline: Menambahkan jadwal dengan field kosong pada toleransi keterlambatan
     Given user sudah login dan berada di halaman jadwal
     When user menekan tombol Tambahkan pada halaman jadwal
     And user memilih menu dropdown tipe jadwal kerja "<tipeJadwal>"
@@ -73,4 +73,3 @@ Feature: Tambah jadwal
     Examples:
       | tipeJadwal            | namaJadwal    | menit | pesanNama       |
       | Jadwal kerja flexible | Jadwal kosong |       | Masukkan angka. |
-  # @Negative

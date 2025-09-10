@@ -5,7 +5,6 @@ import com.dikahadir.page.JadwalPage;
 import io.cucumber.java.en.*;
 import org.testng.Assert;
 
-import java.util.List;
 
 public class TambahJadwalTest {
 

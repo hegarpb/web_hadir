@@ -2,31 +2,24 @@ package com.dikahadir.definitions.aturancuti;
 
 import com.dikahadir.Hooks;
 import com.dikahadir.page.AturanCutiPage;
-import com.dikahadir.repository.AturanCutiRepository;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-import java.time.Duration;
 import java.util.List;
 
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 import org.testng.Assert;
 
 public class TambahAturanCutiTest {
 
     private AturanCutiPage aturanCutiPage;
-    private WebDriverWait wait;
 
     @Given("user melakukan login dan berada di halaman manajemen Aturan Cuti")
     public void userBeradaDiHalamanTambahAturanCuti() {
         this.aturanCutiPage = new AturanCutiPage(Hooks.getDriver());
-        this.wait = new WebDriverWait(Hooks.getDriver(), Duration.ofSeconds(10)); 
         aturanCutiPage.navigateToAturanCuti();
-        wait.until(ExpectedConditions.visibilityOfElementLocated(AturanCutiRepository.buttonTambahAturan));
     }
 
     @When("user menekan tombol Tambahkan Aturan Cuti")
@@ -82,11 +75,16 @@ public class TambahAturanCutiTest {
     }
 
     @Then("form tambah aturan cuti akan tertutup")
-    public void tutupFormTambahAturan(){
-         boolean isFormClosed = wait.until(
-        ExpectedConditions.invisibilityOfElementLocated(AturanCutiRepository.formTambahAturan));
-    Assert.assertTrue(isFormClosed, "Form Tambahkan Aturan Cuti harusnya sudah tertutup!");
+public void tutupFormTambahAturan() {
+    aturanCutiPage = new AturanCutiPage(Hooks.getDriver());
+
+    boolean isFormClosed = aturanCutiPage.isFormTambahClosed();
+    Assert.assertTrue(
+        isFormClosed,
+        "Form Tambahkan Aturan Cuti harusnya sudah tertutup!"
+    );
 }
+
     @Then("data aturan cuti {string} ditampilkan di tabel")
     public void tampilDataBaruDItambahkan(String namaAturan) throws InterruptedException{
     aturanCutiPage.inputSearchText(namaAturan);
@@ -99,19 +97,31 @@ public class TambahAturanCutiTest {
     Assert.assertTrue(ditemukan,
             "Data aturan cuti '" + namaAturan + "' tidak ditemukan di tabel. Hasil tabel: " + hasil);
 }
-    @Then("muncul pesan validasi pada field kosong")
-    public void munculPesanValidasiPadaFieldKosong() {
-    if (aturanCutiPage.isElementPresent(AturanCutiRepository.nameError)) {
-        Assert.assertEquals(aturanCutiPage.getErrorNamaAturan(), "Nama aturan cuti harus diisi!");
+   @Then("muncul pesan validasi pada field kosong")
+public void munculPesanValidasiPadaFieldKosong() {
+    aturanCutiPage = new AturanCutiPage(Hooks.getDriver());
+
+    if (aturanCutiPage.isNameErrorVisible()) {
+        Assert.assertEquals(
+            aturanCutiPage.getErrorNamaAturan(),
+            "Nama aturan cuti harus diisi!"
+        );
     }
 
-    if (aturanCutiPage.isElementPresent(AturanCutiRepository.tanggalBatasError)) {
-        Assert.assertEquals(aturanCutiPage.getErrorTanggalBatas(), "Tanggal batas sisa cuti harus diisi!");
+    if (aturanCutiPage.isTanggalBatasErrorVisible()) {
+        Assert.assertEquals(
+            aturanCutiPage.getErrorTanggalBatas(),
+            "Tanggal batas sisa cuti harus diisi!"
+        );
     }
 
-    if (aturanCutiPage.isElementPresent(AturanCutiRepository.maksimalSisaError)) {
-        Assert.assertEquals(aturanCutiPage.getErrorMaksimalSisa(), "Maksimal sisa cuti harus diisi!");
+    if (aturanCutiPage.isMaksimalSisaErrorVisible()) {
+        Assert.assertEquals(
+            aturanCutiPage.getErrorMaksimalSisa(),
+            "Maksimal sisa cuti harus diisi!"
+        );
     }
 }
+
 
     }

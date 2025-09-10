@@ -18,11 +18,11 @@ Feature: Edit Aturan Cuti
     And data aturan cuti "<namaAturanBaru>" ditampilkan di tabel.
 
     Examples:
-      | namaAturan | namaAturanBaru | eligibleBaru | tanggalBatasBaru | bulanBatasBaru | maksimalSisaBaru | jumlahBulanKerjaSisaBaru |
-      | Cuti Edit  | Cuti Revisi    |           10 |               10 |             10 |                5 |                        3 |
+      | namaAturan  | namaAturanBaru | eligibleBaru | tanggalBatasBaru | bulanBatasBaru | maksimalSisaBaru | jumlahBulanKerjaSisaBaru |
+      | Cuti Khusus | Cuti Revisi    |           10 |               10 |             10 |                5 |                        3 |
 
   @Negative
-  Scenario Outline: Mengedit aturan cuti dengan data invalid
+  Scenario Outline: Mengedit aturan cuti dengan data invalid (mengandung angka negatif)
     Given user sudah login dan diarahkan ke halaman Aturan Cuti
     And user menekan tombol action pada aturan cuti "<namaAturan>"
     And user menekan tombol edit pada aturan cuti
@@ -36,8 +36,8 @@ Feature: Edit Aturan Cuti
     Then sistem akan menampilkan pesan "Gagal Mengubah Aturan Cuti".
 
     Examples:
-      | namaAturan | namaAturanBaru | eligibleBaru | tanggalBatasBaru | bulanBatasBaru | maksimalSisaBaru | jumlahBulanKerjaSisaBaru |
-      | Cuti Edit  | Edit Invalid1  |          -12 |               10 |             10 |               -5 |                       -3 |
+      | namaAturan    | namaAturanBaru    | eligibleBaru | tanggalBatasBaru | bulanBatasBaru | maksimalSisaBaru | jumlahBulanKerjaSisaBaru |
+      | Cuti Tambahan | Cuti Invalid edit |          -12 |               10 |             10 |               -5 |                       -3 |
 
   @Negative
   Scenario Outline: Mengedit aturan cuti dengan  field kosong
@@ -66,5 +66,5 @@ Feature: Edit Aturan Cuti
     Then form sunting aturan cuti akan tertutup
 
     Examples:
-      | namaAturan  |
-      | Cuti revisi |
+      | namaAturan |
+      | Cuti       |

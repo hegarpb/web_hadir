@@ -13,8 +13,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import com.dikahadir.repository.JabatanRepository;
-import com.dikahadir.repository.JadwalRepository;
 
 public class JadwalPage {
     private WebDriver driver;
@@ -33,13 +31,11 @@ public class JadwalPage {
     private By tabelJadwal = By.xpath("//table[contains(@class,'MuiTable-root')]");
     private By tableFirstColumn = By.xpath("//table[contains(@class,'MuiTable-root')]//tbody/tr/td[1]");
     private By tableRows = By.xpath("//table[contains(@class,'MuiTable-root')]//tbody/tr");
-    private By tableContainer = By.xpath("//table[contains(@class,'MuiTable-root')]");
 
     // Form Tambah/Edit
     private By buttonTambahJadwal = By.xpath("//button[normalize-space()='Tambahkan']");
     private By dropdownTipeJadwal = By.id("typeJadwal");
     private By inputNamaJadwalKerja = By.id("nameJadwal");
-    private By inputHariKerja = By.xpath("//label[normalize-space()='Hari kerja']/following::input[1]");
     private By buttonPilihHari = By.xpath("//label[normalize-space()='Hari kerja']/following::button[1]");
     private By inputToleransiKeterlambatan = By.xpath("//label[normalize-space()='Toleransi Keterlambatan']/following::input[1]");
     private By inputLibur = By.xpath("//div[contains(@class, 'MuiSelect-select') and contains(text(), 'Libur')]");
@@ -49,7 +45,6 @@ public class JadwalPage {
     private By iconCalendar = By.xpath("//button[contains(@aria-label,'Choose date')]//*[name()='svg']");
     private By headerCalendar = By.xpath("//div[contains(@class,'MuiPickersCalendarHeader-label')]");
     private By tombolNextMonth = By.xpath("//button//*[name()='svg' and @data-testid='ArrowRightIcon']/..");
-    private By tombolPrevMonth = By.xpath("//button//*[name()='svg' and @data-testid='ArrowLeftIcon']/..");
 
     // Buttons
     private By buttonTambah = By.xpath("//button[normalize-space()='Tambah']");
@@ -61,6 +56,7 @@ public class JadwalPage {
     // Modal / Dialog
     private By alertDialog = By.id("alert-dialog-slide-title");
     private By modalHeader = By.xpath("//h2[@id='alert-dialog-slide-title' and contains(text(), 'Jumlah Hari Kerja')]");
+    private By detailHariKerja     = By.xpath("//h2[normalize-space()='Detail Hari Kerja']");
 
     // Dropdown Menu
     private By dropdownMenuItems = By.xpath("//li[@role='menuitem']");
@@ -181,6 +177,18 @@ public class JadwalPage {
             return false;
         }
     }
+    public By getDetailHariKerjaLocator() {
+    return detailHariKerja;
+}
+
+public boolean isDetailModalVisible() {
+    try {
+        WebElement modal = wait.until(ExpectedConditions.visibilityOfElementLocated(detailHariKerja));
+        return modal.isDisplayed();
+    } catch (TimeoutException e) {
+        return false;
+    }
+}
 
     public void isiSemuaHari() throws InterruptedException {
         List<WebElement> daftarInputLibur = wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(inputLibur));

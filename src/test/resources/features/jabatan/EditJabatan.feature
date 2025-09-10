@@ -5,7 +5,7 @@ Feature: Edit Jabatan
   @Positive
   Scenario Outline: Mengubah nama jabatan dengan fitur edit dengan data yang valid.
     Given user sudah login dan user berada di halaman Manajemen Jabatan
-    When user menekan tombol action pada level jabatan "80"
+    When user menekan tombol action pada level jabatan "89"
     And user menekan tombol edit pada menu dropdown
     And user mengubah nama jabatan menjadi "<namaBaru>"
     And user mengubah level jabatan menjadi "<levelBaru>"
@@ -13,8 +13,8 @@ Feature: Edit Jabatan
     Then sistem akan menampilkan pesan "Berhasil Edit Jabatan"
 
     Examples:
-      | namaBaru | levelBaru |
-      | Direktur |        89 |
+      | namaBaru   | levelBaru |
+      | Komisioner |        71 |
 
   @Positive
   Scenario Outline: Mengubah nama jabatan tetapi level tidak diubah
@@ -26,8 +26,8 @@ Feature: Edit Jabatan
     Then sistem akan menampilkan pesan "Berhasil Edit Jabatan"
 
     Examples:
-      | namaBaru   |
-      | Komisiaris |
+      | namaBaru |
+      | Tester   |
 
   @Positive
   Scenario Outline: Mengubah level jabatan tetapi nama tidak diubah
@@ -43,7 +43,7 @@ Feature: Edit Jabatan
       |        12 |
 
   @Negative
-  Scenario Outline: Mengubah nama jabatan dan level jabatan dengan nama jabatan dan level jabatan yang sudah ada,inputan level mengandung angka negtif
+  Scenario Outline: Mengubah nama jabatan dan level jabatan dengan nama jabatan dan level jabatan yang sudah ada
     Given user sudah login dan user berada di halaman Manajemen Jabatan
     When user menekan tombol action pada level jabatan "8"
     And user menekan tombol edit pada menu dropdown
@@ -73,7 +73,7 @@ Feature: Edit Jabatan
       | Pengawas |           |                | Isi isian ini. |
 
   @Positive
-  Scenario Outline: Validasi batal mengubah data jabatan
+  Scenario Outline: Validasi tombol batal
     Given user sudah login dan user berada di halaman Manajemen Jabatan
     When user menekan tombol action pada level jabatan "10"
     And user menekan tombol edit pada menu dropdown

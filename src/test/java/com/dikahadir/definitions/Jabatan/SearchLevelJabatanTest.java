@@ -2,13 +2,11 @@ package com.dikahadir.definitions.jabatan;
 
 import com.dikahadir.Hooks;
 import com.dikahadir.page.JabatanPage;
-import com.dikahadir.repository.JabatanRepository;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
@@ -23,7 +21,7 @@ public class SearchLevelJabatanTest {
         this.jabatanPage = new JabatanPage(Hooks.getDriver());
         jabatanPage.navigateToJabatanPage();
         WebDriverWait wait = new WebDriverWait(Hooks.getDriver(), Duration.ofSeconds(10));
-        wait.until(ExpectedConditions.visibilityOfElementLocated(JabatanRepository.inputSearchText));
+        jabatanPage.waitForSearchInputVisible();
     }
 
     @When("user menginput {string} pada field pencarian")

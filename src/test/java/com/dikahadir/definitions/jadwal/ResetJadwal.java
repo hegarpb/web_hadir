@@ -1,9 +1,5 @@
 package com.dikahadir.definitions.jadwal;
 
-
-import java.time.Duration;
-
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 import com.dikahadir.Hooks;
@@ -16,14 +12,12 @@ import io.cucumber.java.en.When;
 public class ResetJadwal {
 
     private JadwalPage jadwalPage;
-    private WebDriverWait wait;
     private int jumlahAwal;
 
 
     @Given("user login sebagai admin dan berada di halaman jadwal")
     public void navigateToJabatanPage(){
         this.jadwalPage= new JadwalPage(Hooks.getDriver());
-        this.wait = new WebDriverWait(Hooks.getDriver(), Duration.ofSeconds(10));
         jadwalPage.navigateToJadwalPage();
         jumlahAwal = jadwalPage.getJumlahJadwal();
     }

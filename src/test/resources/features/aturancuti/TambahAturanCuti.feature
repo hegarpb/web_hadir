@@ -16,7 +16,7 @@ Feature: Tambah Aturan Cuti
 
     Examples:
       | namaAturan    | eligible | tanggalBatas | bulanBatas | maksimalSisa | jumlahBulanKerja |
-      | Cuti Tambahan |       12 |            5 |          2 |           10 |                6 |
+      | Cuti Tambahan |       10 |            5 |          2 |           10 |                6 |
 
   Scenario Outline: Tambah aturan cuti dengan data invalid
     Given user melakukan login dan berada di halaman manajemen Aturan Cuti

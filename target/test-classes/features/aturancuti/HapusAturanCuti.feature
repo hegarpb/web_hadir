@@ -10,8 +10,8 @@ Feature: Delete Aturan Cuti
     And pesan "Berhasil Menghapus Aturan Cuti" akan ditampilkan sistem.
 
     Examples:
-      | namaAturan  |
-      | Cuti Delete |
+      | namaAturan |
+      | Cuti Hapus |
 
   Scenario Outline: Batal Aturan Cuti
     Given user sudah login sebagai admin dan berada di halaman Aturan Cuti.
@@ -22,5 +22,5 @@ Feature: Delete Aturan Cuti
     Then tidak ada nama aturan cuti yang terhapus
 
     Examples:
-      | namaAturan    |
-      | Cuti Invalid4 |
+      | namaAturan  |
+      | Cuti Hapus2 |
