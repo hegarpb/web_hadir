@@ -1,0 +1,501 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="26" passed="23" failed="3" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-09-18T19:06:51 WIB" name="Main Test" finished-at="2025-09-18T19:14:07 WIB" duration-ms="435910">
+    <groups>
+      <group name="cucumber">
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.dikahadir.runners.RunnerTest1@4218d6a3]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+      </group> <!-- cucumber -->
+    </groups>
+    <test started-at="2025-09-18T19:06:51 WIB" name="Test Math" finished-at="2025-09-18T19:14:07 WIB" duration-ms="435910">
+      <class name="com.dikahadir.runners.RunnerTest1">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.dikahadir.runners.RunnerTest1@4218d6a3]" started-at="2025-09-18T19:06:51 WIB" name="setUpClass" finished-at="2025-09-18T19:06:52 WIB" duration-ms="970" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@7d3cb276]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.dikahadir.runners.RunnerTest1@4218d6a3]" started-at="2025-09-18T19:06:52 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-09-18T19:07:15 WIB" duration-ms="22912" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Mengubah nama jabatan dengan fitur edit dengan data yang valid."]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Edit Jabatan"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.dikahadir.runners.RunnerTest1@4218d6a3]" started-at="2025-09-18T19:07:15 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-09-18T19:07:37 WIB" duration-ms="22122" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Mengubah nama jabatan tetapi level tidak diubah"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Edit Jabatan"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.dikahadir.runners.RunnerTest1@4218d6a3]" started-at="2025-09-18T19:07:37 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-09-18T19:08:00 WIB" duration-ms="22766" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Mengubah level jabatan tetapi nama tidak diubah"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Edit Jabatan"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.dikahadir.runners.RunnerTest1@4218d6a3]" started-at="2025-09-18T19:08:00 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-09-18T19:08:23 WIB" duration-ms="23417" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Mengubah nama jabatan dan level jabatan dengan nama jabatan dan level jabatan yang sudah ada"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Edit Jabatan"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for visibility of element located by By.xpath: (//p[normalize-space()='Management'])[1] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.34.0', revision: '707dcb4246*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.8'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 142.0.1, moz:accessibilityChecks: false, moz:buildID: 20250827004350, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 101104, moz:profile: C:\Users\LENOVO\AppData\Loc..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Session ID: d3d39663-76ec-4643-86ba-59a15e1daa50]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: (//p[normalize-space()='Management'])[1] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.34.0', revision: '707dcb4246*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.8'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 142.0.1, moz:accessibilityChecks: false, moz:buildID: 20250827004350, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 101104, moz:profile: C:\Users\LENOVO\AppData\Loc..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Session ID: d3d39663-76ec-4643-86ba-59a15e1daa50
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+at com.dikahadir.Hooks.setUp(Hooks.java:38)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.dikahadir.runners.RunnerTest1@4218d6a3]" started-at="2025-09-18T19:08:23 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-09-18T19:08:40 WIB" duration-ms="16635" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Validasi field kosong saat mengubah data jabatan"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Edit Jabatan"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.dikahadir.runners.RunnerTest1@4218d6a3]" started-at="2025-09-18T19:08:40 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-09-18T19:08:59 WIB" duration-ms="18834" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Validasi field kosong saat mengubah data jabatan"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Edit Jabatan"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.dikahadir.runners.RunnerTest1@4218d6a3]" started-at="2025-09-18T19:08:59 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-09-18T19:09:16 WIB" duration-ms="17586" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Validasi tombol batal"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Edit Jabatan"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.dikahadir.runners.RunnerTest1@4218d6a3]" started-at="2025-09-18T19:09:16 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-09-18T19:09:34 WIB" duration-ms="17787" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Menghapus data jabatan dengan feature delete pada tabel jabatan"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Hapus Jabatan"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.dikahadir.runners.RunnerTest1@4218d6a3]" started-at="2025-09-18T19:09:34 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-09-18T19:09:51 WIB" duration-ms="16979" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Batal menghapus jabatan dengan menekan tombol batal pada form hapus jabatan"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Hapus Jabatan"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.dikahadir.runners.RunnerTest1@4218d6a3]" started-at="2025-09-18T19:09:51 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-09-18T19:10:05 WIB" duration-ms="14060" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Berpindah ke halaman selnajutnya dengan menekan tombol selanjutnya"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Tombol Pagination"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.dikahadir.runners.RunnerTest1@4218d6a3]" started-at="2025-09-18T19:10:05 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-09-18T19:10:21 WIB" duration-ms="15992" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Berpindah ke halaman sebelumnya dengan menekan tombol sebelumnya"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Tombol Pagination"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.dikahadir.runners.RunnerTest1@4218d6a3]" started-at="2025-09-18T19:10:21 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-09-18T19:10:35 WIB" duration-ms="13681" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Berpindah ke halaman sebelumnya dengan menekan tombol sebelumnya"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Tombol Pagination"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.dikahadir.runners.RunnerTest1@4218d6a3]" started-at="2025-09-18T19:10:35 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-09-18T19:10:48 WIB" duration-ms="13106" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Berpindah ke halaman sebelumnya dengan menekan tombol sebelumnya"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Tombol Pagination"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.dikahadir.runners.RunnerTest1@4218d6a3]" started-at="2025-09-18T19:10:48 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-09-18T19:11:04 WIB" duration-ms="16179" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Reset filter setelah melakukan pencarian"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Reset Search Level Jabatan"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.dikahadir.runners.RunnerTest1@4218d6a3]" started-at="2025-09-18T19:11:04 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-09-18T19:11:17 WIB" duration-ms="13017" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Search jabatan berdasarkan level"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Search Level Jabatan"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.dikahadir.runners.RunnerTest1@4218d6a3]" started-at="2025-09-18T19:11:17 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-09-18T19:11:31 WIB" duration-ms="13789" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Search jabatan dengan level yang tidak ada"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Search Level Jabatan"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.dikahadir.runners.RunnerTest1@4218d6a3]" started-at="2025-09-18T19:11:31 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-09-18T19:11:44 WIB" duration-ms="13475" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Search jabatan dengan input alfabet"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Search Level Jabatan"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.dikahadir.runners.RunnerTest1@4218d6a3]" started-at="2025-09-18T19:11:44 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-09-18T19:12:04 WIB" duration-ms="19590" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Tambah jabatan baru dengan data nama baru dan level baru"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Tambah Jabatan"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.dikahadir.runners.RunnerTest1@4218d6a3]" started-at="2025-09-18T19:12:04 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-09-18T19:12:30 WIB" duration-ms="25689" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Tambah jabatan baru dengan data nama yang sudah ada tetapi level berbeda"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Tambah Jabatan"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.dikahadir.runners.RunnerTest1@4218d6a3]" started-at="2025-09-18T19:12:30 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-09-18T19:12:45 WIB" duration-ms="15791" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Tambah jabatan baru dengan data  Nama baru dan level yang sudah ada"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Tambah Jabatan"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Pesan sukses tidak sesuai! expected [Berhasil Menambahkan Job Level] but found [Gagal Menambahkan Job Level]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Pesan sukses tidak sesuai! expected [Berhasil Menambahkan Job Level] but found [Gagal Menambahkan Job Level]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:656)
+at com.dikahadir.definitions.jabatan.TambahJabatanTest.pesanSukses(TambahJabatanTest.java:61)
+at ✽.sistem menampilkan pesan sukses "Berhasil Menambahkan Job Level"(file:///C:/Hegar/sqabatch23/TA/web_hadir/src/test/resources/features/jabatan/TambahJabatan.feature:38)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.dikahadir.runners.RunnerTest1@4218d6a3]" started-at="2025-09-18T19:12:45 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-09-18T19:13:01 WIB" duration-ms="15523" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Validasi penambahan jabatan dengan data invalid (nama yang sama dan level yang sama,inputan level non numeric,level negtif atau minus)"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Tambah Jabatan"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Pesan error tidak sesuai! expected [Gagal Menambahkan Job Level] but found [Berhasil Menambahkan Job Level]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Pesan error tidak sesuai! expected [Gagal Menambahkan Job Level] but found [Berhasil Menambahkan Job Level]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:656)
+at com.dikahadir.definitions.jabatan.TambahJabatanTest.pesanError(TambahJabatanTest.java:80)
+at ✽.sistem menampilkan pesan error "Gagal Menambahkan Job Level"(file:///C:/Hegar/sqabatch23/TA/web_hadir/src/test/resources/features/jabatan/TambahJabatan.feature:51)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.dikahadir.runners.RunnerTest1@4218d6a3]" started-at="2025-09-18T19:13:01 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-09-18T19:13:16 WIB" duration-ms="15054" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Validasi penambahan jabatan dengan data invalid (nama yang sama dan level yang sama,inputan level non numeric,level negtif atau minus)"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Tambah Jabatan"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.dikahadir.runners.RunnerTest1@4218d6a3]" started-at="2025-09-18T19:13:16 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-09-18T19:13:29 WIB" duration-ms="13260" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Validasi penambahan jabatan dengan data invalid (nama yang sama dan level yang sama,inputan level non numeric,level negtif atau minus)"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Tambah Jabatan"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.dikahadir.runners.RunnerTest1@4218d6a3]" started-at="2025-09-18T19:13:29 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-09-18T19:13:41 WIB" duration-ms="11553" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Validasi field kosong saat menambahkan jabatan"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Tambah Jabatan"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.dikahadir.runners.RunnerTest1@4218d6a3]" started-at="2025-09-18T19:13:41 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-09-18T19:13:53 WIB" duration-ms="11957" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Validasi field kosong saat menambahkan jabatan"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Tambah Jabatan"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.dikahadir.runners.RunnerTest1@4218d6a3]" started-at="2025-09-18T19:13:53 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-09-18T19:14:06 WIB" duration-ms="12914" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Batal menambah jabatan dengan menekan tombol batal pada form tambah jabatan"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Tambah Jabatan"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.dikahadir.runners.RunnerTest1@4218d6a3]" started-at="2025-09-18T19:14:06 WIB" name="tearDownClass" finished-at="2025-09-18T19:14:07 WIB" duration-ms="1022" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- com.dikahadir.runners.RunnerTest1 -->
+    </test> <!-- Test Math -->
+  </suite> <!-- Main Test -->
+</testng-results>

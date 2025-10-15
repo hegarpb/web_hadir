@@ -16,10 +16,11 @@ public class LoginPage {
     private final By passwordInput = By.id("password");
     private final By loginButton = By.cssSelector("button[type='submit']");
     private By managementBar = By.xpath("(//p[normalize-space()='Management'])[1]");
+   
 
     public LoginPage(WebDriver driver) {
         this.driver = driver;
-        this.wait = new WebDriverWait(driver, Duration.ofSeconds(15)); // Tambah durasi wait jika perlu
+        this.wait = new WebDriverWait(driver, Duration.ofSeconds(10)); // Tambah durasi wait jika perlu
     }
 
     public void setEmail(String value) {

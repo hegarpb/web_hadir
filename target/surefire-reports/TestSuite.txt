@@ -1,0 +1,36 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 26, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 436.9 s <<< FAILURE! -- in TestSuite
+com.dikahadir.runners.RunnerTest1.runScenario["Mengubah nama jabatan dan level jabatan dengan nama jabatan dan level jabatan yang sudah ada", "Edit Jabatan"](4) -- Time elapsed: 23.50 s <<< FAILURE!
+org.openqa.selenium.TimeoutException: 
+Expected condition failed: waiting for visibility of element located by By.xpath: (//p[normalize-space()='Management'])[1] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.34.0', revision: '707dcb4246*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.8'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 142.0.1, moz:accessibilityChecks: false, moz:buildID: 20250827004350, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 101104, moz:profile: C:\Users\LENOVO\AppData\Loc..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Session ID: d3d39663-76ec-4643-86ba-59a15e1daa50
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at com.dikahadir.Hooks.setUp(Hooks.java:38)
+
+com.dikahadir.runners.RunnerTest1.runScenario["Tambah jabatan baru dengan data  Nama baru dan level yang sudah ada", "Tambah Jabatan"](20) -- Time elapsed: 15.79 s <<< FAILURE!
+java.lang.AssertionError: Pesan sukses tidak sesuai! expected [Berhasil Menambahkan Job Level] but found [Gagal Menambahkan Job Level]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at com.dikahadir.definitions.jabatan.TambahJabatanTest.pesanSukses(TambahJabatanTest.java:61)
+	at ✽.sistem menampilkan pesan sukses "Berhasil Menambahkan Job Level"(file:///C:/Hegar/sqabatch23/TA/web_hadir/src/test/resources/features/jabatan/TambahJabatan.feature:38)
+
+com.dikahadir.runners.RunnerTest1.runScenario["Validasi penambahan jabatan dengan data invalid (nama yang sama dan level yang sama,inputan level non numeric,level negtif atau minus)", "Tambah Jabatan"](21) -- Time elapsed: 15.52 s <<< FAILURE!
+java.lang.AssertionError: Pesan error tidak sesuai! expected [Gagal Menambahkan Job Level] but found [Berhasil Menambahkan Job Level]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at com.dikahadir.definitions.jabatan.TambahJabatanTest.pesanError(TambahJabatanTest.java:80)
+	at ✽.sistem menampilkan pesan error "Gagal Menambahkan Job Level"(file:///C:/Hegar/sqabatch23/TA/web_hadir/src/test/resources/features/jabatan/TambahJabatan.feature:51)
+

@@ -40,6 +40,8 @@ public class Hooks {
 
         
         loginPage.navigateToManagementBar();
+
+       
     }
 
     
