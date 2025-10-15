@@ -10,3 +10,7 @@ Thumbs.db
 # Log dan temporary
 *.log
 *.tmp
+
+# Java build output
+target/
+*.class
