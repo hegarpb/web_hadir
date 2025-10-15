@@ -24,12 +24,12 @@ import io.cucumber.testng.CucumberOptions;
     }
 )
 public class RunnerTest1 extends AbstractTestNGCucumberTests {
-    @BeforeSuite
-    public void beforeSute() {
-        boolean speedOK = InternetSpeedUtil.isInternetFastEnough(3);
-        if (!speedOK) {
-            System.err.println("[HOOK] Koneksi gagal atau lambat, hentikan eksekusi!");
-            System.exit(1);
-        }
-    }
+    // @BeforeSuite
+    // public void beforeSute() {
+    //     boolean speedOK = InternetSpeedUtil.isInternetFastEnough(3);
+    //     if (!speedOK) {
+    //         System.err.println("[HOOK] Koneksi gagal atau lambat, hentikan eksekusi!");
+    //         System.exit(1);
+    //     }
+    // }
 }

@@ -19,7 +19,7 @@ Feature: Edit Aturan Cuti
 
     Examples:
       | namaAturan  | namaAturanBaru | eligibleBaru | tanggalBatasBaru | bulanBatasBaru | maksimalSisaBaru | jumlahBulanKerjaSisaBaru |
-      | Cuti Khusus | Cuti Revisi    |           10 |               10 |             10 |                5 |                        3 |
+      | Cuti Khusus | Cuti Revisi    |           10 |                5 |             10 |               10 |                        4 |
 
   @Negative
   Scenario Outline: Mengedit aturan cuti dengan data invalid (mengandung angka negatif)

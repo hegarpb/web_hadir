@@ -5,7 +5,7 @@ Feature: Reset Search Level Jabatan
   @Positive
   Scenario: Reset filter setelah melakukan pencarian
     Given user sudah login dan diarahkan ke halaman Manajemen Jabatan
-    When user sudah menginput level jabatan dengan level "2"
+    When user sudah menginput level jabatan dengan level "9"
     When user menekan tombol search "Search"
     When user menekan tombol "Reset"
     Then semua jabatan yang ditampilkan tidak dalam keadaan terfilter

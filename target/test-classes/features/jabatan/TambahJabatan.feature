@@ -14,7 +14,7 @@ Feature: Tambah Jabatan
 
     Examples:
       | nama       | level | message                        |
-      | Supervisor |    60 | Berhasil Menambahkan Job Level |
+      | Supervisor |    61 | Berhasil Menambahkan Job Level |
 
   @Positive
   Scenario Outline: Tambah jabatan baru dengan data nama yang sudah ada tetapi level berbeda
@@ -27,7 +27,7 @@ Feature: Tambah Jabatan
 
     Examples:
       | nama       | level | message                        |
-      | Supervisor |    62 | Berhasil Menambahkan Job Level |
+      | Supervisor |    66 | Berhasil Menambahkan Job Level |
 
   @Positive
   Scenario Outline: Tambah jabatan baru dengan data  Nama baru dan level yang sudah ada
@@ -40,7 +40,7 @@ Feature: Tambah Jabatan
 
     Examples:
       | nama | level | message                        |
-      | HR   |    25 | Berhasil Menambahkan Job Level |
+      | HRD  |    25 | Berhasil Menambahkan Job Level |
 
   @Negative
   Scenario Outline: Validasi penambahan jabatan dengan data invalid (nama yang sama dan level yang sama,inputan level non numeric,level negtif atau minus)
@@ -52,7 +52,7 @@ Feature: Tambah Jabatan
 
     Examples:
       | nama         | level | message                     |
-      | Supervisor   |    60 | Gagal Menambahkan Job Level |
+      | Karyawan     |     1 | Gagal Menambahkan Job Level |
       | Staff SQA    | abc   | Gagal Menambahkan Job Level |
       | Staff Khusus |   -30 | Gagal Menambahkan Job Level |
 

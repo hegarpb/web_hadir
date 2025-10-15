@@ -13,8 +13,8 @@ Feature: Edit Jabatan
     Then sistem akan menampilkan pesan "Berhasil Edit Jabatan"
 
     Examples:
-      | namaBaru   | levelBaru |
-      | Komisioner |        71 |
+      | namaBaru | levelBaru |
+      | Ketua    |        71 |
 
   @Positive
   Scenario Outline: Mengubah nama jabatan tetapi level tidak diubah
@@ -26,8 +26,8 @@ Feature: Edit Jabatan
     Then sistem akan menampilkan pesan "Berhasil Edit Jabatan"
 
     Examples:
-      | namaBaru |
-      | Tester   |
+      | namaBaru      |
+      | Tester Senior |
 
   @Positive
   Scenario Outline: Mengubah level jabatan tetapi nama tidak diubah

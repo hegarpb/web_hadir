@@ -2,11 +2,7 @@ com\dikahadir\utils\InternetSpeedUtil.class
 com\dikahadir\page\JabatanPage.class
 com\dikahadir\page\JadwalPage.class
 com\dikahadir\page\AturanCutiPage.class
-com\dikahadir\repository\JabatanRepository.class
 com\dikahadir\utils\DriverManager.class
-com\dikahadir\repository\AturanCutiRepository.class
-com\dikahadir\repository\JadwalRepository.class
-com\dikahadir\repository\ManagementRepository.class
 com\dikahadir\utils\DriverUtil.class
 com\dikahadir\page\LoginPage.class
 com\dikahadir\page\ManagementPage.class
